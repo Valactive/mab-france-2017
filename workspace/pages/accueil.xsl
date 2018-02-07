@@ -24,8 +24,8 @@
 	<h1><xsl:value-of select="plh-page/page/item[@lang=$language]"/></h1>
 	<xsl:value-of select="page-content/entry/rubrique-parente/item"></xsl:value-of> / 
 </div> -->
-<!-- nom de la rubrique parente -->
 
+<!-- nom de la rubrique parente -->
 <xsl:choose>
 	<xsl:when test="$rubrique ='' and $s-rubrique = '' and $ss-rubrique = ''">
 		<!-- home page -->
