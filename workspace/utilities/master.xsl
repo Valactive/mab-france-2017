@@ -12,49 +12,49 @@
 	<!-- <xsl:variable name="titre"/> -->
 	<xsl:variable name="language" select="/data/fl-languages/current-language/@handle"/>
 	<xsl:variable name="url-lang">
-	<xsl:choose>
-		<xsl:when test="$language='en'"><xsl:value-of select="'en/'"></xsl:value-of></xsl:when>
-		<xsl:otherwise><xsl:value-of select="''"></xsl:value-of></xsl:otherwise>
-	</xsl:choose>
+		<xsl:choose>
+			<xsl:when test="$language='en'"><xsl:value-of select="'en/'"></xsl:value-of></xsl:when>
+			<xsl:otherwise><xsl:value-of select="''"></xsl:value-of></xsl:otherwise>
+		</xsl:choose>
 	</xsl:variable>
 	<xsl:template match="/">
 		<xsl:comment>
 			<![CDATA[[if IE 6]>
-			<html lang="en" class="no-js ie6 lte-ie9 lte-ie8 lte-ie7 lte-ie6 gte-ie6">
-			<![endif]]]>
-		</xsl:comment>
-		<xsl:comment>
-		<![CDATA[[if IE 7]>
-			<html lang="en" class="no-js ie7 lte-ie9 lte-ie8 lte-ie7 gte-ie7 gte-ie6">
-		<![endif]]]>
-		</xsl:comment>
-		<xsl:comment>
-		<![CDATA[[if IE 8]>
-			<html lang="en" class="no-js ie8 lte-ie9 lte-ie8 gte-ie8 gte-ie7 gte-ie6">
-		<![endif]]]>
-		</xsl:comment>
-		<xsl:comment>
-		<![CDATA[[if IE 9]>
-			<html lang="en" class="no-js ie9 lte-ie9 gte-ie9 gte-ie8 gte-ie7 gte-ie6">
-		<![endif]]]>
-		</xsl:comment>
-		<xsl:comment>
-		<![CDATA[[if !(lte IE 9)]>
-		<!]]>
-		</xsl:comment>
-			<html lang="en" class="no-js">
-		<xsl:comment>
-		<![CDATA[
-		<![endif]]]>
-		</xsl:comment>
-		<xsl:comment>master.xsl</xsl:comment>
-		<head>
+			<html lang="{$current-language}" class="no-js ie6 lte-ie9 lte-ie8 lte-ie7 lte-ie6 gte-ie6">
+				<![endif]]]>
+			</xsl:comment>
+			<xsl:comment>
+				<![CDATA[[if IE 7]>
+				<html lang="{$current-language}" class="no-js ie7 lte-ie9 lte-ie8 lte-ie7 gte-ie7 gte-ie6">
+					<![endif]]]>
+				</xsl:comment>
+				<xsl:comment>
+					<![CDATA[[if IE 8]>
+					<html lang="{$current-language}" class="no-js ie8 lte-ie9 lte-ie8 gte-ie8 gte-ie7 gte-ie6">
+						<![endif]]]>
+					</xsl:comment>
+					<xsl:comment>
+						<![CDATA[[if IE 9]>
+						<html lang="{$current-language}" class="no-js ie9 lte-ie9 gte-ie9 gte-ie8 gte-ie7 gte-ie6">
+							<![endif]]]>
+						</xsl:comment>
+						<xsl:comment>
+							<![CDATA[[if !(lte IE 9)]>
+							<!]]>
+						</xsl:comment>
+						<html lang="{$current-language}" class="no-js">
+							<xsl:comment>
+								<![CDATA[
+								<![endif]]]>
+							</xsl:comment>
+							<xsl:comment>master.xsl</xsl:comment>
+							<head>
 								<title>
 									<xsl:value-of select="$website-name"></xsl:value-of>
 								</title>
 								<meta charset="utf-8"/>
 								<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
-		  Remove this if you use the .htaccess -->
+								Remove this if you use the .htaccess -->
 								<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 								<meta name="keywords" content="MAB France, mab, Comité MAB France, Réserves de biosphère, Développement durable, programme mab, UNESCO, Comité français du mab, l'homme et la biosphère, Guadeloupe, Camargue, Cévennes, Luberon, Iroise, Ventoux, Fontainebleau, Tuamotu, Corse, Vosges"/>
 								<meta name="author" content="valactive"/>
@@ -69,27 +69,53 @@
 							</head>
 							<body class="mab">
 								<!-- HEADER -->
-								<div class="ui main text container">
-									<h1 class="ui header">
-										<xsl:value-of select="$website-name"></xsl:value-of>
-									</h1>
+								<div class="ui">
+									<div class="ui menu secondary">
+										<div class="item">
+											<h1 class="ui header left">
+												<xsl:value-of select="$website-name"></xsl:value-of>
+											</h1>
+										</div>
+										<!-- language switch -->
+										<div class="right menu">
+											<div class="ui pointing floating dropdown link item button">
+												<i class="world icon"></i>
+												<div class="menu">
+													<div class="item">
+													<a>
+													<xsl:attribute name="href">
+														<xsl:value-of select="concat($root,'/fr/')"/>
+												</xsl:attribute>Français</a>
+
+											</div>
+											<div class="item"><a>
+											<xsl:attribute name="href">
+												<xsl:value-of select="concat($root,'/en/')"/>
+										</xsl:attribute>English</a>	
+									</div>
 								</div>
-								<!-- MENU PRINCIPAL -->
-								<xsl:call-template name="mab-menu-principal"/>
-								<!-- CONTENUS -->
-								<div class="article">
-									<div class="main ui container">
-									<!-- contenus des pages -->
-									<xsl:apply-templates />
-								</div>
-								</div>
-								<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-								<!-- JS -->
-								<script src="{$workspace}/semantic/dist/semantic.js"></script>
-								<script src="{$workspace}/semantic/dist/libs/jqueryui/jquery-ui-1.9.1.custom.min.js"></script>
-								<script src="{$workspace}/semantic/dist/jquery.tocify.min.js"></script>
-								<script src="{$workspace}/semantic/dist/mab.js"></script>
-							</body>
-						</html>
-					</xsl:template>
-				</xsl:stylesheet>
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+				<!-- MENU PRINCIPAL -->
+				<xsl:call-template name="mab-menu-principal"/>
+				<!-- CONTENUS -->
+				<div class="article">
+					<div class="main ui container">
+						<!-- contenus des pages -->
+						<xsl:apply-templates />
+					</div>
+				</div>
+				<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+				<!-- JS -->
+				<script src="{$workspace}/semantic/dist/semantic.js"></script>
+				<script src="{$workspace}/semantic/dist/libs/jqueryui/jquery-ui-1.9.1.custom.min.js"></script>
+				<script src="{$workspace}/semantic/dist/jquery.tocify.min.js"></script>
+				<script src="{$workspace}/semantic/dist/mab.js"></script>
+			</body>
+		</html>
+	</xsl:template>
+</xsl:stylesheet>

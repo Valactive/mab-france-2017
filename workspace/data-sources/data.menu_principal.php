@@ -10,6 +10,10 @@ class datasourcemenu_principal extends SectionDatasource
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
+    public $dsParamPARAMOUTPUT = array(
+        'system:id',
+        'nom'
+        );
     public $dsParamSORT = 'system:id';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
@@ -37,10 +41,10 @@ class datasourcemenu_principal extends SectionDatasource
             'name' => 'Menu principal',
             'author' => array(
                 'name' => 'Valéry Frisch',
-                'website' => 'http://mab-france-new.dev',
+                'website' => 'http://mab-france-new.localhost',
                 'email' => 'valery.frisch@gmail.com'),
             'version' => 'Symphony 2.7.0',
-            'release-date' => '2017-12-10T13:31:45+00:00'
+            'release-date' => '2018-01-05T13:07:25+00:00'
         );
     }
 

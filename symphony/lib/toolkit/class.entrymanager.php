@@ -115,12 +115,13 @@ class EntryManager
             return;
         }
 
-        // Check if we have field data
-        if (!is_array($field) || empty($field)) {
-            return;
+        // Ignore parameter when not an array
+        if (!is_array($field)) {
+            $field = array();
         }
 
         $did_lock = false;
+        $exception = null;
         try {
 
             // Check if table exists
@@ -158,13 +159,21 @@ class EntryManager
                 $fields[$index] = array_merge($data, $field_data);
             }
 
-            Symphony::Database()->insert($fields, $table_name);
+            // Insert only if we have field data
+            if (!empty($fields)) {
+                Symphony::Database()->insert($fields, $table_name);
+            }
         } catch (Exception $ex) {
+            $exception = $ex;
             Symphony::Log()->pushExceptionToLog($ex, true);
         }
 
         if ($did_lock) {
             Symphony::Database()->query('UNLOCK TABLES');
+        }
+
+        if ($exception) {
+            throw $exception;
         }
     }
 
@@ -382,7 +391,7 @@ class EntryManager
         $sortSelectClause = null;
 
         if (!$entry_id && !$section_id) {
-            return false;
+            return array();
         }
 
         if (!$section_id) {
@@ -391,7 +400,7 @@ class EntryManager
 
         $section = SectionManager::fetch($section_id);
         if (!is_object($section)) {
-            return false;
+            return array();
         }
 
         // SORTING

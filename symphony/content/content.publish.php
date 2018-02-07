@@ -1017,7 +1017,8 @@ class contentPublish extends AdministrationPage
                 ));
 
                 // The actual pre-populating should only happen if there is not existing fields post data
-                if (!isset($_POST['fields']) && $field = FieldManager::fetch($field_id)) {
+                // and if the field allows it
+                if (!isset($_POST['fields']) && ($field = FieldManager::fetch($field_id)) && $field->canPrePopulate()) {
                     $entry->setData(
                         $field->get('id'),
                         $field->processRawFieldData($value, $error, $message, true)
@@ -1189,7 +1190,8 @@ class contentPublish extends AdministrationPage
 
         EntryManager::setFetchSorting('id', 'DESC');
 
-        if (!$existingEntry = EntryManager::fetch($entry_id)) {
+        $existingEntry = EntryManager::fetch($entry_id);
+        if (empty($existingEntry)) {
             Administration::instance()->throwCustomError(
                 __('Unknown Entry'),
                 __('The Entry, %s, could not be found.', array($entry_id)),
@@ -1397,7 +1399,8 @@ class contentPublish extends AdministrationPage
         $entry_id = intval($this->_context['entry_id']);
 
         if (is_array($_POST['action']) && (array_key_exists('save', $_POST['action']) || array_key_exists('done', $_POST['action']))) {
-            if (!$ret = EntryManager::fetch($entry_id)) {
+            $ret = EntryManager::fetch($entry_id);
+            if (empty($ret)) {
                 Administration::instance()->throwCustomError(
                     __('The Entry, %s, could not be found.', array($entry_id)),
                     __('Unknown Entry'),
@@ -1504,7 +1507,8 @@ class contentPublish extends AdministrationPage
 
                 redirect(SYMPHONY_URL . '/publish/'.$this->_context['section_handle'].'/');
             } else {
-                if (is_array($ret = EntryManager::fetch($entry_id))) {
+                $ret = EntryManager::fetch($entry_id);
+                if (!empty($ret)) {
                     $entry = $ret[0];
                     $this->addTimestampValidationPageAlert($this->_errors['timestamp'], $entry, 'delete');
                 }
@@ -1703,35 +1707,30 @@ class contentPublish extends AdministrationPage
                             'title' => strip_tags($aname),
                         ));
 
+                        if (!$has_entries) {
+                            unset($field);
+                            continue;
+                        }
+
                         $element = new XMLElement('section', null, array('class' => 'association parent'));
                         $header = new XMLElement('header');
+                        $header->appendChild(new XMLElement('p', $a->generate()));
                         $element->appendChild($header);
 
-                        if ($has_entries) {
-                            $element = new XMLElement('section', null, array('class' => 'association parent'));
-                            $header = new XMLElement('header');
-                            $header->appendChild(new XMLElement('p', $a->generate()));
-                            $element->appendChild($header);
+                        $ul = new XMLElement('ul', null, array(
+                            'class' => 'association-links',
+                            'data-section-id' => $as['child_section_id'],
+                            'data-association-ids' => implode(', ', $entry_ids)
+                        ));
 
-                            $ul = new XMLElement('ul', null, array(
-                                'class' => 'association-links',
-                                'data-section-id' => $as['child_section_id'],
-                                'data-association-ids' => implode(', ', $entry_ids)
-                            ));
-
-                            foreach ($entries['records'] as $e) {
-                                // let the field create the mark up
-                                $li = $field->prepareAssociationsDrawerXMLElement($e, $as);
-                                // add it to the unordered list
-                                $ul->appendChild($li);
-                            }
-
-                            $element->appendChild($ul);
-                        // No entries
-                        } else {
-                            $element->setAttribute('class', 'association parent empty');
-                            $header->appendChild(new XMLElement('p', __('No links to %s', array($a->generate()))));
+                        foreach ($entries['records'] as $e) {
+                            // let the field create the mark up
+                            $li = $field->prepareAssociationsDrawerXMLElement($e, $as);
+                            // add it to the unordered list
+                            $ul->appendChild($li);
                         }
+
+                        $element->appendChild($ul);
                         $content->appendChild($element);
                         unset($field);
                     }
@@ -1775,18 +1774,21 @@ class contentPublish extends AdministrationPage
                     $header = new XMLElement('header');
 
                     // Get the search value for filters and prepopulate
+                    $filter = '';
+                    $prepopulate = '';
                     $entry = current(EntryManager::fetch($entry_id));
-                    $search_value = $relation_field->fetchAssociatedEntrySearchValue(
-                        $entry->getData($as['parent_section_field_id']),
-                        $as['parent_section_field_id'],
-                        $entry_id
-                    );
-                    if (is_array($search_value)) {
-                        $search_value = $entry_id;
+                    if ($entry) {
+                        $search_value = $relation_field->fetchAssociatedEntrySearchValue(
+                            $entry->getData($as['parent_section_field_id']),
+                            $as['parent_section_field_id'],
+                            $entry_id
+                        );
+                        if (is_array($search_value)) {
+                            $search_value = $entry_id;
+                        }
+                        $filter = '?filter[' . $relation_field->get('element_name') . ']=' . $search_value;
+                        $prepopulate = '?prepopulate[' . $as['child_section_field_id'] . ']=' . $search_value;
                     }
-
-                    $filter = '?filter[' . $relation_field->get('element_name') . ']=' . $search_value;
-                    $prepopulate = '?prepopulate[' . $as['child_section_field_id'] . ']=' . $search_value;
 
                     // Create link with filter or prepopulate
                     $link = SYMPHONY_URL . '/publish/' . $as['handle'] . '/' . $filter;
@@ -1819,7 +1821,7 @@ class contentPublish extends AdministrationPage
                         foreach ($entries['records'] as $key => $e) {
                             // let the first visible field create the mark up
                             if ($visible_field) {
-                                $li = $visible_field->prepareAssociationsDrawerXMLElement($e, $as);
+                                $li = $visible_field->prepareAssociationsDrawerXMLElement($e, $as, $prepopulate);
                             }
                             // or use the system:id if no visible field exists.
                             else {

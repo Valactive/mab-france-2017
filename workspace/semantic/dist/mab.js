@@ -28,40 +28,39 @@ window.semantic = {
             $('.main.menu').visibility({
                 type: 'fixed'
             });
-            $('.overlay').visibility({
-                type: 'fixed',
-                offset: 80
-            });
+            // $('.overlay').visibility({
+            //     type: 'fixed',
+            //     offset: 80
+            // });
         // lazy load images      
-            $('img').visibility({      
-                type: 'image',        
-                transition: 'vertical flip in',        
-                duration: 500      
-            });
+            // $('img').visibility({      
+            //     type: 'image',        
+            //     transition: 'vertical flip in',        
+            //     duration: 500      
+            // });
         // show dropdown on hover      
             $('.main.menu .ui.dropdown').dropdown({       
                 on: 'hover'      
             });
-
-        $('.ui.sticky')
-        .sticky({
-        context: '#content',
-        offset: 65
-        });
+            
+            $('.ui.dropdown')
+              .dropdown()
+            ;
 
         // http://gregfranko.com/jquery.tocify.js/
         $("#tocContents").tocify({
-            context:"#contents",
+            context:".main.container",
             selectors: "h1,h2,h3,h4",
             theme: "none",
             scrollTo: "65",
             showAndHide: false
         });
+        $('.ui.sticky')
+        .sticky({
+        context: '#content',
+        offset: 65
+        });
   };
 
   // attach ready event
-$(document)
-.ready(semantic.ready)
-;
-
- 
+$(document).ready(semantic.ready);

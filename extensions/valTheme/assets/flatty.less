@@ -1,0 +1,262 @@
+
+
+
+
+// colors --------------------------------------------------
+
+@symphonyred: #B40B51;
+@symphonyblue: #4D78B4;
+@grigioscuro: #423A3A;
+@fumo: #f8f8f8;
+@grigioscurissimo: #3A3232;
+@grigiochiaro: #afafaf;
+@green: #66bc00;
+@green2: #6ea32f;
+@mattone: #b34503;
+@brown: #BD7053;
+
+@button: fadeout(@grigiochiaro, 70%);
+@button-hover: fadeout(@grigiochiaro, 40%);
+
+// --------------------------------------------------------
+
+body > div {
+	font-size: 1.2rem;
+}
+#session {
+	margin-top: -3.5rem;
+}
+#header {
+	h1 {
+		background-color: @grigioscuro;
+		a {
+			color: white;
+			text-shadow: none;
+			font-weight: bold;
+			&:hover {
+				color: @symphonyred;
+			}
+		}
+	}
+	a {
+		color: fadeout(white, 30%);
+		&:hover {
+			color: white;
+		}
+	}
+}
+nav#nav {
+	background: none;
+	background-color: @grigioscurissimo;
+	min-height: 35px;
+	ul {
+		font-size: 1.4rem;
+		line-height: 3.4rem;
+		a {
+			text-shadow: none;
+			border: none;
+		}
+		a:hover {
+			border: none;
+		}
+	}
+	& > ul > li {
+		text-shadow: none;
+		color: #888;
+		height: 3.4rem;
+		&:hover {
+			height: 3.4rem;
+		}
+		&.active {
+			height: 3.4rem;
+			&:hover {
+				height: 3.4rem;
+			}
+		}
+	}
+	ul > li.active {
+		background-image: none;
+		background-color: @symphonyblue;
+		text-shadow: none;
+		height: 3.4rem;
+		border: none;
+	}
+	li > ul {
+		box-shadow: none;
+		border-color: rgba(120,120,120, 0.6);
+		top: 3.4rem;
+		li {
+			&:hover {
+				height: 3.4rem;
+			}
+			a:hover {
+				background-color: fadeout(@grigioscuro, 40%);
+			}
+		}
+	}
+}
+h2#symphony-subheading {
+	font-weight: bold;
+	color: @grigioscuro;
+}
+
+.apply {
+	button {
+		height: inherit;
+	}
+	&:hover {
+		button {
+			border-left: 1px solid #ccc;
+		}
+	}
+	select:hover {
+		background-position: top right;
+	}
+}
+.apply-label-left {
+	height: inherit;
+	background-image: none;
+	background-color: @button;
+}
+ul.actions {
+	.button {
+		background-image: none;
+		border: none;
+		padding: 0.2rem 1.3rem;
+		background-color: @button;
+		&:hover {
+			background-color: @button-hover;
+		}
+	}
+	.button.create {
+		background-image: none;
+		background-color: @green2;
+		border: none;
+		&:hover {
+			background-color: darken(@green2, 10%);
+		}
+	}
+	.button.link-preview {
+		background-color: @button;
+		&:hover {
+			background-color: @button-hover;
+			background-image: none;
+		}
+	}
+}
+div.actions {
+	select {
+		margin-top: 0.4rem;
+	}
+	input[type="submit"] {
+
+	}
+}
+div.field {
+	input[type="text"] {
+		height: inherit;
+		background-color: @fumo;
+	}
+	textarea {
+		background-color: @fumo;
+	}
+	input, textarea, select[multiple] {
+		border: 1px solid rgba(0,0,0,0.2);
+	}
+}
+fieldset.settings {
+	.frame {
+		background-color: lighten(@grigioscuro, 73%);
+	}
+}
+fieldset.apply {
+	input[type="submit"], button[type="submit"], button[type="button"], button.constructor {
+		background-image: none;
+		border-left: 1px solid transparent;
+		&:hover {
+			background-image: none;
+			border-left: 1px solid #ccc;
+		}
+	}
+}
+.collapsible {
+	.content {
+		background-color: lighten(@grigioscuro, 70%);
+	}
+}
+input[type="submit"] {
+	background-image: none;
+	background-color: @button;
+	border: none;
+	height: inherit;
+	line-height: inherit;
+	padding: 0.5rem 1.3rem;
+	&:hover {
+		background-color: @green2;
+		color: white;
+		background-image: none;
+	}
+}
+div.notifier {
+	p {
+		border-bottom: none;
+		padding-bottom: 0.4rem;
+		color: fadeout(white, 40%);
+		&.notice {
+			background-color: @grigioscuro;
+		}
+		&.notice.success {
+			background-color: @green2;
+			color: fadeout(white, 40%);
+		}
+		&.notice.success.dimmed a {
+			color: fadeout(white, 60%);
+			border-bottom-color: fadeout(white, 60%);
+			&:hover {
+				color: white;
+				border-bottom-color: #fff;
+			}
+		}
+		&.notice.error.active {
+			a {
+				color: mix(@brown, yellow);
+			}
+		}
+	}
+}
+button[type="button"] {
+	background-image: none;
+	background-color: @button;
+	border: none;
+	&:hover {
+		background-color: @button-hover;
+	}
+}
+button.delete, .button.delete {
+	background-image: none;
+	background-color: @button;
+	border: none;
+	line-height: inherit;
+	padding: 0.5rem 1.3rem;
+	&:hover {
+		background-image: none;
+		background-color: @mattone;
+		color: white;
+	}
+}
+select {
+	font-size: 1.3rem;
+	padding: 0.1rem 0.1rem 0.2rem;
+}
+select[multiple="multiple"] {
+	option {
+		padding: 0.2rem 0.3rem;
+	}
+}
+
+label.column {
+	i {
+		top: 3px;
+		right: 6px;
+	}
+}

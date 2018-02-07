@@ -264,13 +264,13 @@ class Field
     }
 
     /**
-     * Test whether this field supports data-source output grouping. This
+     * Test whether this field supports data source output grouping. This
      * default implementation prohibits grouping. Data-source grouping allows
      * clients of this field to group the XML output according to this field.
      * Subclasses should override this if grouping is supported.
      *
      * @return boolean
-     *  true if this field does support data-source grouping, false otherwise.
+     *  true if this field does support data source grouping, false otherwise.
      */
     public function allowDatasourceOutputGrouping()
     {
@@ -292,14 +292,14 @@ class Field
     }
 
     /**
-     * Test whether this field supports data-source parameter output. This
+     * Test whether this field supports data source parameter output. This
      * default implementation prohibits parameter output. Data-source
      * parameter output allows this field to be provided as a parameter
-     * to other data-sources or XSLT. Subclasses should override this if
+     * to other data sources or XSLT. Subclasses should override this if
      * parameter output is supported.
      *
      * @return boolean
-     *  true if this supports data-source parameter output, false otherwise.
+     *  true if this supports data source parameter output, false otherwise.
      */
     public function allowDatasourceParamOutput()
     {
@@ -475,7 +475,11 @@ class Field
     {
         // Create header
         $location = ($this->get('location') ? $this->get('location') : 'main');
-        $header = new XMLElement('header', null, array('class' => 'frame-header ' . $location, 'data-name' => $this->name()));
+        $header = new XMLElement('header', null, array(
+            'class' => 'frame-header ' . $location,
+            'data-name' => $this->name(),
+            'title' => $this->get('id'),
+        ));
         $label = (($this->get('label')) ? $this->get('label') : __('New Field'));
         $header->appendChild(new XMLElement('h4', '<strong>' . $label . '</strong> <span class="type">' . $this->name() . '</span>'));
         $wrapper->appendChild($header);
@@ -1238,7 +1242,7 @@ class Field
     }
 
     /**
-     * Display the default data-source filter panel.
+     * Display the default data source filter panel.
      *
      * @param XMLElement $wrapper
      *    the input XMLElement to which the display of this will be appended.
@@ -1644,7 +1648,7 @@ class Field
     }
 
     /**
-     * Function to format this field if it chosen in a data-source to be
+     * Function to format this field if it chosen in a data source to be
      * output as a parameter in the XML.
      *
      * Since Symphony 2.5.0, it will defaults to `prepareReadableValue` return value.
@@ -1777,7 +1781,6 @@ class Field
      *
      * @since Symphony 2.7.0
      * @see Field::createTable()
-     * @throws DatabaseException
      * @return boolean
      *  true if Symphony should call `createTable()`
      */
@@ -1806,7 +1809,13 @@ class Field
      * Checks that we are working with a valid field handle and field id, and
      * checks that the field record exists in the settings table.
      *
+     * @since Symphony 2.7.1 It does check if the settings table only contains
+     *   default columns and assume those fields do not require a record in the settings table.
+     *   When this situation is detected the field is considered as valid even if no records were
+     *   found in the settings table.
+     *
      * @since Symphony 2.7.0
+     * @see Field::tableExists()
      * @return boolean
      *   true if the field id exists in the table, false otherwise
      */
@@ -1815,11 +1824,42 @@ class Field
         if (!$this->get('id') || !$this->_handle) {
             return false;
         }
-        return !empty(Symphony::Database()->fetch(sprintf(
+        $row = Symphony::Database()->fetch(sprintf(
             'SELECT `id` FROM `tbl_fields_%s` WHERE `field_id` = %d',
             $this->_handle,
             General::intval($this->get('id'))
-        )));
+        ));
+        if (empty($row)) {
+            // Some fields do not create any records in their settings table because they do not
+            // implement a proper `Field::commit()` method.
+            // The base implementation of the commit function only deals with the "core"
+            // `tbl_fields` table.
+            // The problem with this approach is that it can lead to data corruption when
+            // saving a field that got deleted by another user.
+            // The only way a field can live without a commit method is if it does not store any
+            // settings at all.
+            // But current version of Symphony assume that the `tbl_fields_$handle` table exists
+            // with at least a `id` and `field_id` column, so field are required to at least create
+            // the table to make their field work without SQL errors from the core.
+            $columns = Symphony::Database()->fetchCol('Field', sprintf(
+                'DESC `tbl_fields_%s`',
+                $this->_handle
+            ));
+            // The table only has the two required columns, tolerate the missing record
+            $isDefault = count($columns) === 2 &&
+                in_array('id', $columns) &&
+                in_array('field_id', $columns);
+            if ($isDefault) {
+                Symphony::Log()->pushDeprecateWarningToLog($this->_handle, get_class($this), array(
+                    'message-format' => __('The field `%1$s` does not create settings records in the `tbl_fields_%1$s`.'),
+                    'alternative-format' => __('Please implement the commit function in class `%s`.'),
+                    'removal-format' => __('The compatibility check will will be removed in Symphony %s.'),
+                    'removal-version' => '4.0.0',
+                ));
+            }
+            return $isDefault;
+        }
+        return true;
     }
 
     /**

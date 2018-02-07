@@ -25,6 +25,7 @@ class contentLogin extends HTMLPage
         $this->addElementToHead(new XMLElement('meta', null, array('charset' => 'UTF-8')), 0);
         $this->addElementToHead(new XMLElement('meta', null, array('http-equiv' => 'X-UA-Compatible', 'content' => 'IE=edge,chrome=1')), 1);
         $this->addElementToHead(new XMLElement('meta', null, array('name' => 'viewport', 'content' => 'width=device-width, initial-scale=1')), 2);
+        $this->addElementToHead(new XMLElement('meta', null, array('name' => 'robots', 'content' => 'noindex')), 3);
 
         parent::addStylesheetToHead(ASSETS_URL . '/css/symphony.min.css', 'screen', null, false);
 
@@ -37,7 +38,7 @@ class contentLogin extends HTMLPage
 
     public function addScriptToHead($path, $position = null, $duplicate = true)
     {
-        // Prevent script inject injection by extensions
+        // Prevent script injection by extensions
     }
 
     public function addStylesheetToHead($path, $type = 'screen', $position = null, $duplicate = true)

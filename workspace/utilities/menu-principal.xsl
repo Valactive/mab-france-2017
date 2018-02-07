@@ -2,7 +2,7 @@
 <xsl:stylesheet version="1.0" 
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:template name="mab-menu-principal">
-		<div class="ui stackable  main menu">
+		<div class="ui stackable row main menu">
 			<div class="ui  fluid container">
 				<a href="{$root}/{$url-lang}" class="header item">
 					<!-- <img class="logo" src="assets/images/logo.png"/> -->
@@ -34,15 +34,15 @@
 										<!-- si 3eme niveau -->
 										<xsl:choose>
 											<xsl:when test="count(//entry[menu-niveau-2-page/item/@handle = $rubrique-parente-handle]/nom/item[@lang=$language])>0">
-												<div class="item">
+												<a class="item" href="{$root}/{$url-lang}{$rubrique-principale-handle}/{$rubrique-parente-handle}/">
 													<i class="dropdown icon"></i>
 													<span class="text">
-														<a href="{$root}/{$url-lang}{$rubrique-principale-handle}/{$rubrique-parente-handle}/">
+														<!-- <a href="{$root}/{$url-lang}{$rubrique-principale-handle}/{$rubrique-parente-handle}/"> -->
 															<xsl:value-of select="nom/item[@lang=$language]"/>
-														</a>
+														<!-- </a> -->
 													</span>
 													<div class="menu">
-														<xsl:for-each select="//entry[menu-niveau-2-page/item/@handle = $rubrique-parente-handle]/nom/item[@lang=$language]">
+														<xsl:for-each select="//menu-principal/entry[menu-niveau-2-page/item/@handle = $rubrique-parente-handle]/nom/item[@lang=$language]">
 															<div class="item">
 																<a href="{$root}/{$url-lang}{$rubrique-principale-handle}/{$rubrique-parente-handle}/{./@handle}/">
 																	<xsl:value-of select="." />
@@ -50,7 +50,7 @@
 															</div>
 														</xsl:for-each>
 													</div>
-												</div>
+												</a>
 											</xsl:when>
 											<xsl:otherwise>
 												<div class="item">

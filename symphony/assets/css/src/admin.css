@@ -131,7 +131,7 @@
 	bottom: 0;
 	width: 100%;
 	max-width: 11.8rem;
-	height: 0.3re,;
+	height: 0.3rem;
 	padding: 0 0.1rem;
 	background: #fff;
 }
@@ -607,15 +607,15 @@ ul.page form span {
 
 /* Checkboxes */
 
-.field-checkbox {
+.field.field-checkbox {
 	min-height: 1.6rem;
 }
 
-.field-checkbox:first-child {
+.field.field-checkbox:first-child {
 	margin-top: 2rem;
 }
 
-.field-checkbox + .field:not(.field-checkbox) {
+.field.field-checkbox + .field:not(.field-checkbox) {
 	margin-top: 2.6rem;
 }
 

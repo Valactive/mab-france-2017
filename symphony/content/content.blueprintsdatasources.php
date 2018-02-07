@@ -946,7 +946,12 @@ class contentBlueprintsDatasources extends ResourcesPage
         $fieldset->appendChild($p);
 
         $label = Widget::Label();
-        $label->appendChild(Widget::Textarea('fields[static_xml]', 12, 50, General::sanitize($fields['static_xml']), array('class' => 'code', 'placeholder' => '<static>content</static>')));
+        $static_xml = htmlspecialchars(
+            $fields['static_xml'],
+            ENT_XML1|ENT_COMPAT,
+            'UTF-8'
+        );
+        $label->appendChild(Widget::Textarea('fields[static_xml]', 12, 50, $static_xml, array('class' => 'code', 'placeholder' => '<static>content</static>')));
 
         if (isset($this->_errors['static_xml'])) {
             $fieldset->appendChild(Widget::Error($label, $this->_errors['static_xml']));
@@ -1123,7 +1128,9 @@ class contentBlueprintsDatasources extends ResourcesPage
              * @param string $file
              *  The path to the Datasource file
              */
-            Symphony::ExtensionManager()->notifyMembers('DatasourcePreDelete', '/blueprints/datasources/', array('file' => DATASOURCES . "/data." . $this->_context[1] . ".php"));
+            Symphony::ExtensionManager()->notifyMembers('DatasourcePreDelete', '/blueprints/datasources/', array(
+                'file' => DATASOURCES . "/data." . $this->_context[1] . ".php")
+            );
 
             if (!General::deleteFile(DATASOURCES . '/data.' . $this->_context[1] . '.php')) {
                 $this->pageAlert(
@@ -1161,6 +1168,8 @@ class contentBlueprintsDatasources extends ResourcesPage
             $this->_errors['name'] = __('This is a required field');
         } elseif (strpos($fields['name'], '\\') !== false) {
             $this->_errors['name'] = __('This field contains invalid characters') . ' (\\)';
+        } elseif (!preg_match('/^[a-z]/i', $fields['name'])) {
+            $this->_errors['name'] = __('The name of the data source must begin with a letter.');
         }
 
         if ($fields['source'] == 'static_xml') {
@@ -1383,6 +1392,8 @@ class contentBlueprintsDatasources extends ResourcesPage
                  *  being the `field_id` and the value the filter.
                  * @param array $dependencies
                  *  An array of dependencies that this datasource has
+                 * @param string $source
+                 *  The source of the datasource's data
                  */
                 Symphony::ExtensionManager()->notifyMembers('DatasourcePreCreate', '/blueprints/datasources/', array(
                     'file' => $file,
@@ -1390,7 +1401,8 @@ class contentBlueprintsDatasources extends ResourcesPage
                     'params' => $params,
                     'elements' => $elements,
                     'filters' => $filters,
-                    'dependencies' => $dependencies
+                    'dependencies' => $dependencies,
+                    'source' => $source
                 ));
             } else {
                 /**
@@ -1405,8 +1417,6 @@ class contentBlueprintsDatasources extends ResourcesPage
                  *  The path to the Datasource file
                  * @param string $contents
                  *  The contents for this Datasource as a string passed by reference
-                 * @param array $dependencies
-                 *  An array of dependencies that this datasource has
                  * @param array $params
                  *  An array of all the `$dsParam*` values
                  * @param array $elements
@@ -1414,14 +1424,19 @@ class contentBlueprintsDatasources extends ResourcesPage
                  * @param array $filters
                  *  An associative array of all the filters for this datasource with the key
                  *  being the `field_id` and the value the filter.
+                 * @param array $dependencies
+                 *  An array of dependencies that this datasource has
+                 * @param string $source
+                 *  The source of the datasource's data
                  */
                 Symphony::ExtensionManager()->notifyMembers('DatasourcePreEdit', '/blueprints/datasources/', array(
                     'file' => $file,
                     'contents' => &$dsShell,
-                    'dependencies' => $dependencies,
                     'params' => $params,
                     'elements' => $elements,
-                    'filters' => $filters
+                    'filters' => $filters,
+                    'dependencies' => $dependencies,
+                    'source' => $source
                 ));
             }
 
