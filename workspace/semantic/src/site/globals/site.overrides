@@ -2,6 +2,7 @@
          Site Overrides
 *******************************/
 html {font-size:16px;}
+
 #header { z-index:0;}
 .main.container { 
     margin-right:387px !important;
@@ -14,11 +15,11 @@ html {font-size:16px;}
     top: 45px;
     bottom: auto;
 }
+
 /*
  * jquery.tocify.css 1.9.0
  * Author: @gregfranko
  */
-
 /* The Table of Contents container element */
 .tocify {
     /* width: 20%; 
