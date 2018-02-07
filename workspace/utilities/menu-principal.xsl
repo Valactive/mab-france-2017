@@ -34,7 +34,7 @@
 										<!-- si 3eme niveau -->
 										<xsl:choose>
 											<xsl:when test="count(//entry[menu-niveau-2-page/item/@handle = $rubrique-parente-handle]/nom/item[@lang=$language])>0">
-												<a class="item" href="{$root}/{$url-lang}{$rubrique-principale-handle}/{$rubrique-parente-handle}/">
+												<div class="item" href="{$root}/{$url-lang}{$rubrique-principale-handle}/{$rubrique-parente-handle}/">
 													<i class="dropdown icon"></i>
 													<span class="text">
 														<!-- <a href="{$root}/{$url-lang}{$rubrique-principale-handle}/{$rubrique-parente-handle}/"> -->
@@ -50,7 +50,7 @@
 															</div>
 														</xsl:for-each>
 													</div>
-												</a>
+												</div>
 											</xsl:when>
 											<xsl:otherwise>
 												<div class="item">
