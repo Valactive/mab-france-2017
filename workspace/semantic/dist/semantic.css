@@ -454,10 +454,10 @@ html {
 .tocify ul,
 .tocify li {
   list-style: none;
-  margin: 0;
-  padding: 0;
+  margin: 0 0 6px 0;
+  padding: 0px 10px 0 0;
   border: none;
-  line-height: 20px;
+  line-height: 15px;
 }
 
 /* Top level header elements */

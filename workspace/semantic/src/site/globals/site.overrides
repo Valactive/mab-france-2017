@@ -3,19 +3,19 @@
 *******************************/
 html {font-size:16px;}
 
-#header { z-index:0;}
+#header { 
+    z-index:0;
+}
 .main.container { 
     margin-right:387px !important;
     margin-left: 3em !important;
     width: 700px !important;
     max-width:960px !important;
 }
-
 .ui.sticky.bound.top, .ui.sticky.fixed.top {
     top: 45px;
     bottom: auto;
 }
-
 /*
  * jquery.tocify.css 1.9.0
  * Author: @gregfranko
@@ -31,10 +31,10 @@ html {font-size:16px;}
 /* The Table of Contents is composed of multiple nested unordered lists.  These styles remove the default styling of an unordered list because it is ugly. */
 .tocify ul, .tocify li {
     list-style: none;
-    margin: 0;
-    padding: 0;
+    margin: 0 0 6px 0;
+    padding: 0px 10px 0 0;
     border: none;
-    line-height: 20px;
+    line-height: 15px;
 }
 
 /* Top level header elements */
