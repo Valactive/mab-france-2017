@@ -77,45 +77,84 @@
 											</h1>
 										</div>
 										<!-- language switch -->
-										<div class="right menu">
-											<div class="ui pointing floating dropdown link item button">
-												<i class="world icon"></i>
-												<div class="menu">
-													<div class="item">
-													<a>
-													<xsl:attribute name="href">
-														<xsl:value-of select="concat($root,'/fr/')"/>
-												</xsl:attribute>Français</a>
+										<!-- variable for localized uri -->
+										<xsl:variable name="next-lang">
+											<xsl:choose>
+												<xsl:when test="$current-language = 'fr'">en</xsl:when>
+												<xsl:otherwise>fr</xsl:otherwise>
+											</xsl:choose>
+										</xsl:variable>
 
-											</div>
-											<div class="item"><a>
-											<xsl:attribute name="href">
-												<xsl:value-of select="concat($root,'/en/')"/>
-										</xsl:attribute>English</a>	
+
+										<xsl:variable name="localized-n1-handle">
+											<xsl:choose>
+												<xsl:when test="$rubrique != ''">
+													<xsl:value-of select="concat(//rubriques-principales/entry/nom[item/@handle = $rubrique]//item[@lang=$next-lang]/@handle,'/')"/>
+												</xsl:when>
+												<xsl:otherwise></xsl:otherwise>
+											</xsl:choose>
+										</xsl:variable>
+										<xsl:variable name="localized-n2-handle">
+											<xsl:choose>
+												<xsl:when test="$s-rubrique != ''">
+													<xsl:value-of select="concat(//menu-principal/entry/nom[item/@handle = $s-rubrique]//item[@lang=$next-lang]/@handle,'/')"/>												
+												</xsl:when>
+												<xsl:otherwise></xsl:otherwise>
+											</xsl:choose>
+										</xsl:variable>
+										<xsl:variable name="localized-n3-handle">
+											<xsl:choose>
+												<xsl:when test="$ss-rubrique != ''">
+													<xsl:value-of select="concat(//menu-principal/entry/nom[item/@handle = $ss-rubrique]//item[@lang=$next-lang]/@handle,'/')"/>												
+												</xsl:when>
+												<xsl:otherwise></xsl:otherwise>
+											</xsl:choose>
+										</xsl:variable>
+
+										<div class="right menu">
+											<xsl:choose>
+												<xsl:when test="$current-language = 'fr'">
+													<a>
+														<xsl:attribute name="href">
+															<xsl:value-of select="concat($root,'/en/',$localized-n1-handle,$localized-n2-handle,$localized-n3-handle)"/>
+														</xsl:attribute>
+														<div class="ui pointing floating link item button">
+															<i class="world icon"></i>
+															<div class="text">English</div>
+														</div>
+													</a>
+												</xsl:when>
+												<xsl:otherwise>
+													<a>
+														<xsl:attribute name="href">
+															<xsl:value-of select="concat($root,'/fr/',$localized-n1-handle,$localized-n2-handle,$localized-n3-handle)"/>
+														</xsl:attribute>
+														<div class="ui pointing floating link item button">
+															<i class="world icon"></i>
+															<div class="text">Français</div>
+														</div>
+													</a>
+												</xsl:otherwise>
+											</xsl:choose>
+										</div>
 									</div>
 								</div>
-							</div>
-						</div>
-
-
-					</div>
-				</div>
-				<!-- MENU PRINCIPAL -->
-				<xsl:call-template name="mab-menu-principal"/>
-				<!-- CONTENUS -->
-				<div class="article">
-					<div class="main ui container">
-						<!-- contenus des pages -->
-						<xsl:apply-templates />
-					</div>
-				</div>
-				<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-				<!-- JS -->
-				<script src="{$workspace}/semantic/dist/semantic.js"></script>
-				<script src="{$workspace}/semantic/dist/libs/jqueryui/jquery-ui-1.9.1.custom.min.js"></script>
-				<script src="{$workspace}/semantic/dist/jquery.tocify.min.js"></script>
-				<script src="{$workspace}/semantic/dist/mab.js"></script>
-			</body>
-		</html>
-	</xsl:template>
-</xsl:stylesheet>
+								<!-- MENU PRINCIPAL -->
+								<xsl:call-template name="mab-menu-principal"/>
+								<!-- CONTENUS -->
+								<div class="article">
+									<div class="main ui container">
+										<!-- contenus des pages -->
+										<xsl:apply-templates />
+									</div>
+								</div>
+								<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+								<!-- JS -->
+								<script src="{$workspace}/semantic/dist/semantic.js"></script>
+								<script src="{$workspace}/semantic/dist/libs/jqueryui/jquery-ui-1.9.1.custom.min.js"></script>
+								<script src="{$workspace}/semantic/dist/jquery.tocify.min.js"></script>
+								<script src="{$workspace}/semantic/dist/mab.js"></script>
+							</body>
+						</html>
+					</xsl:template>
+				</xsl:stylesheet>

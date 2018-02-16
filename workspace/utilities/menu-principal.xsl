@@ -22,6 +22,14 @@
 						<xsl:when test="count(/data/menu-principal/entry[rubrique-parente/item/@handle=$rubrique-principale-handle])>0">
 							<!-- si 2eme niveau -->
 							<div class="ui pointing dropdown link item">
+								<!-- <xsl:attribute name="class">
+									<xsl:choose>
+										<xsl:when test="$rubrique = $rubrique-principale-handle">ui pointing dropdown link item active</xsl:when>
+										<xsl:otherwise>ui pointing dropdown link item</xsl:otherwise>
+									</xsl:choose>
+								</xsl:attribute> -->
+								
+
 								<span class="text">
 									<!-- <a href="{$root}/{$url-lang}{$rubrique-principale-handle}/"> -->
 									<xsl:value-of select="$rubrique-principale" />
