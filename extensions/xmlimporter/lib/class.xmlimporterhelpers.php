@@ -14,5 +14,9 @@
 			$value = implode('/', array_reverse(explode('/', strtok($string, ' '))));
 			return $value;
 		}
+
+		public function setActualite(){
+			return "Actualités";
+		}
 	}
 
