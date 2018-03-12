@@ -427,7 +427,7 @@ button.create:focus,
     display: block;
     width: 18px;
     height: 18px;
-    background-image: url(/extensions/valTheme/assets/base-sprite.png);
+    background-image: url(/extensions/valtheme/assets/base-sprite.png);
     overflow: visible;
     position: absolute;
     top: 50%;

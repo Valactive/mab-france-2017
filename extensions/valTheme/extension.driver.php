@@ -17,7 +17,7 @@
 	-------------------------------------------------------------------------*/
 
 		public function appendAssets() {
-			Administration::instance()->Page->addStylesheetToHead(URL . '/extensions/valTheme/assets/flatty.css', 'screen', 1000, false);
+			Administration::instance()->Page->addStylesheetToHead(URL . '/extensions/valtheme/assets/valtheme.css', 'screen', 1000, false);
 		}
 
 	}
