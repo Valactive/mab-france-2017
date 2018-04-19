@@ -148,7 +148,7 @@
 										<xsl:apply-templates />
 									</div>
 								</div>
-								<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+								<script src="{$workspace}/js/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
 								<!-- JS -->
 								<script src="{$workspace}/semantic/dist/semantic.js"></script>
 								<script src="{$workspace}/semantic/dist/libs/jqueryui/jquery-ui-1.9.1.custom.min.js"></script>
