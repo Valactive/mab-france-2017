@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- master des pages du site mab-france.org -->
-<xsl:stylesheet version="1.0" 
-	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
+<xsl:stylesheet version="1.0"
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:string="http://symphony-cms.com/functions">
 	<!-- <xsl:import href="page-title.xsl"/><xsl:import href="date-time.xsl"/><xsl:import href="mab-menu-principal.xsl"/><xsl:import href="mab-menu-secondaire.xsl"/><xsl:import href="mab-menu-footer.xsl"/><xsl:import href="menu-langue.xsl"/><xsl:import href="get-diaporama.xsl"/><xsl:import href="get-actualites.xsl"/><xsl:import href="get-publications.xsl"/><xsl:import href="string-utils.xsl"/><xsl:import href="actions.xsl"/><xsl:import href="tools.xsl"/> -->
 	<xsl:import href="menu-principal.xsl"/>
-	
+
 	<xsl:output method="html" doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" omit-xml-declaration="yes" encoding="UTF-8" indent="yes" />
 	<xsl:variable name="is-logged-in" select="/data/events/login-info/@logged-in"/>
 	<!-- <xsl:variable name="labels" select="/data/textes-statiques/entry"/> -->
@@ -97,7 +97,7 @@
 										<xsl:variable name="localized-n2-handle">
 											<xsl:choose>
 												<xsl:when test="$s-rubrique != ''">
-													<xsl:value-of select="concat(//menu-principal/entry/nom[item/@handle = $s-rubrique]//item[@lang=$next-lang]/@handle,'/')"/>												
+													<xsl:value-of select="concat(//menu-principal/entry/nom[item/@handle = $s-rubrique]//item[@lang=$next-lang]/@handle,'/')"/>
 												</xsl:when>
 												<xsl:otherwise></xsl:otherwise>
 											</xsl:choose>
@@ -105,7 +105,7 @@
 										<xsl:variable name="localized-n3-handle">
 											<xsl:choose>
 												<xsl:when test="$ss-rubrique != ''">
-													<xsl:value-of select="concat(//menu-principal/entry/nom[item/@handle = $ss-rubrique]//item[@lang=$next-lang]/@handle,'/')"/>												
+													<xsl:value-of select="concat(//menu-principal/entry/nom[item/@handle = $ss-rubrique]//item[@lang=$next-lang]/@handle,'/')"/>
 												</xsl:when>
 												<xsl:otherwise></xsl:otherwise>
 											</xsl:choose>
@@ -148,7 +148,7 @@
 										<xsl:apply-templates />
 									</div>
 								</div>
-								<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+								<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 								<!-- JS -->
 								<script src="{$workspace}/semantic/dist/semantic.js"></script>
 								<script src="{$workspace}/semantic/dist/libs/jqueryui/jquery-ui-1.9.1.custom.min.js"></script>
