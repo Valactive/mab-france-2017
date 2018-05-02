@@ -160,9 +160,7 @@
 
 																<!-- symphony page contents -->
 																<!-- <div class="article"> -->
-																	<div class="main ui container">
 																		<xsl:apply-templates />
-																	 </div>
 																<!-- </div> -->
 																<!-- entire website common section -->
 																<section class="footer">

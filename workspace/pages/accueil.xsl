@@ -344,6 +344,7 @@
 
 				<!-- pages de contenus -->
 				<xsl:otherwise>
+					<div class="main ui container">
 						<!-- breadcrumb -->
 						<div class="ui breadcrumb">
 							<a href="{$root}{$url-lang}" class="section"><xsl:value-of select="$page-title"></xsl:value-of></a>
@@ -376,6 +377,7 @@
 							</section>
 
 						</div>
+					</div>
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:template>
