@@ -5,6 +5,7 @@
 	xmlns:string="http://symphony-cms.com/functions">
 	<!-- <xsl:import href="page-title.xsl"/><xsl:import href="date-time.xsl"/><xsl:import href="mab-menu-principal.xsl"/><xsl:import href="mab-menu-secondaire.xsl"/><xsl:import href="mab-menu-footer.xsl"/><xsl:import href="menu-langue.xsl"/><xsl:import href="get-diaporama.xsl"/><xsl:import href="get-actualites.xsl"/><xsl:import href="get-publications.xsl"/><xsl:import href="string-utils.xsl"/><xsl:import href="actions.xsl"/><xsl:import href="tools.xsl"/> -->
 	<xsl:import href="menu-principal.xsl"/>
+	<xsl:import href="menu-principal-footer.xsl"/>
 
 	<xsl:output method="html" doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" omit-xml-declaration="yes" encoding="UTF-8" indent="yes" />
 	<xsl:variable name="is-logged-in" select="/data/events/login-info/@logged-in"/>
@@ -17,6 +18,41 @@
 			<xsl:otherwise><xsl:value-of select="''"></xsl:value-of></xsl:otherwise>
 		</xsl:choose>
 	</xsl:variable>
+	<!-- language switch -->
+	<!-- variable for localized uri -->
+	<xsl:variable name="next-lang">
+		<xsl:choose>
+			<xsl:when test="$current-language = 'fr'">en</xsl:when>
+			<xsl:otherwise>fr</xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>
+
+
+	<xsl:variable name="localized-n1-handle">
+		<xsl:choose>
+			<xsl:when test="$rubrique != ''">
+				<xsl:value-of select="concat(//rubriques-principales/entry/nom[item/@handle = $rubrique]//item[@lang=$next-lang]/@handle,'/')"/>
+			</xsl:when>
+			<xsl:otherwise></xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>
+	<xsl:variable name="localized-n2-handle">
+		<xsl:choose>
+			<xsl:when test="$s-rubrique != ''">
+				<xsl:value-of select="concat(//menu-principal/entry/nom[item/@handle = $s-rubrique]//item[@lang=$next-lang]/@handle,'/')"/>
+			</xsl:when>
+			<xsl:otherwise></xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>
+	<xsl:variable name="localized-n3-handle">
+		<xsl:choose>
+			<xsl:when test="$ss-rubrique != ''">
+				<xsl:value-of select="concat(//menu-principal/entry/nom[item/@handle = $ss-rubrique]//item[@lang=$next-lang]/@handle,'/')"/>
+			</xsl:when>
+			<xsl:otherwise></xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>
+
 	<xsl:template match="/">
 		<xsl:comment>
 			<![CDATA[[if IE 6]>
@@ -64,97 +100,91 @@
 								<!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
 								<link rel="shortcut icon" href="/favicon.ico"/>
 								<link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+								<!-- google font open sans -->
+								<link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400,700i" rel="stylesheet"/>
 								<!-- CSS: implied media="all" -->
 								<link rel="stylesheet" href="{$workspace}/semantic/dist/semantic.css"/>
 							</head>
 							<body class="mab">
 								<!-- HEADER -->
-								<div class="ui">
-									<div class="ui menu secondary">
-										<div class="item">
-											<h1 class="ui header left">
-												<xsl:value-of select="$website-name"></xsl:value-of>
-											</h1>
-										</div>
-										<!-- language switch -->
-										<!-- variable for localized uri -->
-										<xsl:variable name="next-lang">
-											<xsl:choose>
-												<xsl:when test="$current-language = 'fr'">en</xsl:when>
-												<xsl:otherwise>fr</xsl:otherwise>
-											</xsl:choose>
-										</xsl:variable>
+								<div class="ui internally right aligned grid menu secondary site-top-header">
+
+									<div class="seven wide column left floated right aligned middle aligned content">
+										<span class="site-name"><xsl:value-of select="$website-name"></xsl:value-of></span>
+									</div>
+
+									<div class="two wide column middle aligned content">
+										<a href="{$root}" class="ui medium img">
+											<img class="ui tiny centered image" src="{$workspace}/img/logo_mab-france_couleur.png" alt="logo du Mab France"/>
+										</a>
+									</div>
+
+									<div class="left floated left aligned four wide column middle aligned content">
+										<span class="site-baseline">L'homme et la biosphère<br/>Man and biosphere</span>
+									</div>
 
 
-										<xsl:variable name="localized-n1-handle">
-											<xsl:choose>
-												<xsl:when test="$rubrique != ''">
-													<xsl:value-of select="concat(//rubriques-principales/entry/nom[item/@handle = $rubrique]//item[@lang=$next-lang]/@handle,'/')"/>
-												</xsl:when>
-												<xsl:otherwise></xsl:otherwise>
-											</xsl:choose>
-										</xsl:variable>
-										<xsl:variable name="localized-n2-handle">
-											<xsl:choose>
-												<xsl:when test="$s-rubrique != ''">
-													<xsl:value-of select="concat(//menu-principal/entry/nom[item/@handle = $s-rubrique]//item[@lang=$next-lang]/@handle,'/')"/>
-												</xsl:when>
-												<xsl:otherwise></xsl:otherwise>
-											</xsl:choose>
-										</xsl:variable>
-										<xsl:variable name="localized-n3-handle">
-											<xsl:choose>
-												<xsl:when test="$ss-rubrique != ''">
-													<xsl:value-of select="concat(//menu-principal/entry/nom[item/@handle = $ss-rubrique]//item[@lang=$next-lang]/@handle,'/')"/>
-												</xsl:when>
-												<xsl:otherwise></xsl:otherwise>
-											</xsl:choose>
-										</xsl:variable>
-
-										<div class="right menu">
+									<div class="right floated right aligned middle aligned content three wide column">
+										<a class="ui mini button right floated lang-switcher">
 											<xsl:choose>
 												<xsl:when test="$current-language = 'fr'">
-													<a>
-														<xsl:attribute name="href">
-															<xsl:value-of select="concat($root,'/en/',$localized-n1-handle,$localized-n2-handle,$localized-n3-handle)"/>
-														</xsl:attribute>
-														<div class="ui pointing floating link item button">
-															<i class="world icon"></i>
-															<div class="text">English</div>
-														</div>
-													</a>
+													<xsl:attribute name="href">
+														<xsl:value-of select="concat($root,'/en/',$localized-n1-handle,$localized-n2-handle,$localized-n3-handle)"/>
+													</xsl:attribute>
+													<i class="world icon"></i>
+													English
 												</xsl:when>
 												<xsl:otherwise>
-													<a>
-														<xsl:attribute name="href">
-															<xsl:value-of select="concat($root,'/fr/',$localized-n1-handle,$localized-n2-handle,$localized-n3-handle)"/>
-														</xsl:attribute>
-														<div class="ui pointing floating link item button">
-															<i class="world icon"></i>
-															<div class="text">Français</div>
-														</div>
-													</a>
+													<xsl:attribute name="href">
+														<xsl:value-of select="concat($root,'/fr/',$localized-n1-handle,$localized-n2-handle,$localized-n3-handle)"/>
+													</xsl:attribute>
+													<i class="world icon"></i>
+													Français
 												</xsl:otherwise>
 											</xsl:choose>
-										</div>
+										</a>
 									</div>
 								</div>
-								<!-- MENU PRINCIPAL -->
-								<xsl:call-template name="mab-menu-principal"/>
-								<!-- CONTENUS -->
-								<div class="article">
-									<div class="main ui container">
-										<!-- contenus des pages -->
-										<xsl:apply-templates />
-									</div>
-								</div>
-								<script src="{$workspace}/js/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
-								<!-- JS -->
-								<script src="{$workspace}/semantic/dist/semantic.js"></script>
-								<script src="{$workspace}/semantic/dist/libs/jqueryui/jquery-ui-1.9.1.custom.min.js"></script>
-								<script src="{$workspace}/semantic/dist/jquery.tocify.min.js"></script>
-								<script src="{$workspace}/semantic/dist/mab.js"></script>
-							</body>
-						</html>
-					</xsl:template>
-				</xsl:stylesheet>
+										<!--<div class="item">
+											<h1 class="ui header right">
+												<xsl:value-of select="$website-name"></xsl:value-of>
+												<img src="{$workspace}/img/logo_mab-france_couleur.png" alt="logo du Mab France"/>
+												<p class="head">L'homme et la biosphère<br/>Man and biosphere</p>
+											</h1>
+										</div> -->
+										<!-- MENU PRINCIPAL -->
+										<xsl:call-template name="mab-menu-principal"/>
+										<!-- section 1 : menu + hero + background image -->
+										<div class="main-content">
+
+
+																<!-- symphony page contents -->
+																<!-- <div class="article"> -->
+																	<div class="main ui container">
+																		<xsl:apply-templates />
+																	 </div>
+																<!-- </div> -->
+																<!-- entire website common section -->
+																<section class="footer">
+																	<div class="ui container grid">
+																		<div class="column">
+																			<div class="ui horizontal list">
+																				<div class="item">©MAB FRANCE 2018</div>
+																					<a class="item" href="">Mentions légales</a>
+																			</div>
+																		</div>
+																	</div>
+																</section>
+															</div> <!-- end main-content -->
+
+
+															<script src="{$workspace}/js/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+															<!-- JS -->
+															<script src="{$workspace}/semantic/dist/semantic.min.js"></script>
+															<script src="{$workspace}/js/jquery-ui-1.9.1.custom.min.js"></script>
+															<script src="{$workspace}/js/jquery.tocify.min.js"></script>
+															<script src="{$workspace}/semantic/dist/themes/default/assets/js/mab.js"></script>
+														</body>
+													</html>
+												</xsl:template>
+											</xsl:stylesheet>

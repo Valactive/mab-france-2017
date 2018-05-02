@@ -20,15 +20,19 @@
 @googleProtocol    : 'https://';
 @googleFontRequest : '@{googleFontName}:@{googleFontSizes}&subset=@{googleSubset}';
 
+
+@bold              : bold;
+@normal            : normal;
+
 /*-------------------
       Base Sizes
 --------------------*/
 
 /* This is the single variable that controls them all */
-@emSize   : 14px;
+@emSize   : 16px;
 
 /* The size of page text  */
-@fontSize : 14px;
+@fontSize : 16px;
 
 
 /*-------------------
@@ -57,7 +61,7 @@
   Page Heading
 ---------------*/
 
-@headerFontWeight : bold;
+@headerFontWeight : @bold;
 @headerLineHeight : unit((18 / 14), em);
 
 @h1 : unit((28 / 14), rem);
@@ -121,7 +125,7 @@
 @pageOverflowX       : hidden;
 
 @lineHeight          : 1.4285em;
-@textColor           : rgba(0, 0, 0, 0.87);
+@textColor           : rgba(38, 38, 39, 1);
 
 /*-------------------
       Paragraph
@@ -168,7 +172,7 @@
   Highlighted Text
 --------------------*/
 
-@highlightBackground      : #CCE2FF;
+@highlightBackground      : #3F5F85;
 @highlightColor           : @textColor;
 
 @inputHighlightBackground : rgba(100, 100, 100, 0.4);
@@ -222,7 +226,7 @@
 @olive            : #B5CC18;
 @green            : #21BA45;
 @teal             : #00B5AD;
-@blue             : #2185D0;
+@blue             : #0672B9;
 @violet           : #6435C9;
 @purple           : #A333C8;
 @pink             : #E03997;

@@ -1,0 +1,10 @@
+<svg id="facebook-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #b1563d;
+      }
+    </style>
+  </defs>
+  <path id="Tracé_211" data-name="Tracé 211" class="cls-1" d="M17.5,0A17.5,17.5,0,1,0,35,17.5,17.5,17.5,0,0,0,17.5,0Zm6.676,8.912h-2.42c-1.9,0-2.265.9-2.265,2.225v2.918h4.526l0,4.571H19.491V30.356H14.77V18.627H10.824V14.057H14.77V10.686c0-3.912,2.39-6.042,5.879-6.042l3.527.005V8.912Z" transform="translate(0)"/>
+</svg>

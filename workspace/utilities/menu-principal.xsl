@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" 
+<xsl:stylesheet version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:template name="mab-menu-principal">
-		<div class="ui stackable row main menu">
-			<div class="ui  fluid container">
-				<a href="{$root}/{$url-lang}" class="header item">
+		<div class="ui stackable row main menu borderless menu-principal">
+			<div class="ui fluid container">
+				<a href="{$root}/{$url-lang}/" class="header item">
 					<!-- <img class="logo" src="assets/images/logo.png"/> -->
 					<xsl:value-of select="$page-title"></xsl:value-of>
 				</a>
@@ -28,7 +28,7 @@
 										<xsl:otherwise>ui pointing dropdown link item</xsl:otherwise>
 									</xsl:choose>
 								</xsl:attribute> -->
-								
+
 
 								<span class="text">
 									<!-- <a href="{$root}/{$url-lang}{$rubrique-principale-handle}/"> -->
@@ -46,7 +46,7 @@
 													<i class="dropdown icon"></i>
 													<span class="text">
 														<!-- <a href="{$root}/{$url-lang}{$rubrique-principale-handle}/{$rubrique-parente-handle}/"> -->
-															<xsl:value-of select="nom/item[@lang=$language]"/>
+														<xsl:value-of select="nom/item[@lang=$language]"/>
 														<!-- </a> -->
 													</span>
 													<div class="menu">
@@ -82,6 +82,12 @@
 						</xsl:otherwise>
 					</xsl:choose>
 				</xsl:for-each>
+				<!-- social links -->
+				<div class="ui right menu social-menu">
+					<a href="#" class="ui right v-vimeo"></a>
+					<a href="#" class="ui right v-facebook"></a>
+					<a href="#" class="ui right v-flickr"></a>
+				</div>
 			</div>
 		</div>
 	</xsl:template>

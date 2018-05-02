@@ -117,10 +117,10 @@
 
 .ui.statistics .statistic > .label,
 .ui.statistic > .label {
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", helvetica, sans-serif;
   font-size: 1em;
   font-weight: bold;
-  color: rgba(0, 0, 0, 0.87);
+  color: #262627;
   text-transform: uppercase;
   text-align: center;
 }
@@ -350,7 +350,7 @@
 .ui.blue.statistics .statistic > .value,
 .ui.statistics .blue.statistic > .value,
 .ui.blue.statistic > .value {
-  color: #2185D0;
+  color: #0672B9;
 }
 .ui.violet.statistics .statistic > .value,
 .ui.statistics .violet.statistic > .value,

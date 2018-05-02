@@ -1,3 +1,14 @@
 /*******************************
      User Global Variables
 *******************************/
+@headerFont			 : "Open Sans", helvetica, sans-serif;
+@fontSize			 : 16px;
+@headerFontWeight	 : 400;
+@fontWeight          : 400;
+@paragraphLineHeight : 24px;
+@primaryColor        : #3F5F85;
+@secondaryColor      : #008C6C;
+@lightPrimaryColor   : #0672B9;
+@lightSecondaryColor : #81C0C9;
+@highlightBackground : #3F5F85;
+@marron				 : #B1563D;

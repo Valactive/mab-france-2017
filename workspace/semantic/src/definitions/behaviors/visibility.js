@@ -10,7 +10,7 @@
 
 ;(function ($, window, document, undefined) {
 
-"use strict";
+'use strict';
 
 window = (typeof window != 'undefined' && window.Math == Math)
   ? window
@@ -933,7 +933,7 @@ $.fn.visibility = function(parameters) {
             element.percentagePassed = 0;
 
             // meta calculations
-            element.onScreen  = (element.topVisible && !element.bottomPassed);
+            element.onScreen  = ((element.topVisible || element.passing) && !element.bottomPassed);
             element.passing   = (element.topPassed && !element.bottomPassed);
             element.offScreen = (!element.onScreen);
 
@@ -1254,7 +1254,7 @@ $.fn.visibility.settings = {
   type                   : false,
 
   // z-index to use with visibility 'fixed'
-  zIndex                 : '10',
+  zIndex                 : '1000',
 
   // image only animation settings
   transition             : 'fade in',
