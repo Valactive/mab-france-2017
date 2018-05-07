@@ -14,7 +14,7 @@ class XMLImporterActualitesImport extends XMLImporter {
             'description' => '',
             'file' => __FILE__,
             'created' => '2018-01-24T14:47:26+00:00',
-            'updated' => '2018-02-14T18:00:20+00:00',
+            'updated' => '2018-05-07T12:52:45+00:00',
             'version' => 'XML Importer 3.0'
         );
     }
@@ -55,12 +55,22 @@ class XMLImporterActualitesImport extends XMLImporter {
                     'php' => ''
                 ),
                 6 => array(
+                    'field' => '19',
+                    'xpath' => 'nom-du-document-joint/text()',
+                    'php' => ''
+                ),
+                7 => array(
+                    'field' => '20',
+                    'xpath' => 'document-joint/filename/text()',
+                    'php' => ''
+                ),
+                8 => array(
                     'field' => '28',
                     'xpath' => '.',
                     'php' => 'XMLImporterHelpers::setActualite'
                 ),
             ),
-            'included-elements' => '/data/actualites-import/data/all-actualites/entry',
+            'included-elements' => '/data/actualites-import/data/actualites-pour-import/entry',
             'namespaces' => NULL,
             'source' => 'actualites_import',
             'timeout' => '60',

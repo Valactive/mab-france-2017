@@ -616,4 +616,7 @@ section.footer .ui.list > a.item {
     background-image: url('/workspace/img/slogan-1280.png');
     background-position: center -4px;
   }
+  section.annonce {
+    margin-top: -8%;
+  }
 }

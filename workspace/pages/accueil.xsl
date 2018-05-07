@@ -49,27 +49,36 @@
 <!-- Annonce home page -->
 <section class="annonce">
 	<div class="ui container grid centered center">
+
+
 		<div class="row">
-			<h1 class="text-primary">Les objectifs de développement durable</h1>
+			<h1 class="text-primary"><xsl:value-of select="home-page-annonce/entry/nom-home-page[item/@lang=$language]"/></h1>
 		</div>
 		<div class="row">
-			<p>17 objectiffs Emensis itaque difficultatibus multis et nive obrutis callibus plurimis ubi prope
-				Rauracum ventum est ad supercilia fluminis Rheni, resistente multitudine Alamanna pontem
-				suspendere navium conpage Romani vi nimia vetabantur ritu grandinis undique convolantibus
-				telis, et cum id inpossibile videretur, imperator cogitationibus magnis attonitus, quid capesseret
-				ambigebat. </p>
-			</div>
+			<xsl:copy-of select="home-page-annonce/entry/contenu-home-page[item/@lang=$language]"/>
+		</div>
+<xsl:choose>
+	<xsl:when test="home-page-annonce/entry/lien-1/item[@lang=$language] != '' and home-page-annonce/entry/lien-2/item[@lang=$language] != ''">
+			<!-- two buttons -->
 			<div class="three column row">
 				<div class="six wide column right aligned content">
-					<a href="" class="ui primary circular tiny button">Voir les objectifs</a>
+					<a href="{home-page-annonce/entry/lien-1/item[@lang=$language]}" class="ui primary circular tiny button"><xsl:value-of select="home-page-annonce/entry/nom-lien-1/item[@lang=$language]"/></a>
 				</div>
 				<div class="two wide column">
 					<p></p>
 				</div>
 				<div class="six wide column left aligned content">
-					<a href="" class="ui secondary circular tiny button">En savoir plus</a>
+					<a href="{home-page-annonce/entry/lien-2/item[@lang=$language]}" class="ui secondary circular tiny button"><xsl:value-of select="home-page-annonce/entry/nom-lien-2/item[@lang=$language]"/></a>
 				</div>
 			</div>
+</xsl:when>
+	<xsl:otherwise>
+		<!-- one button -->
+		<div class="column row center aligned content">
+			<a href="{home-page-annonce/entry/lien-1/item[@lang=$language]}" class="ui primary circular button"><xsl:value-of select="home-page-annonce/entry/lien-1/item[@lang=$language]"/></a>
+		</div>
+	</xsl:otherwise>
+</xsl:choose>
 		</div>
 
 	</section>

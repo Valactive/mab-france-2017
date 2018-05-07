@@ -375,11 +375,11 @@ button.create,
   background-color: #b3d47d;
   color:white;
 }
-button.create:hover, 
-button.create:active, 
-button.create:focus, 
-.button.create:hover, 
-.button.create:active, 
+button.create:hover,
+button.create:active,
+button.create:focus,
+.button.create:hover,
+.button.create:active,
 .button.create:focus,
 .aui-editor-create .aui-editor-button:hover {
       border-color: #6b863f;
@@ -480,4 +480,15 @@ label.column i {
     background: -webkit-linear-gradient(45deg, #08aac3 0%,#08c3a5 100%);
     background: linear-gradient(45deg, #08aac3 0%,#08c3a5 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#08aac3', endColorstr='#08c3a5',GradientType=1 );
+}
+tr.unpublishedfilter-draft {
+    color: rgba(0, 0, 0, 0.3) !important;
+    background: #ff000012;
+}
+li.unique.instance header {
+  margin-top:0;
+  padding-left:10px !important;
+}
+li.unique.instance header > a.destructor {
+  right: 10px;
 }

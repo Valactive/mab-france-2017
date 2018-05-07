@@ -543,7 +543,7 @@
 
 		'Create another?' =>
 		'Créer un autre ?',
-		
+
 		'View all Entries' =>
 		'Voir toutes les entrées',
 
@@ -642,6 +642,27 @@
 
 		'Filter %s by' =>
 		'Filtrer %s par',
+
+		'Filter Entries' =>
+		'Filtrer les entrées',
+
+		'Add filter' =>
+		'Ajouter le filtre',
+
+		'Apply filters' =>
+		'Appliquer les filtres',
+
+		'No filters applied yet.' =>
+		'Aucuns filtres appliqués pour le moment...',
+
+		'Clear filter' =>
+		'Enlever le filtre',
+
+		'Clear filters' =>
+		'Enlever tous les filtres',
+
+		'Type and hit enter to apply filter...' =>
+		'Saisissez et cliquez sur \"Appliquer les filtres\"',
 
 		'Filter Authors by' =>
 		'Filtrer les auteurs par',

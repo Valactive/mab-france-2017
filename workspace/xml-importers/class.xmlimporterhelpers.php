@@ -18,5 +18,8 @@
 		static function setActualite($string){
 			return "Actualité";
 		}
+		static function setPublication($string){
+			return "Publication";
+		}
 	}
 
