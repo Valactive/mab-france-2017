@@ -1,30 +1,30 @@
 <?php
 
-class datasourcehome_page_annonce extends SectionDatasource
+class datasourceactualites_home_page extends SectionDatasource
 {
-    public $dsParamROOTELEMENT = 'home-page-annonce';
+    public $dsParamROOTELEMENT = 'actualites-home-page';
     public $dsParamORDER = 'desc';
-    public $dsParamPAGINATERESULTS = 'no';
-    public $dsParamLIMIT = '20';
+    public $dsParamPAGINATERESULTS = 'yes';
+    public $dsParamLIMIT = '2';
     public $dsParamSTARTPAGE = '1';
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
-    public $dsParamSORT = 'system:id';
+    public $dsParamSORT = 'date';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
     public $dsParamFILTERS = array(
-        '81' => 'yes',
+        '16' => 'yes',
     );
 
     public $dsParamINCLUDEDELEMENTS = array(
-        'nom-home-page: all-languages: formatted',
-        'contenu-home-page: all-languages: formatted',
-        'nom-lien-1: all-languages: formatted',
-        'lien-1: all-languages: formatted',
-        'nom-lien-2: all-languages: formatted',
-        'lien-2: all-languages: formatted'
+        'titre',
+        'texte: formatted',
+        'texte: unformatted',
+        'image-a-la-une',
+        'date',
+        'type'
     );
 
     public function __construct($env = null, $process_params = true)
@@ -36,19 +36,19 @@ class datasourcehome_page_annonce extends SectionDatasource
     public function about()
     {
         return array(
-            'name' => 'Home page : annonce',
+            'name' => 'Actualites home page',
             'author' => array(
                 'name' => 'Valéry Frisch',
                 'website' => 'http://mab-france-new.localhost',
                 'email' => 'valery.frisch@gmail.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-05-09T12:09:38+00:00'
+            'release-date' => '2018-05-09T12:18:12+00:00'
         );
     }
 
     public function getSource()
     {
-        return '15';
+        return '6';
     }
 
     public function allowEditorToParse()

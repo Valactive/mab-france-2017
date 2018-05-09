@@ -86,7 +86,7 @@
 				<div class="ui right menu social-menu">
 					<a href="#" class="ui right v-vimeo"></a>
 					<a href="#" class="ui right v-facebook"></a>
-					<a href="#" class="ui right v-flickr"></a>
+					<a href="#" class="ui right v-instagram"></a>
 				</div>
 			</div>
 		</div>

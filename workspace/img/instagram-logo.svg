@@ -1,0 +1,15 @@
+<svg id="instagram-social-network-logo-of-photo-camera" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #b1563d;
+      }
+    </style>
+  </defs>
+  <g id="Groupe_48" data-name="Groupe 48">
+    <ellipse id="Ellipse_16" data-name="Ellipse 16" class="cls-1" cx="5.179" cy="5.019" rx="5.179" ry="5.019" transform="translate(12.345 12.425)"/>
+    <path id="Tracé_222" data-name="Tracé 222" class="cls-1" d="M38.934,45.534a8.021,8.021,0,0,1-16.033,0,7.543,7.543,0,0,1,.331-2.213H20.863V54.216a1.028,1.028,0,0,0,1.025,1.025h17.96a1.028,1.028,0,0,0,1.026-1.025V43.321H38.6A7.554,7.554,0,0,1,38.934,45.534Z" transform="translate(-13.393 -27.81)"/>
+    <path id="Tracé_223" data-name="Tracé 223" class="cls-1" d="M63.25,25.964h2.915A1.164,1.164,0,0,0,67.326,24.8V22.024a1.164,1.164,0,0,0-1.161-1.161H63.25a1.164,1.164,0,0,0-1.161,1.161V24.8A1.164,1.164,0,0,0,63.25,25.964Z" transform="translate(-39.858 -13.393)"/>
+    <path id="Tracé_224" data-name="Tracé 224" class="cls-1" d="M17.5,0A17.5,17.5,0,1,0,35,17.5,17.5,17.5,0,0,0,17.5,0Zm9.585,30.4H7.915A3.232,3.232,0,0,1,4.6,27.086V7.915A3.232,3.232,0,0,1,7.915,4.6h19.17A3.232,3.232,0,0,1,30.4,7.915V27.086A3.232,3.232,0,0,1,27.085,30.4Z"/>
+  </g>
+</svg>

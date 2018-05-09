@@ -380,8 +380,8 @@ h2 {
   transition: all 0.2s ease-in-out;
 }
 .social-menu > a:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 .v-facebook {
   background: url('/workspace/img/facebook-logo.png') center center no-repeat;
@@ -391,6 +391,9 @@ h2 {
 }
 .v-flickr {
   background: url('/workspace/img/flickr-logo.png') center center no-repeat;
+}
+.v-instagram {
+  background: url('/workspace/img/instagram-logo.png') center center no-repeat;
 }
 .site-name {
   font-size: 2.3em;
@@ -462,6 +465,10 @@ section.actu-newsletter .newsletterTextBlock {
 section.actu-newsletter .newsletterTextBlock a {
   color: #B1563D;
   font-weight: bold;
+}
+section.actu-newsletter .ui.cards > .card {
+  -webkit-box-shadow: 0px 1px 8px 2px #b5d8de;
+          box-shadow: 0px 1px 8px 2px #b5d8de;
 }
 section.reserves {
   background-image: url(/workspace/img/fond-reserves-blanc.png), url(/workspace/img/fond-reserves.png);
