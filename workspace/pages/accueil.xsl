@@ -41,27 +41,27 @@
 					<div class="ui container grid centered center">
 						<div class="row">
 							<h1 class="text-primary">
-								<xsl:value-of select="home-page-annonce/entry/nom-home-page[item/@lang=$language]"/>
+								<xsl:value-of select="home-page-annonce/entry/nom-home-page/item[@lang=$current-language]"/>
 							</h1>
 						</div>
 						<div class="row">
-							<xsl:copy-of select="home-page-annonce/entry/contenu-home-page[item/@lang=$language]"/>
+							<xsl:copy-of select="home-page-annonce/entry/contenu-home-page/item[@lang=$current-language]"/>
 						</div>
 						<xsl:choose>
-							<xsl:when test="home-page-annonce/entry/lien-1/item[@lang=$language] != '' and home-page-annonce/entry/lien-2/item[@lang=$language] != ''">
+							<xsl:when test="home-page-annonce/entry/lien-1/item[@lang=$current-language] != '' and home-page-annonce/entry/lien-2/item[@lang=$current-language] != ''">
 								<!-- two buttons -->
 								<div class="three column row">
 									<div class="six wide column right aligned content">
-										<a href="{home-page-annonce/entry/lien-1/item[@lang=$language]}" class="ui primary circular tiny button">
-											<xsl:value-of select="home-page-annonce/entry/nom-lien-1/item[@lang=$language]"/>
+										<a href="{home-page-annonce/entry/lien-1/item[@lang=$current-language]}" class="ui primary circular tiny button">
+											<xsl:value-of select="home-page-annonce/entry/nom-lien-1/item[@lang=$current-language]"/>
 										</a>
 									</div>
 									<div class="two wide column">
 										<p></p>
 									</div>
 									<div class="six wide column left aligned content">
-										<a href="{home-page-annonce/entry/lien-2/item[@lang=$language]}" class="ui secondary circular tiny button">
-											<xsl:value-of select="home-page-annonce/entry/nom-lien-2/item[@lang=$language]"/>
+										<a href="{home-page-annonce/entry/lien-2/item[@lang=$current-language]}" class="ui secondary circular tiny button">
+											<xsl:value-of select="home-page-annonce/entry/nom-lien-2/item[@lang=$current-language]"/>
 										</a>
 									</div>
 								</div>
@@ -69,8 +69,8 @@
 							<xsl:otherwise>
 								<!-- one button -->
 								<div class="column row center aligned content">
-									<a href="{home-page-annonce/entry/lien-1/item[@lang=$language]}" class="ui primary circular button">
-										<xsl:value-of select="home-page-annonce/entry/nom-lien-1/item[@lang=$language]"/>
+									<a href="{home-page-annonce/entry/lien-1/item[@lang=$current-language]}" class="ui primary circular button">
+										<xsl:value-of select="home-page-annonce/entry/nom-lien-1/item[@lang=$current-language]"/>
 									</a>
 								</div>
 							</xsl:otherwise>
