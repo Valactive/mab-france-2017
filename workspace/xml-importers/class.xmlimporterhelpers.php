@@ -21,5 +21,19 @@
 		static function setPublication($string){
 			return "Publication";
 		}
+		public function makeMultilanguage($string)
+		{
+			//var_dump($string);
+		$xml = @simplexml_load_string($string);
+		$xml = simplexml_load_string(''.$string.'');
+		$result = $xml->xpath('//item');
+		//var_dump($result);
+		// $output = array();
+		 $output['fr'] = $string;
+		// $output['en'] = $result[1];
+		// $output['fr'] = $result[2];
+		// $output['pt'] = $result[3];
+		return $output;
+		}
 	}
 
