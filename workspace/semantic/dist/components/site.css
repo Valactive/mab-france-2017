@@ -263,9 +263,8 @@ h2 {
 .c-fakarava {
   color: #f27e75 !important;
 }
-.cls-1 {
-  fill: #e8e9e9;
-}
+
+/* .cls-1{fill:#e8e9e9;} */
 .cls-1,
 .cls-10,
 .cls-11,
@@ -281,11 +280,32 @@ h2 {
 .cls-6,
 .cls-7,
 .cls-8,
-.cls-9 {
+.cls-9,
+.cls-17 {
   fill-rule: evenodd;
 }
+
+/* .cls-2{fill:#B1563D;}
+         .cls-3{fill:#bad77c;}
+         .cls-4{fill:#f17e74;}
+         .cls-5{fill:#4194c7;}
+         .cls-6{fill:#f59769;}
+         .cls-7{fill:#48bca2;}
+         .cls-8{fill:#fecd6f;}
+         .cls-9{fill:#8bb47f;}
+         .cls-10{fill:#7ecbbe;}
+         .cls-11{fill:#fab632;}
+         .cls-12{fill:#f28575;}
+         .cls-13{fill:#00abbd;}
+         .cls-14{fill:#66c2a5;}
+         .cls-15{fill:#41ad4e;}
+         .cls-16{fill:#be9eb3;}
+         .cls-17{fill:#b3ddd0;} */
+.cls-1 {
+  fill: #e8e9e9;
+}
 .cls-2 {
-  fill: #B1563D;
+  fill: #696969;
 }
 .cls-3 {
   fill: #bad77c;
@@ -299,34 +319,41 @@ h2 {
 .cls-6 {
   fill: #f59769;
 }
+.cls-16,
 .cls-7 {
-  fill: #48bca2;
+  fill: #b3ddcf;
 }
 .cls-8 {
-  fill: #fecd6f;
+  fill: #48bca2;
 }
 .cls-9 {
-  fill: #8bb47f;
+  fill: #fecd6f;
 }
 .cls-10 {
-  fill: #7ecbbe;
+  fill: #8bb47f;
 }
 .cls-11 {
-  fill: #fab632;
+  fill: #7ecbbe;
 }
 .cls-12 {
-  fill: #f28575;
+  fill: #fab632;
 }
 .cls-13 {
-  fill: #00abbd;
+  fill: #f28575;
 }
 .cls-14 {
-  fill: #66c2a5;
+  fill: #00abbd;
 }
 .cls-15 {
-  fill: #41ad4e;
+  fill: #66c2a5;
 }
 .cls-16 {
+  fill-rule: evenodd;
+}
+.cls-17 {
+  fill: #41ad4e;
+}
+.cls-18 {
   fill: #be9eb3;
 }
 #header {
@@ -511,7 +538,9 @@ h2.osliv {
   background: #ffffffb0;
 }
 .list-rb > a.item:hover .header,
-.list-rb > a.item:hover .icon {
+.list-rb > a.item:hover .icon,
+.list-rb > a.item.hovered .header,
+.list-rb > a.item.hovered .icon {
   color: #B1563D !important;
 }
 section.contact {

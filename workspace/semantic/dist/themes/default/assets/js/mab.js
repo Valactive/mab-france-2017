@@ -55,23 +55,35 @@ window.semantic = {
             scrollTo: "65",
             showAndHide: false
         });
-
+        // STICKY MAIN MENU
         $('.ui.sticky')
         .sticky({
         context: '#content',
         offset: 65
         });
 
-        // Carte RB
-        $('a', '.list-rb').mouseenter(function() {
-          var rb = '#' + $(this).data("reserve") + "-on";
-          console.log(rb);
+        // LISTE RB hover
+        $('a', '.list-rb').mouseover(function() {
+          rb = '#' + $(this).data("reserve") + '-on';
           $(rb).hide();
-        });
-        $('a', '.list-rb').mouseleave(function() {
-          var rb = '#' + $(this).data("reserve") + "-on";
-          console.log(rb);
+        }).mouseleave(function(e){
           $(rb).show();
+        });
+
+        // CARTE RB hover
+        $('path','#reserves-on').mouseenter(function(e){ 
+          //set active status in rb list
+          rb_on = $(this).data('reserve');
+          rb = rb_on.split('-');
+          rb = rb[0];
+          var listTarget = $(".item[data-reserve='"+rb+"']");
+          listTarget.toggleClass('hovered');
+          $("path[data-reserve='"+rb_on+"']").hide();
+        });
+        $('path', '#reserves-off').mouseleave(function(){
+          //rb_id = '#' + $(this).data('reserve') + '-on';
+          $("path[data-reserve='"+rb_on+"']").show();
+          $('a', '.list-rb').removeClass('hovered');
         });
   };
 

@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:date="http://exslt.org/dates-and-times" extension-element-prefixes="date">
+<xsl:stylesheet version="1.0"
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+xmlns:date="http://exslt.org/dates-and-times"
+xmlns:date-fr="http://exslt.org/dates-and-times"
+xmlns:date-en="http://exslt.org/dates-and-times"
+extension-element-prefixes="date">
 <!--
 
 	Description:
@@ -60,70 +65,73 @@
 -->
 
 <!-- french -->
-	<date:days>
-		<date:day id="1" shorthand="Sun">Dimanche</date:day>
-		<date:day id="2" shorthand="Mon">Lundi</date:day>
-		<date:day id="3" shorthand="Tue">Mardi</date:day>
-		<date:day id="4" shorthand="Wed">Mercredi</date:day>
-		<date:day id="5" shorthand="Thu">Jeudi</date:day>
-		<date:day id="6" shorthand="Fri">Vendredi</date:day>
-		<date:day id="7" shorthand="Sat">Samedi</date:day>
-	</date:days>
+	<date-fr:days>
+		<date-fr:day id="1" shorthand="Sun">Dimanche</date-fr:day>
+		<date-fr:day id="2" shorthand="Mon">Lundi</date-fr:day>
+		<date-fr:day id="3" shorthand="Tue">Mardi</date-fr:day>
+		<date-fr:day id="4" shorthand="Wed">Mercredi</date-fr:day>
+		<date-fr:day id="5" shorthand="Thu">Jeudi</date-fr:day>
+		<date-fr:day id="6" shorthand="Fri">Vendredi</date-fr:day>
+		<date-fr:day id="7" shorthand="Sat">Samedi</date-fr:day>
+	</date-fr:days>
 
-	<date:months>
-		<date:month shorthand="Jan">Janvier</date:month>
-		<date:month shorthand="Feb">Février</date:month>
-		<date:month shorthand="Mar">Mars</date:month>
-		<date:month shorthand="Apr">Avril</date:month>
-		<date:month shorthand="May">Mai</date:month>
-		<date:month shorthand="Jun">Juin</date:month>
-		<date:month shorthand="Jul">Juillet</date:month>
-		<date:month shorthand="Aug">Août</date:month>
-		<date:month shorthand="Sep">Septembre</date:month>
-		<date:month shorthand="Oct">Octobre</date:month>
-		<date:month shorthand="Nov">Novembre</date:month>
-		<date:month shorthand="Dec">Décembre</date:month>
-	</date:months>
+	<date-fr:months>
+		<date-fr:month shorthand="Jan">Janvier</date-fr:month>
+		<date-fr:month shorthand="Feb">Février</date-fr:month>
+		<date-fr:month shorthand="Mar">Mars</date-fr:month>
+		<date-fr:month shorthand="Apr">Avril</date-fr:month>
+		<date-fr:month shorthand="May">Mai</date-fr:month>
+		<date-fr:month shorthand="Jun">Juin</date-fr:month>
+		<date-fr:month shorthand="Jul">Juillet</date-fr:month>
+		<date-fr:month shorthand="Aug">Août</date-fr:month>
+		<date-fr:month shorthand="Sep">Septembre</date-fr:month>
+		<date-fr:month shorthand="Oct">Octobre</date-fr:month>
+		<date-fr:month shorthand="Nov">Novembre</date-fr:month>
+		<date-fr:month shorthand="Dec">Décembre</date-fr:month>
+	</date-fr:months>
 
 <!-- english -->
-<!-- 	<date:days>
-		<date:day id="1" shorthand="Sun">Sunday</date:day>
-		<date:day id="2" shorthand="Mon">Monday</date:day>
-		<date:day id="3" shorthand="Tue">Tuesday</date:day>
-		<date:day id="4" shorthand="Wed">Wednesday</date:day>
-		<date:day id="5" shorthand="Thu">Thursday</date:day>
-		<date:day id="6" shorthand="Fri">Friday</date:day>
-		<date:day id="7" shorthand="Sat">Saturday</date:day>
-	</date:days>
+	<date-en:days>
+		<date-en:day id="1" shorthand="Sun">Sunday</date-en:day>
+		<date-en:day id="2" shorthand="Mon">Monday</date-en:day>
+		<date-en:day id="3" shorthand="Tue">Tuesday</date-en:day>
+		<date-en:day id="4" shorthand="Wed">Wednesday</date-en:day>
+		<date-en:day id="5" shorthand="Thu">Thursday</date-en:day>
+		<date-en:day id="6" shorthand="Fri">Friday</date-en:day>
+		<date-en:day id="7" shorthand="Sat">Saturday</date-en:day>
+	</date-en:days>
 
-	<date:months>
-		<date:month shorthand="Jan">January</date:month>
-		<date:month shorthand="Feb">February</date:month>
-		<date:month shorthand="Mar">March</date:month>
-		<date:month shorthand="Apr">April</date:month>
-		<date:month shorthand="May">May</date:month>
-		<date:month shorthand="Jun">June</date:month>
-		<date:month shorthand="Jul">July</date:month>
-		<date:month shorthand="Aug">August</date:month>
-		<date:month shorthand="Sep">September</date:month>
-		<date:month shorthand="Oct">October</date:month>
-		<date:month shorthand="Nov">November</date:month>
-		<date:month shorthand="Dec">December</date:month>
-	</date:months> -->
+	<date-en:months>
+		<date-en:month shorthand="Jan">January</date-en:month>
+		<date-en:month shorthand="Feb">February</date-en:month>
+		<date-en:month shorthand="Mar">March</date-en:month>
+		<date-en:month shorthand="Apr">April</date-en:month>
+		<date-en:month shorthand="May">May</date-en:month>
+		<date-en:month shorthand="Jun">June</date-en:month>
+		<date-en:month shorthand="Jul">July</date-en:month>
+		<date-en:month shorthand="Aug">August</date-en:month>
+		<date-en:month shorthand="Sep">September</date-en:month>
+		<date-en:month shorthand="Oct">October</date-en:month>
+		<date-en:month shorthand="Nov">November</date-en:month>
+		<date-en:month shorthand="Dec">December</date-en:month>
+	</date-en:months>
 
 	<xsl:template name="format-date">
 		<xsl:param name="date" />
 		<xsl:param name="format" select="'%d;%ds; %m+;, %y+;'" />
+		<xsl:param name="language"/>
 
 		<xsl:call-template name="date-controller">
 			<xsl:with-param name="date" select="$date" />
 			<xsl:with-param name="format" select="$format" />
+			<xsl:with-param name="language" select="$language"/>
 		</xsl:call-template>
 	</xsl:template>
 
 	<xsl:template name="date-controller">
 		<xsl:param name="date" />
 		<xsl:param name="format" />
+		<xsl:param name="language"/>
 
 	<!--
 		Jump X characters:
@@ -245,6 +253,7 @@
 				<xsl:when test="starts-with($format, '%d+;')">
 					<xsl:call-template name="format-day-name">
 						<xsl:with-param name="date" select="$date" />
+						<xsl:with-param name="language" select="$language"/>
 					</xsl:call-template>
 				</xsl:when>
 				<xsl:when test="starts-with($format, '%0d;')">
@@ -310,6 +319,7 @@
 				<xsl:when test="starts-with($format, '%m+;')">
 					<xsl:call-template name="format-month-name">
 						<xsl:with-param name="date" select="$date" />
+						<xsl:with-param name="language" select="$language"/>
 					</xsl:call-template>
 				</xsl:when>
 				<xsl:when test="starts-with($format, '%0m;')">
@@ -510,21 +520,35 @@
 
 	<xsl:template name="format-day-name">
 		<xsl:param name="date" />
-
-		<xsl:value-of select="document('')/*/date:days/date:day[@id = date:day-in-week($date)]" />
+		<xsl:param name="language"/>
+		<xsl:choose>
+			<xsl:when test="$language = 'fr'">
+				<xsl:value-of select="document('')/*/date-fr:days/date-fr:day[@id = date-fr:day-in-week($date)]" />
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="document('')/*/date-en:days/date-en:day[@id = date-en:day-in-week($date)]" />
+			</xsl:otherwise>
+		</xsl:choose>
 	</xsl:template>
 
 	<xsl:template name="format-day-shorthand">
 		<xsl:param name="date" />
-
-		<xsl:value-of select="document('')/*/date:days/date:day[@id = date:day-in-week($date)]/@shorthand" />
+		<xsl:param name="language"/>
+		<xsl:choose>
+			<xsl:when test="$language='fr'">
+				<xsl:value-of select="document('')/*/date-fr:days/date-en:day[@id = date-fr:day-in-week($date)]/@shorthand" />
+			</xsl:when>
+			<xsl:otherwise>
+					<xsl:value-of select="document('')/*/date-en:days/date-en:day[@id = date-en:day-in-week($date)]/@shorthand" />
+				</xsl:otherwise>
+		</xsl:choose>
 	</xsl:template>
 
 	<xsl:template name="format-week-month">
 		<xsl:param name="date" />
 		<xsl:param name="prefix" select="''" />
 
-		<xsl:variable name="week" select="date:week-in-month($date)" />
+		<xsl:variable name="week" select="date-en:week-in-month($date)" />
 
 		<xsl:value-of select="format-number($week, concat($prefix, '0'))" />
 	</xsl:template>
@@ -533,7 +557,7 @@
 		<xsl:param name="date" />
 		<xsl:param name="prefix" select="''" />
 
-		<xsl:variable name="week" select="date:week-in-year($date)" />
+		<xsl:variable name="week" select="date-en:week-in-year($date)" />
 
 		<xsl:value-of select="format-number($week, concat($prefix, '0'))" />
 	</xsl:template>
@@ -549,14 +573,28 @@
 
 	<xsl:template name="format-month-name">
 		<xsl:param name="date" />
-
-		<xsl:value-of select="document('')/*/date:months/date:month[date:month-in-year($date)]" />
+		<xsl:param name="language"/>
+<xsl:choose>
+	<xsl:when test="$language='fr'">
+		<xsl:value-of select="document('')/*/date-fr:months/date-fr:month[date-fr:month-in-year($date)]" />
+	</xsl:when>
+	<xsl:otherwise>
+			<xsl:value-of select="document('')/*/date-en:months/date-en:month[date-en:month-in-year($date)]" />
+	</xsl:otherwise>
+</xsl:choose>
 	</xsl:template>
 
 	<xsl:template name="format-month-shorthand">
 		<xsl:param name="date" />
-
-		<xsl:value-of select="document('')/*/date:months/date:month[date:month-in-year($date)]/@shorthand" />
+		<xsl:param name="language"/>
+		<xsl:choose>
+			<xsl:when test="$language='fr'">
+					<xsl:value-of select="document('')/*/date-fr:months/date-fr:month[date-fr:month-in-year($date)]/@shorthand" />
+			</xsl:when>
+			<xsl:otherwise>
+					<xsl:value-of select="document('')/*/date-en:months/date-en:month[date-en:month-in-year($date)]/@shorthand" />
+			</xsl:otherwise>
+		</xsl:choose>
 	</xsl:template>
 
 	<xsl:template name="format-year-number">
