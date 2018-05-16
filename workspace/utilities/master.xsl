@@ -120,7 +120,7 @@
 									</div>
 
 									<div class="left floated left aligned four wide column middle aligned content">
-										<span class="site-baseline">L'homme et la biosphère<br/>Man and biosphere</span>
+										<span class="site-baseline">L'Homme et la biosphère<br/>Man and biosphere</span>
 									</div>
 
 

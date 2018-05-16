@@ -137,7 +137,7 @@
 															<a href="#" class="ui primary basic button right floated">
 																<xsl:choose>
 																	<xsl:when test="$current-language = 'fr'">																		Lire la suite																	</xsl:when>
-																	<xsl:otherwise>continue reading</xsl:otherwise>
+																	<xsl:otherwise>Learn moreh</xsl:otherwise>
 																</xsl:choose>
 																<i class="arrow alternate circle right outline icon"></i>
 															</a>
@@ -431,7 +431,7 @@
 											<div class="header">
 											<xsl:choose>
 												<xsl:when test="$current-language='fr'">Sur notre page Facebook</xsl:when>
-												<xsl:otherwise>On our Facebook page</xsl:otherwise>
+												<xsl:otherwise>On Facebook</xsl:otherwise>
 											</xsl:choose>
 											</div>
 										</div>
@@ -441,8 +441,8 @@
 										<div class="content">
 											<div class="header">
 											<xsl:choose>
-												<xsl:when test="$current-language='fr'">Admirez nos photos sur Instagram</xsl:when>
-												<xsl:otherwise>See our photos on Instagram</xsl:otherwise>
+												<xsl:when test="$current-language='fr'">Sur Instagram</xsl:when>
+												<xsl:otherwise>On Instagram</xsl:otherwise>
 											</xsl:choose>
 											</div>
 										</div>
@@ -452,8 +452,8 @@
 										<div class="content">
 											<div class="header">
 											<xsl:choose>
-												<xsl:when test="$current-language='fr'">Consultez nos vidéos sur Vimeo</xsl:when>
-												<xsl:otherwise>Watch our videos on Vimeo</xsl:otherwise>
+												<xsl:when test="$current-language='fr'">Sur Vimeo</xsl:when>
+												<xsl:otherwise>On Vimeo</xsl:otherwise>
 											</xsl:choose>
 											</div>
 										</div>
