@@ -219,7 +219,7 @@ h2 {
 
 /*******************************
          RB COLORS
-        *******************************/
+         *******************************/
 
 .c-guadeloupe {
   color: #bad77b !important;
@@ -379,7 +379,7 @@ h2 {
 }
 .ui.main.menu {
   margin: 0;
-  background: rgba(255, 255, 255, 0.71);
+  background: rgba(240, 240, 240, 0.7);
   display: block;
 }
 .ui.main.menu .item {
@@ -543,12 +543,62 @@ h2.osliv {
 .list-rb > a.item.hovered .icon {
   color: #B1563D !important;
 }
+.bkg-breadcrumb {
+  background: rgba(255, 255, 255, 0.6);
+  height: 2.2em;
+  width: 100%;
+}
+.ui.breadcrumb {
+  padding: 0.7em 1em 0em 1.2em;
+  font-size: 0.8em !important;
+  display: block !important;
+  color: #438CBC;
+}
+.page-header {
+  background: url('/workspace/img/fond-page-contenus.png') center bottom no-repeat;
+  min-height: 8em;
+  padding-top: 0 !important;
+  margin-bottom: 3em;
+}
+.page-header h1 {
+  padding-left: 0.5em;
+  font-weight: bold;
+}
+.main-content {
+  margin-top: 16px;
+}
+#content {
+  color: #262727;
+}
+#content a {
+  text-decoration: underline;
+}
+#content.ui.segment {
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+#content strong {
+  color: #094851;
+  font-weight: bold;
+}
+#content h1,
+#content h2,
+#content h3 {
+  font-family: 'Lato', helvetica, arial, sans-serif;
+  color: #B1563D;
+}
+#content ul {
+  list-style-type: inherit;
+  padding: 0 0 0 2.2em;
+}
 section.contact {
   background: url(/workspace/img/fond-section-contact.jpg) 100% 100% no-repeat;
   padding-top: 3em;
   padding-bottom: 6em;
 }
 .main.container {
+  font-family: "Open Sans", helvetica, arial, sans-serif;
   margin-right: 387px !important;
   margin-left: 3em !important;
   width: 700px !important;
@@ -585,13 +635,11 @@ section.footer .ui.list > a.item {
 
 /* The Table of Contents container element */
 .tocify {
-  
-/* width: 20%;
-    max-height: 90%;
-    overflow: auto;
-    margin-left: 2%;
-    position: fixed;*/
+  font-family: "Open Sans", helvetica, arial, sans-serif;
+  font-size: 0.8em;
+  padding-top: 1em;
 }
+
 /* The Table of Contents is composed of multiple nested unordered lists.  These styles remove the default styling of an unordered list because it is ugly. */
 .tocify ul,
 .tocify li {
@@ -637,6 +685,13 @@ section.footer .ui.list > a.item {
 /* Twitter Bootstrap Override Style */
 .nav-list > li > a {
   padding: 5px;
+}
+@media screen and (min-width: 1200px) {
+  .main.ui.container {
+    max-width: 880px !important;
+    width: 860px !important;
+    margin-left: 10% !important;
+  }
 }
 @media screen and (min-width: 1280px) {
   .hero {

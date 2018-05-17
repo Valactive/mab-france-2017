@@ -431,7 +431,7 @@ h2 {
 
 /*******************************
          RB COLORS
-        *******************************/
+         *******************************/
 
 .c-guadeloupe {
   color: #bad77b !important;
@@ -621,7 +621,7 @@ h2 {
 
 .ui.main.menu {
   margin: 0;
-  background: rgba(255, 255, 255, 0.71);
+  background: rgba(240, 240, 240, 0.7);
   display: block;
 }
 
@@ -817,6 +817,66 @@ h2.osliv {
   color: #B1563D !important;
 }
 
+.bkg-breadcrumb {
+  background: rgba(255, 255, 255, 0.6);
+  height: 2.2em;
+  width: 100%;
+}
+
+.ui.breadcrumb {
+  padding: 0.7em 1em 0em 1.2em;
+  font-size: 0.8em !important;
+  display: block !important;
+  color: #438CBC;
+}
+
+.page-header {
+  background: url('/workspace/img/fond-page-contenus.png') center bottom no-repeat;
+  min-height: 8em;
+  padding-top: 0 !important;
+  margin-bottom: 3em;
+}
+
+.page-header h1 {
+  padding-left: 0.5em;
+  font-weight: bold;
+}
+
+.main-content {
+  margin-top: 16px;
+}
+
+#content {
+  color: #262727;
+}
+
+#content a {
+  text-decoration: underline;
+}
+
+#content.ui.segment {
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+#content strong {
+  color: #094851;
+  font-weight: bold;
+}
+
+#content h1,
+#content h2,
+#content h3 {
+  font-family: 'Lato', helvetica, arial, sans-serif;
+  color: #B1563D;
+}
+
+#content ul {
+  list-style-type: inherit;
+  padding: 0 0 0 2.2em;
+}
+
 section.contact {
   background: url(/workspace/img/fond-section-contact.jpg) 100% 100% no-repeat;
   padding-top: 3em;
@@ -824,6 +884,7 @@ section.contact {
 }
 
 .main.container {
+  font-family: "Open Sans", helvetica, arial, sans-serif;
   margin-right: 387px !important;
   margin-left: 3em !important;
   width: 700px !important;
@@ -868,11 +929,9 @@ section.footer .ui.list > a.item {
 /* The Table of Contents container element */
 
 .tocify {
-  /* width: 20%;
-    max-height: 90%;
-    overflow: auto;
-    margin-left: 2%;
-    position: fixed;*/
+  font-family: "Open Sans", helvetica, arial, sans-serif;
+  font-size: 0.8em;
+  padding-top: 1em;
 }
 
 /* The Table of Contents is composed of multiple nested unordered lists.  These styles remove the default styling of an unordered list because it is ugly. */
@@ -928,6 +987,14 @@ section.footer .ui.list > a.item {
 
 .nav-list > li > a {
   padding: 5px;
+}
+
+@media screen and (min-width: 1200px) {
+  .main.ui.container {
+    max-width: 880px !important;
+    width: 860px !important;
+    margin-left: 10% !important;
+  }
 }
 
 @media screen and (min-width: 1280px) {
@@ -2917,7 +2984,7 @@ section.footer .ui.list > a.item {
 
 .ui.blue.buttons .button,
 .ui.blue.button {
-  background-color: #0672B9;
+  background-color: #438CBC;
   color: #FFFFFF;
   text-shadow: none;
   background-image: none;
@@ -2930,21 +2997,21 @@ section.footer .ui.list > a.item {
 
 .ui.blue.buttons .button:hover,
 .ui.blue.button:hover {
-  background-color: #0064a6;
+  background-color: #377faf;
   color: #FFFFFF;
   text-shadow: none;
 }
 
 .ui.blue.buttons .button:focus,
 .ui.blue.button:focus {
-  background-color: #005b96;
+  background-color: #2e78a8;
   color: #FFFFFF;
   text-shadow: none;
 }
 
 .ui.blue.buttons .button:active,
 .ui.blue.button:active {
-  background-color: #045488;
+  background-color: #367096;
   color: #FFFFFF;
   text-shadow: none;
 }
@@ -2953,7 +3020,7 @@ section.footer .ui.list > a.item {
 .ui.blue.buttons .active.button:active,
 .ui.blue.active.button,
 .ui.blue.button .active.button:active {
-  background-color: #0064a6;
+  background-color: #3480b1;
   color: #FFFFFF;
   text-shadow: none;
 }
@@ -2962,40 +3029,40 @@ section.footer .ui.list > a.item {
 
 .ui.basic.blue.buttons .button,
 .ui.basic.blue.button {
-  -webkit-box-shadow: 0px 0px 0px 1px #0672B9 inset !important;
-  box-shadow: 0px 0px 0px 1px #0672B9 inset !important;
-  color: #0672B9 !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #438CBC inset !important;
+  box-shadow: 0px 0px 0px 1px #438CBC inset !important;
+  color: #438CBC !important;
 }
 
 .ui.basic.blue.buttons .button:hover,
 .ui.basic.blue.button:hover {
   background: transparent !important;
-  -webkit-box-shadow: 0px 0px 0px 1px #0064a6 inset !important;
-  box-shadow: 0px 0px 0px 1px #0064a6 inset !important;
-  color: #0064a6 !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #377faf inset !important;
+  box-shadow: 0px 0px 0px 1px #377faf inset !important;
+  color: #377faf !important;
 }
 
 .ui.basic.blue.buttons .button:focus,
 .ui.basic.blue.button:focus {
   background: transparent !important;
-  -webkit-box-shadow: 0px 0px 0px 1px #005b96 inset !important;
-  box-shadow: 0px 0px 0px 1px #005b96 inset !important;
-  color: #0064a6 !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #2e78a8 inset !important;
+  box-shadow: 0px 0px 0px 1px #2e78a8 inset !important;
+  color: #377faf !important;
 }
 
 .ui.basic.blue.buttons .active.button,
 .ui.basic.blue.active.button {
   background: transparent !important;
-  -webkit-box-shadow: 0px 0px 0px 1px #0064a6 inset !important;
-  box-shadow: 0px 0px 0px 1px #0064a6 inset !important;
-  color: #045488 !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #3480b1 inset !important;
+  box-shadow: 0px 0px 0px 1px #3480b1 inset !important;
+  color: #367096 !important;
 }
 
 .ui.basic.blue.buttons .button:active,
 .ui.basic.blue.button:active {
-  -webkit-box-shadow: 0px 0px 0px 1px #045488 inset !important;
-  box-shadow: 0px 0px 0px 1px #045488 inset !important;
-  color: #045488 !important;
+  -webkit-box-shadow: 0px 0px 0px 1px #367096 inset !important;
+  box-shadow: 0px 0px 0px 1px #367096 inset !important;
+  color: #367096 !important;
 }
 
 .ui.buttons:not(.vertical) > .basic.blue.button:not(:first-child) {
@@ -7351,15 +7418,15 @@ a.ui.inverted.teal.header:hover {
 /*--- Blue ---*/
 
 .ui.blue.header {
-  color: #0672B9 !important;
+  color: #438CBC !important;
 }
 
 a.ui.blue.header:hover {
-  color: #0064a6 !important;
+  color: #377faf !important;
 }
 
 .ui.blue.dividing.header {
-  border-bottom: 2px solid #0672B9;
+  border-bottom: 2px solid #438CBC;
 }
 
 /* Inverted */
@@ -7999,7 +8066,7 @@ i.inverted.circular.teal.icon {
 /* Blue */
 
 i.blue.icon {
-  color: #0672B9 !important;
+  color: #438CBC !important;
 }
 
 i.inverted.blue.icon {
@@ -8008,7 +8075,7 @@ i.inverted.blue.icon {
 
 i.inverted.bordered.blue.icon,
 i.inverted.circular.blue.icon {
-  background-color: #0672B9 !important;
+  background-color: #438CBC !important;
   color: #FFFFFF !important;
 }
 
@@ -15521,8 +15588,8 @@ a.ui.basic.teal.label:hover {
 
 .ui.blue.labels .label,
 .ui.blue.label {
-  background-color: #0672B9 !important;
-  border-color: #0672B9 !important;
+  background-color: #438CBC !important;
+  border-color: #438CBC !important;
   color: #FFFFFF !important;
 }
 
@@ -15530,8 +15597,8 @@ a.ui.basic.teal.label:hover {
 
 .ui.blue.labels .label:hover,
 a.ui.blue.label:hover {
-  background-color: #0064a6 !important;
-  border-color: #0064a6 !important;
+  background-color: #377faf !important;
+  border-color: #377faf !important;
   color: #FFFFFF !important;
 }
 
@@ -15545,22 +15612,22 @@ a.ui.blue.label:hover {
 /* Ribbon */
 
 .ui.blue.ribbon.label {
-  border-color: #045488 !important;
+  border-color: #367096 !important;
 }
 
 /* Basic */
 
 .ui.basic.blue.label {
   background-color: #FFFFFF !important;
-  color: #0672B9 !important;
-  border-color: #0672B9 !important;
+  color: #438CBC !important;
+  border-color: #438CBC !important;
 }
 
 .ui.basic.blue.labels a.label:hover,
 a.ui.basic.blue.label:hover {
   background-color: #FFFFFF !important;
-  color: #0064a6 !important;
-  border-color: #0064a6 !important;
+  color: #377faf !important;
+  border-color: #377faf !important;
 }
 
 /*--- Violet ---*/
@@ -18684,11 +18751,11 @@ ol.ui.horizontal.list li:before,
 /* Blue */
 
 .ui.blue.segment:not(.inverted) {
-  border-top: 2px solid #0672B9 !important;
+  border-top: 2px solid #438CBC !important;
 }
 
 .ui.inverted.blue.segment {
-  background-color: #0672B9 !important;
+  background-color: #438CBC !important;
   color: #FFFFFF !important;
 }
 
@@ -22543,7 +22610,7 @@ ol.ui.horizontal.list li:before,
 .ui.grid > .blue.row,
 .ui.grid > .blue.column,
 .ui.grid > .row > .blue.column {
-  background-color: #0672B9 !important;
+  background-color: #438CBC !important;
   color: #FFFFFF;
 }
 
@@ -24749,8 +24816,8 @@ Floated Menu / Item
 
 .ui.menu .blue.active.item,
 .ui.blue.menu .active.item {
-  border-color: #0672B9 !important;
-  color: #0672B9 !important;
+  border-color: #438CBC !important;
+  color: #438CBC !important;
 }
 
 .ui.menu .violet.active.item,
@@ -25010,7 +25077,7 @@ Floated Menu / Item
 
 .ui.inverted.menu .blue.active.item,
 .ui.inverted.blue.menu {
-  background-color: #0672B9;
+  background-color: #438CBC;
 }
 
 .ui.inverted.blue.menu .item:before {
@@ -26034,13 +26101,13 @@ Floated Menu / Item
 
 .ui.blue.message {
   background-color: #DFF0FF;
-  color: #0672B9;
-  -webkit-box-shadow: 0px 0px 0px 1px #0672B9 inset, 0px 0px 0px 0px rgba(0, 0, 0, 0);
-  box-shadow: 0px 0px 0px 1px #0672B9 inset, 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  color: #438CBC;
+  -webkit-box-shadow: 0px 0px 0px 1px #438CBC inset, 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  box-shadow: 0px 0px 0px 1px #438CBC inset, 0px 0px 0px 0px rgba(0, 0, 0, 0);
 }
 
 .ui.blue.message .header {
-  color: #0563a0;
+  color: #3c7ea9;
 }
 
 .ui.violet.message {
@@ -26907,11 +26974,11 @@ Floated Menu / Item
 /* Blue */
 
 .ui.blue.table {
-  border-top: 0.2em solid #0672B9;
+  border-top: 0.2em solid #438CBC;
 }
 
 .ui.inverted.blue.table {
-  background-color: #0672B9 !important;
+  background-color: #438CBC !important;
   color: #FFFFFF !important;
 }
 
@@ -28353,15 +28420,15 @@ a.ui.card:hover,
 .ui.blue.cards > .card,
 .ui.cards > .blue.card,
 .ui.blue.card {
-  -webkit-box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #0672B9, 0px 1px 3px 0px #D4D4D5;
-  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #0672B9, 0px 1px 3px 0px #D4D4D5;
+  -webkit-box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #438CBC, 0px 1px 3px 0px #D4D4D5;
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #438CBC, 0px 1px 3px 0px #D4D4D5;
 }
 
 .ui.blue.cards > .card:hover,
 .ui.cards > .blue.card:hover,
 .ui.blue.card:hover {
-  -webkit-box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #0064a6, 0px 1px 3px 0px #BCBDBD;
-  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #0064a6, 0px 1px 3px 0px #BCBDBD;
+  -webkit-box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #377faf, 0px 1px 3px 0px #BCBDBD;
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #377faf, 0px 1px 3px 0px #BCBDBD;
 }
 
 /* Violet */
@@ -30327,7 +30394,7 @@ a.ui.card:hover,
 .ui.blue.statistics .statistic > .value,
 .ui.statistics .blue.statistic > .value,
 .ui.blue.statistic > .value {
-  color: #0672B9;
+  color: #438CBC;
 }
 
 .ui.violet.statistics .statistic > .value,
@@ -35672,7 +35739,7 @@ a.ui.nag {
 /* Blue */
 
 .ui.blue.progress .bar {
-  background-color: #0672B9;
+  background-color: #438CBC;
 }
 
 .ui.blue.inverted.progress .bar {

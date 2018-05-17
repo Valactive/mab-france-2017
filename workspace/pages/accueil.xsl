@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" 
-	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
+<xsl:stylesheet version="1.0"
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:ap="http://git.io/sym-asset-pipeline" exclude-result-prefixes="ap">
 	<xsl:import href="../utilities/master.xsl"></xsl:import>
 	<xsl:import href="../utilities/dates.xsl"></xsl:import>
@@ -137,7 +137,7 @@
 															<a href="#" class="ui primary basic button right floated">
 																<xsl:choose>
 																	<xsl:when test="$current-language = 'fr'">																		Lire la suite																	</xsl:when>
-																	<xsl:otherwise>Learn moreh</xsl:otherwise>
+																	<xsl:otherwise>Learn more</xsl:otherwise>
 																</xsl:choose>
 																<i class="arrow alternate circle right outline icon"></i>
 															</a>
@@ -151,11 +151,11 @@
 																<xsl:otherwise>%0m;/%0d;/%y2;</xsl:otherwise>
 															</xsl:choose>
 															</xsl:variable>
-															
+
 															<xsl:choose>
 																<xsl:when test="type/item = 'Actualité' and $current-language='en'">News</xsl:when>
 																<xsl:otherwise><xsl:value-of select="type/item"/></xsl:otherwise>
-															</xsl:choose> -																		
+															</xsl:choose> -
 																<xsl:call-template name="format-date">
 																	<xsl:with-param name="date" select="date/date/start"/>
 																	<xsl:with-param name="format" select=" $dateFormat "/>
@@ -211,10 +211,10 @@
 											<xsl:otherwise>
 												<p>(en)Le Mab France publie la Lettre de la biosphère quatre fois par an.</p>
 												<p>Vous pouvez vous inscrire <a href="">sur nos listes</a> pour la recevoir	dans votre boite mail !</p>
-												<p>Sinon, vous pouvez également <a href="">consulter en ligne</a> toutes les lettres que nous avons publié.</p>											
+												<p>Sinon, vous pouvez également <a href="">consulter en ligne</a> toutes les lettres que nous avons publié.</p>
 											</xsl:otherwise>
 										</xsl:choose>
-											
+
 										</div>
 									</div>
 								</div>
@@ -430,7 +430,7 @@
 										<div class="content">
 											<div class="header">
 											<xsl:choose>
-												<xsl:when test="$current-language='fr'">Sur notre page Facebook</xsl:when>
+												<xsl:when test="$current-language='fr'">Sur Facebook</xsl:when>
 												<xsl:otherwise>On Facebook</xsl:otherwise>
 											</xsl:choose>
 											</div>
@@ -485,8 +485,10 @@
 			<!-- pages de contenus -->
 			<xsl:otherwise>
 				<div class="ui grid">
-					<div class="row">
+
+					<div class="row page-header">
 					<!-- breadcrumb -->
+					<div class="bkg-breadcrumb">
 					<div class="ui breadcrumb container">
 						<a href="{$root}{$url-lang}" class="section">
 							<i class="home icon"></i> <!-- <xsl:value-of select="$page-title"></xsl:value-of> -->
@@ -506,26 +508,30 @@
 						</xsl:if>
 					</div>
 					</div>
+					<!-- page header -->
+					<div class="ui container">
+								<h1 class="text-primary"><xsl:value-of select="page-content/entry/nom/item[@lang=$language]"/></h1>
+							</div>
+					<!-- end page header -->
+					</div>
 					<!-- end breadcrumb -->
+
+
+
 					<!-- toc -->
 					<div class="main ui container">
 
 					<div class="ui segment" id="content">
 						<div class="ui right rail very close">
 							<div id="tocContents" class="ui sticky">
-								contenu du rail
+								Dans cette page
 							 <div id="tocContents"></div>
 							</div>
 						</div>
 						<!-- contenu de la section page -->
 						<!-- accueil sinon s-rubrique ou ss-rubrique -->
 						<!-- <section id="contents"> -->
-							<h1>
-								<xsl:value-of select="page-content/entry/nom/item[@lang=$language]"></xsl:value-of>
-							</h1>
-
-								<xsl:copy-of select="page-content/entry/contenu/item[@lang=$language]"></xsl:copy-of>
-
+						<xsl:copy-of select="page-content/entry/contenu/item[@lang=$language]"></xsl:copy-of>
 						<!-- </section> -->
 					</div>
 					</div>

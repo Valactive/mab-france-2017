@@ -163,7 +163,7 @@
 																		<xsl:apply-templates />
 																<!-- </div> -->
 																<!-- entire website common section -->
-																<section class="footer">
+																<section class="ui grid footer">
 																	<div class="ui container grid">
 																		<div class="column">
 																			<div class="ui horizontal list">

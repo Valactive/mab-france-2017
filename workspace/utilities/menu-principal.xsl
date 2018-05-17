@@ -3,7 +3,7 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:template name="mab-menu-principal">
 		<div class="ui stackable row main menu borderless menu-principal">
-			<div class="ui fluid container">
+			<div class="ui container">
 				<a href="{$root}/{$url-lang}/" class="header item">
 					<!-- <img class="logo" src="assets/images/logo.png"/> -->
 					<xsl:value-of select="$page-title"></xsl:value-of>

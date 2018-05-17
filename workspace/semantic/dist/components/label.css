@@ -756,16 +756,16 @@ a.ui.basic.teal.label:hover {
 
 .ui.blue.labels .label,
 .ui.blue.label {
-  background-color: #0672B9 !important;
-  border-color: #0672B9 !important;
+  background-color: #438CBC !important;
+  border-color: #438CBC !important;
   color: #FFFFFF !important;
 }
 
 /* Link */
 .ui.blue.labels .label:hover,
 a.ui.blue.label:hover {
-  background-color: #0064a6 !important;
-  border-color: #0064a6 !important;
+  background-color: #377faf !important;
+  border-color: #377faf !important;
   color: #FFFFFF !important;
 }
 
@@ -777,20 +777,20 @@ a.ui.blue.label:hover {
 
 /* Ribbon */
 .ui.blue.ribbon.label {
-  border-color: #045488 !important;
+  border-color: #367096 !important;
 }
 
 /* Basic */
 .ui.basic.blue.label {
   background-color: #FFFFFF !important;
-  color: #0672B9 !important;
-  border-color: #0672B9 !important;
+  color: #438CBC !important;
+  border-color: #438CBC !important;
 }
 .ui.basic.blue.labels a.label:hover,
 a.ui.basic.blue.label:hover {
   background-color: #FFFFFF !important;
-  color: #0064a6 !important;
-  border-color: #0064a6 !important;
+  color: #377faf !important;
+  border-color: #377faf !important;
 }
 
 /*--- Violet ---*/

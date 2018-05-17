@@ -49,17 +49,19 @@ window.semantic = {
 
         // http://gregfranko.com/jquery.tocify.js/
         $("#tocContents").tocify({
-            context:".main.container",
+            context:"#content",
             selectors: "h1,h2,h3,h4",
             theme: "none",
-            scrollTo: "65",
-            showAndHide: false
+            scrollTo: "135",
+            showAndHide: false,
+            extendPage: false
         });
         // STICKY MAIN MENU
         $('.ui.sticky')
         .sticky({
         context: '#content',
-        offset: 65
+        offset: 135,
+        bottomOffset: 20
         });
 
         // LISTE RB hover
@@ -71,7 +73,7 @@ window.semantic = {
         });
 
         // CARTE RB hover
-        $('path','#reserves-on').mouseenter(function(e){ 
+        $('path','#reserves-on').mouseenter(function(e){
           //set active status in rb list
           rb_on = $(this).data('reserve');
           rb = rb_on.split('-');
@@ -80,10 +82,21 @@ window.semantic = {
           listTarget.toggleClass('hovered');
           $("path[data-reserve='"+rb_on+"']").hide();
         });
+        $('path').popup(
+          'show',
+          {
+            content: 'the rb',
+            debug: true,
+            verbose: true
+          });
+
         $('path', '#reserves-off').mouseleave(function(){
           //rb_id = '#' + $(this).data('reserve') + '-on';
           $("path[data-reserve='"+rb_on+"']").show();
           $('a', '.list-rb').removeClass('hovered');
+        });
+        $('path','#reserves-off').popup({
+          content: 'the rb'
         });
   };
 
