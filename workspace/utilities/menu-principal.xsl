@@ -73,12 +73,34 @@
 							</div>
 						</xsl:when>
 						<xsl:otherwise>
-							<div class="item">
-								<span class="text">
-									<xsl:value-of select="$rubrique-principale" />
-								</span>
-								<!-- <a href="{$root}/{$url-lang}{$rubrique-principale-handle}/"><xsl:value-of select="$rubrique-principale" /></a> -->
-							</div>
+							<xsl:choose>
+								<xsl:when test="../../@id = '5'">
+									<div class="ui pointing dropdown link item">
+									<span class="text">
+										<!-- <a href="{$root}/{$url-lang}{$rubrique-principale-handle}/"> -->
+										<xsl:value-of select="$rubrique-principale" />
+										<!-- </a> -->
+									</span>
+									<i class="dropdown icon"></i>
+									<div class="menu">
+										<xsl:for-each select="/data/liste-reserves-de-biosphere/entry">
+											<div class="item">
+												<a href="{$root}/biosphere/{biosphere-nom/@handle}"><xsl:value-of select="biosphere-nom"/></a>
+											</div>
+										</xsl:for-each>
+									</div>
+								</div>
+								</xsl:when>
+								<xsl:otherwise>
+									<div class="item">
+										<span class="text">
+											<xsl:value-of select="$rubrique-principale" />
+										</span>
+										<!-- <a href="{$root}/{$url-lang}{$rubrique-principale-handle}/"><xsl:value-of select="$rubrique-principale" /></a> -->
+									</div>
+								</xsl:otherwise>
+							</xsl:choose>
+
 						</xsl:otherwise>
 					</xsl:choose>
 				</xsl:for-each>

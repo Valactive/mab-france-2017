@@ -18,7 +18,7 @@
 		<xsl:choose>
 			<xsl:when test="$rubrique ='' and $s-rubrique = '' and $ss-rubrique = ''">
 				<!-- home page -->
-				<!-- 		<h1><xsl:value-of select="page-content-1level/entry/nom/item[@lang=$language]"/></h1><p><xsl:copy-of select="page-content-1level/entry/contenu"></xsl:copy-of></p> -->
+				<!-- <h1><xsl:value-of select="page-content-1level/entry/nom/item[@lang=$language]"/></h1><p><xsl:copy-of select="page-content-1level/entry/contenu"></xsl:copy-of></p> -->
 				<section class="hero">
 					<!-- Contenu hero -->
 					<div class="ui grid container centered">
@@ -227,7 +227,7 @@
 				<!-- end section actu-newsletter -->
 				<section class="reserves container">
 					<div class="ui">
-						<div class="ui two column grid title">
+						<div id="reserves-de-biosphere" class="ui two column grid title">
 							<div class="row">
 								<div class="column five wide right aligned content">
 									<h2 class="osibv">
@@ -523,9 +523,10 @@
 
 					<div class="ui segment" id="content">
 						<div class="ui right rail very close">
-							<div id="tocContents" class="ui sticky">
-								Dans cette page
-							 <div id="tocContents"></div>
+							<div class="ui sticky">
+								<div id="tocContents">
+									<strong>Dans cette page</strong>
+							 	</div>
 							</div>
 						</div>
 						<!-- contenu de la section page -->

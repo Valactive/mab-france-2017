@@ -95,7 +95,7 @@
 								<meta name="keywords" content="MAB France, mab, Comité MAB France, Réserves de biosphère, Développement durable, programme mab, UNESCO, Comité français du mab, l'homme et la biosphère, Guadeloupe, Camargue, Cévennes, Luberon, Iroise, Ventoux, Fontainebleau, Tuamotu, Corse, Vosges"/>
 								<meta name="author" content="valactive"/>
 								<!-- Mobile viewport optimized: j.mp/bplateviewport -->
-								<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+								<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
 								<!-- <meta name="google-site-verification" content="AJta6kSh11NpeCGrwds_aC7awKODbNvE4hh7jv9hW9U" /> -->
 								<!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
 								<link rel="shortcut icon" href="/favicon.ico"/>
@@ -105,7 +105,13 @@
 								<!-- CSS: implied media="all" -->
 								<link rel="stylesheet" href="{$workspace}/semantic/dist/semantic.css"/>
 							</head>
-							<body class="mab">
+							<body>
+							<xsl:attribute name="class">
+							<xsl:choose>
+								<xsl:when test="$current-page-id = 1 and $rubrique = ''">home mab</xsl:when>
+								<xsl:otherwise>mab</xsl:otherwise>
+							</xsl:choose>
+							</xsl:attribute>
 								<!-- HEADER -->
 								<div class="ui internally right aligned grid menu secondary site-top-header">
 

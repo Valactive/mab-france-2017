@@ -359,6 +359,12 @@ h2 {
 #header {
   z-index: 0;
 }
+.ui.dropdown .menu {
+  z-index: 2 !important;
+}
+.ui.menu.menu-principal .ui.dropdown .menu > .item {
+  padding: 0.3125em 1.125em !important;
+}
 .ui.secondary.menu.site-top-header {
   background: #008c6c;
   
@@ -564,6 +570,9 @@ h2.osliv {
   padding-left: 0.5em;
   font-weight: bold;
 }
+.home .main-content {
+  margin-top: 45px;
+}
 .main-content {
   margin-top: 16px;
 }
@@ -628,26 +637,47 @@ section.footer {
 section.footer .ui.list > a.item {
   color: white;
 }
+#tocContents {
+  background-image: url(/workspace/img/fond-page-contenus.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: auto 100%;
+  padding: 10px 0 41px 5px;
+}
 /*
  * jquery.tocify.css 1.9.0
  * Author: @gregfranko
  */
 
 /* The Table of Contents container element */
-.tocify {
+#content .tocify {
   font-family: "Open Sans", helvetica, arial, sans-serif;
-  font-size: 0.8em;
   padding-top: 1em;
+  height: 130%;
+}
+#content .tocify a {
+  text-decoration: none;
+}
+#content .tocify a:hover {
+  text-decoration: underline;
+}
+#content .tocify a:before {
+  font-family: Icons;
+  content: "\f30b";
+  padding-right: 5px;
 }
 
 /* The Table of Contents is composed of multiple nested unordered lists.  These styles remove the default styling of an unordered list because it is ugly. */
-.tocify ul,
-.tocify li {
+#content .tocify ul,
+#content .tocify li {
   list-style: none;
   margin: 0 0 6px 0;
-  padding: 0px 10px 0 0;
+  padding: 0px 10px 0 8px;
   border: none;
   line-height: 15px;
+}
+#content .tocify ul {
+  margin-top: 6px;
 }
 
 /* Top level header elements */
@@ -657,7 +687,7 @@ section.footer .ui.list > a.item {
 
 /* Top level subheader elements.  These are the first nested items underneath a header element. */
 .tocify-subheader {
-  padding-left: 10px;
+  padding-left: 6px;
   /*display: none;*/
 }
 
@@ -674,17 +704,6 @@ section.footer .ui.list > a.item {
 /* Further indents third level subheader elements. You can continue this pattern if you have more nested elements. */
 .tocify-subheader .tocify-subheader .tocify-subheader {
   text-indent: 40px;
-}
-
-/* Twitter Bootstrap Override Style */
-.nav-list > li > a,
-.nav-list .nav-header {
-  margin: 0px;
-}
-
-/* Twitter Bootstrap Override Style */
-.nav-list > li > a {
-  padding: 5px;
 }
 @media screen and (min-width: 1200px) {
   .main.ui.container {

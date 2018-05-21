@@ -23,8 +23,7 @@ window.semantic = {
 
   // ready event
   semantic.ready = function() {
-        var $container = $('.main.container');
-        // fix main menu to page on passing
+            // fix main menu to page on passing
             $('.main.menu').visibility({
                 type: 'fixed'
             });
@@ -32,23 +31,26 @@ window.semantic = {
             //     type: 'fixed',
             //     offset: 80
             // });
-        // lazy load images
-            // $('img').visibility({
-            //     type: 'image',
-            //     transition: 'vertical flip in',
-            //     duration: 500
-            // });
-        // show dropdown on hover
-            $('.main.menu .ui.dropdown').dropdown({
-                on: 'hover'
+
+          //lazy load images
+            $('img').visibility({
+                type: 'image',
+                transition: 'vertical flip in',
+                duration: 500
             });
+        // show dropdown on hover
+            // $('.main.menu .ui.dropdown').dropdown({
+            //     on: 'hover'
+            // });
 
             $('.ui.dropdown')
               .dropdown()
             ;
 
+
         // http://gregfranko.com/jquery.tocify.js/
-        $("#tocContents").tocify({
+        $("#tocContents")
+          .tocify({
             context:"#content",
             selectors: "h1,h2,h3,h4",
             theme: "none",
@@ -56,12 +58,13 @@ window.semantic = {
             showAndHide: false,
             extendPage: false
         });
+
         // STICKY MAIN MENU
         $('.ui.sticky')
         .sticky({
-        context: '#content',
-        offset: 135,
-        bottomOffset: 20
+          context: '#content',
+          offset: 135,
+          bottomOffset: 20
         });
 
         // LISTE RB hover
@@ -98,7 +101,5 @@ window.semantic = {
         $('path','#reserves-off').popup({
           content: 'the rb'
         });
-  };
-
-  // attach ready event
+  };  // attach ready event
 $(document).ready(semantic.ready);
