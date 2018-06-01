@@ -13,13 +13,14 @@
     "grunt-contrib-concat": "~1.0.1",
     "grunt-contrib-jshint": "~1.0.0",
     "grunt-contrib-uglify": "~1.0.1",
-    "grunt-contrib-watch": "~1.0.0",
+    "grunt-contrib-watch": "^1.0.1",
     "grunt-csso": "~1.0.0",
     "grunt-git-rev-parse": "^0.1.5",
     "grunt-phpcs": "^0.4.0"
   },
   "dependencies": {
     "lodash": "^4.17.5",
-    "semantic-ui": "^2.2.14"
+    "npm": "^5.8.0",
+    "semantic-ui": "^2.3.1"
   }
 }
