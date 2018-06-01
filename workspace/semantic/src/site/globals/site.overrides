@@ -49,8 +49,17 @@
          .cls-14{fill:#66c2a5;}
          .cls-15{fill:#41ad4e;}
          .cls-16{fill:#be9eb3;}
+         .cls-17{fill:#b3ddd0;} */
+
+         .cls-1{fill:#e8e9e9;}.cls-2{fill:#696969;}.cls-3{fill:#bad77c;}.cls-4{fill:#f17e74;}.cls-5{fill:#4194c7;}.cls-6{fill:#f59769;}.cls-16,.cls-7{fill:#b3ddcf;}.cls-8{fill:#48bca2;}.cls-9{fill:#fecd6f;}.cls-10{fill:#8bb47f;}.cls-11{fill:#7ecbbe;}.cls-12{fill:#fab632;}.cls-13{fill:#f28575;}.cls-14{fill:#00abbd;}.cls-15{fill:#66c2a5;}.cls-16{fill-rule:evenodd;}.cls-17{fill:#41ad4e;}.cls-18{fill:#be9eb3;}
          #header {
             z-index:0;
+        }
+        .ui.dropdown .menu {
+            z-index: 2 !important;
+        }
+        .ui.menu.menu-principal .ui.dropdown .menu > .item {
+            padding:0.3125em 1.125em !important;
         }
         .ui.secondary.menu.site-top-header {
             background: #008c6c; /* Old browsers */
@@ -62,7 +71,7 @@
         }
         .ui.main.menu {
             margin: 0;
-            background : rgba(255,255,255,0.71);
+            background : rgba(240,240,240,0.70);
             display:block;
         }
         .ui.main.menu .item {
@@ -89,9 +98,9 @@
             transition: all .2s ease-in-out;
         }
         .social-menu > a:hover {
-           transform: scale(1.1);
-       }
-       .v-facebook {
+         transform: scale(1.2);
+     }
+     .v-facebook {
         background : url('/workspace/img/facebook-logo.png') center center no-repeat;
     }
     .v-vimeo {
@@ -99,6 +108,9 @@
     }
     .v-flickr {
         background : url('/workspace/img/flickr-logo.png') center center no-repeat;
+    }
+    .v-instagram {
+        background : url('/workspace/img/instagram-logo.png') center center no-repeat;
     }
     .site-name {
         font-size:2.3em;
@@ -173,6 +185,13 @@
         color: @marron;
         font-weight: bold;
     }
+    section.actu-newsletter .ui.cards > .card {
+        box-shadow: 0px 1px 8px 2px #b5d8de;
+    }
+    section.actu-newsletter .ui.cards > .card > .image {
+        // height:130px;
+        // overflow:hidden;
+    }
     section.reserves {
         background-image: url(/workspace/img/fond-reserves-blanc.png), url(/workspace/img/fond-reserves.png);
         background-size: 70% 100%, 97% 100%;
@@ -214,16 +233,69 @@
         background: #ffffffb0;
     }
     .list-rb > a.item:hover .header,
-    .list-rb > a.item:hover .icon {
+    .list-rb > a.item:hover .icon,
+    .list-rb > a.item.hovered .header,
+    .list-rb > a.item.hovered .icon {
         color:#B1563D !important;
     }
-
+    // breadcrumbs
+    .bkg-breadcrumb {
+        background : rgba(255,255,255,0.6);
+        height: 2.2em;
+        width:100%;
+    }
+    .ui.breadcrumb {
+        padding: 0.7em 1em 0em 1.2em;
+        font-size: 0.8em !important;
+        display:block !important;
+        color: @blue;
+    }
+    .page-header {
+        background : url('/workspace/img/fond-page-contenus.png') center bottom no-repeat;
+        min-height:8em;
+        padding-top:0 !important;
+        margin-bottom:3em;
+    }
+    .page-header h1 {
+        padding-left: 0.5em;
+        font-weight: bold;
+    }
+    // contents
+    .home .main-content {
+        margin-top:45px;
+    }
+    .main-content {
+        margin-top:16px;
+    }
+    #content {
+        color:#262727;
+    }
+    #content a {
+        text-decoration : underline;
+    }
+    #content.ui.segment {
+        border: none;
+        box-shadow: none;
+    }
+    #content strong {
+        color:#094851;
+        font-weight:bold;
+    }
+    #content h1, #content h2, #content h3 {
+        font-family : @fontName, helvetica, arial, sans-serif;
+        color:@marron;
+    }
+    #content ul {
+        list-style-type: inherit;
+        padding: 0 0 0 2.2em;
+    }
     section.contact {
         background : url(/workspace/img/fond-section-contact.jpg) 100% 100% no-repeat;
         padding-top:3em;
         padding-bottom:6em;
     }
     .main.container {
+        font-family : "Open Sans", helvetica, arial, sans-serif;
         margin-right:387px !important;
         margin-left: 3em !important;
         width: 700px !important;
@@ -254,27 +326,45 @@
         color:white;
     }
 
+    #tocContents {
+        background-image: url(/workspace/img/fond-page-contenus.png);
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        background-size: auto 100%;
+        padding: 10px 0 41px 5px;
+    }
 /*
  * jquery.tocify.css 1.9.0
  * Author: @gregfranko
  */
  /* The Table of Contents container element */
- .tocify {
-    /* width: 20%;
-    max-height: 90%;
-    overflow: auto;
-    margin-left: 2%;
-    position: fixed;*/
+ #content .tocify {
+    font-family : "Open Sans", helvetica, arial, sans-serif;
+    padding-top:1em;
+    height:130%;
+}
+#content .tocify a {
+    text-decoration : none;
+}
+#content .tocify a:hover {
+    text-decoration: underline;
+}
+#content .tocify a:before {
+    font-family: Icons;
+    content: "\f30b";
+    padding-right:5px;
 }
 /* The Table of Contents is composed of multiple nested unordered lists.  These styles remove the default styling of an unordered list because it is ugly. */
-.tocify ul, .tocify li {
+#content .tocify ul, #content .tocify li {
     list-style: none;
     margin: 0 0 6px 0;
-    padding: 0px 10px 0 0;
+    padding: 0px 10px 0 8px;
     border: none;
     line-height: 15px;
 }
-
+#content .tocify ul {
+    margin-top:6px;
+}
 /* Top level header elements */
 .tocify-header {
     text-indent: 0px;
@@ -282,7 +372,7 @@
 
 /* Top level subheader elements.  These are the first nested items underneath a header element. */
 .tocify-subheader {
-    padding-left: 10px;
+    padding-left: 6px;
     /*display: none;*/
 }
 
@@ -301,14 +391,14 @@
     text-indent: 40px;
 }
 
-/* Twitter Bootstrap Override Style */
-.nav-list > li > a, .nav-list .nav-header {
-    margin: 0px;
-}
 
-/* Twitter Bootstrap Override Style */
-.nav-list > li > a {
-    padding: 5px;
+// responsive media query
+@media screen and (min-width: 1200px) {
+    .main.ui.container {
+        max-width:880px !important;
+        width:860px !important;
+        margin-left:10% !important;
+    }
 }
 @media screen and (min-width: 1280px) {
     .hero {
@@ -316,12 +406,15 @@
         max-height: 67%;
     }
     section.annonce {
-        margin-top:-81px;
+        margin-top:-7em;
     }
 }
 @media screen and (max-width: 1280px) {
     .hero {
         background-image:url('/workspace/img/slogan-1280.png');
         background-position: center -4px;
+    }
+    section.annonce {
+        margin-top:-8%;
     }
 }
