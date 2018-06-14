@@ -252,85 +252,85 @@
 									<a data-reserve="guadeloupe" href="{$root}/biosphere/reserve-de-biosphere-" class="item">
 										<i class="circle icon c-guadeloupe"></i>
 										<div class="content">
-											<div class="header">RB de l’archipel de Guadeloupe</div>
+											<div class="header">L’archipel de Guadeloupe</div>
 										</div>
 									</a>
 									<a data-reserve="iroise" href="{$root}/biosphere/reserve-de-biosphere-" class="item">
 										<i class="circle icon c-iroise"></i>
 										<div class="content">
-											<div class="header">RB des Îles et de la mer d’Iroise</div>
+											<div class="header">Les Îles et de la mer d’Iroise</div>
 										</div>
 									</a>
 									<a data-reserve="audomarois" href="{$root}/biosphere/reserve-de-biosphere-" class="item">
 										<i class="circle icon c-audomarois"></i>
 										<div class="content">
-											<div class="header">RB du marais Audomarois</div>
+											<div class="header">Le marais Audomarois</div>
 										</div>
 									</a>
 									<a data-reserve="fontainebleau" href="{$root}/biosphere/reserve-de-biosphere-" class="item">
 										<i class="circle icon c-fontainebleau"></i>
 										<div class="content">
-											<div class="header">RB de Fontainebleau et du Gâtinais</div>
+											<div class="header">Fontainebleau et Gâtinais</div>
 										</div>
 									</a>
 									<a data-reserve="vosges" href="{$root}/biosphere/reserve-de-biosphere-" class="item">
 										<i class="circle icon c-vosges"></i>
 										<div class="content">
-											<div class="header">RB transfrontière des Vosges du Nord-Pfälzerwald</div>
+											<div class="header">Transfrontière des Vosges du Nord-Pfälzerwald</div>
 										</div>
 									</a>
 									<a data-reserve="cevennes" href="{$root}/biosphere/reserve-de-biosphere-" class="item">
 										<i class="circle icon c-cevennes"></i>
 										<div class="content">
-											<div class="header">RB des Cévennes</div>
+											<div class="header">Les Cévennes</div>
 										</div>
 									</a>
 									<a data-reserve="dordogne" href="{$root}/biosphere/reserve-de-biosphere-" class="item">
 										<i class="circle icon c-dordogne"></i>
 										<div class="content">
-											<div class="header">RB du bassin de la Dordogne</div>
+											<div class="header">Le bassin de la Dordogne</div>
 										</div>
 									</a>
 									<a data-reserve="gardon" href="{$root}/biosphere/reserve-de-biosphere-" class="item">
 										<i class="circle icon c-gardon"></i>
 										<div class="content">
-											<div class="header">RB des gorges du Gardon</div>
+											<div class="header">Les gorges du Gardon</div>
 										</div>
 									</a>
 									<a data-reserve="camargue" href="{$root}/biosphere/reserve-de-biosphere-" class="item">
 										<i class="circle icon c-camargue"></i>
 										<div class="content">
-											<div class="header">RB de Camargue (delta du Rhône)</div>
+											<div class="header">La Camargue (delta du Rhône)</div>
 										</div>
 									</a>
 									<a data-reserve="luberon" href="{$root}/biosphere/reserve-de-biosphere-" class="item">
 										<i class="circle icon c-luberon"></i>
 										<div class="content">
-											<div class="header">RB Luberon-Lure</div>
+											<div class="header">Le Luberon-Lure</div>
 										</div>
 									</a>
 									<a data-reserve="ventoux" href="{$root}/biosphere/reserve-de-biosphere-" class="item">
 										<i class="circle icon c-ventoux"></i>
 										<div class="content">
-											<div class="header">RB du Mont Ventoux</div>
+											<div class="header">Le mont Ventoux</div>
 										</div>
 									</a>
 									<a data-reserve="viso" href="{$root}/biosphere/reserve-de-biosphere-" class="item">
 										<i class="circle icon c-viso"></i>
 										<div class="content">
-											<div class="header">RB transfrontière du Mont Viso</div>
+											<div class="header">Transfrontière du Mont Viso</div>
 										</div>
 									</a>
 									<a data-reserve="fango" href="{$root}/biosphere/reserve-de-biosphere-" class="item">
 										<i class="circle icon c-fango"></i>
 										<div class="content">
-											<div class="header">RB de la vallée du Fango</div>
+											<div class="header">La vallée du Fango</div>
 										</div>
 									</a>
 									<a data-reserve="fakarava" href="{$root}/biosphere/reserve-de-biosphere-" class="item">
 										<i class="circle icon c-fakarava"></i>
 										<div class="content">
-											<div class="header">RB de la commune de Fakarava</div>
+											<div class="header">La commune de Fakarava</div>
 										</div>
 									</a>
 								</div>
