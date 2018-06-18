@@ -20,7 +20,7 @@
 							<div class="column">
 								<span class="text">
 									<!-- <a href="{$root}/{$url-lang}{$rubrique-principale-handle}/"> -->
-									<h5><xsl:value-of select="$rubrique-principale" /></h5>
+									<h3><xsl:value-of select="$rubrique-principale" /></h3>
 									<!-- </a> -->
 								</span>
 

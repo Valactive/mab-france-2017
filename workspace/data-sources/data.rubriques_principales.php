@@ -3,7 +3,7 @@
 class datasourcerubriques_principales extends SectionDatasource
 {
     public $dsParamROOTELEMENT = 'rubriques-principales';
-    public $dsParamORDER = 'desc';
+    public $dsParamORDER = 'asc';
     public $dsParamPAGINATERESULTS = 'no';
     public $dsParamLIMIT = '20';
     public $dsParamSTARTPAGE = '1';
@@ -13,7 +13,7 @@ class datasourcerubriques_principales extends SectionDatasource
     public $dsParamPARAMOUTPUT = array(
         'system:id'
         );
-    public $dsParamSORT = 'system:id';
+    public $dsParamSORT = 'ordre';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
@@ -33,10 +33,10 @@ class datasourcerubriques_principales extends SectionDatasource
             'name' => 'Rubriques principales',
             'author' => array(
                 'name' => 'Valéry Frisch',
-                'website' => 'http://mab-france-new.dev',
+                'website' => 'http://mab-france-new.localhost',
                 'email' => 'valery.frisch@gmail.com'),
-            'version' => 'Symphony 2.7.0',
-            'release-date' => '2017-11-26T20:27:45+00:00'
+            'version' => 'Symphony 2.7.2',
+            'release-date' => '2018-06-16T07:43:38+00:00'
         );
     }
 

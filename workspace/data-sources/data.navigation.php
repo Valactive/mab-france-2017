@@ -1,33 +1,14 @@
 <?php
 
-class datasourcemenu_principal extends SectionDatasource
+require_once(EXTENSIONS.'/page_lhandles/lib/class.datasource.MultilingualNavigation.php');
+
+class datasourcenavigation extends MultilingualNavigationDatasource
 {
-    public $dsParamROOTELEMENT = 'menu-principal';
-    public $dsParamORDER = 'asc';
-    public $dsParamPAGINATERESULTS = 'no';
-    public $dsParamLIMIT = '20';
-    public $dsParamSTARTPAGE = '1';
+    public $dsParamROOTELEMENT = 'navigation';
+    public $dsParamORDER = 'desc';
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
-    public $dsParamPARAMOUTPUT = array(
-        'system:id',
-        'nom'
-        );
-    public $dsParamSORT = 'ordre';
-    public $dsParamHTMLENCODE = 'no';
-    public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
-
-    public $dsParamFILTERS = array(
-        '4' => 'yes',
-    );
-
-    public $dsParamINCLUDEDELEMENTS = array(
-        'nom: all-languages: formatted',
-        'rubrique-parente',
-        'menu-niveau-2-page',
-        'publie'
-    );
 
     public function __construct($env = null, $process_params = true)
     {
@@ -38,19 +19,19 @@ class datasourcemenu_principal extends SectionDatasource
     public function about()
     {
         return array(
-            'name' => 'Menu principal',
+            'name' => 'Navigation',
             'author' => array(
-                'name' => 'Sophie Taminh',
-                'website' => 'https://prep.mab-france.org',
-                'email' => 'staminh@valactive.com'),
+                'name' => 'Valéry Frisch',
+                'website' => 'http://mab-france-new.localhost',
+                'email' => 'valery.frisch@gmail.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-05-18T07:27:10+00:00'
+            'release-date' => '2018-06-17T10:43:41+00:00'
         );
     }
 
     public function getSource()
     {
-        return '1';
+        return 'navigation';
     }
 
     public function allowEditorToParse()

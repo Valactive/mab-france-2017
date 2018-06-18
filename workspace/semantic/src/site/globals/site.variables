@@ -1,6 +1,7 @@
 /*******************************
      User Global Variables
 *******************************/
+
 @headerFont			 : "Open Sans", helvetica, sans-serif;
 @fontSize			 : 16px;
 @headerFontWeight	 : 400;

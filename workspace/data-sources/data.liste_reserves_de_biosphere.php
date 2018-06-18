@@ -10,12 +10,13 @@ class datasourceliste_reserves_de_biosphere extends SectionDatasource
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
-    public $dsParamSORT = 'biosphere-nom';
+    public $dsParamSORT = 'system:id';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
     public $dsParamINCLUDEDELEMENTS = array(
-        'biosphere-nom'
+        'nom: all-languages: formatted',
+        'classe'
     );
 
     public function __construct($env = null, $process_params = true)
@@ -33,7 +34,7 @@ class datasourceliste_reserves_de_biosphere extends SectionDatasource
                 'website' => 'http://mab-france-new.localhost',
                 'email' => 'valery.frisch@gmail.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-05-19T05:45:39+00:00'
+            'release-date' => '2018-06-17T10:51:22+00:00'
         );
     }
 

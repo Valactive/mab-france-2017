@@ -3,11 +3,11 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:template name="mab-menu-principal">
 		<div class="ui stackable row main menu borderless menu-principal">
-			<div class="ui container">
-				<a href="{$root}/{$url-lang}/" class="header item">
-					<!-- <img class="logo" src="assets/images/logo.png"/> -->
+			<div class="ui container fluid">
+				<!-- <a href="{$root}/{$url-lang}/" class="header item">
+					<img class="logo" src="assets/images/logo.png"/>
 					<xsl:value-of select="$page-title"></xsl:value-of>
-				</a>
+				</a> -->
 				<!-- 1er niveau -->
 				<xsl:for-each select="/data/rubriques-principales/entry/nom/item[@lang=$language]">
 					<xsl:variable name="rubrique-principale-handle">
@@ -73,33 +73,14 @@
 							</div>
 						</xsl:when>
 						<xsl:otherwise>
-							<xsl:choose>
-								<xsl:when test="../../@id = '5'">
-									<div class="ui pointing dropdown link item">
-									<span class="text">
-										<!-- <a href="{$root}/{$url-lang}{$rubrique-principale-handle}/"> -->
-										<xsl:value-of select="$rubrique-principale" />
-										<!-- </a> -->
-									</span>
-									<i class="dropdown icon"></i>
-									<div class="menu">
-										<xsl:for-each select="/data/liste-reserves-de-biosphere/entry">
-											<div class="item">
-												<a href="{$root}/biosphere/{biosphere-nom/@handle}"><xsl:value-of select="biosphere-nom"/></a>
-											</div>
-										</xsl:for-each>
-									</div>
-								</div>
-								</xsl:when>
-								<xsl:otherwise>
+
 									<div class="item">
 										<span class="text">
 											<xsl:value-of select="$rubrique-principale" />
 										</span>
 										<!-- <a href="{$root}/{$url-lang}{$rubrique-principale-handle}/"><xsl:value-of select="$rubrique-principale" /></a> -->
 									</div>
-								</xsl:otherwise>
-							</xsl:choose>
+
 
 						</xsl:otherwise>
 					</xsl:choose>

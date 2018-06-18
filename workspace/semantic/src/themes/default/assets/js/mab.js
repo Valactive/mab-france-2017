@@ -69,10 +69,10 @@ window.semantic = {
 
         // LISTE RB hover
         $('a', '.list-rb').mouseover(function() {
-          rb = '#' + $(this).data("reserve") + '-on';
-          $(rb).hide();
+          rb = $(this).data("reserve") + '-on';
+          $("path[data-reserve='"+rb+"']").hide();
         }).mouseleave(function(e){
-          $(rb).show();
+          $("path[data-reserve='"+rb+"']").show();
         });
 
         // CARTE RB hover
@@ -103,3 +103,4 @@ window.semantic = {
         });
   };  // attach ready event
 $(document).ready(semantic.ready);
+jQuery.event.special.touchstart = { setup: function( _, ns, handle ){ if ( ns.includes("noPreventDefault") ) { this.addEventListener("touchstart", handle, { passive: false }); } else { this.addEventListener("touchstart", handle, { passive: true }); } } };

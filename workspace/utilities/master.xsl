@@ -8,7 +8,11 @@
 	<xsl:import href="menu-principal-footer.xsl"/>
 
 	<xsl:output method="html" doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" omit-xml-declaration="yes" encoding="UTF-8" indent="yes" />
+
 	<xsl:variable name="is-logged-in" select="/data/events/login-info/@logged-in"/>
+	<xsl:variable name="rubrique"/>
+	<xsl:variable name="s-rubrique"/>
+	<xsl:variable name="ss-rubrique"/>
 	<!-- <xsl:variable name="labels" select="/data/textes-statiques/entry"/> -->
 	<!-- <xsl:variable name="titre"/> -->
 	<xsl:variable name="language" select="/data/fl-languages/current-language/@handle"/>
@@ -109,6 +113,7 @@
 							<xsl:attribute name="class">
 							<xsl:choose>
 								<xsl:when test="$current-page-id = 1 and $rubrique = ''">home mab</xsl:when>
+								<xsl:when test="$current-page-id = 4">biosphere</xsl:when>
 								<xsl:otherwise>mab</xsl:otherwise>
 							</xsl:choose>
 							</xsl:attribute>
@@ -121,12 +126,12 @@
 
 									<div class="two wide column middle aligned content">
 										<a href="{$root}" class="ui medium img">
-											<img class="ui tiny centered image" src="{$workspace}/img/logo_mab-france_couleur.png" alt="logo du Mab France"/>
+											<img class="ui tiny centered image" src="{$workspace}/img/logos/france-2016.png" alt="logo du Mab France"/>
 										</a>
 									</div>
 
 									<div class="left floated left aligned four wide column middle aligned content">
-										<span class="site-baseline">L'Homme et la biosphère<br/>Man and biosphere</span>
+										<span class="site-baseline">L'Homme &amp; la Biosphère<br/>Man &amp; the Biosphere</span>
 									</div>
 
 

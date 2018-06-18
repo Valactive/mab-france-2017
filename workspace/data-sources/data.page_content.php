@@ -3,14 +3,14 @@
 class datasourcepage_content extends SectionDatasource
 {
     public $dsParamROOTELEMENT = 'page-content';
-    public $dsParamORDER = 'desc';
+    public $dsParamORDER = 'asc';
     public $dsParamPAGINATERESULTS = 'no';
     public $dsParamLIMIT = '20';
     public $dsParamSTARTPAGE = '1';
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
-    public $dsParamSORT = 'system:id';
+    public $dsParamSORT = 'ordre';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
@@ -36,11 +36,11 @@ class datasourcepage_content extends SectionDatasource
         return array(
             'name' => 'Page content',
             'author' => array(
-                'name' => 'Valéry Frisch',
-                'website' => 'http://mab-france-new.dev',
-                'email' => 'valery.frisch@gmail.com'),
-            'version' => 'Symphony 2.7.0',
-            'release-date' => '2017-12-10T14:36:05+00:00'
+                'name' => 'Sophie Taminh',
+                'website' => 'https://prep.mab-france.org',
+                'email' => 'staminh@valactive.com'),
+            'version' => 'Symphony 2.7.2',
+            'release-date' => '2018-05-18T07:27:46+00:00'
         );
     }
 
