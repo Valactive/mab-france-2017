@@ -1645,6 +1645,34 @@ section.page-head {
   color: white;
 }
 
+section.territoire {
+  padding: 5em 0;
+  background: url('/workspace/img/bg-territoire.png') top center no-repeat;
+}
+
+section.territoire .ui.container {
+  padding: 20px;
+  background-color: white;
+  border-radius: 30px;
+}
+
+section.actu-biosphere {
+  background: url('/workspace/img/bg-actu-biosphere.png') top center no-repeat;
+  margin-top: -5em;
+  padding-top: 10em;
+  padding-bottom: 3em;
+}
+
+section.actu-biosphere .ui.cards > .card > .content > .header:not(.ui),
+section.actu-biosphere .ui.card > .content > .header:not(.ui) {
+  font-size: 1em;
+  font-weight: normal;
+}
+
+section.actu-biosphere .meta {
+  padding: 5px;
+}
+
 h2.osibv {
   font-size: 3.2em;
   font-style: italic;
