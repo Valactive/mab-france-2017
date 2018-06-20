@@ -43,7 +43,7 @@ class datasourcebiosphere extends SectionDatasource
         'biosphere-mail',
         'biosphere-adresse-2: formatted',
         'biosphere-telephone-2',
-        'biosphermai2',
+        'mail2',
         'biosphere-nom-site-web',
         'biosphere-lien-site-web',
         'biosphere-nom-site-web-2',
@@ -69,7 +69,7 @@ class datasourcebiosphere extends SectionDatasource
                 'website' => 'http://mab-france-new.localhost',
                 'email' => 'valery.frisch@gmail.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-06-17T12:23:18+00:00'
+            'release-date' => '2018-06-20T16:52:11+00:00'
         );
     }
 

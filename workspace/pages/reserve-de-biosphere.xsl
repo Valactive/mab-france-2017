@@ -58,9 +58,9 @@
 										<td>
 											<p class="table-list-title">
 												<xsl:choose>
-												<xsl:when test="$current-language='fr'">Nombre de communes :</xsl:when>
-												<xsl:otherwise>Number of municipalities :</xsl:otherwise>
-											</xsl:choose>
+													<xsl:when test="$current-language='fr'">Nombre de communes :</xsl:when>
+													<xsl:otherwise>Number of municipalities :</xsl:otherwise>
+												</xsl:choose>
 											</p>
 										</td>
 										<td><p><xsl:value-of select="biosphere/entry/nombre-communes"/></p></td>
@@ -69,9 +69,9 @@
 										<td>
 											<p class="table-list-title">
 												<xsl:choose>
-												<xsl:when test="$current-language='fr'">Nombre d'habitants :</xsl:when>
-												<xsl:otherwise>Population :</xsl:otherwise>
-											</xsl:choose>
+													<xsl:when test="$current-language='fr'">Nombre d'habitants :</xsl:when>
+													<xsl:otherwise>Population :</xsl:otherwise>
+												</xsl:choose>
 											</p>
 										</td>
 										<td><p><xsl:value-of select="biosphere/entry/biosphere-nb-habitants"/></p></td>
@@ -80,30 +80,30 @@
 										<td>
 											<p class="table-list-title">
 												<xsl:choose>
-												<xsl:when test="$current-language='fr'">Superficie :</xsl:when>
-												<xsl:otherwise>Area :</xsl:otherwise>
-											</xsl:choose>
+													<xsl:when test="$current-language='fr'">Superficie :</xsl:when>
+													<xsl:otherwise>Area :</xsl:otherwise>
+												</xsl:choose>
 											</p>
 										</td>
 										<td>
 											<p><xsl:value-of select="biosphere/entry/biosphere-superficie"/></p>
-											</td>
+										</td>
 									</tr>
 									<tr>
 										<td>
 											<p class="table-list-title">
 												<xsl:choose>
-												<xsl:when test="$current-language='fr'">Régions :</xsl:when>
-												<xsl:otherwise>Regions :</xsl:otherwise>
-											</xsl:choose>
+													<xsl:when test="$current-language='fr'">Régions :</xsl:when>
+													<xsl:otherwise>Regions :</xsl:otherwise>
+												</xsl:choose>
 											</p>
 										</td>
 										<td>
 											<p>
-											<xsl:for-each select="biosphere/entry/biosphere-region/item">
-												<xsl:value-of select="."/>
-												<xsl:if test="position()!=last()"> , </xsl:if>
-											</xsl:for-each>
+												<xsl:for-each select="biosphere/entry/biosphere-region/item">
+													<xsl:value-of select="."/>
+													<xsl:if test="position()!=last()"> , </xsl:if>
+												</xsl:for-each>
 											</p>
 										</td>
 									</tr>
@@ -111,17 +111,17 @@
 										<td>
 											<p class="table-list-title">
 												<xsl:choose>
-												<xsl:when test="$current-language='fr'">Départements :</xsl:when>
-												<xsl:otherwise>Departments :</xsl:otherwise>
-											</xsl:choose>
+													<xsl:when test="$current-language='fr'">Départements :</xsl:when>
+													<xsl:otherwise>Departments :</xsl:otherwise>
+												</xsl:choose>
 											</p>
 										</td>
 										<td>
 											<p>
-											<xsl:for-each select="biosphere/entry/biosphere-departement/item">
-												<xsl:value-of select="."/>
-												<xsl:if test="position()!=last()"> , </xsl:if>
-											</xsl:for-each>
+												<xsl:for-each select="biosphere/entry/biosphere-departement/item">
+													<xsl:value-of select="."/>
+													<xsl:if test="position()!=last()"> , </xsl:if>
+												</xsl:for-each>
 											</p>
 										</td>
 									</tr>
@@ -129,26 +129,116 @@
 										<td>
 											<p class="table-list-title">
 												<xsl:choose>
-												<xsl:when test="$current-language='fr'">Date de création :</xsl:when>
-												<xsl:otherwise>Creation date :</xsl:otherwise>
-											</xsl:choose>
+													<xsl:when test="$current-language='fr'">Date de création :</xsl:when>
+													<xsl:otherwise>Creation date :</xsl:otherwise>
+												</xsl:choose>
 											</p>
 										</td>
 										<td><p><xsl:value-of select="biosphere/entry/biosphere-annee-creation"/></p></td>
 									</tr>
 									<xsl:if test="biosphere/entry/biosphere-annee-renouvellement != ''">
+										<tr>
+											<td>
+												<p class="table-list-title">
+													<xsl:choose>
+														<xsl:when test="$current-language='fr'">Date de renouvellement :</xsl:when>
+														<xsl:otherwise>Renew date :</xsl:otherwise>
+													</xsl:choose>
+												</p>
+											</td>
+											<td><p><xsl:value-of select="biosphere/entry/biosphere-annee-renouvellement"/></p></td>
+										</tr>
+									</xsl:if>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="coordonnees">
+				<div class="ui container">
+					<div class="ui segment picto-deco">
+						<div class="ui grid">
+							<div class="height wide column">
+								<table>
 									<tr>
 										<td>
 											<p class="table-list-title">
 												<xsl:choose>
-												<xsl:when test="$current-language='fr'">Date de renouvellement :</xsl:when>
-												<xsl:otherwise>Renew date :</xsl:otherwise>
-											</xsl:choose>
+														<xsl:when test="$current-language='fr'">Adresse :</xsl:when>
+														<xsl:otherwise>Address :</xsl:otherwise>
+												</xsl:choose>
+											</p>
+											<td><p><xsl:copy-of select="biosphere/entry/biosphere-adresse"/></p></td>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<p class="table-list-title">
+												<xsl:choose>
+														<xsl:when test="$current-language='fr'">Tél :</xsl:when>
+														<xsl:otherwise>Phone :</xsl:otherwise>
+												</xsl:choose>
+											</p>
+											<td><p><xsl:copy-of select="biosphere/entry/biosphere-telephone"/></p></td>
+										</td>
+									</tr>
+
+									<tr>
+										<td>
+											<p class="table-list-title">
+												<xsl:choose>
+														<xsl:when test="$current-language='fr'">Email :</xsl:when>
+														<xsl:otherwise>Email :</xsl:otherwise>
+												</xsl:choose>
+											</p>
+											<td>
+												<p><xsl:copy-of select="biosphere/entry/biosphere-mail"/></p>
+												<xsl:if test="biosphere/entry/mail2">
+													<p><xsl:copy-of select="biosphere/entry/mail2"/></p>
+												</xsl:if>
+											</td>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="height wide column">
+								<table>
+									<tr>
+										<td><p class="table-list-title">
+											<xsl:choose>
+														<xsl:when test="$current-language='fr'">Site web :</xsl:when>
+														<xsl:otherwise>Website :</xsl:otherwise>
+												</xsl:choose>
 											</p>
 										</td>
-										<td><p><xsl:value-of select="biosphere/entry/biosphere-annee-renouvellement"/></p></td>
+										<td>
+											<p><a href="{biosphere/entry/biosphere-lien-site-web}" target="_blank"><xsl:value-of select="biosphere/entry/biosphere-nom-site-web"/></a></p>
+											<xsl:if test="biosphere/entry/biosphere-nom-site-web !=''">
+												<p><a href="{biosphere/entry/biosphere-lien-site-web-2}" target="_blank"><xsl:value-of select="biosphere/entry/biosphere-nom-site-web-2"/></a></p>
+											</xsl:if>
+										</td>
 									</tr>
-									</xsl:if>
+									<tr>
+										<td></td>
+										<td>
+											<xsl:if test="biosphere/entry/biosphere-page-facebook!=''">
+											<span class="social-menu"><a href="{biosphere/entry/biosphere-page-facebook}" target="_blank" class="v-facebook marron"></a></span>
+											</xsl:if>
+											<xsl:if test="biosphere/entry/biosphere-lien-instagram!=''">
+											<span class="social-menu"><a href="{biosphere/entry/biosphere-lien-instagram}" target="_blank" class="v-instagram marron"></a></span>
+										</xsl:if>
+										<xsl:if test="biosphere/entry/dossier-presse != ''">
+											<a href="{$workspace}{biophere/entry/dossier-presse/@path}{biosphere/entry/dossier-presse/filename}" class="ui circular mini button download-press">
+												<xsl:choose>
+														<xsl:when test="$current-language='fr'">Télécharger le dossier de presse</xsl:when>
+														<xsl:otherwise>Download press review</xsl:otherwise>
+												</xsl:choose>
+												<i class="right download icon"></i>
+											</a>
+										</xsl:if>
+										</td>
+									</tr>
 								</table>
 							</div>
 						</div>

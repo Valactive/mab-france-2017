@@ -292,7 +292,12 @@ h2 {
     text-indent: -9999em;
     transition: all .2s ease-in-out;
 }
-
+.coordonnees .social-menu>a {
+    height: 26px;
+    width: 26px;
+    margin-top:1px;
+    vertical-align: top;
+}
 .social-menu>a:hover {
     transform: scale(1.2);
 }
@@ -300,7 +305,9 @@ h2 {
 .v-facebook {
     background: url('/workspace/img/facebook-logo.png') center center no-repeat;
 }
-
+.v-facebook.marron {
+    background: url('/workspace/img/facebook-logo-marron.png');
+}
 .v-vimeo {
     background: url('/workspace/img/vimeo-social-logo.png') center center no-repeat;
 }
@@ -312,7 +319,9 @@ h2 {
 .v-instagram {
     background: url('/workspace/img/instagram-logo.png') center center no-repeat;
 }
-
+.v-instagram.marron {
+    background: url('/workspace/img/instagram-marron.png');
+}
 .site-name {
     font-size: 2.3em;
     color: #E8FAFD;
@@ -466,19 +475,57 @@ section.page-head {
 .sidebar-content {
     padding-top:13.4em;
 }
-.sidebar-content table td {
+.sidebar-content table td,
+.coordonnees table td {
     padding:5px 8px;
 }
 .sidebar-content table p {
     font-size: 12px;
     line-height: 18px;
 }
-.table-list-title {
+.table-list-title,
+.coordonnees .table-list-title {
     font-size:12px;
     font-weight: normal;
     color:@marron;
     text-align: right;
     white-space: nowrap;
+}
+.coordonnees {
+    margin: 3em 0;
+}
+.coordonnees .ui.segment {
+    -webkit-box-shadow: 10px 10px 10px 20px rgba(150, 150, 150, 0.07);
+    box-shadow: 10px 10px 20px 20px rgba(150, 150, 150, 0.07);
+    margin: 1rem 0em;
+    padding: 1em 1em;
+    border-radius: 1em;
+    border: 1px solid rgba(150, 150, 150, 0.07);
+}
+.coordonnees .ui.segment:before {
+    width: 150px;
+    content: " ";
+    background-image: url('/workspace/img/pictos-bg.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    left:30px;
+    top:-18px;
+    height: 20px;
+}
+.coordonnees p {
+    font-size: 14px;
+    line-height: 22px;
+    color:#3F5F85;
+    margin:0;
+}
+.coordonnees .table-list-title {
+    font-size: 14px;
+}
+.ui.button.download-press {
+    vertical-align: top;
+    margin-left:5px;
+    background-color:@marron;
+    color:white;
 }
 h2.osibv {
     font-size: 3.2em;
