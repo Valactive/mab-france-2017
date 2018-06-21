@@ -216,7 +216,7 @@
 									</td>
 									<td>
 										<p><a href="{biosphere/entry/biosphere-lien-site-web}" target="_blank"><xsl:value-of select="biosphere/entry/biosphere-nom-site-web"/></a><i class="right external alternate icon text-marron"></i></p>
-										<xsl:if test="biosphere/entry/biosphere-nom-site-web !=''">
+										<xsl:if test="biosphere/entry/biosphere-nom-site-web-2 !=''">
 											<p><a href="{biosphere/entry/biosphere-lien-site-web-2}" target="_blank"><xsl:value-of select="biosphere/entry/biosphere-nom-site-web-2"/></a><i class="right external alternate icon text-marron"></i></p>
 										</xsl:if>
 									</td>
