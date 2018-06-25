@@ -206,12 +206,12 @@
 											<xsl:when test="$current-language='fr'">
 												<p>Le Mab France publie la Lettre de la biosphère quatre fois par an.</p>
 												<p>Vous pouvez vous inscrire <a href="">sur nos listes</a> pour la recevoir	dans votre boite mail !</p>
-												<p>Sinon, vous pouvez également <a href="">consulter en ligne</a> toutes les lettres que nous avons publié.</p>
+												<p> <a href="">Toutes les lettres sont consultables en ligne</a> </p>
 											</xsl:when>
 											<xsl:otherwise>
-												<p>(en)Le Mab France publie la Lettre de la biosphère quatre fois par an.</p>
-												<p>Vous pouvez vous inscrire <a href="">sur nos listes</a> pour la recevoir	dans votre boite mail !</p>
-												<p>Sinon, vous pouvez également <a href="">consulter en ligne</a> toutes les lettres que nous avons publié.</p>
+												<p>The Mab France publishes the Letter of the biosphere four times a year.</p>
+												<p>To subscribe,<a href="">Click here</a> </p>
+												<p>you can <a href="">consult all the previews letters on line.</a></p>
 											</xsl:otherwise>
 										</xsl:choose>
 
