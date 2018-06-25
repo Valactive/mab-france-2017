@@ -13,3 +13,6 @@ table.cke_editor td, table.cke_dialog td {
 table.cke_dialog .cke_dialog_contents .cke_dialog_contents_body > div > table > tbody > tr > td {
 	padding-left: 10px !important;
 }
+.cke_editable h1,h2,h3,h4,h5 {
+	color:#B1563D;
+}
