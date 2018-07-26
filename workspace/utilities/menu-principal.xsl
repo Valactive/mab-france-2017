@@ -28,8 +28,6 @@
 										<xsl:otherwise>ui pointing dropdown link item</xsl:otherwise>
 									</xsl:choose>
 								</xsl:attribute> -->
-
-
 								<span class="text">
 									<!-- <a href="{$root}/{$url-lang}{$rubrique-principale-handle}/"> -->
 									<xsl:value-of select="$rubrique-principale" />
@@ -37,6 +35,7 @@
 								</span>
 								<i class="dropdown icon"></i>
 								<div class="menu">
+								<!-- boucle 2ème niveau -->
 									<xsl:for-each select="/data/menu-principal/entry[rubrique-parente/item/@handle=$rubrique-principale-handle]">
 										<xsl:variable name="rubrique-parente-handle" select="nom/item[@lang=$language]/@handle" />
 										<!-- si 3eme niveau -->
@@ -50,6 +49,7 @@
 														<!-- </a> -->
 													</span>
 													<div class="menu">
+													<!-- boucle 3ème niveau -->
 														<xsl:for-each select="//menu-principal/entry[menu-niveau-2-page/item/@handle = $rubrique-parente-handle]/nom/item[@lang=$language]">
 															<div class="item">
 																<a href="{$root}/{$url-lang}{$rubrique-principale-handle}/{$rubrique-parente-handle}/{./@handle}/">
@@ -60,12 +60,13 @@
 													</div>
 												</div>
 											</xsl:when>
-											<xsl:otherwise>
+											<xsl:otherwise>												
 												<div class="item">
 													<a href="{$root}/{$url-lang}{$rubrique-principale-handle}/{$rubrique-parente-handle}/">
 														<xsl:value-of select="nom/item[@lang=$language]" />
 													</a>
 												</div>
+
 											</xsl:otherwise>
 										</xsl:choose>
 									</xsl:for-each>
@@ -73,7 +74,6 @@
 							</div>
 						</xsl:when>
 						<xsl:otherwise>
-
 									<div class="item">
 										<span class="text">
 											<xsl:value-of select="$rubrique-principale" />

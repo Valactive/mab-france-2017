@@ -267,7 +267,7 @@
 						<div class="ui four link cards">
 							<xsl:for-each select="actualites-page-biosphere/entry">
 								<div class="card">
-									<div class="image">
+									<div class="card-header-image">
 										<xsl:variable name="img" select="image-a-la-une"/>
 										<xsl:call-template name="resize-direction-basic">
 											<xsl:with-param name="type" select="'1'"/>

@@ -8,7 +8,9 @@
 	<xsl:param name="_width"></xsl:param>
 	<xsl:param name="_height"></xsl:param>
 	<xsl:param name="swidth"></xsl:param>
-	<xsl:param name="sheight"></xsl:param>	
+	<xsl:param name="sheight"></xsl:param>
+	<xsl:param name="backColor" select="''"></xsl:param>
+	<xsl:param name="cropPoint"></xsl:param>
 	<xsl:param name="path"></xsl:param>
 	<xsl:param name="class"></xsl:param>
 	<!-- var for resize img -->
@@ -23,7 +25,7 @@
 		</xsl:variable>
 		<xsl:variable name="filepath"><xsl:value-of select="$path/@path"/></xsl:variable>
 		<xsl:variable name="filename"><xsl:value-of select="$path/filename"/></xsl:variable>
- 		<img class="{$class}" src="{$root}/image/{$type}/{$resizeDirection}/{$filepath}/{$filename}" />
+ 		<img class="{$class}" src="{$root}/image/{$type}/{$resizeDirection}/{$cropPoint}/{$backColor}{$filepath}/{$filename}" />
 </xsl:template>
 
 </xsl:stylesheet>

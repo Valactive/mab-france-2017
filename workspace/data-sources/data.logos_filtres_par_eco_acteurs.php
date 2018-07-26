@@ -1,0 +1,86 @@
+<?php
+
+class datasourcelogos_filtres_par_eco_acteurs extends SectionDatasource
+{
+    public $dsParamROOTELEMENT = 'logos-filtres-par-eco-acteurs';
+    public $dsParamORDER = 'asc';
+    public $dsParamPAGINATERESULTS = 'no';
+    public $dsParamLIMIT = '20';
+    public $dsParamSTARTPAGE = '1';
+    public $dsParamREDIRECTONEMPTY = 'no';
+    public $dsParamREDIRECTONFORBIDDEN = 'no';
+    public $dsParamREDIRECTONREQUIRED = 'no';
+    public $dsParamPARAMOUTPUT = array(
+        'system:id'
+        );
+    public $dsParamSORT = 'nom-ref-logo';
+    public $dsParamHTMLENCODE = 'no';
+    public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
+
+    public $dsParamFILTERS = array(
+        'system:id' => '{$ds-eco-acteurs-avec-filtres.logo-odd}',
+    );
+
+    public $dsParamINCLUDEDELEMENTS = array(
+        'nom-ref-logo',
+        'image-ref-logo',
+        'lien-http-ref-logo'
+    );
+
+    public function __construct($env = null, $process_params = true)
+    {
+        parent::__construct($env, $process_params);
+        $this->_dependencies = array('$ds-eco-acteurs-avec-filtres.logo-odd');
+    }
+
+    public function about()
+    {
+        return array(
+            'name' => 'Logos filtrés par eco-acteurs',
+            'author' => array(
+                'name' => 'Valéry Frisch',
+                'website' => 'http://mab-france.localhost',
+                'email' => 'valery.frisch@gmail.com'),
+            'version' => 'Symphony 2.7.2',
+            'release-date' => '2018-07-26T12:25:29+00:00'
+        );
+    }
+
+    public function getSource()
+    {
+        return '12';
+    }
+
+    public function allowEditorToParse()
+    {
+        return true;
+    }
+
+    public function execute(array &$param_pool = null)
+    {
+        $result = new XMLElement($this->dsParamROOTELEMENT);
+
+        try {
+            $result = parent::execute($param_pool);
+        } catch (FrontendPageNotFoundException $e) {
+            // Work around. This ensures the 404 page is displayed and
+            // is not picked up by the default catch() statement below
+            FrontendPageNotFoundExceptionHandler::render($e);
+        } catch (Exception $e) {
+            $result->appendChild(new XMLElement('error',
+                General::wrapInCDATA($e->getMessage() . ' on ' . $e->getLine() . ' of file ' . $e->getFile())
+            ));
+            return $result;
+        }
+
+        if ($this->_force_empty_result) {
+            $result = $this->emptyXMLSet();
+        }
+
+        if ($this->_negate_result) {
+            $result = $this->negateXMLSet();
+        }
+
+        return $result;
+    }
+}
