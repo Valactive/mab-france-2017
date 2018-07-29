@@ -76,15 +76,15 @@
 										<div class="column twelve wide top content aligned">
 											<h2 class="left floated">
 												<xsl:choose>
-													<xsl:when test="$current-language = 'fr'">														Actualités &amp; publications													</xsl:when>
-													<xsl:otherwise>														News &amp; publications													</xsl:otherwise>
+													<xsl:when test="$current-language = 'fr'">Actualités &amp; publications</xsl:when>
+													<xsl:otherwise>News &amp; publications</xsl:otherwise>
 												</xsl:choose>
 											</h2>
 										</div>
 										<div class="column four wide bottom content aligned">
-											<a href="#" class="ui mini primary button right floated">
+											<a href="{$root}/{$current-language}/{/data/navigation/page[@id=5]/item[@lang=$current-language]/@handle}/" class="ui mini primary button right floated">
 												<xsl:choose>
-													<xsl:when test="$current-language = 'fr'">													Tout voir												</xsl:when>
+													<xsl:when test="$current-language = 'fr'">Tout voir</xsl:when>
 													<xsl:otherwise>See all</xsl:otherwise>
 												</xsl:choose>
 											</a>
@@ -99,6 +99,7 @@
 												<xsl:for-each select="actualites-home-page/entry">
 													<div class="card">
 														<div class="card-header-image">
+														<a href="{$root}/{$current-language}/{/data/navigation/page[@id=8]/item[@lang='fr']/@handle}/{titre/@handle}/">
 															<xsl:variable name="img" select="image-a-la-une"/>
 															<xsl:call-template name="resize-direction-basic">
 																<xsl:with-param name="type" select="'1'"/>
@@ -110,15 +111,16 @@
 																<xsl:with-param name="class" select="''"/>
 															</xsl:call-template>
 															<!-- <img src="{$root}/image/" alt="image de l'actualité"/> -->
+														</a>
 														</div>
 														<div class="content">
-															<a href="#" class="header">
+															<a href="{$root}/{$current-language}/{/data/navigation/page[@id=8]/item[@lang='fr']/@handle}/{titre/@handle}/" class="header">
 																<xsl:value-of select="titre"/>
 															</a>
 															<!-- <div class="description"><xsl:value-of select="texte" mode="formatted"/></div> -->
 														</div>
 														<div class="meta">
-															<a href="#" class="ui mini basic button fluid">
+															<a href="{$root}/{$current-language}/{/data/navigation/page[@id=8]/item[@lang='fr']/@handle}/{titre/@handle}/" class="ui mini basic button fluid">
 																<xsl:choose>
 																	<xsl:when test="$current-language = 'fr'">																		Lire la suite																	</xsl:when>
 																	<xsl:otherwise>Learn more</xsl:otherwise>
@@ -190,12 +192,12 @@
 											<xsl:when test="$current-language='fr'">
 												<p>Le Mab France publie la Lettre de la biosphère quatre fois par an.</p>
 												<p>Vous pouvez vous inscrire <a href="">sur nos listes</a> pour la recevoir	dans votre boite mail !</p>
-												<p> <a href="">Toutes les lettres sont consultables en ligne</a> </p>
+												<p> <a href="{$root}/fr/lettres-de-la-biosphere/">Toutes les lettres sont consultables en ligne</a> </p>
 											</xsl:when>
 											<xsl:otherwise>
 												<p>The Mab France publishes the Letter of the biosphere four times a year.</p>
 												<p>To subscribe,<a href="">Click here</a> </p>
-												<p>you can <a href="">consult all the previews letters on line.</a></p>
+												<p>you can <a href="{$root}/en/biopsphere-newsletters/">consult all the previews letters on line.</a></p>
 											</xsl:otherwise>
 										</xsl:choose>
 
