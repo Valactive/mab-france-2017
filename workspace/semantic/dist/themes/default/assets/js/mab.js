@@ -82,14 +82,9 @@ semantic.ready = function () {
     rb = rb[0];
     var listTarget = $(".item[data-reserve='" + rb + "']");
     listTarget.toggleClass('hovered');
+    listTarget.addClass('cursor','pointer');
     $("path[data-reserve='" + rb_on + "']").hide();
   });
-  $('path').popup(
-    'show', {
-      content: 'the rb',
-      debug: true,
-      verbose: true
-    });
 
   $('path', '#reserves-off').mouseleave(function () {
     //rb_id = '#' + $(this).data('reserve') + '-on';
@@ -98,6 +93,15 @@ semantic.ready = function () {
   });
   $('path', '#reserves-off').popup({
     content: 'the rb'
+  });
+
+  $("path", "#reserves-off").on("click", function() {
+    console.log('click');
+    rb_on = $(this).data('reserve');
+    rb = rb_on.split('-');
+    rb = rb[0];
+    var listTarget = $(".item[data-reserve='" + rb + "']").attr('href');
+    document.location.href = listTarget;
   });
 
   // select eco-acteurs reserve
