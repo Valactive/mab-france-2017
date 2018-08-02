@@ -87,9 +87,9 @@
 				</xsl:for-each>
 				<!-- social links -->
 				<div class="ui right menu social-menu">
-					<a href="#" class="ui right v-vimeo"></a>
-					<a href="#" class="ui right v-facebook"></a>
-					<a href="#" class="ui right v-instagram"></a>
+					<a href="#" class="ui right v-vimeo" target="_blank"></a>
+					<a href="https://www.facebook.com/manbiospherefrance/" class="ui right v-facebook" target="_blank"></a>
+					<a href="https://www.instagram.com/man_biosphere.france/" class="ui right v-instagram" target="_blank"></a>
 				</div>
 			</div>
 		</div>

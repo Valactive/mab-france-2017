@@ -41,18 +41,21 @@
 								<small><xsl:value-of select="nom-biosphere-filtree-par-eco-acteur/entry/prefixe-du-nom/item[@lang=$current-language]"></xsl:value-of></small><br/>
 								<xsl:value-of select="nom-biosphere-filtree-par-eco-acteur/entry/nom/item[@lang=$current-language]"/>
 							</h1>
-					<h3>
+					<!-- <h3>
 						<xsl:value-of select="eco-acteur-detail/entry/biosphere/item"></xsl:value-of>
-					</h3>
+					</h3>-->
 					<div class="ui middle aligned divided list">
 						<xsl:for-each select="$logos-odd/item">
-							<div class="item">
 							<xsl:variable name="logo-odd-id">
 								<xsl:value-of select="@id"></xsl:value-of>
 							</xsl:variable>
+
+							<a class="item" href="{/data/logos-odd/entry[@id=$logo-odd-id]/lien-http-ref-logo}" target="_blank">
+							
+							
 							<img class="ui image" src="{$root}/image/1/48/48{/data/logos-odd/entry[@id=$logo-odd-id]/image-ref-logo/@path}/{/data/logos-odd/entry[@id=$logo-odd-id]/image-ref-logo/filename}"/>
-							<div class="content"><a class="header"><xsl:value-of select="/data/logos-odd/entry[@id=$logo-odd-id]/nom-ref-logo"></xsl:value-of></a></div>
-						</div>
+							<div class="content header"><xsl:value-of select="/data/logos-odd/entry[@id=$logo-odd-id]/nom-ref-logo"></xsl:value-of></div>
+						</a>
 						</xsl:for-each>	
 					</div>
 					
