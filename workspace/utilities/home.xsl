@@ -339,17 +339,24 @@
 								</xsl:choose>
 								</h2>
 								<div class="ui middle aligned selection list">
+									<!--lien facebook-->
+									
 									<div class="item">
+										
 										<img class="ui avatar image" src="/workspace/img/facebook-logo.svg" alt=""></img>
 										<div class="content">
+											<a href="https://www.facebook.com/manbiospherefrance/"  target="_blank">
 											<div class="header">
 											<xsl:choose>
 												<xsl:when test="$current-language='fr'">Sur Facebook</xsl:when>
 												<xsl:otherwise>On Facebook</xsl:otherwise>
 											</xsl:choose>
 											</div>
+											</a>
 										</div>
-									</div>
+										
+									</div> <!-- fin lien facebook-->
+									 
 									<div class="item">
 										<img class="ui avatar image" src="/workspace/img/instagram-logo.svg" alt=""></img>
 										<div class="content">

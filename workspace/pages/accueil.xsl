@@ -5,7 +5,7 @@
 	<xsl:import href="../utilities/master.xsl"></xsl:import>
 	<xsl:import href="../utilities/home.xsl"></xsl:import>
 	<xsl:import href="../utilities/page-content-with-toc.xsl"></xsl:import>
-	<xsl:import href="../utilities/eco-acteurs.xsl"></xsl:import>
+	<xsl:import href="../utilities/list-eco-acteurs.xsl"></xsl:import>
 	<xsl:import href="../utilities/trophees.xsl"></xsl:import>
 	<xsl:import href="../utilities/dates.xsl"></xsl:import>
 	<xsl:import href="../utilities/img-resize-direction.xsl"></xsl:import>
@@ -22,6 +22,7 @@
 		</div> -->
 		<!-- nom de la rubrique parente -->
 		<xsl:choose>
+
 			<xsl:when test="$rubrique ='' and $s-rubrique = '' and $ss-rubrique = ''">
 				<!-- home page -->
 				<xsl:call-template name="home"></xsl:call-template>
@@ -30,12 +31,15 @@
 					<xsl:call-template name="mab-menu-principal-footer"/>
 				</section>
 			</xsl:when>
+
 			<xsl:when test="$rubrique!='' and $s-rubrique!='' and $isEcoActeurs > 0">
-			<xsl:call-template name="eco-acteurs"></xsl:call-template>
+			<xsl:call-template name="list-eco-acteurs"></xsl:call-template>
 			</xsl:when>
+
 			<xsl:when test="$rubrique!='' and $s-rubrique!='' and $isTrophees > 0">
 			<xsl:call-template name="trophees"></xsl:call-template>
-			</xsl:when>			
+			</xsl:when>	
+					
 			<!-- pages de contenus -->
 			<xsl:otherwise>
 				<xsl:call-template name="page-content-with-toc"></xsl:call-template>

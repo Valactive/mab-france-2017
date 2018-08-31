@@ -40,7 +40,7 @@
 					<h1 class="ui text-primary">
 								<small><xsl:value-of select="nom-biosphere-filtree-par-eco-acteur/entry/prefixe-du-nom/item[@lang=$current-language]"></xsl:value-of></small><br/>
 								<xsl:value-of select="nom-biosphere-filtree-par-eco-acteur/entry/nom/item[@lang=$current-language]"/>
-							</h1>
+					</h1>
 					<!-- <h3>
 						<xsl:value-of select="eco-acteur-detail/entry/biosphere/item"></xsl:value-of>
 					</h3>-->
@@ -51,7 +51,6 @@
 							</xsl:variable>
 
 							<a class="item" href="{/data/logos-odd/entry[@id=$logo-odd-id]/lien-http-ref-logo}" target="_blank">
-							
 							
 							<img class="ui image" src="{$root}/image/1/48/48{/data/logos-odd/entry[@id=$logo-odd-id]/image-ref-logo/@path}/{/data/logos-odd/entry[@id=$logo-odd-id]/image-ref-logo/filename}"/>
 							<div class="content header"><xsl:value-of select="/data/logos-odd/entry[@id=$logo-odd-id]/nom-ref-logo"></xsl:value-of></div>

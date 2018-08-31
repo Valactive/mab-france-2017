@@ -4,13 +4,18 @@
 
 	<xsl:import href="../utilities/content-page-header.xsl"></xsl:import>
 	<xsl:import href="../utilities/advanced-truncate.xsl"></xsl:import>
+	<xsl:import href="../utilities/pagination.xsl"></xsl:import>
 	<xsl:param name="url-biosphere"></xsl:param>
 	<xsl:param name="url-odd"></xsl:param>
 
-	<xsl:template name="eco-acteurs">
+
+
+
+
+	<xsl:template name="list-eco-acteurs">
 		<div class="ui grid">
 			<xsl:call-template name="content-page-header"></xsl:call-template>
-			<div class="ui row">
+			<div class="ui row"> <!-- filtre -->
 
 				<h4 class="ui horizontal divider header">
 				</h4>
@@ -66,18 +71,16 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			<h4 class="ui horizontal divider header">
+			</div> <!-- ui row-->
+			<h4 class="ui horizontal divider header"> <!-- entete avec icone ecoacteurs-->
 				<i class="users icon"></i>
 				<xsl:choose>
 					<xsl:when test="$current-language = 'fr'">Éco-acteurs																	</xsl:when>
 					<xsl:otherwise>Eco-players</xsl:otherwise>
 				</xsl:choose>
-			</h4>
-			<div class="ui row cards-eco-acteurs">
+			</h4> <!-- ui horizontal divider hearder-->
+			<div class="ui row cards-eco-acteurs"> <!-- la grille des vignettes-->
 				<div class="ui container">
-
-
 					<div class="ui four link cards">
 						<xsl:for-each select="eco-acteurs-avec-filtres/entry">
 							<div class="ui card">
@@ -106,8 +109,8 @@
 											<xsl:with-param name="limit" select="25"/>
 										</xsl:call-template>
 										<!-- <xsl:copy-of select="eco-acteur-presentation/item[@lang=$language]"/> -->
-									</div>
-								</div>
+									</div> <!-- description-->
+								</div> <!--content-->
 								<div class="extra content">
 									<xsl:for-each select="logo-odd/item">
 										<xsl:variable name="logo-odd-id">
@@ -126,13 +129,32 @@
 											</xsl:choose>
 											<i class="arrow alternate circle right outline icon"></i>
 										</a>
-									</div>
-								</div>
-							</div>
+									</div> <!--right floated-->
+								</div> <!--extra content-->
+							</div> <!--ui card-->
 						</xsl:for-each>
-					</div>
-				</div>
-			</div>
-		</div>
+					</div> <!--ui four link cards-->
+				</div> <!--ui four link cards-->
+			</div> <!--ui row cards-eco-acteurs-->
+
+			<!-- appel template de pagination-->
+			<xsl:call-template name="pagination"> 
+				<xsl:with-param name="pagination" select="/data/eco-acteurs-avec-filtres/pagination" /> 
+				<xsl:with-param name="pagination-url" select="concat($root,'/',$current-language,'/',$rubrique,'/',$s-rubrique,'/?numpage=','$')"/> 
+				<xsl:with-param name="show-range" select="'3'" /> 
+				<xsl:with-param name="class-pagination" select="'ui pagination menu'" /> 
+				<xsl:with-param name="class-previous" select="'ui button'" /> 
+				<xsl:with-param name="class-next" select="'ui button'" /> 
+			</xsl:call-template>
+<!-- pagination-->
+<!-- 			<div class="ui pagination menu"> 
+  				<a class="active item">1</a>
+  				<div class="disabled item">...</div>
+  				<a class="item">10</a>
+  				<a class="item">11</a>
+ 				 <a class="item">12</a>
+			</div> --> 
+			<!-- ui pagination menu-->
+		</div> <!-- ui grid-->
 	</xsl:template>
 </xsl:stylesheet>
