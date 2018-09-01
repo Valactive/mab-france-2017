@@ -143,7 +143,7 @@
 				<xsl:with-param name="pagination" select="/data/eco-acteurs-avec-filtres/pagination" /> 
 				<xsl:with-param name="pagination-url" select="concat($root,'/',$current-language,'/',$rubrique,'/',$s-rubrique,'/?numpage=','$')"/> 
 				<xsl:with-param name="show-range" select="'3'" /> 
-				<xsl:with-param name="class-pagination" select="'ui pagination menu'" /> 
+				<xsl:with-param name="class-pagination" select="'ui pagination'" /> 
 				<xsl:with-param name="class-previous" select="'ui item circular mini basic icon button'" /> 
 				<xsl:with-param name="class-next" select="'ui item circular mini basic icon button'" /> 
 			</xsl:call-template>
