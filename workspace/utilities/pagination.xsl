@@ -33,15 +33,15 @@
 	<xsl:param name="show-range" select="3" />
 	<xsl:param name="show-navigation" select="true()" />
 	<xsl:param name="show-rotation" select="false()" />
-	<xsl:param name="label-next" select="'&#187;'" />
-	<xsl:param name="label-previous" select="'&#171;'" />
-	<xsl:param name="class-pagination" select="'ui pagination menu'" />
-	<xsl:param name="class-page" select="'item'" />
-	<xsl:param name="class-next" select="'ui button item'" />
-	<xsl:param name="class-previous" select="'ui button item'" />
-	<xsl:param name="class-selected" select="'item active'" />
+	<xsl:param name="label-next" select="''" />
+	<xsl:param name="label-previous" select="''" />
+	<xsl:param name="class-pagination" select="'ui pagination'" />
+	<xsl:param name="class-page" select="'ui circular button mini basic item'" />
+	<xsl:param name="class-next" select="'ui circular button mini basic icon item'" />
+	<xsl:param name="class-previous" select="'ui circular button mini basic icon item'" />
+	<xsl:param name="class-selected" select="'ui circular button mini basic item active'" />
 	<xsl:param name="class-ellipsis" select="'disabled item'" />
-	<xsl:param name="class-disabled" select="'ui pagination menu'" />
+	<xsl:param name="class-disabled" select="'disabled'" />
 
 	<!-- Only show pagination if there are more than one page -->
 	<xsl:if test="$pagination/@total-pages &gt; 1">
@@ -130,6 +130,7 @@
 							</xsl:attribute>
 						</xsl:if>
 						<xsl:value-of select="$label-previous" />
+						<i class="left arrow icon"></i>
 					</a>
 				
 			</xsl:if>
@@ -151,7 +152,7 @@
 			<xsl:if test="$show-navigation = true()">
 				
 					
-					<a >
+					<a>
 						<xsl:if test="$page-next = 1">
 							<xsl:attribute name="class">
 								<xsl:value-of select="$class-disabled" />
@@ -171,6 +172,7 @@
 							</xsl:attribute>
 						</xsl:if>
 						<xsl:value-of select="$label-next" />
+						<i class="right arrow icon"></i>
 					</a>
 				
 			</xsl:if>
@@ -214,7 +216,7 @@
 			</a>
 				
 		<xsl:if test="$page != 2">
-			<div class="{$class-ellipsis}">&#8230;</div>
+			<a class="{$class-ellipsis}">&#8230;</a>
 		</xsl:if> 
 	</xsl:if>
 	
@@ -245,7 +247,7 @@
 	<!-- Generate ellipsis at the end -->
 	<xsl:if test="$page = $page-last and $page-last &lt; $page-total">
 		<xsl:if test="$page != ($page-total - 1)">
-			<div class="{$class-ellipsis}">&#8230;</div>
+			<a class="{$class-ellipsis}">&#8230;</a>
 		</xsl:if> 
 		
 			<a class="{$class-page}">
