@@ -33,11 +33,11 @@ semantic.ready = function () {
   // });
 
   //lazy load images
-  $('img').visibility({
-    type: 'image',
-    transition: 'vertical flip in',
-    duration: 500
-  });
+  // $('img').visibility({
+  //   type: 'image',
+  //   transition: 'vertical flip in',
+  //   duration: 500
+  // });
   // show dropdown on hover
   // $('.main.menu .ui.dropdown').dropdown({
   //     on: 'hover'
@@ -96,7 +96,7 @@ semantic.ready = function () {
   });
 
   $("path", "#reserves-off").on("click", function() {
-    console.log('click');
+    //console.log('click');
     rb_on = $(this).data('reserve');
     rb = rb_on.split('-');
     rb = rb[0];
@@ -111,10 +111,15 @@ semantic.ready = function () {
       //redirect with url param for filtering items
       console.log("ok");
       if(value !== 'all'){
+        removedParam = removeParam('numpage');
         addParam = insertParam('biosphere', value);
+        //console.log(addParam);
+        document.location.search = addParam;
+        //document.location.href = addParam;
       } else {
         removedParam = removeParam('biosphere');
-        console.log(removedParam);
+        document.location.href = removedParam;
+        //console.log(removedParam);
       }
     }
   });
@@ -124,12 +129,16 @@ semantic.ready = function () {
     debug: true,
     onChange: function (value, text) {
       //redirect with url param for filtering items
-      console.log("ok");
+      //console.log("ok");
       if(value !== 'all'){
+        removedParam = removeParam('numpage');
         addParam = insertParam('odd', value);
+        //console.log(addParam);
+        document.location.search = addParam;
       } else {
         removedParam = removeParam('odd');
-        console.log(removedParam);
+        document.location.href = removedParam;
+        //console.log(removedParam);
       }
     }
   });
@@ -151,13 +160,13 @@ semantic.ready = function () {
         break;
       }
     }
-
     if (i < 0) {
       kvp[kvp.length] = [key, value].join('=');
     }
-
+    kvp = kvp.join('&');
+return kvp;
     //this will reload the page, it's likely better to store this until finished
-    document.location.search = kvp.join('&');
+   // document.location.search = kvp.join('&');
   }
 
   function removeParam(parameter)
@@ -179,7 +188,8 @@ semantic.ready = function () {
   window.history.pushState('',document.title,url); // added this line to push the new url directly to url bar .
   
 }
-  document.location.href = url;
+return( url );
+//  document.location.href = url;
 }
 
 

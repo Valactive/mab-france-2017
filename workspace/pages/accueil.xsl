@@ -32,7 +32,7 @@
 				</section>
 			</xsl:when>
 
-			<xsl:when test="$rubrique!='' and $s-rubrique!='' and $isEcoActeurs > 0">
+			<xsl:when test="/data/menu-principal/entry[nom/item[@lang=$current-language]/@handle=$s-rubrique]/@id = 22">
 			<xsl:call-template name="list-eco-acteurs"></xsl:call-template>
 			</xsl:when>
 

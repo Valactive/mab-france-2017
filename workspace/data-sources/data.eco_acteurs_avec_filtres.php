@@ -21,7 +21,7 @@ class datasourceeco_acteurs_avec_filtres extends SectionDatasource
         '133' => 'Yes',
         '135' => '{$url-odd}',
         '137' => '{$url-biosphere}',
-        '151' => '{$s-rubrique}',
+        '151' => '22',
     );
 
     public $dsParamINCLUDEDELEMENTS = array(
@@ -45,11 +45,11 @@ class datasourceeco_acteurs_avec_filtres extends SectionDatasource
         return array(
             'name' => 'Eco-acteurs avec filtres',
             'author' => array(
-                'name' => 'Sophie Taminh',
+                'name' => 'Valéry Frisch',
                 'website' => 'http://mab-france.localhost',
-                'email' => 'staminh@valactive.com'),
+                'email' => 'valery.frisch@gmail.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-08-29T10:01:46+00:00'
+            'release-date' => '2018-09-02T12:33:13+00:00'
         );
     }
 

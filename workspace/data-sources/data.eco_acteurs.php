@@ -12,7 +12,8 @@ class datasourceeco_acteurs extends SectionDatasource
     public $dsParamREDIRECTONREQUIRED = 'no';
     public $dsParamPARAMOUTPUT = array(
         'logo-odd',
-        'biosphere'
+        'biosphere',
+        'page-liee'
         );
     public $dsParamSORT = 'system:id';
     public $dsParamHTMLENCODE = 'no';
@@ -20,7 +21,7 @@ class datasourceeco_acteurs extends SectionDatasource
 
     public $dsParamFILTERS = array(
         '133' => 'yes',
-        '151' => '{$s-rubrique}',
+        '151' => '22',
     );
 
     public $dsParamINCLUDEDELEMENTS = array(
@@ -28,7 +29,8 @@ class datasourceeco_acteurs extends SectionDatasource
         'eco-acteur-presentation: all-languages: formatted',
         'image-a-la-une',
         'logo-odd',
-        'biosphere'
+        'biosphere',
+        'page-liee'
     );
 
     public function __construct($env = null, $process_params = true)
@@ -46,7 +48,7 @@ class datasourceeco_acteurs extends SectionDatasource
                 'website' => 'http://mab-france.localhost',
                 'email' => 'valery.frisch@gmail.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-07-26T13:09:34+00:00'
+            'release-date' => '2018-09-02T12:33:41+00:00'
         );
     }
 

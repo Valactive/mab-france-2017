@@ -16,6 +16,7 @@ class datasourcepage_content extends SectionDatasource
 
     public $dsParamFILTERS = array(
         '2' => '{$ss-rubrique:$s-rubrique}',
+        '4' => 'yes',
     );
 
     public $dsParamINCLUDEDELEMENTS = array(
@@ -37,10 +38,10 @@ class datasourcepage_content extends SectionDatasource
             'name' => 'Page content',
             'author' => array(
                 'name' => 'Sophie Taminh',
-                'website' => 'https://prep.mab-france.org',
+                'website' => 'http://mab-france.localhost',
                 'email' => 'staminh@valactive.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-05-18T07:27:46+00:00'
+            'release-date' => '2018-08-03T10:17:13+00:00'
         );
     }
 
