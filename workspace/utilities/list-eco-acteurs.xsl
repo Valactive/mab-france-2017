@@ -110,7 +110,7 @@
 							</xsl:variable>
 
 							<div class="ui card">
-								<a href="{$root}/eco-acteur/{$eco-name-handle}/" class="card-header-image">
+								<a href="{$root}/{$current-language}/eco-acteur/{$eco-name-handle}/" class="card-header-image">
 									<xsl:variable name="img" select="image-a-la-une"/>
 									<!-- <xsl:call-template name="resize-direction-basic">
 										<xsl:with-param name="type" select="'2'"/>
@@ -126,7 +126,7 @@
 									<img src="{$root}/image/1/280/0/{$img/@path}/{$img/filename}" alt="image de l'actualité"/>
 								</a>
 								<div class="content">
-									<a href="{$root}/eco-acteur/{$eco-name-handle}/" class="header">
+									<a href="{$root}/{$current-language}/eco-acteur/{$eco-name-handle}/" class="header">
 
 										<xsl:value-of select="$eco-name"/>
 									</a>
@@ -160,7 +160,7 @@
 										</div>
 									</xsl:for-each>
 									<div class="right floated">
-										<a href="{$root}/eco-acteur/{eco-acteur-nom/item/@handle}/" class="ui mini ">
+										<a href="{$root}/{$current-language}/eco-acteur/{eco-acteur-nom/item/@handle}/" class="ui mini ">
 											<xsl:choose>
 												<xsl:when test="$current-language = 'fr'">Lire la suite</xsl:when>
 												<xsl:otherwise>Learn more</xsl:otherwise>
