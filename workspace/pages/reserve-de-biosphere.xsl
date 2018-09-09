@@ -231,7 +231,7 @@
 											<span class="social-menu"><a href="{biosphere/entry/biosphere-lien-instagram}" target="_blank" class="v-instagram marron"></a></span>
 										</xsl:if>
 										<xsl:if test="biosphere/entry/dossier-presse != ''">
-											<a href="{$workspace}{biophere/entry/dossier-presse/@path}{biosphere/entry/dossier-presse/filename}" class="ui circular mini button download-press">
+											<a href="{$workspace}{biosphere/entry/dossier-presse/@path}/{biosphere/entry/dossier-presse/filename}" target="_blank" class="ui circular mini button download-press">
 												<xsl:choose>
 													<xsl:when test="$current-language='fr'">Télécharger le dossier de presse</xsl:when>
 													<xsl:otherwise>Download press review</xsl:otherwise>
