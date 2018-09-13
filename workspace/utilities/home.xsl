@@ -360,23 +360,27 @@
 									<div class="item">
 										<img class="ui avatar image" src="/workspace/img/instagram-logo.svg" alt=""></img>
 										<div class="content">
+											<a href="https://www.instagram.com/man_biosphere.france/"  target="_blank">
 											<div class="header">
 											<xsl:choose>
 												<xsl:when test="$current-language='fr'">Sur Instagram</xsl:when>
 												<xsl:otherwise>On Instagram</xsl:otherwise>
 											</xsl:choose>
 											</div>
+											</a>
 										</div>
 									</div>
 									<div class="item">
 										<img class="ui avatar image" src="/workspace/img/vimeo-social-logo.svg" alt=""></img>
 										<div class="content">
+											<a href="https://vimeo.com/user8895387"  target="_blank">
 											<div class="header">
 											<xsl:choose>
 												<xsl:when test="$current-language='fr'">Sur Vimeo</xsl:when>
 												<xsl:otherwise>On Vimeo</xsl:otherwise>
 											</xsl:choose>
 											</div>
+											</a>
 										</div>
 									</div>
 								</div>

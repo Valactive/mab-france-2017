@@ -1,9 +1,9 @@
 <?php
 
-class datasourceeco_acteurs_avec_filtres extends SectionDatasource
+class datasourcelaureats_avec_filtre extends SectionDatasource
 {
-    public $dsParamROOTELEMENT = 'eco-acteurs-avec-filtres';
-    public $dsParamORDER = 'random';
+    public $dsParamROOTELEMENT = 'laureats-avec-filtre';
+    public $dsParamORDER = 'desc';
     public $dsParamPAGINATERESULTS = 'yes';
     public $dsParamLIMIT = '12';
     public $dsParamSTARTPAGE = '{$url-numpage}';
@@ -13,25 +13,25 @@ class datasourceeco_acteurs_avec_filtres extends SectionDatasource
     public $dsParamPARAMOUTPUT = array(
         'logo-odd'
         );
-    public $dsParamSORT = 'eco-acteur-nom';
+    public $dsParamSORT = 'system:id';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
     public $dsParamFILTERS = array(
-        '133' => 'Yes',
-        '135' => '{$url-odd}',
-        '137' => '{$url-biosphere}',
-        '151' => '22',
+        '143' => 'yes',
+        '145' => '{$url-odd}',
+        '146' => '{$url-annee}',
+        '150' => '{$url-biosphere}',
+        '152' => '2187',
     );
 
     public $dsParamINCLUDEDELEMENTS = array(
         'system:pagination',
-        'eco-acteur-nom: all-languages: formatted',
-        'eco-acteur-presentation: all-languages: formatted',
-        'eco-acteur-publiee',
+        'laureat-nom: all-languages: formatted',
+        'laureat-presentation: all-languages: formatted',
         'image-a-la-une',
         'logo-odd',
-        'biosphere'
+        'biosphere-trophee'
     );
 
     public function __construct($env = null, $process_params = true)
@@ -43,19 +43,19 @@ class datasourceeco_acteurs_avec_filtres extends SectionDatasource
     public function about()
     {
         return array(
-            'name' => 'Eco-acteurs avec filtres',
+            'name' => 'Lauréats avec filtre',
             'author' => array(
-                'name' => 'Sophie Taminh',
+                'name' => 'Valéry Frisch',
                 'website' => 'http://mab-france.localhost',
-                'email' => 'staminh@valactive.com'),
+                'email' => 'valery.frisch@gmail.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-09-12T08:27:30+00:00'
+            'release-date' => '2018-09-13T17:23:51+00:00'
         );
     }
 
     public function getSource()
     {
-        return '17';
+        return '18';
     }
 
     public function allowEditorToParse()

@@ -6,13 +6,13 @@
 	<xsl:import href="../utilities/home.xsl"></xsl:import>
 	<xsl:import href="../utilities/page-content-with-toc.xsl"></xsl:import>
 	<xsl:import href="../utilities/list-eco-acteurs.xsl"></xsl:import>
-	<xsl:import href="../utilities/trophees.xsl"></xsl:import>
+	<xsl:import href="../utilities/list-laureats.xsl"></xsl:import>
 	<xsl:import href="../utilities/dates.xsl"></xsl:import>
 	<xsl:import href="../utilities/img-resize-direction.xsl"></xsl:import>
 	<xsl:output method="xml" doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" omit-xml-declaration="yes" encoding="UTF-8" indent="yes" />
 	<xsl:template match="data">
 	<xsl:variable name="isEcoActeurs"><xsl:value-of select="count(/data/eco-acteurs/entry)"></xsl:value-of></xsl:variable>
-	<xsl:variable name="isTrophees"><xsl:value-of select="count(/data/trophees/entry)"></xsl:value-of></xsl:variable>
+	<xsl:variable name="isLaureats"><xsl:value-of select="count(/data/laureats/entry)"></xsl:value-of></xsl:variable>
 		<!-- whitch template? -->
 		<!-- si $rubrique et $sous-rubrique vide = home -->
 		<!-- si $rubrique ok et $sous-rubrique vide = $rubrique -->
@@ -36,8 +36,8 @@
 			<xsl:call-template name="list-eco-acteurs"></xsl:call-template>
 			</xsl:when>
 
-			<xsl:when test="$rubrique!='' and $s-rubrique!='' and $isTrophees > 0">
-			<xsl:call-template name="trophees"></xsl:call-template>
+			<xsl:when test="/data/menu-principal/entry[nom/item[@lang=$current-language]/@handle=$s-rubrique]/@id = 2187">
+			<xsl:call-template name="list-laureats"></xsl:call-template>
 			</xsl:when>	
 					
 			<!-- pages de contenus -->

@@ -1,9 +1,9 @@
 <?php
 
-class datasourcetrophee extends SectionDatasource
+class datasourcelogos_filtres_par_laureats extends SectionDatasource
 {
-    public $dsParamROOTELEMENT = 'trophee';
-    public $dsParamORDER = 'desc';
+    public $dsParamROOTELEMENT = 'logos-filtres-par-laureats';
+    public $dsParamORDER = 'asc';
     public $dsParamPAGINATERESULTS = 'no';
     public $dsParamLIMIT = '20';
     public $dsParamSTARTPAGE = '1';
@@ -11,50 +11,44 @@ class datasourcetrophee extends SectionDatasource
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
     public $dsParamPARAMOUTPUT = array(
-        'system:id',
-        'logo-odd',
-        'biosphere-trophee'
+        'system:id'
         );
-    public $dsParamSORT = 'anne-trophee';
+    public $dsParamSORT = 'nom-ref-logo';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
     public $dsParamFILTERS = array(
-        '143' => 'Yes',
+        'system:id' => '{$ds-laureats-avec-filtre.logo-odd}',
     );
 
     public $dsParamINCLUDEDELEMENTS = array(
-        'trophee-nom: formatted',
-        'trophee-presentation: formatted',
-        'trophee-publie',
-        'image-a-la-une',
-        'logo-odd',
-        'anne-trophee',
-        'biosphere-trophee'
+        'nom-ref-logo',
+        'image-ref-logo',
+        'lien-http-ref-logo'
     );
 
     public function __construct($env = null, $process_params = true)
     {
         parent::__construct($env, $process_params);
-        $this->_dependencies = array();
+        $this->_dependencies = array('$ds-laureats-avec-filtre.logo-odd');
     }
 
     public function about()
     {
         return array(
-            'name' => 'Trophée',
+            'name' => 'Logos filtrés par laureats',
             'author' => array(
-                'name' => 'Sophie Taminh',
-                'website' => 'https://prep.mab-france.org',
-                'email' => 'staminh@valactive.com'),
+                'name' => 'Valéry Frisch',
+                'website' => 'http://mab-france.localhost',
+                'email' => 'valery.frisch@gmail.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-07-16T12:28:15+00:00'
+            'release-date' => '2018-09-13T17:29:28+00:00'
         );
     }
 
     public function getSource()
     {
-        return '18';
+        return '12';
     }
 
     public function allowEditorToParse()

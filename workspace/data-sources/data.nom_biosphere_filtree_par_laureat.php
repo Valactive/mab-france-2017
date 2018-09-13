@@ -1,62 +1,50 @@
 <?php
 
-class datasourcetrophees extends SectionDatasource
+class datasourcenom_biosphere_filtree_par_laureat extends SectionDatasource
 {
-    public $dsParamROOTELEMENT = 'trophees';
+    public $dsParamROOTELEMENT = 'nom-biosphere-filtree-par-laureat';
     public $dsParamORDER = 'desc';
-    public $dsParamPAGINATERESULTS = 'yes';
-    public $dsParamLIMIT = '10';
-    public $dsParamSTARTPAGE = '{$page}';
+    public $dsParamPAGINATERESULTS = 'no';
+    public $dsParamLIMIT = '20';
+    public $dsParamSTARTPAGE = '1';
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
-    public $dsParamPARAMOUTPUT = array(
-        'logo-odd'
-        );
     public $dsParamSORT = 'system:id';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
     public $dsParamFILTERS = array(
-        '143' => 'Yes',
-        '145' => '{$url-odd}',
-        '150' => '{$url-biosphere}',
-        '152' => '{$s-rubrique}',
+        'system:id' => '{$ds-laureat-detail.biosphere-trophee}',
     );
 
     public $dsParamINCLUDEDELEMENTS = array(
-        'system:pagination',
-        'trophee-nom: all-languages: formatted',
-        'trophee-presentation: all-languages: formatted',
-        'trophee-publie',
-        'image-a-la-une',
-        'logo-odd',
-        'anne-trophee',
-        'biosphere-trophee'
+        'nom: all-languages: formatted',
+        'prefixe-du-nom: all-languages: formatted'
     );
 
     public function __construct($env = null, $process_params = true)
     {
         parent::__construct($env, $process_params);
-        $this->_dependencies = array();
+        $this->_dependencies = array('$ds-laureat-detail.biosphere-trophee');
     }
 
     public function about()
     {
         return array(
-            'name' => 'Trophées',
+            'name' => 'Nom Biosphere filtrée par lauréat',
             'author' => array(
-                'name' => 'Valéry Frisch',
-                'website' => 'https://prep.mab-france.org',
-                'email' => 'valery.frisch@gmail.com'),
+                'name' => 'Sophie Taminh',
+                'website' => 'http://mab-france.localhost',
+                'email' => 'staminh@valactive.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-07-25T14:41:51+00:00'
+            'release-date' => '2018-09-13T22:13:34+00:00'
         );
     }
 
     public function getSource()
     {
-        return '18';
+        return '8';
     }
 
     public function allowEditorToParse()

@@ -38,11 +38,11 @@ class datasourcelogos_filtres_par_eco_acteurs extends SectionDatasource
         return array(
             'name' => 'Logos filtrés par eco-acteurs',
             'author' => array(
-                'name' => 'Valéry Frisch',
+                'name' => 'Sophie Taminh',
                 'website' => 'http://mab-france.localhost',
-                'email' => 'valery.frisch@gmail.com'),
+                'email' => 'staminh@valactive.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-07-26T12:25:29+00:00'
+            'release-date' => '2018-09-12T21:38:51+00:00'
         );
     }
 

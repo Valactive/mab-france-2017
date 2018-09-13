@@ -142,6 +142,46 @@ semantic.ready = function () {
       }
     }
   });
+
+  //laureats filtres
+    // select laureats reserve
+    $('#laureat-reserve').dropdown({
+      debug: true,
+      onChange: function (value, text) {
+        //redirect with url param for filtering items
+        console.log("ok");
+        if(value !== 'all'){
+          removedParam = removeParam('numpage');
+          addParam = insertParam('biosphere', value);
+          //console.log(addParam);
+          document.location.search = addParam;
+          //document.location.href = addParam;
+        } else {
+          removedParam = removeParam('biosphere');
+          document.location.href = removedParam;
+          //console.log(removedParam);
+        }
+      }
+    });
+  
+    // select laureats odd
+    $('#laureat-odd').dropdown({
+      debug: true,
+      onChange: function (value, text) {
+        //redirect with url param for filtering items
+        //console.log("ok");
+        if(value !== 'all'){
+          removedParam = removeParam('numpage');
+          addParam = insertParam('odd', value);
+          //console.log(addParam);
+          document.location.search = addParam;
+        } else {
+          removedParam = removeParam('odd');
+          document.location.href = removedParam;
+          //console.log(removedParam);
+        }
+      }
+    });
   // utilities
   function insertParam(key, value) {
     key = encodeURI(key);
