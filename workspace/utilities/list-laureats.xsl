@@ -161,7 +161,7 @@
 										</div>
 									</xsl:for-each>
 									<div class="right floated">
-										<a href="{$root}/{$current-language}/laureat/{laureat-presentation-nom/item/@handle}/" class="ui mini ">
+										<a href="{$root}/{$current-language}/laureat/{$laureat-name-handle}/" class="ui mini ">
 											<xsl:choose>
 												<xsl:when test="$current-language = 'fr'">Lire la suite</xsl:when>
 												<xsl:otherwise>Learn more</xsl:otherwise>
