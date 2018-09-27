@@ -38,11 +38,11 @@ class datasourcelogos_filtres_par_laureats extends SectionDatasource
         return array(
             'name' => 'Logos filtrés par laureats',
             'author' => array(
-                'name' => 'Valéry Frisch',
+                'name' => 'Sophie Taminh',
                 'website' => 'http://mab-france.localhost',
-                'email' => 'valery.frisch@gmail.com'),
+                'email' => 'staminh@valactive.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-09-13T17:29:28+00:00'
+            'release-date' => '2018-09-24T12:09:54+00:00'
         );
     }
 

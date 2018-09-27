@@ -13,8 +13,11 @@
 					<div class="ui right rail very close">
 						<div class="ui sticky">
 							<div id="tocContents">
-								<strong>Dans cette page</strong>
-							</div>
+								<xsl:choose>
+									<xsl:when test="$current-language = 'fr'"><strong>Dans cette page</strong>															</xsl:when>
+									<xsl:otherwise><strong>In this page</strong></xsl:otherwise>
+								</xsl:choose>
+							</div> <!-- topContents-->
 						</div>
 					</div>
 					<!-- contenu de la section page -->

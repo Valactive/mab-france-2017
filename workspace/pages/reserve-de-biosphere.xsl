@@ -171,7 +171,11 @@
 													<xsl:otherwise>Address :</xsl:otherwise>
 												</xsl:choose>
 											</p>
-											<td><p><xsl:copy-of select="biosphere/entry/biosphere-adresse"/></p></td>
+											<td><p><xsl:copy-of select="biosphere/entry/biosphere-adresse"/></p>
+												<xsl:if test="biosphere/entry/biosphere-adresse-2">
+													<p><br/><xsl:copy-of select="biosphere/entry/biosphere-adresse-2"/></p>
+												</xsl:if>
+											</td>
 										</td>
 									</tr>
 									<tr>
@@ -182,7 +186,11 @@
 													<xsl:otherwise>Phone :</xsl:otherwise>
 												</xsl:choose>
 											</p>
-											<td><p><xsl:copy-of select="biosphere/entry/biosphere-telephone"/></p></td>
+											<td><p><xsl:copy-of select="biosphere/entry/biosphere-telephone"/></p>
+												<xsl:if test="biosphere/entry/biosphere-telephone-2">
+													<p><xsl:copy-of select="biosphere/entry/biosphere-telephone-2"/></p>
+												</xsl:if>
+											</td>
 										</td>
 									</tr>
 

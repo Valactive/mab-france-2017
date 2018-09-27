@@ -38,8 +38,12 @@
 				</div>
 				<div class="eight wide column">
 					<h1 class="ui text-primary">
-								<small><xsl:value-of select="nom-biosphere-filtree-par-laureat/entry/prefixe-du-nom/item[@lang=$current-language]"></xsl:value-of></small><br/>
-								<xsl:value-of select="nom-biosphere-filtree-par-laureat/entry/nom/item[@lang=$current-language]"/>
+						<xsl:value-of select="nom-biosphere-filtree-par-laureat/entry/prefixe-du-nom/item[@lang=$current-language]"></xsl:value-of>
+						<br/>
+						<xsl:value-of select="nom-biosphere-filtree-par-laureat/entry/nom/item[@lang=$current-language]"/>
+					</h1>
+					<h1 class="ui text-primary">
+						Lauréat <xsl:value-of select="laureat-detail/entry/annee-trophee"/>
 					</h1>
 					<!-- <h3>
 						<xsl:value-of select="eco-acteur-detail/entry/biosphere/item"></xsl:value-of>
