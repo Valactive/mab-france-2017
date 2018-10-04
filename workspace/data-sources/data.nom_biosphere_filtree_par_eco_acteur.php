@@ -34,11 +34,11 @@ class datasourcenom_biosphere_filtree_par_eco_acteur extends SectionDatasource
         return array(
             'name' => 'Nom Biosphere filtrée par eco-acteur',
             'author' => array(
-                'name' => 'Valéry Frisch',
+                'name' => 'Sophie Taminh',
                 'website' => 'http://mab-france.localhost',
-                'email' => 'valery.frisch@gmail.com'),
+                'email' => 'staminh@valactive.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-07-26T19:14:27+00:00'
+            'release-date' => '2018-10-04T08:41:20+00:00'
         );
     }
 

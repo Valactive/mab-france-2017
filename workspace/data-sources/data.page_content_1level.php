@@ -10,6 +10,7 @@ class datasourcepage_content_1level extends SectionDatasource
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
+    public $dsParamNEGATEPARAM = '$rubrique';
     public $dsParamSORT = 'ordre';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
@@ -36,10 +37,10 @@ class datasourcepage_content_1level extends SectionDatasource
             'name' => 'Page content 1level',
             'author' => array(
                 'name' => 'Sophie Taminh',
-                'website' => 'https://prep.mab-france.org',
+                'website' => 'http://mab-france.localhost',
                 'email' => 'staminh@valactive.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-05-18T07:28:18+00:00'
+            'release-date' => '2018-10-04T13:18:13+00:00'
         );
     }
 

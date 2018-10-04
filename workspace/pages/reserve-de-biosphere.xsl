@@ -166,44 +166,24 @@
 									<tr>
 										<td>
 											<p class="table-list-title">
-												<xsl:choose>
-													<xsl:when test="$current-language='fr'">Adresse :</xsl:when>
-													<xsl:otherwise>Address :</xsl:otherwise>
-												</xsl:choose>
+												Contact :
 											</p>
 											<td><p><xsl:copy-of select="biosphere/entry/biosphere-adresse"/></p>
+												<p><xsl:copy-of select="biosphere/entry/biosphere-telephone"/></p>
+												<p><xsl:copy-of select="biosphere/entry/biosphere-mail"/></p>
+												
+											</td>
+										</td>
+									</tr>
+									<tr>
+										<td>		
+											<td>
 												<xsl:if test="biosphere/entry/biosphere-adresse-2">
 													<p><br/><xsl:copy-of select="biosphere/entry/biosphere-adresse-2"/></p>
 												</xsl:if>
-											</td>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<p class="table-list-title">
-												<xsl:choose>
-													<xsl:when test="$current-language='fr'">Tél :</xsl:when>
-													<xsl:otherwise>Phone :</xsl:otherwise>
-												</xsl:choose>
-											</p>
-											<td><p><xsl:copy-of select="biosphere/entry/biosphere-telephone"/></p>
 												<xsl:if test="biosphere/entry/biosphere-telephone-2">
 													<p><xsl:copy-of select="biosphere/entry/biosphere-telephone-2"/></p>
 												</xsl:if>
-											</td>
-										</td>
-									</tr>
-
-									<tr>
-										<td>
-											<p class="table-list-title">
-												<xsl:choose>
-													<xsl:when test="$current-language='fr'">Email :</xsl:when>
-													<xsl:otherwise>Email :</xsl:otherwise>
-												</xsl:choose>
-											</p>
-											<td>
-												<p><xsl:copy-of select="biosphere/entry/biosphere-mail"/></p>
 												<xsl:if test="biosphere/entry/mail2">
 													<p><xsl:copy-of select="biosphere/entry/mail2"/></p>
 												</xsl:if>
@@ -212,23 +192,27 @@
 									</tr>
 								</table>
 							</div>
+							
 							<div class="height wide column">
 								<table>
+									<xsl:if test="biosphere/entry/biosphere-nom-site-web !=''">
 									<tr>
 										<td><p class="table-list-title">
+
 											<xsl:choose>
 												<xsl:when test="$current-language='fr'">Site web :</xsl:when>
 												<xsl:otherwise>Website :</xsl:otherwise>
 											</xsl:choose>
-										</p>
-									</td>
-									<td>
-										<p><a href="{biosphere/entry/biosphere-lien-site-web}" target="_blank"><xsl:value-of select="biosphere/entry/biosphere-nom-site-web"/></a><i class="right external alternate icon text-marron"></i></p>
-										<xsl:if test="biosphere/entry/biosphere-nom-site-web-2 !=''">
-											<p><a href="{biosphere/entry/biosphere-lien-site-web-2}" target="_blank"><xsl:value-of select="biosphere/entry/biosphere-nom-site-web-2"/></a><i class="right external alternate icon text-marron"></i></p>
-										</xsl:if>
-									</td>
-								</tr>
+											</p>
+										</td>
+										<td>
+											<p><a href="{biosphere/entry/biosphere-lien-site-web}" target="_blank"><xsl:value-of select="biosphere/entry/biosphere-nom-site-web"/></a><i class="right external alternate icon text-marron"></i></p>
+											<xsl:if test="biosphere/entry/biosphere-nom-site-web-2 !=''">
+												<p><a href="{biosphere/entry/biosphere-lien-site-web-2}" target="_blank"><xsl:value-of select="biosphere/entry/biosphere-nom-site-web-2"/></a><i class="right external alternate icon text-marron"></i></p>
+											</xsl:if>
+										</td>
+									</tr>
+									</xsl:if>
 								<tr>
 									<td></td>
 									<td>

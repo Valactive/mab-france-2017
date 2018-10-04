@@ -10,6 +10,7 @@ class datasourcelogos_filtres_par_eco_acteurs extends SectionDatasource
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
+    public $dsParamREQUIREDPARAM = '$s-rubrique';
     public $dsParamPARAMOUTPUT = array(
         'system:id'
         );
@@ -42,7 +43,7 @@ class datasourcelogos_filtres_par_eco_acteurs extends SectionDatasource
                 'website' => 'http://mab-france.localhost',
                 'email' => 'staminh@valactive.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-09-12T21:38:51+00:00'
+            'release-date' => '2018-10-04T14:14:54+00:00'
         );
     }
 

@@ -10,6 +10,7 @@ class datasourceactualites_home_page_logo_odd extends SectionDatasource
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
+    public $dsParamNEGATEPARAM = '$rubrique';
     public $dsParamSORT = 'system:id';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
@@ -34,11 +35,11 @@ class datasourceactualites_home_page_logo_odd extends SectionDatasource
         return array(
             'name' => 'Actualites home page - logo odd',
             'author' => array(
-                'name' => 'Valéry Frisch',
-                'website' => 'https://prep.mab-france.org',
-                'email' => 'valery.frisch@gmail.com'),
+                'name' => 'Sophie Taminh',
+                'website' => 'http://mab-france.localhost',
+                'email' => 'staminh@valactive.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-05-15T17:37:45+00:00'
+            'release-date' => '2018-10-04T13:06:03+00:00'
         );
     }
 

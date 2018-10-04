@@ -15,16 +15,26 @@ class datasourceactualite_detail extends SectionDatasource
         'logo-odd',
         'biosphere'
         );
-    public $dsParamSORT = 'system:id';
+    public $dsParamSORT = 'date';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
     public $dsParamFILTERS = array(
+        '13' => '{$titre-actualite}',
         '16' => 'Yes',
     );
 
     public $dsParamINCLUDEDELEMENTS = array(
-        'publie'
+        'titre',
+        'texte: formatted',
+        'publie',
+        'logo-odd',
+        'date',
+        'nom-du-document-joint',
+        'document-joint',
+        'type-de-publication',
+        'type',
+        'biosphere'
     );
 
     public function __construct($env = null, $process_params = true)
@@ -39,10 +49,10 @@ class datasourceactualite_detail extends SectionDatasource
             'name' => 'Actualité - détail',
             'author' => array(
                 'name' => 'Sophie Taminh',
-                'website' => 'https://prep.mab-france.org',
+                'website' => 'http://mab-france.localhost',
                 'email' => 'staminh@valactive.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-07-16T12:29:14+00:00'
+            'release-date' => '2018-10-01T07:38:11+00:00'
         );
     }
 

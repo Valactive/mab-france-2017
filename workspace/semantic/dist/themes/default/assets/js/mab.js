@@ -104,6 +104,7 @@ semantic.ready = function () {
     document.location.href = listTarget;
   });
 
+  //eco-acteurs filtres
   // select eco-acteurs reserve
   $('#eco-reserve').dropdown({
     debug: true,
@@ -144,6 +145,25 @@ semantic.ready = function () {
   });
 
   //laureats filtres
+   // select laureats annee
+    $('#laureat-annee').dropdown({
+      debug: true,
+      onChange: function (value, text) {
+        //redirect with url param for filtering items
+        console.log("ok");
+        if(value !== 'all'){
+          removedParam = removeParam('numpage');
+          addParam = insertParam('annee', value);
+          //console.log(addParam);
+          document.location.search = addParam;
+          //document.location.href = addParam;
+        } else {
+          removedParam = removeParam('annee');
+          document.location.href = removedParam;
+          //console.log(removedParam);
+        }
+      }
+    });
     // select laureats reserve
     $('#laureat-reserve').dropdown({
       debug: true,

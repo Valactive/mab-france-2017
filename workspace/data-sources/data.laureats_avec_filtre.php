@@ -10,8 +10,10 @@ class datasourcelaureats_avec_filtre extends SectionDatasource
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
+    public $dsParamREQUIREDPARAM = '$s-rubrique';
     public $dsParamPARAMOUTPUT = array(
-        'logo-odd'
+        'logo-odd',
+        'annee-trophee'
         );
     public $dsParamSORT = 'system:id';
     public $dsParamHTMLENCODE = 'no';
@@ -20,8 +22,8 @@ class datasourcelaureats_avec_filtre extends SectionDatasource
     public $dsParamFILTERS = array(
         '143' => 'yes',
         '145' => '{$url-odd}',
-        '146' => '{$url-annee}',
         '150' => '{$url-biosphere}',
+        '157' => '{$url-annee}',
         '152' => '2187',
     );
 
@@ -45,11 +47,11 @@ class datasourcelaureats_avec_filtre extends SectionDatasource
         return array(
             'name' => 'Lauréats avec filtre',
             'author' => array(
-                'name' => 'Valéry Frisch',
+                'name' => 'Sophie Taminh',
                 'website' => 'http://mab-france.localhost',
-                'email' => 'valery.frisch@gmail.com'),
+                'email' => 'staminh@valactive.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-09-13T17:23:51+00:00'
+            'release-date' => '2018-10-04T14:13:57+00:00'
         );
     }
 

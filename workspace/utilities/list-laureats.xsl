@@ -11,9 +11,6 @@
 	<xsl:param name="url-annee"></xsl:param>
 
 
-
-
-
 	<xsl:template name="list-laureats">
 		<div class="ui grid">
 			<xsl:call-template name="content-page-header"></xsl:call-template>
@@ -25,7 +22,22 @@
 
 				<div class="ui container" id="filtres">
 					<div class="ui form">
-						<div class="two fields">
+						<div class="three fields">
+							<div class="field">
+								<label>Année</label>
+								<select id="laureat-annee" class="ui fluid search dropdown">
+									<option value="">Année</option>
+									<option value="all">Toutes</option>
+									<xsl:for-each select="annees-filtrees-par-laureats/entry">
+										<option value="{@id}">
+											<xsl:if test="$url-annee = @id">
+												<xsl:attribute name="selected"></xsl:attribute>
+											</xsl:if>
+											<xsl:value-of select="annee"></xsl:value-of>
+										</option>
+									</xsl:for-each>
+								</select>
+							</div>
 							<div class="field">
 								<label>Réserve de biosphere</label>
 								<select id="laureat-reserve" class="ui fluid search dropdown">
@@ -113,17 +125,6 @@
 							<div class="ui card">
 								<a href="{$root}/{$current-language}/laureat/{$laureat-name-handle}/" class="card-header-image">
 									<xsl:variable name="img" select="image-a-la-une"/>
-									<!-- <xsl:call-template name="resize-direction-basic">
-										<xsl:with-param name="type" select="'2'"/>
-										<xsl:with-param name="oriWidth" select="image-a-la-une/meta/@width"/>
-										<xsl:with-param name="oriHeigh" select="image-a-la-une/meta/@height"/>
-										<xsl:with-param name="swidth" select="'260'"/>
-										<xsl:with-param name="sheight" select="'0'"/>
-										<xsl:with-param name="cropPoint" select="'2'"/>
-										<xsl:with-param name="backColor" select="'FFFFFF/'"/>
-										<xsl:with-param name="path" select="$img"/>
-										<xsl:with-param name="class" select="''"/>
-									</xsl:call-template> -->
 									<img src="{$root}/image/1/280/0/{$img/@path}/{$img/filename}" alt="image du laureat-nom"/>
 								</a>
 								<div class="content">
@@ -179,15 +180,19 @@
 				<div class="ui container grid centered">
 					<!-- appel template de pagination-->
 					<xsl:call-template name="pagination">
-						<xsl:with-param name="pagination" select="/data/laureats-avec-filtre/pagination" />
+						<xsl:with-param name="pagination" select="/data/laureats-avec-filtre/pagination"/>
 						<xsl:with-param name="pagination-url">
 							<xsl:value-of select="concat($root,'/',$current-language,'/',$rubrique,'/',$s-rubrique,'/?numpage=','$')"/>
-							<xsl:if test="$url-odd!=''">
-								<xsl:value-of select="concat('&amp;odd=',$url-odd)"></xsl:value-of>
+							<xsl:if test="$url-annee!=''">
+								<xsl:value-of select="concat('&amp;annee=',$url-annee)"></xsl:value-of>
 							</xsl:if>
 							<xsl:if test="$url-biosphere!=''">
 								<xsl:value-of select="concat('&amp;biosphere=',$url-biosphere)"></xsl:value-of>
 							</xsl:if>
+							<xsl:if test="$url-odd!=''">
+								<xsl:value-of select="concat('&amp;odd=',$url-odd)"></xsl:value-of>
+							</xsl:if>
+							
 						</xsl:with-param>
 
 						<xsl:with-param name="show-range" select="'3'" />

@@ -2,15 +2,79 @@
 <xsl:stylesheet version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-<xsl:output method="xml"
-	doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
-	doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
-	omit-xml-declaration="yes"
-	encoding="UTF-8"
-	indent="yes" />
+	<xsl:import href="../utilities/master.xsl"></xsl:import>
+	<xsl:import href="../utilities/dates.xsl"></xsl:import>
 
-<xsl:template match="/">
-	<h1><xsl:value-of select="/data/params/page-title"/></h1>
-</xsl:template>
+	<xsl:template match="data">
+		<xsl:variable name="logos-odd" select="actualite-detail/entry/logo-odd" />
+		<div class="ui grid">
+			<div class="row page-header">
+				<!-- breadcrumb -->
+				<div class="bkg-breadcrumb">
+					<div class="ui breadcrumb container">
+						<a href="{$root}{$url-lang}" class="section">
+							<i class="home icon"></i>
+						</a>
+						<div class="divider"> / </div>
+						<xsl:value-of select="plh-page/page/item[@lang=$current-language]"></xsl:value-of>
+						<div class="divider"> / </div>
+						<xsl:value-of select="actualite-detail/entry/titre"></xsl:value-of>
+					</div>
+				</div>
+				<!-- page header -->
+				<div class="ui container">
+					<h1 class="text-primary">
+						<xsl:value-of select="actualite-detail/entry/titre" /><br/>
+					</h1>
+				</div> <!-- ui container-->
+				<!-- end page header -->
+			</div>
+			<!-- end breadcrumb -->
+			<div class="two wide column items">
+			</div>
+			<div class="nine wide column items">
+				<h2><xsl:copy-of select="actualite-detail/entry/type-de-publication"/></h2>
+				<xsl:copy-of select="actualite-detail/entry/texte"/>
+			</div> <!--nine wide columns item-->
+			<div class="five wide column">
+					<h1 class="ui text-primary">
+						<xsl:call-template name="format-date">
+							<xsl:with-param name="date" select="actualite-detail/entry/date/date/start"/>
+							<xsl:with-param name="format" select="'%m+; - %y+;'"/>
+							<xsl:with-param name="language" select=" 'fr' "/>
+							</xsl:call-template>
+					</h1>
+					<div class="ui middle aligned divided list">
+						<xsl:for-each select="$logos-odd/item">
+							<xsl:variable name="logo-odd-id">
+								<xsl:value-of select="@id"></xsl:value-of>
+							</xsl:variable>
+							<a class="item" href="{/data/logos-odd/entry[@id=$logo-odd-id]/lien-http-ref-logo}" target="_blank">
+							<img class="ui image" src="{$root}/image/1/48/48{/data/logos-odd/entry[@id=$logo-odd-id]/image-ref-logo/@path}/{/data/logos-odd/entry[@id=$logo-odd-id]/image-ref-logo/filename}"/>
+							<div class="content header"><xsl:value-of select="/data/logos-odd/entry[@id=$logo-odd-id]/nom-ref-logo"></xsl:value-of></div>
+							</a>
+						</xsl:for-each>	
+					</div> <!--ui middle aligned divide list-->
+					<div class="ui middle aligned divided list">
+					<xsl:if test="actualite-detail/entry/document-joint != ''">
+						<a href="{$workspace}/uploads/actualites{actualité-detail/entry/document-joint/@path}/{actualite-detail/entry/document-joint/filename}" target="_blank" class="ui circular mini button download-press">
+							<xsl:value-of select="actualite-detail/entry/nom-du-document-joint"></xsl:value-of>
+							<i class="right download icon"></i>
+						</a>
+					</xsl:if>
+					</div> <!--ui middle aligned divide list-->
+					<div class="ui middle aligned divided list">
+						<a data-social-name="facebook" aria-label="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.huffingtonpost.fr%2F2018%2F10%2F02%2Fparis-fashion-week-chanel-a-transforme-le-grand-palais-en-immense-plage_a_23548106%2F%3Fncid%3Dother_facebook_eucluwzme5k%26utm_campaign%3Dshare_facebook" target="_blank">
+						<img class="ui avatar image" src="/workspace/img/facebook-logo.svg" alt=""></img>
+						<xsl:choose>
+							<xsl:when test="$current-language='fr'">Partager sur Facebook</xsl:when>
+							<xsl:otherwise>Share on Facebook</xsl:otherwise>
+						</xsl:choose>
+						</a>
+					</div>
+			</div> <!-- five wide column-->
+			
+		</div>
+	</xsl:template>
 
 </xsl:stylesheet>

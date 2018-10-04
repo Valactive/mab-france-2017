@@ -1,62 +1,53 @@
 <?php
 
-class datasourceeco_acteurs_avec_filtres extends SectionDatasource
+class datasourcebiospheres_filtrees_par_actualites extends SectionDatasource
 {
-    public $dsParamROOTELEMENT = 'eco-acteurs-avec-filtres';
-    public $dsParamORDER = 'random';
-    public $dsParamPAGINATERESULTS = 'yes';
-    public $dsParamLIMIT = '12';
-    public $dsParamSTARTPAGE = '{$url-numpage}';
+    public $dsParamROOTELEMENT = 'biospheres-filtrees-par-actualites';
+    public $dsParamORDER = 'desc';
+    public $dsParamPAGINATERESULTS = 'no';
+    public $dsParamLIMIT = '20';
+    public $dsParamSTARTPAGE = '1';
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
     public $dsParamREQUIREDPARAM = '$rubrique';
     public $dsParamPARAMOUTPUT = array(
-        'logo-odd'
+        'system:id'
         );
-    public $dsParamSORT = 'eco-acteur-nom';
+    public $dsParamSORT = 'titre';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
     public $dsParamFILTERS = array(
-        '133' => 'Yes',
-        '135' => '{$url-odd}',
-        '137' => '{$url-biosphere}',
-        '151' => '22',
+        'system:id' => '{$ds-actualites.biosphere}',
     );
 
     public $dsParamINCLUDEDELEMENTS = array(
-        'system:pagination',
-        'eco-acteur-nom: all-languages: formatted',
-        'eco-acteur-presentation: all-languages: formatted',
-        'eco-acteur-publiee',
-        'image-a-la-une',
-        'logo-odd',
-        'biosphere'
+        'titre'
     );
 
     public function __construct($env = null, $process_params = true)
     {
         parent::__construct($env, $process_params);
-        $this->_dependencies = array();
+        $this->_dependencies = array('$ds-actualites.biosphere');
     }
 
     public function about()
     {
         return array(
-            'name' => 'Eco-acteurs avec filtres',
+            'name' => 'Biosphères filtrées par actualites',
             'author' => array(
                 'name' => 'Sophie Taminh',
                 'website' => 'http://mab-france.localhost',
                 'email' => 'staminh@valactive.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-10-04T13:21:23+00:00'
+            'release-date' => '2018-10-04T13:19:00+00:00'
         );
     }
 
     public function getSource()
     {
-        return '17';
+        return '6';
     }
 
     public function allowEditorToParse()

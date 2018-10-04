@@ -35,11 +35,11 @@ class datasourcelogos_odd extends SectionDatasource
         return array(
             'name' => 'Logos ODD',
             'author' => array(
-                'name' => 'Valéry Frisch',
+                'name' => 'Sophie Taminh',
                 'website' => 'http://mab-france.localhost',
-                'email' => 'valery.frisch@gmail.com'),
+                'email' => 'staminh@valactive.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-07-26T09:07:48+00:00'
+            'release-date' => '2018-10-01T07:41:15+00:00'
         );
     }
 

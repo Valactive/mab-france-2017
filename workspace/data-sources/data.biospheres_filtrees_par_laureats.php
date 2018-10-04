@@ -10,6 +10,7 @@ class datasourcebiospheres_filtrees_par_laureats extends SectionDatasource
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
+    public $dsParamREQUIREDPARAM = '$s-rubrique';
     public $dsParamPARAMOUTPUT = array(
         'system:id'
         );
@@ -40,7 +41,7 @@ class datasourcebiospheres_filtrees_par_laureats extends SectionDatasource
                 'website' => 'http://mab-france.localhost',
                 'email' => 'staminh@valactive.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-09-13T22:10:35+00:00'
+            'release-date' => '2018-10-04T14:12:15+00:00'
         );
     }
 

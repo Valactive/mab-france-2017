@@ -10,6 +10,7 @@ class datasourcehome_page_annonce extends SectionDatasource
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
+    public $dsParamNEGATEPARAM = '$rubrique';
     public $dsParamSORT = 'system:id';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
@@ -38,11 +39,11 @@ class datasourcehome_page_annonce extends SectionDatasource
         return array(
             'name' => 'Home page : annonce',
             'author' => array(
-                'name' => 'Valéry Frisch',
-                'website' => 'http://mab-france-new.localhost',
-                'email' => 'valery.frisch@gmail.com'),
+                'name' => 'Sophie Taminh',
+                'website' => 'http://mab-france.localhost',
+                'email' => 'staminh@valactive.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-05-09T12:09:38+00:00'
+            'release-date' => '2018-10-04T13:05:39+00:00'
         );
     }
 

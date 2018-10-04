@@ -10,6 +10,7 @@ class datasourceeco_acteur_detail extends SectionDatasource
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
+    public $dsParamREQUIREDPARAM = '$rubrique';
     public $dsParamPARAMOUTPUT = array(
         'system:id',
         'logo-odd',
@@ -20,8 +21,8 @@ class datasourceeco_acteur_detail extends SectionDatasource
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
     public $dsParamFILTERS = array(
-        '133' => 'Yes',
         '131' => '{$nom-eco-acteur}',
+        '133' => 'Yes',
     );
 
     public $dsParamINCLUDEDELEMENTS = array(
@@ -45,11 +46,11 @@ class datasourceeco_acteur_detail extends SectionDatasource
         return array(
             'name' => 'Eco-acteur-détail',
             'author' => array(
-                'name' => 'Valéry Frisch',
+                'name' => 'Sophie Taminh',
                 'website' => 'http://mab-france.localhost',
-                'email' => 'valery.frisch@gmail.com'),
+                'email' => 'staminh@valactive.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-07-26T13:27:10+00:00'
+            'release-date' => '2018-10-04T13:21:07+00:00'
         );
     }
 
