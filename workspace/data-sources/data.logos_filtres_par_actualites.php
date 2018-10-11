@@ -1,8 +1,8 @@
 <?php
 
-class datasourcelogo_filtres_par_id extends SectionDatasource
+class datasourcelogos_filtres_par_actualites extends SectionDatasource
 {
-    public $dsParamROOTELEMENT = 'logo-filtres-par-id';
+    public $dsParamROOTELEMENT = 'logos-filtres-par-actualites';
     public $dsParamORDER = 'desc';
     public $dsParamPAGINATERESULTS = 'no';
     public $dsParamLIMIT = '20';
@@ -10,12 +10,15 @@ class datasourcelogo_filtres_par_id extends SectionDatasource
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
-    public $dsParamSORT = 'system:id';
+    public $dsParamPARAMOUTPUT = array(
+        'system:id'
+        );
+    public $dsParamSORT = 'nom-ref-logo';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
     public $dsParamFILTERS = array(
-        'system:id' => '{$ds-eco-acteurs.logo-odd}',
+        'system:id' => '{$ds-actualites-avec-filtres.logo-odd}',
     );
 
     public $dsParamINCLUDEDELEMENTS = array(
@@ -27,19 +30,19 @@ class datasourcelogo_filtres_par_id extends SectionDatasource
     public function __construct($env = null, $process_params = true)
     {
         parent::__construct($env, $process_params);
-        $this->_dependencies = array('$ds-eco-acteurs.logo-odd');
+        $this->_dependencies = array('$ds-actualites-avec-filtres.logo-odd');
     }
 
     public function about()
     {
         return array(
-            'name' => 'Logo filtrés par id',
+            'name' => 'Logos filtrés par actualites',
             'author' => array(
-                'name' => 'Valéry Frisch',
-                'website' => 'https://prep.mab-france.org',
-                'email' => 'valery.frisch@gmail.com'),
+                'name' => 'Sophie Taminh',
+                'website' => 'http://mab-france.localhost',
+                'email' => 'staminh@valactive.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-07-24T16:07:56+00:00'
+            'release-date' => '2018-10-11T21:12:47+00:00'
         );
     }
 

@@ -10,7 +10,6 @@ class datasourceeco_acteur_detail extends SectionDatasource
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
-    public $dsParamREQUIREDPARAM = '$rubrique';
     public $dsParamPARAMOUTPUT = array(
         'system:id',
         'logo-odd',
@@ -50,7 +49,7 @@ class datasourceeco_acteur_detail extends SectionDatasource
                 'website' => 'http://mab-france.localhost',
                 'email' => 'staminh@valactive.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-10-04T13:21:07+00:00'
+            'release-date' => '2018-10-04T22:44:46+00:00'
         );
     }
 

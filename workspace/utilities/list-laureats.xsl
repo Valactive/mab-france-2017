@@ -10,16 +10,13 @@
 	<xsl:param name="url-odd"></xsl:param>
 	<xsl:param name="url-annee"></xsl:param>
 
-
 	<xsl:template name="list-laureats">
 		<div class="ui grid">
 			<xsl:call-template name="content-page-header"></xsl:call-template>
-			<div class="ui row">				<!-- filtre -->
-
+	<!-- filtre -->
+			<div class="ui row">
 				<h4 class="ui horizontal divider header">
 				</h4>
-
-
 				<div class="ui container" id="filtres">
 					<div class="ui form">
 						<div class="three fields">
@@ -45,7 +42,6 @@
 									<option value="all">Toutes</option>
 									<xsl:for-each select="biospheres-filtrees-par-laureats/entry">
 										<option value="{@id}">
-
 											<xsl:if test="$url-biosphere = @id">
 												<xsl:attribute name="selected"></xsl:attribute>
 											</xsl:if>
@@ -73,7 +69,7 @@
 									</xsl:choose>
 									<div class="menu">
 										<div class="item" data-value="all">Tous</div>
-										<xsl:for-each select="logos-filtres-par-laureats/entry">
+										<xsl:for-each select="logos-odd/entry">
 											<div class="item" data-value="{@id}">
 												<img class="ui mini image" src="{$root}/image/1/32/32{image-ref-logo/@path}/{image-ref-logo/filename}"/>
 												<xsl:value-of select="nom-ref-logo"></xsl:value-of>
@@ -90,9 +86,10 @@
 			<h4 class="ui horizontal divider header">
 				<!-- entete avec icone laureat-->
 				<i class="users icon"></i>
+				<xsl:value-of select="/data/laureats-avec-filtre/pagination/@total-entries"/> 
 				<xsl:choose>
-					<xsl:when test="$current-language = 'fr'">Lauréats																	</xsl:when>
-					<xsl:otherwise>Winners</xsl:otherwise>
+					<xsl:when test="$current-language = 'fr'"> Lauréats																	</xsl:when>
+					<xsl:otherwise> Winners</xsl:otherwise>
 				</xsl:choose>
 			</h4>
 			<!-- ui horizontal divider hearder-->
@@ -137,13 +134,13 @@
 											<xsl:when test="laureat-presentation/item[@lang=$language]!=''">
 												<xsl:call-template name="truncate">
 													<xsl:with-param name="node" select="laureat-presentation/item[@lang=$language]"/>
-													<xsl:with-param name="limit" select="25"/>
+													<xsl:with-param name="limit" select="45"/>
 												</xsl:call-template>
 											</xsl:when>
 											<xsl:otherwise>
 												<xsl:call-template name="truncate">
 													<xsl:with-param name="node" select="laureat-presentation/item[@lang='fr']"/>
-													<xsl:with-param name="limit" select="25"/>
+													<xsl:with-param name="limit" select="45"/>
 												</xsl:call-template>
 											</xsl:otherwise>
 										</xsl:choose>

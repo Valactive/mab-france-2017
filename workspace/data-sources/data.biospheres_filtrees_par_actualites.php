@@ -41,7 +41,7 @@ class datasourcebiospheres_filtrees_par_actualites extends SectionDatasource
                 'website' => 'http://mab-france.localhost',
                 'email' => 'staminh@valactive.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-10-04T13:19:00+00:00'
+            'release-date' => '2018-10-09T11:52:13+00:00'
         );
     }
 

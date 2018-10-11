@@ -25,7 +25,7 @@ class datasourceactualites_home_page extends SectionDatasource
         'texte: unformatted',
         'image-a-la-une',
         'date',
-        'type'
+        'type-de-publication'
     );
 
     public function __construct($env = null, $process_params = true)
@@ -43,7 +43,7 @@ class datasourceactualites_home_page extends SectionDatasource
                 'website' => 'http://mab-france.localhost',
                 'email' => 'staminh@valactive.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-10-04T10:16:18+00:00'
+            'release-date' => '2018-10-11T20:24:56+00:00'
         );
     }
 

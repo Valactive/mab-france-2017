@@ -3,6 +3,7 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:import href="../utilities/master.xsl"></xsl:import>
 	<xsl:import href="../utilities/dates.xsl"></xsl:import>
+	<xsl:import href="../utilities/advanced-truncate.xsl"></xsl:import>
 	<xsl:import href="../utilities/img-resize-direction.xsl"></xsl:import>
 
 	<xsl:output method="xml"
@@ -256,37 +257,61 @@
 						</h2>
 					</div>
 					<div class="row">
-						<div class="ui four link cards">
+				
+						<div class="ui five link cards">
+						
 							<xsl:for-each select="actualites-page-biosphere/entry">
 								<div class="card">
 									<div class="card-header-image">
-										<xsl:variable name="img" select="image-a-la-une"/>
-										<xsl:call-template name="resize-direction-basic">
-											<xsl:with-param name="type" select="'1'"/>
-											<xsl:with-param name="oriWidth" select="image-a-la-une/meta/@width"/>
-											<xsl:with-param name="oriHeigh" select="image-a-la-une/meta/@height"/>
-											<xsl:with-param name="swidth" select="'130'"/>
-											<xsl:with-param name="sheight" select="'240'"/>
-											<xsl:with-param name="path" select="$img"/>
-											<xsl:with-param name="class" select="''"/>
-										</xsl:call-template>
-										<!-- <img src="{$root}/image/" alt="image de l'actualité"/> -->
-									</div>
+										<a href="{$root}/{$current-language}/{/data/navigation/page[@id=8]/item[@lang='fr']/@handle}/{titre/@handle}/">
+											<xsl:variable name="img" select="image-a-la-une"/>
+											<xsl:call-template name="resize-direction-basic">
+												<xsl:with-param name="type" select="'1'"/>
+												<xsl:with-param name="oriWidth" select="image-a-la-une/meta/@width"/>
+												<xsl:with-param name="oriHeigh" select="image-a-la-une/meta/@height"/>
+												<xsl:with-param name="swidth" select="'130'"/>
+												<xsl:with-param name="sheight" select="'240'"/>
+												<xsl:with-param name="path" select="$img"/>
+												<xsl:with-param name="class" select="''"/>
+											</xsl:call-template>
+															<!-- <img src="{$root}/image/" alt="image de l'actualité"/> -->
+										</a>
+									</div> <!-- card header-->
 									<div class="content">
-										<a href="#" class="header">
-											<xsl:value-of select="titre"/>
+										<a href="{$root}/{$current-language}/actualite-et-publication/{titre/@handle}/" class="header">
+										<xsl:call-template name="truncate">
+											<xsl:with-param name="node" select="titre"/>
+											<xsl:with-param name="limit" select="35"/>
+										</xsl:call-template>
 										</a>
-										<!-- <div class="description"><xsl:value-of select="texte" mode="formatted"/></div> -->
-									</div>
-									<div class="meta">
-										<a href="#" class="ui mini basic button fluid">
-											<xsl:choose>
-												<xsl:when test="$current-language = 'fr'">																		Lire la suite																	</xsl:when>
+										<div class="description">
+										<xsl:call-template name="truncate">
+											<xsl:with-param name="node" select="texte"/>
+											<xsl:with-param name="limit" select="45"/>
+										</xsl:call-template>		
+										</div> <!-- description-->
+									</div>  <!-- content-->
+									<div class="extra content">
+										<xsl:for-each select="logo-odd/item">
+											<xsl:variable name="logo-odd-id">
+											<xsl:value-of select="@id"/>
+											</xsl:variable>
+											<xsl:variable name="logo-odd" select="/data/logos-filtres-par-actualite/entry[@id=$logo-odd-id]"/>
+											<div class="left floated logo-odd">
+											<img class="ui image" src="{$root}/image/1/32/32{$logo-odd/image-ref-logo/@path}/{$logo-odd/image-ref-logo/filename}"/>
+											</div>
+										</xsl:for-each>
+										<div class="right floated">
+											<a href="{$root}/{$current-language}/actualite-et-publication/{titre/@handle}/" class="ui mini ">
+												<xsl:choose>
+												<xsl:when test="$current-language = 'fr'">Lire la suite</xsl:when>
 												<xsl:otherwise>Learn more</xsl:otherwise>
-											</xsl:choose>
-											<i class="arrow alternate circle right outline icon"></i>
+												</xsl:choose>
+													<i class="arrow alternate circle right outline icon"></i>
 										</a>
-
+										</div>	<!--right floated-->
+									</div>	<!--extra content-->
+									<div class="meta">
 										<p class="small center aligned content">
 											<xsl:variable name="dateFormat">
 												<xsl:choose>
@@ -295,10 +320,9 @@
 													<xsl:otherwise>%0m;/%0d;/%y2;</xsl:otherwise>
 												</xsl:choose>
 											</xsl:variable>
-
 											<xsl:choose>
 												<xsl:when test="type/item = 'Actualité' and $current-language='en'">News</xsl:when>
-												<xsl:otherwise><xsl:value-of select="type/item"/></xsl:otherwise>
+												<xsl:otherwise><xsl:value-of select="type-de-publication/item"/></xsl:otherwise>
 											</xsl:choose> -
 											<xsl:call-template name="format-date">
 												<xsl:with-param name="date" select="date/date/start"/>
@@ -306,12 +330,12 @@
 												<xsl:with-param name="language" select="$current-language"/>
 											</xsl:call-template>
 										</p>
-									</div>
-								</div>
+									</div> <!-- meta-->
+								</div>  <!--cards-->
 							</xsl:for-each>
-						</div>
-						<!-- end cards -->
-					</div>
+						</div> <!--ui four link cards-->
+					
+					</div> <!--row-->
 				</div>
 			</div>
 		</section>

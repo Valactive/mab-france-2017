@@ -93,8 +93,6 @@
 									<!-- start cards row -->
 									<div class="row">
 										<div class="ui two column grid">
-											<!-- <div class="column"> -->
-											<!-- start card 1 -->
 											<div class="ui two link cards">
 												<xsl:for-each select="actualites-home-page/entry">
 													<div class="card">
@@ -114,21 +112,41 @@
 														</a>
 														</div>
 														<div class="content">
-															<a href="{$root}/{$current-language}/{/data/navigation/page[@id=8]/item[@lang='fr']/@handle}/{titre/@handle}/" class="header">
-																<xsl:value-of select="titre"/>
+															<a href="{$root}/{$current-language}/actualite-et-publication/{titre/@handle}/" class="header">
+															<xsl:call-template name="truncate">
+															<xsl:with-param name="node" select="titre"/>
+															<xsl:with-param name="limit" select="35"/>
+															</xsl:call-template>
 															</a>
-															<!-- <div class="description"><xsl:value-of select="texte" mode="formatted"/></div> -->
+															<div class="description">
+																<xsl:call-template name="truncate">
+																<xsl:with-param name="node" select="texte"/>
+																<xsl:with-param name="limit" select="45"/>
+																</xsl:call-template>		
+															</div> <!-- description-->
 														</div>
-														<div class="meta">
-															<a href="{$root}/{$current-language}/{/data/navigation/page[@id=8]/item[@lang='fr']/@handle}/{titre/@handle}/" class="ui mini basic button fluid">
-																<xsl:choose>
-																	<xsl:when test="$current-language = 'fr'">																		Lire la suite																	</xsl:when>
+														<div class="extra content">
+															<xsl:for-each select="logo-odd/item">
+																<xsl:variable name="logo-odd-id">
+																	<xsl:value-of select="@id"/>
+																</xsl:variable>
+																<xsl:variable name="logo-odd" select="/data/logos-filtres-par-actualites/entry[@id=$logo-odd-id]"/>
+																<div class="left floated logo-odd">
+																	<img class="ui image" src="{$root}/image/1/32/32{$logo-odd/image-ref-logo/@path}/{$logo-odd/image-ref-logo/filename}"/>
+																</div>
+															</xsl:for-each>
+															<div class="right floated">
+																<a href="{$root}/{$current-language}/actualite-et-publication/{titre/@handle}/" class="ui mini ">
+																	<xsl:choose>
+																	<xsl:when test="$current-language = 'fr'">Lire la suite</xsl:when>
 																	<xsl:otherwise>Learn more</xsl:otherwise>
-																</xsl:choose>
-																<i class="arrow alternate circle right outline icon"></i>
-															</a>
-															<br/>
-															<br/>
+																	</xsl:choose>
+																	<i class="arrow alternate circle right outline icon"></i>
+																</a>
+															</div>	<!--right floated-->
+														</div>	<!--extra content-->
+
+														<div class="meta">
 															<p class="small center aligned content">
 															<xsl:variable name="dateFormat">
 															<xsl:choose>
@@ -137,10 +155,9 @@
 																<xsl:otherwise>%0m;/%0d;/%y2;</xsl:otherwise>
 															</xsl:choose>
 															</xsl:variable>
-
 															<xsl:choose>
 																<xsl:when test="type/item = 'Actualité' and $current-language='en'">News</xsl:when>
-																<xsl:otherwise><xsl:value-of select="type/item"/></xsl:otherwise>
+																<xsl:otherwise><xsl:value-of select="type-de-publication/item"/></xsl:otherwise>
 															</xsl:choose> -
 																<xsl:call-template name="format-date">
 																	<xsl:with-param name="date" select="date/date/start"/>

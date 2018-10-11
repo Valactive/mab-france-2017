@@ -11,7 +11,7 @@
 	<xsl:import href="../utilities/img-resize-direction.xsl"></xsl:import>
 	<xsl:output method="xml" doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" omit-xml-declaration="yes" encoding="UTF-8" indent="yes" />
 	
-	<xsl:template match="data">
+ 	<xsl:template match="data">
 		<xsl:variable name="isEcoActeurs"><xsl:value-of select="count(/data/eco-acteurs/entry)"></xsl:value-of></xsl:variable>
 		<xsl:variable name="isLaureats"><xsl:value-of select="count(/data/laureats/entry)"></xsl:value-of></xsl:variable>
 		<!-- whitch template? -->

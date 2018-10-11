@@ -16,6 +16,7 @@ class datasourcelogos_odd extends SectionDatasource
 
     public $dsParamFILTERS = array(
         '65' => 'regexp:ODD',
+        '158' => 'ODD',
     );
 
     public $dsParamINCLUDEDELEMENTS = array(
@@ -39,7 +40,7 @@ class datasourcelogos_odd extends SectionDatasource
                 'website' => 'http://mab-france.localhost',
                 'email' => 'staminh@valactive.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-10-01T07:41:15+00:00'
+            'release-date' => '2018-10-11T21:07:47+00:00'
         );
     }
 

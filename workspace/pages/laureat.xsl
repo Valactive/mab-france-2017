@@ -19,8 +19,6 @@
 						<xsl:value-of select="plh-page/page/item[@lang=$current-language]"></xsl:value-of>
 						<div class="divider"> / </div>
 						<xsl:value-of select="laureat-detail/entry/laureat-nom"></xsl:value-of>
-
-
 					</div>
 				</div>
 				<!-- page header -->

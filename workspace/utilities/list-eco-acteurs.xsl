@@ -9,19 +9,12 @@
 	<xsl:param name="url-biosphere"></xsl:param>
 	<xsl:param name="url-odd"></xsl:param>
 
-
-
-
-
 	<xsl:template name="list-eco-acteurs">
 		<div class="ui grid">
 			<xsl:call-template name="content-page-header"></xsl:call-template>
 			<div class="ui row">				<!-- filtre -->
-
 				<h4 class="ui horizontal divider header">
 				</h4>
-
-
 				<div class="ui container" id="filtres">
 					<div class="ui form">
 						<div class="two fields">
@@ -32,13 +25,13 @@
 									<option value="all">Toutes</option>
 									<xsl:for-each select="biospheres-filtrees-par-eco-acteurs/entry">
 										<option value="{@id}">
-
 											<xsl:if test="$url-biosphere = @id">
 												<xsl:attribute name="selected"></xsl:attribute>
 											</xsl:if>
 											<xsl:value-of select="nom/item[@lang=$language]"></xsl:value-of>
 										</option>
 									</xsl:for-each>
+									<option value="all">Toutes</option>
 								</select>
 							</div>
 							<div class="field">
@@ -60,12 +53,13 @@
 									</xsl:choose>
 									<div class="menu">
 										<div class="item" data-value="all">Tous</div>
-										<xsl:for-each select="logos-filtres-par-eco-acteurs/entry">
+										<xsl:for-each select="logos-odd/entry">
 											<div class="item" data-value="{@id}">
 												<img class="ui mini image" src="{$root}/image/1/32/32{image-ref-logo/@path}/{image-ref-logo/filename}"/>
 												<xsl:value-of select="nom-ref-logo"></xsl:value-of>
 											</div>
 										</xsl:for-each>
+										<div class="item" data-value="all">Tous</div>
 									</div>
 								</div>
 							</div>
@@ -77,9 +71,10 @@
 			<h4 class="ui horizontal divider header">
 				<!-- entete avec icone ecoacteurs-->
 				<i class="users icon"></i>
+				<xsl:value-of select="/data/eco-acteurs-avec-filtres/pagination/@total-entries"/> 
 				<xsl:choose>
-					<xsl:when test="$current-language = 'fr'">Éco-acteurs																	</xsl:when>
-					<xsl:otherwise>Eco-players</xsl:otherwise>
+					<xsl:when test="$current-language = 'fr'"> Éco-acteurs																	</xsl:when>
+					<xsl:otherwise> Eco-players</xsl:otherwise>
 				</xsl:choose>
 			</h4>
 			<!-- ui horizontal divider hearder-->
@@ -127,7 +122,6 @@
 								</a>
 								<div class="content">
 									<a href="{$root}/{$current-language}/eco-acteur/{$eco-name-handle}/" class="header">
-
 										<xsl:value-of select="$eco-name"/>
 									</a>
 									<div class="description">
@@ -135,13 +129,13 @@
 											<xsl:when test="eco-acteur-presentation/item[@lang=$language]!=''">
 												<xsl:call-template name="truncate">
 													<xsl:with-param name="node" select="eco-acteur-presentation/item[@lang=$language]"/>
-													<xsl:with-param name="limit" select="25"/>
+													<xsl:with-param name="limit" select="45"/>
 												</xsl:call-template>
 											</xsl:when>
 											<xsl:otherwise>
 												<xsl:call-template name="truncate">
 													<xsl:with-param name="node" select="eco-acteur-presentation/item[@lang='fr']"/>
-													<xsl:with-param name="limit" select="25"/>
+													<xsl:with-param name="limit" select="45"/>
 												</xsl:call-template>
 											</xsl:otherwise>
 										</xsl:choose>

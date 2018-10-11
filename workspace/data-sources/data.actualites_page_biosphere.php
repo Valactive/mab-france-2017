@@ -28,7 +28,7 @@ class datasourceactualites_page_biosphere extends SectionDatasource
         'image-a-la-une',
         'logo-odd',
         'date',
-        'type'
+        'type-de-publication'
     );
 
     public function __construct($env = null, $process_params = true)
@@ -42,11 +42,11 @@ class datasourceactualites_page_biosphere extends SectionDatasource
         return array(
             'name' => 'Actualités page biosphère',
             'author' => array(
-                'name' => 'Valéry Frisch',
-                'website' => 'http://mab-france-new.localhost',
-                'email' => 'valery.frisch@gmail.com'),
+                'name' => 'Sophie Taminh',
+                'website' => 'http://mab-france.localhost',
+                'email' => 'staminh@valactive.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-06-20T20:31:32+00:00'
+            'release-date' => '2018-10-11T20:26:45+00:00'
         );
     }
 

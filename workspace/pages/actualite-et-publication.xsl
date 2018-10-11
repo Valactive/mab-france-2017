@@ -64,8 +64,10 @@
 					</xsl:if>
 					</div> <!--ui middle aligned divide list-->
 					<div class="ui middle aligned divided list">
-						<a data-social-name="facebook" aria-label="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.huffingtonpost.fr%2F2018%2F10%2F02%2Fparis-fashion-week-chanel-a-transforme-le-grand-palais-en-immense-plage_a_23548106%2F%3Fncid%3Dother_facebook_eucluwzme5k%26utm_campaign%3Dshare_facebook" target="_blank">
-						<img class="ui avatar image" src="/workspace/img/facebook-logo.svg" alt=""></img>
+						<!--<a data-social-name="facebook" aria-label="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.{$root}/{$current-language}/{/data/navigation/page[@id=8]/item[@lang='fr']/@handle}/{titre/@handle}/" target="_blank">-->
+						
+						<a data-social-name="facebook" aria-label="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=www/{$http-host}{$current-path}/" target="_blank">
+							<img class="ui avatar image" src="/workspace/img/facebook-logo.svg" alt=""></img>
 						<xsl:choose>
 							<xsl:when test="$current-language='fr'">Partager sur Facebook</xsl:when>
 							<xsl:otherwise>Share on Facebook</xsl:otherwise>

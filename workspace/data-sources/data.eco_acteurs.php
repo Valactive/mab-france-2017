@@ -49,7 +49,7 @@ class datasourceeco_acteurs extends SectionDatasource
                 'website' => 'http://mab-france.localhost',
                 'email' => 'staminh@valactive.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-10-04T13:20:49+00:00'
+            'release-date' => '2018-10-04T22:34:32+00:00'
         );
     }
 
