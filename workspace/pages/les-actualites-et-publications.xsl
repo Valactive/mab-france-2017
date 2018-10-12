@@ -87,8 +87,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			<!-- ui row-->
+			</div> <!-- ui row-->
 			<h4 class="ui horizontal divider header">
 				<!-- entete avec icone laureat-->
 				<i class="users icon"></i>
