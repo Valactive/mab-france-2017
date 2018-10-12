@@ -258,7 +258,7 @@
 					</div>
 					<div class="row">
 				
-						<div class="ui five link cards">
+						<div class="ui four link cards">
 						
 							<xsl:for-each select="actualites-page-biosphere/entry">
 								<div class="card">
