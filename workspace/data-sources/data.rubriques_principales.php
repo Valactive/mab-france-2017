@@ -32,11 +32,11 @@ class datasourcerubriques_principales extends SectionDatasource
         return array(
             'name' => 'Rubriques principales',
             'author' => array(
-                'name' => 'Valéry Frisch',
-                'website' => 'http://mab-france-new.localhost',
-                'email' => 'valery.frisch@gmail.com'),
+                'name' => 'Sophie Taminh',
+                'website' => 'http://mab-france.localhost',
+                'email' => 'staminh@valactive.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-06-16T07:43:38+00:00'
+            'release-date' => '2018-10-11T21:28:00+00:00'
         );
     }
 

@@ -118,12 +118,7 @@
 															<xsl:with-param name="limit" select="35"/>
 															</xsl:call-template>
 															</a>
-															<div class="description">
-																<xsl:call-template name="truncate">
-																<xsl:with-param name="node" select="texte"/>
-																<xsl:with-param name="limit" select="45"/>
-																</xsl:call-template>		
-															</div> <!-- description-->
+														
 														</div>
 														<div class="extra content">
 															<xsl:for-each select="logo-odd/item">

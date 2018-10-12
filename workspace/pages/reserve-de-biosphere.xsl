@@ -284,19 +284,13 @@
 											<xsl:with-param name="limit" select="35"/>
 										</xsl:call-template>
 										</a>
-										<div class="description">
-										<xsl:call-template name="truncate">
-											<xsl:with-param name="node" select="texte"/>
-											<xsl:with-param name="limit" select="45"/>
-										</xsl:call-template>		
-										</div> <!-- description-->
 									</div>  <!-- content-->
 									<div class="extra content">
 										<xsl:for-each select="logo-odd/item">
 											<xsl:variable name="logo-odd-id">
 											<xsl:value-of select="@id"/>
 											</xsl:variable>
-											<xsl:variable name="logo-odd" select="/data/logos-filtres-par-actualite/entry[@id=$logo-odd-id]"/>
+											<xsl:variable name="logo-odd" select="/data/logos-filtres-par-actualites/entry[@id=$logo-odd-id]"/>
 											<div class="left floated logo-odd">
 											<img class="ui image" src="{$root}/image/1/32/32{$logo-odd/image-ref-logo/@path}/{$logo-odd/image-ref-logo/filename}"/>
 											</div>
