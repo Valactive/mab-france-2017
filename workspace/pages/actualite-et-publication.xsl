@@ -86,7 +86,7 @@
 			<meta property="og:type"          content="website" />
 			<meta property="og:title"         content="Mab France" />
 			<meta property="og:description"   content="Le comité MAB France anime au niveau national les activités menées dans le cadre du Programme MAB de l'UNESCO et coordonne les actions de développement durable dans les 10 réserves de biosphère françaises en favorisant les échanges d'information et d'expérience " />
-			<meta property="og:image"         content="{$root}/image/1/280/0/{image-a-la-une/@path}/{image-a-la-une/filename}" />
+			<meta property="og:image"         content="{$root}/image/1/280/0/{data/actualite-detail/image-a-la-une/@path}/{data/actualite-detail/image-a-la-une/filename}" />
 		</xsl:template>
 
 	</xsl:stylesheet>
