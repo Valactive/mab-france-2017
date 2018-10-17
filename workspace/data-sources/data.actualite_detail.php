@@ -28,6 +28,7 @@ class datasourceactualite_detail extends SectionDatasource
         'titre',
         'texte: formatted',
         'publie',
+        'image-a-la-une',
         'logo-odd',
         'date',
         'nom-du-document-joint',
@@ -52,7 +53,7 @@ class datasourceactualite_detail extends SectionDatasource
                 'website' => 'http://mab-france.localhost',
                 'email' => 'staminh@valactive.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-10-01T07:38:11+00:00'
+            'release-date' => '2018-10-17T18:26:07+00:00'
         );
     }
 
