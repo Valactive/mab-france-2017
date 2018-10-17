@@ -64,29 +64,41 @@
 						</a>
 					</xsl:if>
 				</div> <!--ui middle aligned divide list-->
+
+				<div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v3.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+				
 				<div class="ui middle aligned divided list">
+					<a onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('{$current-url}'),'facebook-share-dialog','width=626,height=436'); return false;">
 					<img 
 						class="ui avatar image" 
 						src="/workspace/img/facebook-logo.svg" 
 						alt="_blank"
-						onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('{$current-url}'),'facebook-share-dialog','width=626,height=436'); return false;"
+						
 						></img>
 						<xsl:choose>
 							<xsl:when test="$current-language='fr'">Partager sur Facebook</xsl:when>
 							<xsl:otherwise>Share on Facebook</xsl:otherwise>
 						</xsl:choose>
-					</div>	
-				</div> <!-- five wide column-->
+					</a>
+				</div>	
+			</div> <!-- five wide column-->
 
-			</div>
-		</xsl:template>
+		</div>
+	</xsl:template>
 
-		<xsl:template name="partage-actualite"> <!-- partage facebook sur page actualite-->
+	<xsl:template name="partage-actualite"> <!-- partage facebook sur page actualite-->
 			<meta property="og:url"           content="{$current-url}" />
 			<meta property="og:type"          content="website" />
-			<meta property="og:title"         content="Mab France" />
-			<meta property="og:description"   content="coucouc, Le comité MAB France anime au niveau national les activités menées dans le cadre du Programme MAB de l'UNESCO et coordonne les actions de développement durable dans les 10 réserves de biosphère françaises en favorisant les échanges d'information et d'expérience " />
+			<meta property="og:title"         content="Mab France, actualite" />
+			<meta property="og:description"   content="coucou, Le comité MAB France anime au niveau national les activités menées dans le cadre du Programme MAB de l'UNESCO et coordonne les actions de développement durable dans les 10 réserves de biosphère françaises en favorisant les échanges d'information et d'expérience " />
 			<meta property="og:image"         content="{$root}/image/1/280/0/{data/actualite-detail/entry/image-a-la-une/@path}/{data/actualite-detail/entry/image-a-la-une/filename}" />
-		</xsl:template>
+	</xsl:template>
 
-	</xsl:stylesheet>
+</xsl:stylesheet>
