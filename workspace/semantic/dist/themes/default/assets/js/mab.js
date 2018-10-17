@@ -202,6 +202,65 @@ semantic.ready = function () {
         }
       }
     });
+
+  //actualites filtres
+   // select actualites annee
+    $('#actualite-annee').dropdown({
+      debug: true,
+      onChange: function (value, text) {
+        //redirect with url param for filtering items
+        console.log("ok");
+        if(value !== 'all'){
+          removedParam = removeParam('numpage');
+          addParam = insertParam('annee', value);
+          //console.log(addParam);
+          document.location.search = addParam;
+          //document.location.href = addParam;
+        } else {
+          removedParam = removeParam('annee');
+          document.location.href = removedParam;
+          //console.log(removedParam);
+        }
+      }
+    });
+      // select actualite typo
+    $('#actualite-typo').dropdown({
+      debug: true,
+      onChange: function (value, text) {
+        //redirect with url param for filtering items
+        //console.log("ok");
+        if(value !== 'all'){
+          removedParam = removeParam('numpage');
+          addParam = insertParam('typo', value);
+          //console.log(addParam);
+          document.location.search = addParam;
+        } else {
+          removedParam = removeParam('typo');
+          document.location.href = removedParam;
+          //console.log(removedParam);
+        }
+      }
+    });
+    // select actualite reserve
+    $('#actualite-reserve').dropdown({
+      debug: true,
+      onChange: function (value, text) {
+        //redirect with url param for filtering items
+        console.log("ok");
+        if(value !== 'all'){
+          removedParam = removeParam('numpage');
+          addParam = insertParam('biosphere', value);
+          //console.log(addParam);
+          document.location.search = addParam;
+          //document.location.href = addParam;
+        } else {
+          removedParam = removeParam('biosphere');
+          document.location.href = removedParam;
+          //console.log(removedParam);
+        }
+      }
+    });
+
   // utilities
   function insertParam(key, value) {
     key = encodeURI(key);

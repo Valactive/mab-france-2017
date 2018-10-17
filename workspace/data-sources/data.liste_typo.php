@@ -1,8 +1,8 @@
 <?php
 
-class datasourcebiospheres_filtrees_par_laureats extends SectionDatasource
+class datasourceliste_typo extends SectionDatasource
 {
-    public $dsParamROOTELEMENT = 'biospheres-filtrees-par-laureats';
+    public $dsParamROOTELEMENT = 'liste-typo';
     public $dsParamORDER = 'asc';
     public $dsParamPAGINATERESULTS = 'no';
     public $dsParamLIMIT = '20';
@@ -10,44 +10,36 @@ class datasourcebiospheres_filtrees_par_laureats extends SectionDatasource
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
-    public $dsParamREQUIREDPARAM = '$s-rubrique';
-    public $dsParamPARAMOUTPUT = array(
-        'system:id'
-        );
-    public $dsParamSORT = 'nom';
+    public $dsParamSORT = 'nom-ref-type-de-publi';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
-    public $dsParamFILTERS = array(
-        'system:id' => '{$ds-laureats.biosphere}',
-    );
-
     public $dsParamINCLUDEDELEMENTS = array(
-        'nom: all-languages: formatted'
+        'nom-ref-type-de-publi: all-languages: formatted'
     );
 
     public function __construct($env = null, $process_params = true)
     {
         parent::__construct($env, $process_params);
-        $this->_dependencies = array('$ds-laureats.biosphere');
+        $this->_dependencies = array();
     }
 
     public function about()
     {
         return array(
-            'name' => 'Biosphères filtrées par lauréats',
+            'name' => 'liste typo',
             'author' => array(
                 'name' => 'Sophie Taminh',
                 'website' => 'http://mab-france.localhost',
                 'email' => 'staminh@valactive.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-10-04T14:12:15+00:00'
+            'release-date' => '2018-10-15T11:21:54+00:00'
         );
     }
 
     public function getSource()
     {
-        return '8';
+        return '7';
     }
 
     public function allowEditorToParse()

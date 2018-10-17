@@ -1,53 +1,48 @@
 <?php
 
-class datasourcebiospheres_filtrees_par_actualites extends SectionDatasource
+class datasourceref_types_de_publication extends SectionDatasource
 {
-    public $dsParamROOTELEMENT = 'biospheres-filtrees-par-actualites';
-    public $dsParamORDER = 'desc';
+    public $dsParamROOTELEMENT = 'ref-types-de-publication';
+    public $dsParamORDER = 'asc';
     public $dsParamPAGINATERESULTS = 'no';
     public $dsParamLIMIT = '20';
     public $dsParamSTARTPAGE = '1';
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
-    public $dsParamREQUIREDPARAM = '$rubrique';
     public $dsParamPARAMOUTPUT = array(
         'system:id'
         );
-    public $dsParamSORT = 'titre';
+    public $dsParamSORT = 'nom-ref-type-de-publi';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
-    public $dsParamFILTERS = array(
-        'system:id' => '{$ds-actualites.biosphere}',
-    );
-
     public $dsParamINCLUDEDELEMENTS = array(
-        'titre'
+        'nom-ref-type-de-publi: formatted'
     );
 
     public function __construct($env = null, $process_params = true)
     {
         parent::__construct($env, $process_params);
-        $this->_dependencies = array('$ds-actualites.biosphere');
+        $this->_dependencies = array();
     }
 
     public function about()
     {
         return array(
-            'name' => 'Biosphères filtrées par actualites',
+            'name' => 'Réf. : Types de publication',
             'author' => array(
                 'name' => 'Sophie Taminh',
                 'website' => 'http://mab-france.localhost',
                 'email' => 'staminh@valactive.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-10-09T11:52:13+00:00'
+            'release-date' => '2018-10-15T11:16:17+00:00'
         );
     }
 
     public function getSource()
     {
-        return '6';
+        return '7';
     }
 
     public function allowEditorToParse()

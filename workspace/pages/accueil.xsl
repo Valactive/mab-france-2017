@@ -47,4 +47,6 @@
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
+<xsl:template name="partage-actualite"> <!-- partage facebook sur page actualite-->
+</xsl:template>
 </xsl:stylesheet>

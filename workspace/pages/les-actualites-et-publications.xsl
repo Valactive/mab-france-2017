@@ -10,9 +10,11 @@
 
 	
 	<xsl:import href="../utilities/pagination.xsl"></xsl:import>
-	<xsl:param name="url-biosphere"></xsl:param>
-	<xsl:param name="url-odd"></xsl:param>
 	<xsl:param name="url-annee"></xsl:param>
+	<xsl:param name="url-typo"></xsl:param>
+	<xsl:param name="url-biosphere"></xsl:param>
+	
+	
 
 	<xsl:template match="data">
 		<div class="ui grid">
@@ -31,12 +33,27 @@
 								<select id="actualite-annee" class="ui fluid search dropdown">
 									<option value="">Année</option>
 									<option value="all">Toutes</option>
-									<xsl:for-each select="annees-filtrees-par-laureats/entry">
-										<option value="{@id}">
-											<xsl:if test="$url-annee = @id">
+									<xsl:for-each select="liste-annees/entry">
+										<option value="{annee/@handle}">
+											<xsl:if test="$url-annee = annee/@handle">
 												<xsl:attribute name="selected"></xsl:attribute>
 											</xsl:if>
 											<xsl:value-of select="annee"></xsl:value-of>
+										</option>
+									</xsl:for-each>
+								</select>
+							</div>
+							<div class="field">
+								<label>Type de publication</label>
+								<select id="actualite-typo" class="ui fluid search dropdown">
+									<option value="">Typologie</option>
+									<option value="all">Toutes</option>
+									<xsl:for-each select="liste-typo/entry">
+										<option value="{@id}">
+											<xsl:if test="$url-typo = @id">
+												<xsl:attribute name="selected"></xsl:attribute>
+											</xsl:if>
+											<xsl:value-of select="nom-ref-type-de-publi/item[@lang=$language]"></xsl:value-of>
 										</option>
 									</xsl:for-each>
 								</select>
@@ -46,7 +63,7 @@
 								<select id="actualite-reserve" class="ui fluid search dropdown">
 									<option value="">Réserve de biosphère</option>
 									<option value="all">Toutes</option>
-									<xsl:for-each select="biospheres-filtrees-par-laureats/entry">
+									<xsl:for-each select="liste-reserves-de-biosphere/entry">
 										<option value="{@id}">
 											<xsl:if test="$url-biosphere = @id">
 												<xsl:attribute name="selected"></xsl:attribute>
@@ -55,34 +72,6 @@
 										</option>
 									</xsl:for-each>
 								</select>
-							</div>
-							<div class="field">
-								<label>Objectifs de Développement Durable</label>
-								<div id="actualite-odd" class="ui fluid search selection dropdown">
-									<i class="dropdown icon"></i>
-									<xsl:choose>
-										<xsl:when test="$url-odd != ''">
-											<div class="text">
-												<img class="ui mini image" src="{$root}/image/1/32/32{/data/logos-odd/entry[@id=$url-odd]/image-ref-logo/@path}/{/data/logos-odd/entry[@id=$url-odd]/image-ref-logo/filename}"/>
-												<xsl:value-of select="/data/logos-odd/entry[@id=$url-odd]/nom-ref-logo"></xsl:value-of>
-											</div>
-										</xsl:when>
-										<xsl:otherwise>
-											<div class="default text">
-													Objectifs de Développement Durable
-											</div>
-										</xsl:otherwise>
-									</xsl:choose>
-									<div class="menu">
-										<div class="item" data-value="all">Tous</div>
-										<xsl:for-each select="logos-fodd/entry">
-											<div class="item" data-value="{@id}">
-												<img class="ui mini image" src="{$root}/image/1/32/32{image-ref-logo/@path}/{image-ref-logo/filename}"/>
-												<xsl:value-of select="nom-ref-logo"></xsl:value-of>
-											</div>
-										</xsl:for-each>
-									</div>
-								</div>
 							</div>
 						</div>
 					</div>
@@ -111,8 +100,25 @@
 							</xsl:variable>
 							<div class="ui card">
 								<a href="{$root}/{$current-language}/actualite-et-publication/{$actualite-name-handle}/" class="card-header-image">
-									<xsl:variable name="img" select="image-a-la-une"/>
-									<img src="{$root}/image/1/280/0/{$img/@path}/{$img/filename}" alt="image de l'actualite"/>
+									<xsl:choose>
+									<xsl:when test="image-a-la-une != ''">
+										<xsl:variable name="img" select="image-a-la-une"/>
+										<img src="{$root}/image/1/280/0/{$img/@path}/{$img/filename}" alt="image de l'actualite"/>
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:choose>
+											<xsl:when test="type-de-publication/item/@handle = 'actualite'">
+											<i class=" huge copyright icon"></i>
+											</xsl:when>
+											<xsl:when test="type-de-publication/item/@handle = 'newsletter'">
+											<i class=" huge pencil alternate icon"></i>
+											</xsl:when>
+											<xsl:otherwise >
+											<i class=" huge eye slash icon"></i>
+											</xsl:otherwise>
+										</xsl:choose>
+									</xsl:otherwise>
+									</xsl:choose>
 								</a>
 								<div class="content">
 									<a href="{$root}/{$current-language}/actualite-et-publication/{$actualite-name-handle}/" class="header">
@@ -181,12 +187,13 @@
 							<xsl:if test="$url-annee!=''">
 								<xsl:value-of select="concat('&amp;annee=',$url-annee)"></xsl:value-of>
 							</xsl:if>
+							<xsl:if test="$url-typo!=''">
+								<xsl:value-of select="concat('&amp;typo=',$url-typo)"></xsl:value-of>
+							</xsl:if>
 							<xsl:if test="$url-biosphere!=''">
 								<xsl:value-of select="concat('&amp;biosphere=',$url-biosphere)"></xsl:value-of>
 							</xsl:if>
-							<xsl:if test="$url-odd!=''">
-								<xsl:value-of select="concat('&amp;odd=',$url-odd)"></xsl:value-of>
-							</xsl:if>
+							
 							
 						</xsl:with-param>
 
@@ -199,5 +206,6 @@
 			</div>
 		</div>		<!-- ui grid-->
 	</xsl:template>
+	<xsl:template name="partage-actualite"/> <!-- partage facebook sur page actualite-->
 
 </xsl:stylesheet>

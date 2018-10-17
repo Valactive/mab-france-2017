@@ -7,6 +7,7 @@
 
 	<xsl:template match="data">
 		<xsl:variable name="logos-odd" select="actualite-detail/entry/logo-odd" />
+		
 		<div class="ui grid">
 			<div class="row page-header">
 				<!-- breadcrumb -->
@@ -37,46 +38,55 @@
 				<xsl:copy-of select="actualite-detail/entry/texte"/>
 			</div> <!--nine wide columns item-->
 			<div class="five wide column">
-					<h1 class="ui text-primary">
-						<xsl:call-template name="format-date">
-							<xsl:with-param name="date" select="actualite-detail/entry/date/date/start"/>
-							<xsl:with-param name="format" select="'%m+; - %y+;'"/>
-							<xsl:with-param name="language" select=" 'fr' "/>
-							</xsl:call-template>
-					</h1>
-					<div class="ui middle aligned divided list">
-						<xsl:for-each select="$logos-odd/item">
-							<xsl:variable name="logo-odd-id">
-								<xsl:value-of select="@id"></xsl:value-of>
-							</xsl:variable>
-							<a class="item" href="{/data/logos-odd/entry[@id=$logo-odd-id]/lien-http-ref-logo}" target="_blank">
+				<h1 class="ui text-primary">
+					<xsl:call-template name="format-date">
+						<xsl:with-param name="date" select="actualite-detail/entry/date/date/start"/>
+						<xsl:with-param name="format" select="'%m+; - %y+;'"/>
+						<xsl:with-param name="language" select=" 'fr' "/>
+					</xsl:call-template>
+				</h1>
+				<div class="ui middle aligned divided list">
+					<xsl:for-each select="$logos-odd/item">
+						<xsl:variable name="logo-odd-id">
+							<xsl:value-of select="@id"></xsl:value-of>
+						</xsl:variable>
+						<a class="item" href="{/data/logos-odd/entry[@id=$logo-odd-id]/lien-http-ref-logo}" target="_blank">
 							<img class="ui image" src="{$root}/image/1/48/48{/data/logos-odd/entry[@id=$logo-odd-id]/image-ref-logo/@path}/{/data/logos-odd/entry[@id=$logo-odd-id]/image-ref-logo/filename}"/>
 							<div class="content header"><xsl:value-of select="/data/logos-odd/entry[@id=$logo-odd-id]/nom-ref-logo"></xsl:value-of></div>
-							</a>
-						</xsl:for-each>	
-					</div> <!--ui middle aligned divide list-->
-					<div class="ui middle aligned divided list">
+						</a>
+					</xsl:for-each>	
+				</div> <!--ui middle aligned divide list-->
+				<div class="ui middle aligned divided list">
 					<xsl:if test="actualite-detail/entry/document-joint != ''">
 						<a href="{$workspace}/uploads/actualites{actualité-detail/entry/document-joint/@path}/{actualite-detail/entry/document-joint/filename}" target="_blank" class="ui circular mini button download-press">
 							<xsl:value-of select="actualite-detail/entry/nom-du-document-joint"></xsl:value-of>
 							<i class="right download icon"></i>
 						</a>
 					</xsl:if>
-					</div> <!--ui middle aligned divide list-->
-					<div class="ui middle aligned divided list">
-						<!--<a data-social-name="facebook" aria-label="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.{$root}/{$current-language}/{/data/navigation/page[@id=8]/item[@lang='fr']/@handle}/{titre/@handle}/" target="_blank">-->
-						
-						<a data-social-name="facebook" aria-label="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=www/{$http-host}{$current-path}/" target="_blank">
-							<img class="ui avatar image" src="/workspace/img/facebook-logo.svg" alt=""></img>
+				</div> <!--ui middle aligned divide list-->
+				<div class="ui middle aligned divided list">
+					<img 
+						class="ui avatar image" 
+						src="/workspace/img/facebook-logo.svg" 
+						alt="_blank"
+						onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('{$current-url}'),'facebook-share-dialog','width=626,height=436'); return false;"
+						></img>
 						<xsl:choose>
 							<xsl:when test="$current-language='fr'">Partager sur Facebook</xsl:when>
 							<xsl:otherwise>Share on Facebook</xsl:otherwise>
 						</xsl:choose>
-						</a>
-					</div>
-			</div> <!-- five wide column-->
-			
-		</div>
-	</xsl:template>
+					</div>	
+				</div> <!-- five wide column-->
 
-</xsl:stylesheet>
+			</div>
+		</xsl:template>
+
+		<xsl:template name="partage-actualite"> <!-- partage facebook sur page actualite-->
+			<meta property="og:url"           content="{$current-url}" />
+			<meta property="og:type"          content="website" />
+			<meta property="og:title"         content="Mab France" />
+			<meta property="og:description"   content="Le comité MAB France anime au niveau national les activités menées dans le cadre du Programme MAB de l'UNESCO et coordonne les actions de développement durable dans les 10 réserves de biosphère françaises en favorisant les échanges d'information et d'expérience " />
+			<meta property="og:image"         content="{$root}/image/1/280/0/{image-a-la-une/@path}/{image-a-la-une/filename}" />
+		</xsl:template>
+
+	</xsl:stylesheet>

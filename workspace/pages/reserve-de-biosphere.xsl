@@ -247,36 +247,44 @@
 		</section>
 		<section class="actu-biosphere">
 			<div class="ui container">
-				<div class="ui grid">
-					<div class="row">
+				<div class="two column row last-actu">
 						<h2 class="left floated">
 							<xsl:choose>
 								<xsl:when test="$current-language = 'fr'">Actualités &amp; publications</xsl:when>
 								<xsl:otherwise>News &amp; publications</xsl:otherwise>
 							</xsl:choose>
+							<a href="{$root}/{$current-language}/{/data/navigation/page[@id=5]/item[@lang=$current-language]/@handle}/" class="ui mini primary button right floated">
+								<xsl:choose>
+									<xsl:when test="$current-language = 'fr'">Tout voir</xsl:when>
+									<xsl:otherwise>See all</xsl:otherwise>
+								</xsl:choose>
+							</a>
 						</h2>
-					</div>
-					<div class="row">
-				
-						<div class="ui four link cards">
-						
+				</div>
+				<div class="ui four link cards">
 							<xsl:for-each select="actualites-page-biosphere/entry">
-								<div class="card">
-									<div class="card-header-image">
-										<a href="{$root}/{$current-language}/{/data/navigation/page[@id=8]/item[@lang='fr']/@handle}/{titre/@handle}/">
-											<xsl:variable name="img" select="image-a-la-une"/>
-											<xsl:call-template name="resize-direction-basic">
-												<xsl:with-param name="type" select="'1'"/>
-												<xsl:with-param name="oriWidth" select="image-a-la-une/meta/@width"/>
-												<xsl:with-param name="oriHeigh" select="image-a-la-une/meta/@height"/>
-												<xsl:with-param name="swidth" select="'130'"/>
-												<xsl:with-param name="sheight" select="'240'"/>
-												<xsl:with-param name="path" select="$img"/>
-												<xsl:with-param name="class" select="''"/>
-											</xsl:call-template>
-															<!-- <img src="{$root}/image/" alt="image de l'actualité"/> -->
-										</a>
-									</div> <!-- card header-->
+								<div class=" ui card">
+									<a href="{$root}/{$current-language}/actualite-et-publication/titre/@handle" class="card-header-image">
+									<xsl:choose>
+									<xsl:when test="image-a-la-une != ''">
+										<xsl:variable name="img" select="image-a-la-une"/>
+										<img src="{$root}/image/1/280/0/{$img/@path}/{$img/filename}" alt="image de l'actualite"/>
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:choose>
+											<xsl:when test="type-de-publication/item/@handle = 'actualite'">
+											<i class=" huge copyright icon"></i>
+											</xsl:when>
+											<xsl:when test="type-de-publication/item/@handle = 'newsletter'">
+											<i class=" huge pencil alternate icon"></i>
+											</xsl:when>
+											<xsl:otherwise >
+											<i class=" huge eye slash icon"></i>
+											</xsl:otherwise>
+										</xsl:choose>
+									</xsl:otherwise>
+									</xsl:choose>
+									</a>
 									<div class="content">
 										<a href="{$root}/{$current-language}/actualite-et-publication/{titre/@handle}/" class="header">
 										<xsl:call-template name="truncate">
@@ -325,13 +333,11 @@
 											</xsl:call-template>
 										</p>
 									</div> <!-- meta-->
-								</div>  <!--cards-->
+								</div>  <!--ui cards-->
 							</xsl:for-each>
 						</div> <!--ui four link cards-->
-					
-					</div> <!--row-->
-				</div>
-			</div>
+			</div> <!-- ui container-->
 		</section>
 	</xsl:template>
+	<xsl:template name="partage-actualite"/> <!-- partage facebook sur page actualite-->
 </xsl:stylesheet>

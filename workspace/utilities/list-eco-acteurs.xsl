@@ -23,7 +23,7 @@
 								<select id="eco-reserve" class="ui fluid search dropdown">
 									<option value="">Réserve de biosphère</option>
 									<option value="all">Toutes</option>
-									<xsl:for-each select="biospheres-filtrees-par-eco-acteurs/entry">
+									<xsl:for-each select="liste-reserves-de-biosphere/entry">
 										<option value="{@id}">
 											<xsl:if test="$url-biosphere = @id">
 												<xsl:attribute name="selected"></xsl:attribute>

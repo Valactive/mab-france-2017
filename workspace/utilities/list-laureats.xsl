@@ -6,9 +6,10 @@
 	<xsl:import href="../utilities/content-page-header.xsl"></xsl:import>
 	<xsl:import href="../utilities/advanced-truncate.xsl"></xsl:import>
 	<xsl:import href="../utilities/pagination.xsl"></xsl:import>
+	<xsl:param name="url-annee"></xsl:param>
 	<xsl:param name="url-biosphere"></xsl:param>
 	<xsl:param name="url-odd"></xsl:param>
-	<xsl:param name="url-annee"></xsl:param>
+	
 
 	<xsl:template name="list-laureats">
 		<div class="ui grid">
@@ -25,7 +26,7 @@
 								<select id="laureat-annee" class="ui fluid search dropdown">
 									<option value="">Année</option>
 									<option value="all">Toutes</option>
-									<xsl:for-each select="annees-filtrees-par-laureats/entry">
+									<xsl:for-each select="liste-annees/entry">
 										<option value="{@id}">
 											<xsl:if test="$url-annee = @id">
 												<xsl:attribute name="selected"></xsl:attribute>
@@ -40,7 +41,7 @@
 								<select id="laureat-reserve" class="ui fluid search dropdown">
 									<option value="">Réserve de biosphère</option>
 									<option value="all">Toutes</option>
-									<xsl:for-each select="biospheres-filtrees-par-laureats/entry">
+									<xsl:for-each select="liste-reserves-de-biosphere/entry">
 										<option value="{@id}">
 											<xsl:if test="$url-biosphere = @id">
 												<xsl:attribute name="selected"></xsl:attribute>

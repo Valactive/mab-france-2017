@@ -10,10 +10,13 @@ class datasourceliste_reserves_de_biosphere extends SectionDatasource
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
-    public $dsParamNEGATEPARAM = '$rubrique';
-    public $dsParamSORT = 'system:id';
+    public $dsParamSORT = 'nom';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
+
+    public $dsParamFILTERS = array(
+        '45' => 'yes',
+    );
 
     public $dsParamINCLUDEDELEMENTS = array(
         'nom: all-languages: formatted',
@@ -35,7 +38,7 @@ class datasourceliste_reserves_de_biosphere extends SectionDatasource
                 'website' => 'http://mab-france.localhost',
                 'email' => 'staminh@valactive.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-10-04T13:23:14+00:00'
+            'release-date' => '2018-10-15T11:21:30+00:00'
         );
     }
 

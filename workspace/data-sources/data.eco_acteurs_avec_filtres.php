@@ -3,7 +3,7 @@
 class datasourceeco_acteurs_avec_filtres extends SectionDatasource
 {
     public $dsParamROOTELEMENT = 'eco-acteurs-avec-filtres';
-    public $dsParamORDER = 'random';
+    public $dsParamORDER = 'desc';
     public $dsParamPAGINATERESULTS = 'yes';
     public $dsParamLIMIT = '12';
     public $dsParamSTARTPAGE = '{$url-numpage}';
@@ -14,7 +14,7 @@ class datasourceeco_acteurs_avec_filtres extends SectionDatasource
     public $dsParamPARAMOUTPUT = array(
         'logo-odd'
         );
-    public $dsParamSORT = 'eco-acteur-nom';
+    public $dsParamSORT = 'date-maj';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
@@ -50,7 +50,7 @@ class datasourceeco_acteurs_avec_filtres extends SectionDatasource
                 'website' => 'http://mab-france.localhost',
                 'email' => 'staminh@valactive.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-10-11T10:18:33+00:00'
+            'release-date' => '2018-10-12T07:40:11+00:00'
         );
     }
 

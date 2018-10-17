@@ -1,53 +1,45 @@
 <?php
 
-class datasourcebiospheres_filtrees_par_eco_acteurs extends SectionDatasource
+class datasourceliste_annees extends SectionDatasource
 {
-    public $dsParamROOTELEMENT = 'biospheres-filtrees-par-eco-acteurs';
-    public $dsParamORDER = 'asc';
+    public $dsParamROOTELEMENT = 'liste-annees';
+    public $dsParamORDER = 'desc';
     public $dsParamPAGINATERESULTS = 'no';
     public $dsParamLIMIT = '20';
     public $dsParamSTARTPAGE = '1';
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
-    public $dsParamREQUIREDPARAM = '$s-rubrique';
-    public $dsParamPARAMOUTPUT = array(
-        'system:id'
-        );
-    public $dsParamSORT = 'nom';
+    public $dsParamSORT = 'annee';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
-    public $dsParamFILTERS = array(
-        'system:id' => '{$ds-eco-acteurs.biosphere}',
-    );
-
     public $dsParamINCLUDEDELEMENTS = array(
-        'nom: all-languages: formatted'
+        'annee'
     );
 
     public function __construct($env = null, $process_params = true)
     {
         parent::__construct($env, $process_params);
-        $this->_dependencies = array('$ds-eco-acteurs.biosphere');
+        $this->_dependencies = array();
     }
 
     public function about()
     {
         return array(
-            'name' => 'Biosphères filtrées par eco-acteurs',
+            'name' => 'liste annees',
             'author' => array(
                 'name' => 'Sophie Taminh',
                 'website' => 'http://mab-france.localhost',
                 'email' => 'staminh@valactive.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-10-04T14:12:50+00:00'
+            'release-date' => '2018-10-15T10:39:33+00:00'
         );
     }
 
     public function getSource()
     {
-        return '8';
+        return '20';
     }
 
     public function allowEditorToParse()

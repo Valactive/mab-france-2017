@@ -64,5 +64,6 @@
 			</div>
 		</div>
 	</xsl:template>
+	<xsl:template name="partage-actualite"/> <!-- partage facebook sur page actualite-->
 
 </xsl:stylesheet>

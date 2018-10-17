@@ -10,20 +10,15 @@ class datasourceactualites_avec_filtre extends SectionDatasource
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
-    public $dsParamPARAMOUTPUT = array(
-        'logo-odd',
-        'type-de-publication',
-        'biosphere'
-        );
     public $dsParamSORT = 'date';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
     public $dsParamFILTERS = array(
         '16' => 'yes',
-        '123' => '{$url-odd}',
-        '26' => '{$url-type-publi}',
+        '26' => '{$url-typo}',
         '130' => '{$url-biosphere}',
+        '15' => 'regexp: {$url-annee}',
     );
 
     public $dsParamINCLUDEDELEMENTS = array(
@@ -53,7 +48,7 @@ class datasourceactualites_avec_filtre extends SectionDatasource
                 'website' => 'http://mab-france.localhost',
                 'email' => 'staminh@valactive.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-10-10T14:10:46+00:00'
+            'release-date' => '2018-10-15T13:07:31+00:00'
         );
     }
 

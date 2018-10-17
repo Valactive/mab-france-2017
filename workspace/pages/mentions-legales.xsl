@@ -12,5 +12,6 @@
 <xsl:template match="/">
 	<h1><xsl:value-of select="/data/params/page-title"/></h1>
 </xsl:template>
+<xsl:template name="partage-actualite"/> <!-- partage facebook sur page actualite-->
 
 </xsl:stylesheet>
