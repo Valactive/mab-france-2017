@@ -247,24 +247,27 @@
 		</section>
 		<section class="actu-biosphere">
 			<div class="ui container">
-				<div class="two column row last-actu">
+			<div class="ui grid">	
+				<div class="ui row last-actu">
 						<h2 class="left floated">
 							<xsl:choose>
 								<xsl:when test="$current-language = 'fr'">Actualités &amp; publications</xsl:when>
 								<xsl:otherwise>News &amp; publications</xsl:otherwise>
 							</xsl:choose>
+						</h2>
+						
 							<a href="{$root}/{$current-language}/{/data/navigation/page[@id=5]/item[@lang=$current-language]/@handle}/" class="ui mini primary button right floated">
 								<xsl:choose>
 									<xsl:when test="$current-language = 'fr'">Tout voir</xsl:when>
 									<xsl:otherwise>See all</xsl:otherwise>
 								</xsl:choose>
 							</a>
-						</h2>
+						
 				</div>
-				<div class="ui four link cards">
+				<div class="ui row four link cards">
 							<xsl:for-each select="actualites-page-biosphere/entry">
 								<div class=" ui card">
-									<a href="{$root}/{$current-language}/actualite-et-publication/titre/@handle" class="card-header-image">
+									<a href="{$root}/{$current-language}/actualite-et-publication/{titre/@handle}/" class="card-header-image">
 									<xsl:choose>
 									<xsl:when test="image-a-la-une != ''">
 										<xsl:variable name="img" select="image-a-la-une"/>
@@ -336,6 +339,7 @@
 								</div>  <!--ui cards-->
 							</xsl:for-each>
 						</div> <!--ui four link cards-->
+					</div>	
 			</div> <!-- ui container-->
 		</section>
 	</xsl:template>
