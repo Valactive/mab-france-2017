@@ -183,7 +183,7 @@
 					<xsl:call-template name="pagination">
 						<xsl:with-param name="pagination" select="/data/actualites-avec-filtre/pagination"/>
 						<xsl:with-param name="pagination-url">
-							<xsl:value-of select="concat($root,'/',$current-language,'/',$rubrique,'/',$s-rubrique,'/?numpage=','$')"/>
+							<xsl:value-of select="concat($current-url,'/?numpage=','$')"/>
 							<xsl:if test="$url-annee!=''">
 								<xsl:value-of select="concat('&amp;annee=',$url-annee)"></xsl:value-of>
 							</xsl:if>
@@ -193,8 +193,6 @@
 							<xsl:if test="$url-biosphere!=''">
 								<xsl:value-of select="concat('&amp;biosphere=',$url-biosphere)"></xsl:value-of>
 							</xsl:if>
-							
-							
 						</xsl:with-param>
 
 						<xsl:with-param name="show-range" select="'3'" />
