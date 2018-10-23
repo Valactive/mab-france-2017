@@ -216,7 +216,7 @@
 											<xsl:otherwise>
 												<p>The Mab France publishes the Letter of the biosphere four times a year.</p>
 												<p>To subscribe,<a href="">Click here</a> </p>
-												<p>you can <a href="{$root}/en/biosphere-newsletters/">consult all the previews letters on line.</a></p>
+												<p>you can <a href="{$root}/en/biosphere-newsletter/">consult all the previews letters on line.</a></p>
 											</xsl:otherwise>
 										</xsl:choose>
 
