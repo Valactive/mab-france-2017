@@ -182,10 +182,17 @@
 										<div class="column one wide"></div>
 										<div class="column nine wide">
 											<h2>Lettre de la biosphère</h2>
-											<p class="marron">N°114 - Avril 2018</p>
+											<p class="marron">N°<xsl:value-of select="/data/lettres-home-page/entry/numero/@handle"/> 
+											- 
+												<xsl:call-template name="format-date">
+													<xsl:with-param name="date" select="/data/lettres-home-page/entry/date"/>
+													<xsl:with-param name="format" select="'%m+; - %y+;'"/>
+													<xsl:with-param name="language" select=" 'fr' "/>
+												</xsl:call-template>
+											</p>
 										</div>
 										<div class="column six wide right content aligned">
-											<a href="#" class="ui mini button primary">
+											<a href="{/data/lettres-home-page/entry/url-version-web}" target="_blank" class="ui mini button primary">
 											<xsl:choose>
 											<xsl:when test="$current-language='fr'">Lire la lettre en ligne</xsl:when>
 											<xsl:otherwise>Read online</xsl:otherwise>
@@ -209,7 +216,7 @@
 											<xsl:otherwise>
 												<p>The Mab France publishes the Letter of the biosphere four times a year.</p>
 												<p>To subscribe,<a href="">Click here</a> </p>
-												<p>you can <a href="{$root}/en/biopsphere-newsletters/">consult all the previews letters on line.</a></p>
+												<p>you can <a href="{$root}/en/biosphere-newsletters/">consult all the previews letters on line.</a></p>
 											</xsl:otherwise>
 										</xsl:choose>
 

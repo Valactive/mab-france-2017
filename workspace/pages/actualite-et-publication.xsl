@@ -97,7 +97,7 @@
 			<meta property="og:url"           content="{$current-url}" />
 			<meta property="og:type"          content="website" />
 			<meta property="og:title"         content="Mab France, actualite" />
-			<meta property="og:description"   content="actualité du mab France. {data/actualite-detail/entry/titre}. Le comité MAB France anime au niveau national les activités menées dans le cadre du Programme MAB de l'UNESCO et coordonne les actions de développement durable dans les 10 réserves de biosphère françaises en favorisant les échanges d'information et d'expérience " />
+			<meta property="og:description"   content="Actualité du mab France. {data/actualite-detail/entry/titre}. " />
 			<meta property="og:image"         content="{$root}/image/1/280/0/{data/actualite-detail/entry/image-a-la-une/@path}/{data/actualite-detail/entry/image-a-la-une/filename}" />
 	</xsl:template>
 
