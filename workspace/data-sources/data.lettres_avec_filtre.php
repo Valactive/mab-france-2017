@@ -10,7 +10,7 @@ class datasourcelettres_avec_filtre extends SectionDatasource
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
-    public $dsParamSORT = 'numero';
+    public $dsParamSORT = 'date';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
@@ -47,7 +47,7 @@ class datasourcelettres_avec_filtre extends SectionDatasource
                 'website' => 'http://mab-france.localhost',
                 'email' => 'staminh@valactive.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-10-23T05:13:27+00:00'
+            'release-date' => '2018-10-23T19:14:36+00:00'
         );
     }
 

@@ -63,7 +63,7 @@
 										<img src="{$root}/image/1/280/0/{$img/@path}/{$img/filename}" alt="image de la lettre"/>
 									</xsl:when>
 									<xsl:otherwise>
-										<i class=" huge copyright icon"></i>
+										<img class="ui tiny centered image" src="https://prep.mab-france.org/workspace/img/logos/france-2016.png" style="width:800px" alt="logo du Mab France"/>
 									</xsl:otherwise>
 									</xsl:choose>
 							<div class="content">
