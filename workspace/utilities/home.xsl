@@ -210,7 +210,14 @@
 										<xsl:choose>
 											<xsl:when test="$current-language='fr'">
 												<p>Le Mab France publie la Lettre de la biosphère quatre fois par an.</p>
-												<p>Vous pouvez vous inscrire <a href="">sur nos listes</a> pour la recevoir	dans votre boite mail !</p>
+												<p> <div class="createsend-button" style="height:27px;display:inline-block;" data-listid="r/54/8E5/071/1B4D77D32002385C"></div>
+													<script type="text/javascript">(function () { var e = document.createElement('script'); 
+																					e.type = 'text/javascript'; e.async = true; 
+																					e.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://btn.createsend1.com/js/sb.min.js?v=3'; 
+																					e.className = 'createsend-script'; 
+																					var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(e, s); })();
+													</script> 
+													pour la recevoir dans votre boite mail !</p>
 												<p> <a href="{$root}/fr/lettres-de-la-biosphere/">Toutes les lettres sont consultables en ligne</a> </p>
 											</xsl:when>
 											<xsl:otherwise>
