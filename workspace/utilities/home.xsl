@@ -218,11 +218,11 @@
 																					var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(e, s); })();
 													</script> 
 													pour la recevoir dans votre boite mail !</p>
-												<p> <a href="{$root}/fr/lettres-de-la-biosphere/">Toutes les lettres sont consultables en ligne</a> </p>
+												<p> <a href="{$root}/fr/lettres-de-la-biosphere/" >Toutes les lettres sont consultables en ligne</a> </p>
 											</xsl:when>
 											<xsl:otherwise>
 												<p>The Mab France publishes the Letter of the biosphere four times a year.</p>
-												<p>To subscribe,<a href=""> Click here</a> </p>
+												<p>To subscribe,<a href="http://email.mab-france.org/h/r/1B4D77D32002385C" target="_blank"> Click here</a> </p>
 												<p>you can also<a href="{$root}/en/biosphere-newsletter/"> consult all the previous letters on line.</a></p>
 											</xsl:otherwise>
 										</xsl:choose>
