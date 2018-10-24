@@ -157,31 +157,22 @@
 							</xsl:choose>
 						</a>
 					</div>
-				</div> <!--ui internally right aligned grid menu secondary site-top-header-->
-										<!--<div class="item">
-											<h1 class="ui header right">
-												<xsl:value-of select="$website-name"></xsl:value-of>
-												<img src="{$workspace}/img/logo_mab-france_couleur.png" alt="logo du Mab France"/>
-												<p class="head">L'homme et la biosphère<br/>Man and biosphere</p>
-											</h1>
-										</div> -->
-										<!-- MENU PRINCIPAL -->
+				</div> 
+				<!-- MENU PRINCIPAL -->
 				<xsl:call-template name="mab-menu-principal"/>
-										<!-- section 1 : menu + hero + background image -->
+				<!-- section 1 : menu + hero + background image -->
 				<div class="main-content">
 
 
-																<!-- symphony page contents -->
-																<!-- <div class="article"> -->
+				<!-- symphony page contents -->
 				<xsl:apply-templates />
-																<!-- </div> -->
-																<!-- entire website common section -->
+				<!-- entire website common section -->
 					<section class="ui grid footer">
 						<div class="ui container grid">
 							<div class="column">
 								<div class="ui horizontal list">
 									<div class="item">©MAB FRANCE 2019</div>
-									<a class="item" href="">Mentions légales</a>
+									<a class="item" href="{$root}/{$current-language}/mentions-legales/">Mentions légales</a>
 								</div>
 							</div>
 						</div>
