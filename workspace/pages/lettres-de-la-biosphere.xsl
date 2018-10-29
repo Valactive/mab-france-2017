@@ -75,12 +75,7 @@
 								<xsl:value-of select="titre"/>
 							
 								<div class="description">
-								<xsl:if test="tribune-a != ''">
 									Tribune à <xsl:value-of select="tribune-a"></xsl:value-of>
-								</xsl:if>
-								<xsl:if test="edito != ''">
-									Edito : <xsl:value-of select="edito"></xsl:value-of>
-								</xsl:if>
 							</div>
 							</div> <!--ui middle aligned divide list-->
 								<div class="extra content">
@@ -88,8 +83,8 @@
 										<xsl:if test="pdf != ''">
 										<a href="{$workspace}/uploads/mab/documents/{pdf/item}" target="_blank" class="ui mini ">
 											<xsl:choose>
-												<xsl:when test="$current-language = 'fr'">Charger le pdf </xsl:when>
-												<xsl:otherwise>Learn more </xsl:otherwise>
+												<xsl:when test="$current-language = 'fr'">Télécharger le pdf </xsl:when>
+												<xsl:otherwise>Download pdf file </xsl:otherwise>
 											</xsl:choose>
 											<i class="arrow alternate circle right outline icon"></i>
 										</a>
@@ -98,8 +93,8 @@
 									<div class="right floated">
 										<a href="{url-version-web}" target="_blank" class="ui mini ">
 											<xsl:choose>
-												<xsl:when test="$current-language = 'fr'">Voir la version web </xsl:when>
-												<xsl:otherwise>Learn more </xsl:otherwise>
+												<xsl:when test="$current-language = 'fr'">Lire la lettre en ligne </xsl:when>
+												<xsl:otherwise>Read on line </xsl:otherwise>
 											</xsl:choose>
 											<i class="arrow alternate circle right outline icon"></i>
 										</a>
