@@ -97,7 +97,7 @@
 												<xsl:for-each select="actualites-home-page/entry">
 													<div class="card">
 														<div class="card-header-image">
-														<a href="{$root}/{$current-language}/{/data/navigation/page[@id=8]/item[@lang='fr']/@handle}/{titre/@handle}/">
+														<a href="{$root}/{$current-language}/{/data/navigation/page[@id=8]/item[@lang='fr']/@handle}/{titre/@handle}/" target="_blank">
 															<xsl:variable name="img" select="image-a-la-une"/>
 															<xsl:call-template name="resize-direction-basic">
 																<xsl:with-param name="type" select="'1'"/>
@@ -112,7 +112,7 @@
 														</a>
 														</div>
 														<div class="content">
-															<a href="{$root}/{$current-language}/actualite-et-publication/{titre/@handle}/" class="header">
+															<a href="{$root}/{$current-language}/actualite-et-publication/{titre/@handle}/" target="_blank" class="header">
 															<xsl:call-template name="truncate">
 															<xsl:with-param name="node" select="titre"/>
 															<xsl:with-param name="limit" select="35"/>
@@ -131,7 +131,7 @@
 																</div>
 															</xsl:for-each>
 															<div class="right floated">
-																<a href="{$root}/{$current-language}/actualite-et-publication/{titre/@handle}/" class="ui mini ">
+																<a href="{$root}/{$current-language}/actualite-et-publication/{titre/@handle}/" target="_blank" class="ui mini ">
 																	<xsl:choose>
 																	<xsl:when test="$current-language = 'fr'">Lire la suite</xsl:when>
 																	<xsl:otherwise>Learn more</xsl:otherwise>
@@ -210,19 +210,30 @@
 										<xsl:choose>
 											<xsl:when test="$current-language='fr'">
 												<p>Le Mab France publie la Lettre de la biosphère quatre fois par an.</p>
-												<p> <div class="createsend-button" style="height:27px;display:inline-block;" data-listid="r/54/8E5/071/1B4D77D32002385C"></div>
+												<p> Pour la recevoir dans votre boîte mail </p>
+												<p>
+													<div class="createsend-button" style="height:27px;display:inline-block;" data-listid="r/54/8E5/071/1B4D77D32002385C"></div>
 													<script type="text/javascript">(function () { var e = document.createElement('script'); 
 																					e.type = 'text/javascript'; e.async = true; 
 																					e.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://btn.createsend1.com/js/sb.min.js?v=3'; 
 																					e.className = 'createsend-script'; 
 																					var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(e, s); })();
 													</script> 
-													pour la recevoir dans votre boite mail !</p>
+												</p>
 												<p> <a href="{$root}/fr/lettres-de-la-biosphere/" >Toutes les lettres sont consultables en ligne</a> </p>
 											</xsl:when>
 											<xsl:otherwise>
 												<p>The Mab France publishes the Letter of the biosphere four times a year.</p>
-												<p>To subscribe,<a href="http://email.mab-france.org/h/r/1B4D77D32002385C" target="_blank"> Click here</a> </p>
+												<p>To subscribe </p>
+												<p>
+													<div class="createsend-button" style="height:27px;display:inline-block;" data-listid="r/54/8E5/071/1B4D77D32002385C"></div>
+													<script type="text/javascript">(function () { var e = document.createElement('script'); 
+																					e.type = 'text/javascript'; e.async = true; 
+																					e.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://btn.createsend1.com/js/sb.min.js?v=3'; 
+																					e.className = 'createsend-script'; 
+																					var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(e, s); })();
+													</script> 
+												</p>
 												<p>you can also<a href="{$root}/en/biosphere-newsletter/"> consult all the previous letters on line.</a></p>
 											</xsl:otherwise>
 										</xsl:choose>

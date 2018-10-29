@@ -99,7 +99,7 @@
 								<xsl:value-of select="titre"></xsl:value-of>
 							</xsl:variable>
 							<div class="ui card">
-								<a href="{$root}/{$current-language}/actualite-et-publication/{$actualite-name-handle}/" class="card-header-image">
+								<a href="{$root}/{$current-language}/actualite-et-publication/{$actualite-name-handle}/" target="_blank" class="card-header-image">
 									<xsl:choose>
 									<xsl:when test="image-a-la-une != ''">
 										<xsl:variable name="img" select="image-a-la-une"/>
@@ -121,7 +121,7 @@
 									</xsl:choose>
 								</a>
 								<div class="content">
-									<a href="{$root}/{$current-language}/actualite-et-publication/{$actualite-name-handle}/" class="header">
+									<a href="{$root}/{$current-language}/actualite-et-publication/{$actualite-name-handle}/" target="_blank" class="header">
 										<xsl:call-template name="truncate">
 											<xsl:with-param name="node" select="titre"/>
 											<xsl:with-param name="limit" select="35"/>
@@ -142,7 +142,7 @@
 										</div>
 									</xsl:for-each>
 									<div class="right floated">
-										<a href="{$root}/{$current-language}/actualite-et-publication/{$actualite-name-handle}/" class="ui mini ">
+										<a href="{$root}/{$current-language}/actualite-et-publication/{$actualite-name-handle}/" target="_blank" class="ui mini ">
 											<xsl:choose>
 												<xsl:when test="$current-language = 'fr'">Lire la suite</xsl:when>
 												<xsl:otherwise>Learn more</xsl:otherwise>
