@@ -16,13 +16,12 @@ class datasourcelettres_home_page extends SectionDatasource
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
     public $dsParamFILTERS = array(
-        '161' => 'yes',
+        '162' => 'yes',
     );
 
     public $dsParamINCLUDEDELEMENTS = array(
         'numero',
         'url-version-web',
-        'publie',
         'date'
     );
 
@@ -41,7 +40,7 @@ class datasourcelettres_home_page extends SectionDatasource
                 'website' => 'http://mab-france.localhost',
                 'email' => 'staminh@valactive.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-10-23T19:14:14+00:00'
+            'release-date' => '2018-10-29T18:40:13+00:00'
         );
     }
 

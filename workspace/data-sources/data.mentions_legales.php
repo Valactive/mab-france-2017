@@ -15,7 +15,7 @@ class datasourcementions_legales extends SectionDatasource
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
     public $dsParamFILTERS = array(
-        'system:id' => '2269',
+        'system:id' => '2691',
     );
 
     public $dsParamINCLUDEDELEMENTS = array(
@@ -38,7 +38,7 @@ class datasourcementions_legales extends SectionDatasource
                 'website' => 'http://mab-france.localhost',
                 'email' => 'staminh@valactive.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-10-24T11:26:11+00:00'
+            'release-date' => '2018-10-29T18:37:17+00:00'
         );
     }
 

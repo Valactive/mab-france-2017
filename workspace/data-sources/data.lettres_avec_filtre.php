@@ -15,8 +15,8 @@ class datasourcelettres_avec_filtre extends SectionDatasource
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
     public $dsParamFILTERS = array(
-        '161' => 'yes',
-        '163' => 'regexp: {$url-annee}',
+        '162' => 'yes',
+        '164' => 'regexp: {$url-annee}',
     );
 
     public $dsParamINCLUDEDELEMENTS = array(
@@ -24,10 +24,8 @@ class datasourcelettres_avec_filtre extends SectionDatasource
         'titre',
         'numero',
         'url-version-web',
-        'publie',
         'image-a-la-une',
         'date',
-        'edito',
         'pdf',
         'tribune-a'
     );
@@ -47,7 +45,7 @@ class datasourcelettres_avec_filtre extends SectionDatasource
                 'website' => 'http://mab-france.localhost',
                 'email' => 'staminh@valactive.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-10-23T19:14:36+00:00'
+            'release-date' => '2018-10-29T18:43:14+00:00'
         );
     }
 
