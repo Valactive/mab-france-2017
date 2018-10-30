@@ -108,13 +108,10 @@
 									<xsl:otherwise>
 										<xsl:choose>
 											<xsl:when test="type-de-publication/item/@handle = 'actualite'">
-											<i class=" huge copyright icon"></i>
-											</xsl:when>
-											<xsl:when test="type-de-publication/item/@handle = 'newsletter'">
-											<i class=" huge pencil alternate icon"></i>
+											<img src="{$root}/image/1/280/0/workspace/uploads/image-a-la-une/capture-d-e-cran-2018-10-26-a-11-55-46-copie.png" alt="image de l"'"actualité"/>
 											</xsl:when>
 											<xsl:otherwise >
-											<i class=" huge eye slash icon"></i>
+												<img src="{$root}/image/1/280/0/workspace/uploads/image-a-la-une/capture-d-e-cran-2018-10-26-a-11-38-57-copie.png" alt="image de la publication"/>
 											</xsl:otherwise>
 										</xsl:choose>
 									</xsl:otherwise>

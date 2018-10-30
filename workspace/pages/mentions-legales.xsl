@@ -36,7 +36,8 @@
 					<!-- </section> -->
 				</div>
 			</div>
-		</div></xsl:template>
+		</div>
+</xsl:template>
 <xsl:template name="partage-actualite"/> <!-- partage facebook sur page actualite-->
 
 </xsl:stylesheet>
