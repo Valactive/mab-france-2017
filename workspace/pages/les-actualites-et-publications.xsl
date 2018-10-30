@@ -108,7 +108,7 @@
 									<xsl:otherwise>
 										<xsl:choose>
 											<xsl:when test="type-de-publication/item/@handle = 'actualite'">
-											<img src="{$root}/image/1/280/0/workspace/uploads/image-a-la-une/capture-d-e-cran-2018-10-26-a-11-55-46-copie.png" alt="image de l"'"actualité"/>
+											<img src="{$root}/image/1/280/0/workspace/uploads/image-a-la-une/capture-d-e-cran-2018-10-26-a-11-55-46-copie.png" alt="image de l actualité"/>
 											</xsl:when>
 											<xsl:otherwise >
 												<img src="{$root}/image/1/280/0/workspace/uploads/image-a-la-une/capture-d-e-cran-2018-10-26-a-11-38-57-copie.png" alt="image de la publication"/>
