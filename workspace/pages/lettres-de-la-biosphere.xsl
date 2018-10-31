@@ -17,11 +17,11 @@
 	<xsl:template match="data">
 		<div class="ui grid">
 			<xsl:call-template name="content-page-header"></xsl:call-template>
-			<div class="ui row">				<!-- filtre -->
-				<h4 class="ui horizontal divider header"></h4>
+			<div class="row">
+				
 				<div class="ui container" id="filtres">
-					<div class="ui form">
-						<div class="one field">
+					<div class="ui grid">	
+						<div class="one fields">
 							<div class="field">
 								<label>Année</label>
 								<select id="actualite-annee" class="ui fluid search dropdown">
@@ -38,18 +38,52 @@
 								</select>
 							</div> <!--field-->
 						</div> <!--one field--> 
-					</div> <!--ui form-->
-				</div> <!--ui horizontal divider header-->
-			</div> <!-- ui row-->
-			<h4 class="ui horizontal divider header">
+				
+				
+				
+						<div class="column six wide">
+							<div class="item" data-value="isotope-item" data-text="Toutes">
+									<p><i class="trash alternate outline icon"></i>
+									Supprimer le  filtre</p>
+							</div>
+						</div>
+
+						<div class="column eight wide">
+							<p>
+								<xsl:choose>
+								<xsl:when test="$current-language='fr'">
+								LeMab France publie la Lettre de la biosphère quatre fois par an.
+								Pour la recevoir dans votre boîte mail
+								</xsl:when>
+								<xsl:otherwise>
+								The Mab France publishes the Letter of the biosphere four times a year.
+								To subscribe
+								</xsl:otherwise>
+								</xsl:choose>
+									<div class="createsend-button" style="height:27px;display:inline-block;" data-listid="r/54/8E5/071/1B4D77D32002385C"></div>
+									<script type="text/javascript">(function () { var e = document.createElement('script'); 
+																	e.type = 'text/javascript'; e.async = true; 
+																	e.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://btn.createsend1.com/js/sb.min.js?v=3'; 
+																	e.className = 'createsend-script'; 
+																	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(e, s); })();
+									</script> 
+							</p>
+						</div>
+					</div>
+				
+				</div> <!--ui container-->
+			</div> <!-- row-->
+		
+			<h4 class="ui horizontal divider header center">
 				<!-- entete avec icone laureat-->
 				<i class="users icon"></i>
 				<xsl:value-of select="/data/lettres-avec-filtre/pagination/@total-entries"/> 
 				<xsl:choose>
-					<xsl:when test="$current-language = 'fr'"> Lettres de la biosphère																</xsl:when>
+					<xsl:when test="$current-language = 'fr'"> Lettres de la biosphère</xsl:when>
 					<xsl:otherwise> Biosphere's letter</xsl:otherwise>
 				</xsl:choose>
 			</h4>
+			
 			<!-- ui horizontal divider hearder-->
 			<div class="ui row cards-eco-acteurs">
 				<!-- la grille des vignettes-->
@@ -63,7 +97,7 @@
 										<img src="{$root}/image/1/280/0/{$img/@path}/{$img/filename}" alt="image de la lettre"/>
 									</xsl:when>
 									<xsl:otherwise>
-										<img class="ui tiny centered image" src="https://prep.mab-france.org/workspace/img/logos/france-2016.png" style="width:800px" alt="logo du Mab France"/>
+										<img  src="{$root}/workspace/uploads/image-a-la-une/vignettes-defaut.jpg" alt="vignette par defaut"/>
 									</xsl:otherwise>
 									</xsl:choose>
 							<div class="content">
