@@ -41,14 +41,14 @@
 				
 				
 				
-						<div class="column six wide">
+						<!--<div class="column six wide">
 							<div class="item" data-value="isotope-item" data-text="Toutes">
 									<p><i class="trash alternate outline icon"></i>
-									Supprimer le  filtre</p>
+									Réinitialiser le filtre</p>
 							</div>
-						</div>
+						</div>-->
 
-						<div class="column eight wide">
+						<div class="column nine wide">
 							<p>
 								<xsl:choose>
 								<xsl:when test="$current-language='fr'">
