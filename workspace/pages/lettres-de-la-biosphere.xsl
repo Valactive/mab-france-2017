@@ -97,7 +97,7 @@
 										<img src="{$root}/image/1/280/0/{$img/@path}/{$img/filename}" alt="image de la lettre"/>
 									</xsl:when>
 									<xsl:otherwise>
-										<img  src="{$root}/workspace/uploads/image-a-la-une/vignettes-defaut.png" alt="vignette par defaut"/>
+										<img  src="{$root}/workspace/uploads/image-a-la-une/vignettes-defaut.jpg" alt="vignette par defaut"/>
 									</xsl:otherwise>
 									</xsl:choose>
 							<div class="content">
