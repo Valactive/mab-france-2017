@@ -135,8 +135,9 @@
 					<div class="left floated left aligned four wide column middle aligned content">
 						<span class="site-baseline">L'Homme &amp; la Biosphère<br/>Man &amp; the Biosphere</span>
 					</div>
-
-
+<!-- que les cas de creation de page dynamique--><!-- afficher le bouton changement de langue-->
+					<!--<xsl:choose>
+					<xsl:when test="$rubrique != ''">-->
 					<div class="right floated right aligned middle aligned content three wide column">
 						<a class="ui mini button right floated lang-switcher">
 							<xsl:choose>
@@ -157,6 +158,8 @@
 							</xsl:choose>
 						</a>
 					</div>
+					<!--</xsl:when>
+					</xsl:choose>-->
 				</div> 
 				<!-- MENU PRINCIPAL -->
 				<xsl:call-template name="mab-menu-principal"/>
