@@ -67,7 +67,7 @@
 		<section class="actu-newsletter">
 			<div class="ui container">
 				<!-- two columns page grid layout -->
-				<div class="ui two column grid">
+				<div class="ui two column grid stackable">
 					<!-- left column -->
 					<!-- new grid -->
 					<div class="column">
@@ -93,7 +93,7 @@
 							<!-- start cards row -->
 							<div class="row">
 								<div class="ui two column grid">
-									<div class="ui two link cards">
+									<div class="ui two link cards stackable">
 										<xsl:for-each select="actualites-home-page/entry">
 											<div class="card">
 												<div class="card-header-image">
@@ -106,22 +106,22 @@
 																	<xsl:with-param name="type" select="'1'"/>
 																	<xsl:with-param name="oriWidth" select="image-a-la-une/meta/@width"/>
 																	<xsl:with-param name="oriHeigh" select="image-a-la-une/meta/@height"/>
-																	<xsl:with-param name="swidth" select="'130'"/>
-																	<xsl:with-param name="sheight" select="'240'"/>
+																	<xsl:with-param name="swidth" select="'0'"/>
+																	<xsl:with-param name="sheight" select="'370'"/>
 																	<xsl:with-param name="path" select="$img"/>
-																	<xsl:with-param name="class" select="''"/>
+																	<xsl:with-param name="class" select="'ui fluid image'"/>
 																</xsl:call-template>
 															</xsl:when>
 															<xsl:otherwise>
 																<xsl:choose>
 																	<xsl:when test="type-de-publication/item/@handle = 'actualite'">
-																		<img src="{$root}/image/1/280/0/uploads/image-a-la-une/capture-d-e-cran-2018-10-26-a-11-55-46-copie.png" alt="image de l actualité par defaut"/>
+																		<img src="{$root}/image/1/370/0/uploads/image-a-la-une/capture-d-e-cran-2018-10-26-a-11-55-46-copie.png" alt="image de l actualité par defaut"/>
 																	</xsl:when>
 																	<xsl:when test="type-de-publication/item/@handle = ''">
-																		<img src="{$root}/image/1/280/0/uploads/image-a-la-une/capture-d-e-cran-2018-10-26-a-11-55-46-copie.png" alt="image par defaut sans type "/>
+																		<img src="{$root}/image/1/370/0/uploads/image-a-la-une/capture-d-e-cran-2018-10-26-a-11-55-46-copie.png" alt="image par defaut sans type "/>
 																	</xsl:when>
 																	<xsl:otherwise >
-																		<img src="{$root}/image/1/280/0/uploads/image-a-la-une/capture-d-e-cran-2018-10-26-a-11-38-57-copie.png" alt="image de la publication"/>
+																		<img src="{$root}/image/1/370/0/uploads/image-a-la-une/capture-d-e-cran-2018-10-26-a-11-38-57-copie.png" alt="image de la publication"/>
 																	</xsl:otherwise>
 																</xsl:choose>
 															</xsl:otherwise>
@@ -195,8 +195,7 @@
 					<!-- start col right -->
 					<div class="column">
 						<div class="row">
-							<div class="ui grid">
-								<div class="column one wide"></div>
+							<div class="ui two column grid">
 								<div class="column nine wide">
 									<h2>Lettre de la biosphère</h2>
 									<p class="marron">N°<xsl:value-of select="/data/lettres-home-page/entry/numero/@handle"/> 
@@ -223,7 +222,7 @@
 							<div class="column one wide">
 								<p></p>
 							</div>
-							<div class="column fifteen wide newsletterTextBlock">
+							<div class="column sixteen wide newsletterTextBlock">
 								<xsl:choose>
 									<xsl:when test="$current-language='fr'">
 										<p>Le Mab France publie la Lettre de la biosphère quatre fois par an.</p>

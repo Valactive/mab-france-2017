@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-	<xsl:template name="mab-menu-principal">
-		<div class="ui row main menu menu-principal massive borderless">
+	<xsl:template name="mab-menu-mobile-principal">
+		<div class="ui vertical menu">
+			<!-- home link -->
+					<div class="item">
+						<div class="header"><a href="{$root}">Accueil</a></div>
+					</div>
 			<!-- <div class="ui container fluid"> -->
 			<!-- <div class="ui massive menu borderless"> -->
 				<!-- <a href="{$root}/{$url-lang}/" class="header item">
@@ -17,24 +21,26 @@
 					<xsl:variable name="rubrique-principale">
 						<xsl:value-of select="."></xsl:value-of>
 					</xsl:variable>
+
 					<!-- rubrique-principale = rubrique-parente -->
 					<!-- rubrique-parente = menu-niveau-2-page -->
 					<xsl:choose>
+		
 						<xsl:when test="count(/data/menu-principal/entry[rubrique-parente/item/@handle=$rubrique-principale-handle])>0">
 							<!-- si 2eme niveau -->
-							<div class="ui pointing dropdown link item">
+							<div class="item">
 								<!-- <xsl:attribute name="class">
 									<xsl:choose>
 										<xsl:when test="$rubrique = $rubrique-principale-handle">ui pointing dropdown link item active</xsl:when>
 										<xsl:otherwise>ui pointing dropdown link item</xsl:otherwise>
 									</xsl:choose>
 								</xsl:attribute> -->
-								<span class="text">
+								<div class="header">
 									<!-- <a href="{$root}/{$url-lang}{$rubrique-principale-handle}/"> -->
 									<xsl:value-of select="$rubrique-principale" />
 									<!-- </a> -->
-								</span>
-								<i class="dropdown icon"></i>
+								</div>	
+
 								<div class="menu">
 								<!-- boucle 2ème niveau -->
 									<xsl:for-each select="/data/menu-principal/entry[rubrique-parente/item/@handle=$rubrique-principale-handle]">
@@ -42,14 +48,13 @@
 										<!-- si 3eme niveau -->
 										<xsl:choose>
 											<xsl:when test="count(//entry[menu-niveau-2-page/item/@handle = $rubrique-parente-handle]/nom/item[@lang=$language])>0">
-												<div class="item" href="{$root}/{$url-lang}{$rubrique-principale-handle}/{$rubrique-parente-handle}/">
-													<i class="dropdown icon"></i>
-													<span class="text">
+												<div class="item thirdlever" href="{$root}/{$url-lang}{$rubrique-principale-handle}/{$rubrique-parente-handle}/">
+												
+													<span class="header">
 														<!-- <a href="{$root}/{$url-lang}{$rubrique-principale-handle}/{$rubrique-parente-handle}/"> -->
 														<xsl:value-of select="nom/item[@lang=$language]"/>
 														<!-- </a> -->
 													</span>
-													<div class="menu">
 													<!-- boucle 3ème niveau -->
 														<xsl:for-each select="//menu-principal/entry[menu-niveau-2-page/item/@handle = $rubrique-parente-handle]/nom/item[@lang=$language]">
 															<div class="item">
@@ -58,7 +63,6 @@
 																</a>
 															</div>
 														</xsl:for-each>
-													</div>
 												</div>
 											</xsl:when>
 											<xsl:otherwise>												
