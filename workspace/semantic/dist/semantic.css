@@ -1,5 +1,5 @@
  /*
- * # Semantic UI - 2.3.3
+ * # Semantic UI - 
  * https://github.com/Semantic-Org/Semantic-UI
  * http://www.semantic-ui.com/
  *
@@ -10,7 +10,7 @@
  */
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin');
 /*!
- * # Semantic UI 2.3.3 - Reset
+ * # Semantic UI undefined - Reset
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -193,7 +193,7 @@ table {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Site
+ * # Semantic UI undefined - Site
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -212,7 +212,7 @@ body {
 }
 
 html {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 body {
@@ -224,7 +224,7 @@ body {
   font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.4285em;
-  color: #262627;
+  color: rgba(0, 0, 0, 0.87);
   font-smoothing: antialiased;
 }
 
@@ -324,17 +324,17 @@ a:hover {
 
 ::-webkit-selection {
   background-color: #3F5F85;
-  color: #262627;
+  color: rgba(0, 0, 0, 0.87);
 }
 
 ::-moz-selection {
   background-color: #3F5F85;
-  color: #262627;
+  color: rgba(0, 0, 0, 0.87);
 }
 
 ::selection {
   background-color: #3F5F85;
-  color: #262627;
+  color: rgba(0, 0, 0, 0.87);
 }
 
 /* Form */
@@ -342,19 +342,19 @@ a:hover {
 textarea::-webkit-selection,
 input::-webkit-selection {
   background-color: rgba(100, 100, 100, 0.4);
-  color: #262627;
+  color: rgba(0, 0, 0, 0.87);
 }
 
 textarea::-moz-selection,
 input::-moz-selection {
   background-color: rgba(100, 100, 100, 0.4);
-  color: #262627;
+  color: rgba(0, 0, 0, 0.87);
 }
 
 textarea::selection,
 input::selection {
   background-color: rgba(100, 100, 100, 0.4);
-  color: #262627;
+  color: rgba(0, 0, 0, 0.87);
 }
 
 /* Force Simple Scrollbars */
@@ -402,6 +402,860 @@ body .ui.inverted::-webkit-scrollbar-thumb:window-inactive {
 
 body .ui.inverted::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.35);
+}
+
+/*******************************
+Site Overrides by valery
+*******************************/
+
+.marron {
+  color: #B1563D;
+}
+
+a {
+  color: #3F5F85;
+}
+
+.text-primary {
+  color: #3F5F85;
+}
+
+h2 {
+  font-weight: 600;
+  color: #3F5F85;
+}
+
+/*******************************
+         RB COLORS
+*******************************/
+
+.c-guadeloupe {
+  color: #bad77b !important;
+}
+
+.c-iroise {
+  color: #4194c7 !important;
+}
+
+.c-audomarois {
+  color: #be9eb3 !important;
+}
+
+.c-fontainebleau {
+  color: #f59668 !important;
+}
+
+.c-vosges {
+  color: #44bda3 !important;
+}
+
+.c-cevennes {
+  color: #8bb37e !important;
+}
+
+.c-dordogne {
+  color: #fecd6f !important;
+}
+
+.c-gardon {
+  color: #7fcbbe !important;
+}
+
+.c-camargue {
+  color: #fbb731 !important;
+}
+
+.c-luberon {
+  color: #00abbd !important;
+}
+
+.c-ventoux {
+  color: #f38575 !important;
+}
+
+.c-viso {
+  color: #65c2a5 !important;
+}
+
+.c-fango {
+  color: #41ae4e !important;
+}
+
+.c-fakarava {
+  color: #f27e75 !important;
+}
+
+.cls-1 {
+  fill: #e8e9e9;
+}
+
+.cls-1,
+.cls-10,
+.cls-11,
+.cls-12,
+.cls-13,
+.cls-14,
+.cls-15,
+.cls-16,
+.cls-2,
+.cls-3,
+.cls-4,
+.cls-5,
+.cls-6,
+.cls-7,
+.cls-8,
+.cls-9 {
+  fill-rule: evenodd;
+}
+
+.cls-2 {
+  fill: #B1563D;
+}
+
+.cls-3 {
+  fill: #bad77c;
+}
+
+.cls-4 {
+  fill: #f17e74;
+}
+
+.cls-5 {
+  fill: #4194c7;
+}
+
+.cls-6 {
+  fill: #f59769;
+}
+
+.cls-7 {
+  fill: #48bca2;
+}
+
+.cls-8 {
+  fill: #fecd6f;
+}
+
+.cls-9 {
+  fill: #8bb47f;
+}
+
+.cls-10 {
+  fill: #7ecbbe;
+}
+
+.cls-11 {
+  fill: #fab632;
+}
+
+.cls-12 {
+  fill: #f28575;
+}
+
+.cls-13 {
+  fill: #00abbd;
+}
+
+.cls-14 {
+  fill: #66c2a5;
+}
+
+.cls-15 {
+  fill: #41ad4e;
+}
+
+.cls-16 {
+  fill: #be9eb3;
+}
+
+.cls-17 {
+  fill: #b3ddd0;
+}
+
+.cls-1 {
+  fill: #e8e9e9;
+}
+
+.cls-2 {
+  fill: #696969;
+}
+
+.cls-3 {
+  fill: #bad77c;
+}
+
+.cls-4 {
+  fill: #f17e74;
+}
+
+.cls-5 {
+  fill: #4194c7;
+}
+
+.cls-6 {
+  fill: #f59769;
+}
+
+.cls-16,
+.cls-7 {
+  fill: #b3ddcf;
+}
+
+.cls-8 {
+  fill: #48bca2;
+}
+
+.cls-9 {
+  fill: #fecd6f;
+}
+
+.cls-10 {
+  fill: #8bb47f;
+}
+
+.cls-11 {
+  fill: #7ecbbe;
+}
+
+.cls-12 {
+  fill: #fab632;
+}
+
+.cls-13 {
+  fill: #f28575;
+}
+
+.cls-14 {
+  fill: #00abbd;
+}
+
+.cls-15 {
+  fill: #66c2a5;
+}
+
+.cls-16 {
+  fill-rule: evenodd;
+}
+
+.cls-17 {
+  fill: #41ad4e;
+}
+
+.cls-18 {
+  fill: #be9eb3;
+}
+
+#header {
+  z-index: 0;
+}
+
+.ui.secondary.menu.site-top-header {
+  background: #008c6c;
+  /* Old browsers */
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #008c6c 0%, #0672b9 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#008c6c), to(#0672b9));
+  background: linear-gradient(to right, #008c6c 0%, #0672b9 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#008c6c', endColorstr='#0672b9', GradientType=1);
+  /* IE6-9 */
+  margin-bottom: 0;
+}
+
+.ui.main .menu {
+  margin: 0;
+  background: rgba(240, 240, 240, 0.7);
+  display: block;
+}
+
+.ui.main.menu .item {
+  color: #3F5F85;
+}
+
+.ui.main.menu.menu-principal {
+  padding: 8px 0;
+  margin-bottom: 0;
+}
+
+.ui.dropdown .menu {
+  z-index: 1000 !important;
+}
+
+.ui.main.menu.menu-principal .ui.dropdown .menu > .item {
+  padding: 0.3125em 1.125em !important;
+}
+
+.ui.main.menu-principal .ui.menu {
+  position: relative;
+  z-index: 1000;
+  background: none;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.social-menu {
+  padding-right: 15px;
+  background: transparent !important;
+}
+
+.social-menu .ui.item > a {
+  display: inline-block;
+  height: 23px;
+  width: 23px;
+  margin-top: 6px;
+  margin-left: 6px;
+  text-indent: -9999em;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.menu.social-menu .ui.item {
+  padding: 0;
+}
+
+.coordonnees .social-menu > a {
+  height: 26px;
+  width: 26px;
+  margin-top: 1px;
+  vertical-align: top;
+}
+
+.social-menu > div.item > a:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.ui.vertical.menu {
+  width: 100% !important;
+}
+
+.v-facebook {
+  background: url('/workspace/img/facebook-logo.png') center center no-repeat;
+}
+
+.v-facebook.marron {
+  background: url('/workspace/img/facebook-logo-marron.png');
+}
+
+.v-vimeo {
+  background: url('/workspace/img/vimeo-social-logo.png') center center no-repeat;
+}
+
+.v-flickr {
+  background: url('/workspace/img/flickr-logo.png') center center no-repeat;
+}
+
+.v-instagram {
+  background: url('/workspace/img/instagram-logo.png') center center no-repeat;
+}
+
+.v-instagram.marron {
+  background: url('/workspace/img/instagram-marron.png');
+}
+
+.site-name {
+  font-size: 2.3em;
+  color: #E8FAFD;
+}
+
+.site-baseline {
+  font-family: "Open Sans", helvetica, arial, sans-serif;
+  font-size: 1.3em;
+  font-weight: 600;
+  font-style: italic;
+  color: #E8FAFD;
+}
+
+.site-top-header img.ui {
+  border: 3px solid white;
+}
+
+.site-top-header .ui.button {
+  background: rgba(255, 255, 255, 0.71);
+  color: #517364;
+}
+
+.hero {
+  position: relative;
+  margin-top: -46px;
+  max-height: 86%;
+  z-index: 0;
+  background-repeat: no-repeat;
+}
+
+.hero .hero-slogan {
+  min-height: 430px;
+  padding-top: 120px;
+  padding-bottom: 45px;
+}
+
+.hero h1 {
+  font-size: 2.1em;
+  color: white;
+  text-shadow: 1px 2px 3px grey;
+}
+
+section.annonce h1 {
+  font-size: 2.3em;
+}
+
+section.annonce {
+  background-size: 100% 100%;
+  z-index: 3;
+  position: relative;
+  padding: 8em 0;
+  color: white;
+}
+
+@media only screen and (min-width: 767px) {
+  section.annonce {
+    background-image: url(/workspace/img/actu-newsletter-1920.png);
+  }
+}
+
+section.actu-newsletter {
+  position: relative;
+  min-height: 450px;
+  background-color: #E8FAFD;
+  margin-top: -50px;
+  padding-top: 6em;
+  padding-bottom: 8em;
+}
+
+section.actu-newsletter h2 {
+  margin-bottom: 0;
+}
+
+section.actu-newsletter .ui.basic.button {
+  border: none;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+section.actu-newsletter .newsletterTextBlock {
+  padding: 50px !important;
+  background-color: white;
+  font-size: 18px;
+}
+
+section.actu-newsletter .newsletterTextBlock a {
+  color: #B1563D;
+  font-weight: bold;
+}
+
+section.actu-newsletter .ui.cards > .card {
+  -webkit-box-shadow: 0px 1px 8px 2px #b5d8de;
+  box-shadow: 0px 1px 8px 2px #b5d8de;
+}
+
+section.reserves {
+  background-image: url(/workspace/img/fond-reserves-blanc.png), url(/workspace/img/fond-reserves.png);
+  background-size: 70% 100%, 97% 100%;
+  position: relative;
+  margin-top: -4em;
+  min-height: 22em;
+  background-position: right top, left 13px;
+  background-repeat: no-repeat, no-repeat;
+  margin-bottom: Opx;
+  padding-bottom: 3em;
+}
+
+section.reserves .title {
+  padding-top: 6em;
+}
+
+section.reserves #carte-rb {
+  width: 90%;
+  padding-top: 0;
+  padding-right: 3em;
+}
+
+section.page-head {
+  min-height: 12rem;
+  background-repeat: no-repeat;
+}
+
+/*******************/
+
+/* Page biosphere  */
+
+/*******************/
+
+.biosphere .main-content {
+  margin-top: 0;
+}
+
+.biosphere .page-head {
+  background: url(/workspace/img/bg-header-biosphere.png) center top no-repeat;
+  padding-top: 30px !important;
+}
+
+.biosphere h1 {
+  font-weight: bold;
+  line-height: 30px;
+}
+
+.biosphere h2 {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.biosphere h1 small {
+  font-family: Lato, sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+}
+
+.illus-territoire {
+  position: absolute;
+  padding-top: 3.8em;
+}
+
+.main-page-content {
+  padding-top: 4em;
+}
+
+.sidebar-content {
+  padding-top: 13.4em;
+}
+
+.sidebar-content table td,
+.coordonnees table td {
+  padding: 5px 8px;
+}
+
+.sidebar-content table p {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.table-list-title,
+.coordonnees .table-list-title {
+  font-size: 12px;
+  font-weight: normal;
+  color: #B1563D;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.coordonnees {
+  margin: 3em 0;
+}
+
+.coordonnees .ui.segment {
+  -webkit-box-shadow: 10px 10px 10px 20px rgba(150, 150, 150, 0.07);
+  box-shadow: 10px 10px 20px 20px rgba(150, 150, 150, 0.07);
+  margin: 1rem 0em;
+  padding: 1em 1em;
+  border-radius: 1em;
+  border: 1px solid rgba(150, 150, 150, 0.07);
+}
+
+.coordonnees .ui.segment:before {
+  width: 150px;
+  content: " ";
+  background-image: url('/workspace/img/pictos-bg.png');
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 30px;
+  top: -18px;
+  height: 20px;
+}
+
+.coordonnees p {
+  font-size: 14px;
+  line-height: 22px;
+  color: #3F5F85;
+  margin: 0;
+}
+
+.coordonnees .table-list-title {
+  font-size: 14px;
+}
+
+.ui.button.download-press {
+  vertical-align: top;
+  margin-left: 5px;
+  background-color: #B1563D;
+  color: white;
+}
+
+h2.osibv {
+  font-size: 3.2em;
+  font-style: italic;
+  font-weight: bold;
+  color: #249A86;
+  line-height: 1.4em;
+  padding-right: 25px;
+}
+
+h2.osliv {
+  font-size: 2em;
+  font-weight: 300;
+  font-style: italic;
+  color: #249A86;
+  line-height: 2.6em;
+}
+
+.list-rb > a {
+  font-size: 0.8em;
+  margin-bottom: 5px;
+  padding: 6px 15px !important;
+  background: #ffffffb0;
+}
+
+.list-rb > a.item:hover .header,
+.list-rb > a.item:hover .icon,
+.list-rb > a.item.hovered .header,
+.list-rb > a.item.hovered .icon {
+  color: #B1563D !important;
+}
+
+.bkg-breadcrumb {
+  background: rgba(255, 255, 255, 0.6);
+  height: 2.2em;
+  width: 100%;
+}
+
+.ui.breadcrumb {
+  padding: 0.7em 1em 0em 1.2em;
+  font-size: 0.8em !important;
+  display: block !important;
+  color: #2185D0;
+}
+
+.page-header {
+  background: url('/workspace/img/fond-page-contenus.png') center bottom no-repeat;
+  min-height: 8em;
+  padding-top: 0 !important;
+  margin-bottom: 3em;
+}
+
+.page-header h1 {
+  padding-left: 0.5em;
+  font-weight: bold;
+}
+
+.home .main-content {
+  margin-top: 45px;
+}
+
+.main-content {
+  margin-top: 16px;
+}
+
+#content {
+  color: #262727;
+}
+
+#content a {
+  text-decoration: underline;
+}
+
+#content.ui.segment {
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+#content strong {
+  color: #094851;
+  font-weight: bold;
+}
+
+#content h1,
+#content h2,
+#content h3 {
+  font-family: 'Lato', helvetica, arial, sans-serif;
+  color: #B1563D;
+}
+
+#content ul {
+  list-style-type: inherit;
+  padding: 0 0 0 2.2em;
+}
+
+section.contact {
+  background: url(/workspace/img/fond-section-contact.jpg) 100% 100% no-repeat;
+  padding-top: 3em;
+  padding-bottom: 6em;
+}
+
+.main.container {
+  font-family: "Open Sans", helvetica, arial, sans-serif;
+  margin-right: 387px !important;
+  margin-left: 3em !important;
+  width: 700px !important;
+  max-width: 960px !important;
+}
+
+.ui.sticky.bound.top,
+.ui.sticky.fixed.top {
+  top: 45px;
+  bottom: auto;
+}
+
+section.menu-footer ul.ui.list {
+  margin-left: 0px;
+}
+
+section.menu-footer ul.ui.list ul {
+  padding: 0 0 0.25em 0.5em;
+}
+
+section.menu-footer ul.ui.list li:before,
+section.menu-footer .ui.bulleted.list .list > .item:before,
+section.menu-footer .ui.bulleted.list > .item:before {
+  content: '';
+}
+
+section.footer {
+  background-color: #C96B4D;
+  padding: 2em 0;
+  color: white;
+}
+
+section.footer .ui.list > a.item {
+  color: white;
+}
+
+#tocContents {
+  background-image: url(/workspace/img/fond-page-contenus.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: auto 100%;
+  padding: 10px 0 41px 5px;
+}
+
+.ui.selection.dropdown.visible,
+.ui.selection.dropdown.active {
+  z-index: 1200 !important;
+}
+
+/*
+ * jquery.tocify.css 1.9.0
+ * Author: @gregfranko
+ */
+
+/* The Table of Contents container element */
+
+#content .tocify {
+  font-family: "Open Sans", helvetica, arial, sans-serif;
+  padding-top: 1em;
+  height: 130%;
+}
+
+#content .tocify a {
+  text-decoration: none;
+}
+
+#content .tocify a:hover {
+  text-decoration: underline;
+}
+
+#content .tocify a:before {
+  font-family: Icons;
+  content: "\f30b";
+  padding-right: 5px;
+}
+
+/* The Table of Contents is composed of multiple nested unordered lists.  These styles remove the default styling of an unordered list because it is ugly. */
+
+#content .tocify ul,
+#content .tocify li {
+  list-style: none;
+  margin: 0 0 6px 0;
+  padding: 0px 10px 0 8px;
+  border: none;
+  line-height: 15px;
+}
+
+#content .tocify ul {
+  margin-top: 6px;
+}
+
+/* Top level header elements */
+
+.tocify-header {
+  text-indent: 0px;
+}
+
+/* Top level subheader elements.  These are the first nested items underneath a header element. */
+
+.tocify-subheader {
+  padding-left: 6px;
+  /*display: none;*/
+}
+
+/* Makes the font smaller for all subheader elements. */
+
+.tocify-subheader li {
+  font-size: 12px;
+}
+
+/* Further indents second level subheader elements. */
+
+.tocify-subheader .tocify-subheader {
+  text-indent: 30px;
+}
+
+/* Further indents third level subheader elements. You can continue this pattern if you have more nested elements. */
+
+.tocify-subheader .tocify-subheader .tocify-subheader {
+  text-indent: 40px;
+}
+
+@media screen and (min-width: 1200px) {
+  .main.ui.container {
+    max-width: 880px !important;
+    width: 860px !important;
+    margin-left: 10% !important;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hero {
+    background-image: url('/workspace/img/slogan.jpg');
+    max-height: 67%;
+  }
+
+  section.annonce {
+    /* permet de cacher le bas de la section .hero */
+    margin-top: -7em;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .hero {
+    background-image: url('/workspace/img/slogan-1280.png');
+    background-position: center -4px;
+  }
+
+  section.annonce {
+    margin-top: -8%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ui.secondary.menu.site-top-header {
+    margin: 0 !important;
+    padding: 0;
+  }
+
+  section.annonce {
+    background: #88ae96 !important;
+    /* Old browsers */
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, #88ae96 0%, #3f8bbe 100%) !important;
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, #88ae96 0%, #3f8bbe 100%) !important;
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#88ae96', endColorstr='#3f8bbe', GradientType=1) !important;
+    /* IE6-9 fallback on horizontal gradient */
+  }
 }
 
 /*******************************
@@ -963,34 +1817,6 @@ section.page-head {
   color: white;
 }
 
-section.territoire {
-  padding: 5em 0;
-  background: url('/workspace/img/bg-territoire.png') top center no-repeat;
-}
-
-section.territoire .ui.container {
-  padding: 20px;
-  background-color: white;
-  border-radius: 30px;
-}
-
-section.actu-biosphere {
-  background: url('/workspace/img/bg-actu-biosphere.png') top center no-repeat;
-  margin-top: -5em;
-  padding-top: 10em;
-  padding-bottom: 3em;
-}
-
-section.actu-biosphere .ui.cards > .card > .content > .header:not(.ui),
-section.actu-biosphere .ui.card > .content > .header:not(.ui) {
-  font-size: 1em;
-  font-weight: normal;
-}
-
-section.actu-biosphere .meta {
-  padding: 5px;
-}
-
 h2.osibv {
   font-size: 3.2em;
   font-style: italic;
@@ -1032,7 +1858,7 @@ h2.osliv {
   padding: 0.7em 1em 0em 1.2em;
   font-size: 0.8em !important;
   display: block !important;
-  color: #438CBC;
+  color: #2185D0;
 }
 
 .page-header {
@@ -1063,10 +1889,6 @@ h2.osliv {
   text-decoration: underline;
 }
 
-#content img {
-  padding: 0 10px 10px 0;
-}
-
 #content.ui.segment {
   border: none;
   -webkit-box-shadow: none;
@@ -1083,7 +1905,6 @@ h2.osliv {
 #content h3 {
   font-family: 'Lato', helvetica, arial, sans-serif;
   color: #B1563D;
-  font-weight: normal;
 }
 
 #content ul {
@@ -1140,7 +1961,7 @@ section.footer .ui.list > a.item {
   background-repeat: no-repeat;
   background-position: bottom right;
   background-size: auto 100%;
-  padding: 10px 0 70px 5px;
+  padding: 10px 0 41px 5px;
 }
 
 /*
@@ -1189,8 +2010,6 @@ section.footer .ui.list > a.item {
 
 .tocify-header {
   text-indent: 0px;
-  font-size: 14px;
-  padding-top: 12px !important;
 }
 
 /* Top level subheader elements.  These are the first nested items underneath a header element. */
@@ -1216,19 +2035,6 @@ section.footer .ui.list > a.item {
 
 .tocify-subheader .tocify-subheader .tocify-subheader {
   text-indent: 40px;
-}
-
-.card .card-header-image {
-  height: 130px;
-  overflow: hidden;
-}
-
-.card .logo-odd {
-  padding: 0 5px 0 0;
-}
-
-.cards-eco-acteurs {
-  background-color: #f1f4d1;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1262,7 +2068,7 @@ section.footer .ui.list > a.item {
   }
 }
 /*!
- * # Semantic UI 2.3.3 - Button
+ * # Semantic UI undefined - Button
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -2605,7 +3411,7 @@ section.footer .ui.list > a.item {
 }
 
 .ui.eight.buttons > .button {
-  width: 12.500%;
+  width: 12.5%;
 }
 
 .ui.nine.buttons {
@@ -2675,7 +3481,7 @@ section.footer .ui.list > a.item {
 }
 
 .ui.eight.vertical.buttons > .button {
-  height: 12.500%;
+  height: 12.5%;
 }
 
 .ui.nine.vertical.buttons > .button {
@@ -5451,7 +6257,7 @@ section.footer .ui.list > a.item {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Container
+ * # Semantic UI undefined - Container
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -5612,7 +6418,7 @@ section.footer .ui.list > a.item {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Divider
+ * # Semantic UI undefined - Divider
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -5879,7 +6685,7 @@ section.footer .ui.list > a.item {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Flag
+ * # Semantic UI undefined - Flag
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -7155,7 +7961,7 @@ i.flag.zimbabwe:before {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Header
+ * # Semantic UI undefined - Header
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -7982,7 +8788,7 @@ a.ui.inverted.grey.header:hover {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Icon
+ * # Semantic UI undefined - Icon
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -14110,7 +14916,7 @@ i.icon.youtube.square {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Image
+ * # Semantic UI undefined - Image
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -14432,7 +15238,7 @@ img.ui.bordered.image {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Input
+ * # Semantic UI undefined - Input
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -15004,7 +15810,7 @@ img.ui.bordered.image {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Label
+ * # Semantic UI undefined - Label
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -16435,7 +17241,7 @@ a.ui.basic.label:hover {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - List
+ * # Semantic UI undefined - List
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -17512,7 +18318,7 @@ ol.ui.horizontal.list li:before,
     User Variable Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Loader
+ * # Semantic UI undefined - Loader
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -17890,7 +18696,7 @@ ol.ui.horizontal.list li:before,
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Rail
+ * # Semantic UI undefined - Rail
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -18052,7 +18858,7 @@ ol.ui.horizontal.list li:before,
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Reveal
+ * # Semantic UI undefined - Reveal
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -18367,7 +19173,7 @@ ol.ui.horizontal.list li:before,
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Segment
+ * # Semantic UI undefined - Segment
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -19267,7 +20073,7 @@ ol.ui.horizontal.list li:before,
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Step
+ * # Semantic UI undefined - Step
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -19957,7 +20763,7 @@ ol.ui.horizontal.list li:before,
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Breadcrumb
+ * # Semantic UI undefined - Breadcrumb
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -20088,7 +20894,7 @@ ol.ui.horizontal.list li:before,
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Form
+ * # Semantic UI undefined - Form
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -21267,7 +22073,7 @@ ol.ui.horizontal.list li:before,
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Grid
+ * # Semantic UI undefined - Grid
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -25871,7 +26677,7 @@ Floated Menu / Item
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Message
+ * # Semantic UI undefined - Message
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -26441,7 +27247,7 @@ Floated Menu / Item
         Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Table
+ * # Semantic UI undefined - Table
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -27736,7 +28542,7 @@ Floated Menu / Item
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Ad
+ * # Semantic UI undefined - Ad
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -28025,7 +28831,7 @@ Floated Menu / Item
     User Variable Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Item
+ * # Semantic UI undefined - Item
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -28058,7 +28864,13 @@ Floated Menu / Item
   background: #FFFFFF;
   padding: 0em;
   border: none;
-  border-radius: 0.25rem;
+  border-radius: 0.28571429rem;
+  -webkit-box-shadow: 0px 1px 3px 0px #D4D4D5, 0px 0px 0px 1px #D4D4D5;
+  box-shadow: 0px 1px 3px 0px #D4D4D5, 0px 0px 0px 1px #D4D4D5;
+  -webkit-transition: -webkit-box-shadow 0.1s ease, -webkit-transform 0.1s ease;
+  transition: -webkit-box-shadow 0.1s ease, -webkit-transform 0.1s ease;
+  transition: box-shadow 0.1s ease, transform 0.1s ease;
+  transition: box-shadow 0.1s ease, transform 0.1s ease, -webkit-box-shadow 0.1s ease, -webkit-transform 0.1s ease;
   z-index: '';
 }
 
@@ -28124,18 +28936,18 @@ Floated Menu / Item
 
 .ui.cards > .card > :first-child,
 .ui.card > :first-child {
-  border-radius: 0.25rem 0.25rem 0em 0em !important;
+  border-radius: 0.28571429rem 0.28571429rem 0em 0em !important;
   border-top: none !important;
 }
 
 .ui.cards > .card > :last-child,
 .ui.card > :last-child {
-  border-radius: 0em 0em 0.25rem 0.25rem !important;
+  border-radius: 0em 0em 0.28571429rem 0.28571429rem !important;
 }
 
 .ui.cards > .card > :only-child,
 .ui.card > :only-child {
-  border-radius: 0.25rem !important;
+  border-radius: 0.28571429rem !important;
 }
 
 /*--------------
@@ -28209,7 +29021,7 @@ Floated Menu / Item
 .ui.cards > .card > .content > .header:not(.ui),
 .ui.card > .content > .header:not(.ui) {
   font-weight: bold;
-  font-size: 1.3125em;
+  font-size: 1.28571429em;
   margin-top: -0.21425em;
   line-height: 1.28571429em;
 }
@@ -28363,7 +29175,7 @@ Floated Menu / Item
 
 .ui.cards > .card .meta > a:not(.ui):hover,
 .ui.card .meta > a:not(.ui):hover {
-  color: #262627;
+  color: rgba(0, 0, 0, 0.87);
 }
 
 /*--------------
@@ -28484,22 +29296,22 @@ Floated Menu / Item
 
 .ui.raised.cards > .card,
 .ui.raised.card {
-  -webkit-box-shadow: 0px 0px 0px 1px transparent, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.15);
-  box-shadow: 0px 0px 0px 1px transparent, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.15);
+  -webkit-box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.15);
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.15);
 }
 
 .ui.raised.cards a.card:hover,
 .ui.link.cards .raised.card:hover,
 a.ui.raised.card:hover,
 .ui.link.raised.card:hover {
-  -webkit-box-shadow: 0px 0px 0px 1px transparent, 0px 2px 4px 0px rgba(34, 36, 38, 0.15), 0px 2px 10px 0px rgba(34, 36, 38, 0.25);
-  box-shadow: 0px 0px 0px 1px transparent, 0px 2px 4px 0px rgba(34, 36, 38, 0.15), 0px 2px 10px 0px rgba(34, 36, 38, 0.25);
+  -webkit-box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 4px 0px rgba(34, 36, 38, 0.15), 0px 2px 10px 0px rgba(34, 36, 38, 0.25);
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 4px 0px rgba(34, 36, 38, 0.15), 0px 2px 10px 0px rgba(34, 36, 38, 0.25);
 }
 
 .ui.raised.cards > .card,
 .ui.raised.card {
-  -webkit-box-shadow: 0px 0px 0px 1px transparent, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.15);
-  box-shadow: 0px 0px 0px 1px transparent, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.15);
+  -webkit-box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.15);
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 4px 0px rgba(34, 36, 38, 0.12), 0px 2px 10px 0px rgba(34, 36, 38, 0.15);
 }
 
 /*-------------------
@@ -28546,8 +29358,8 @@ a.ui.card:hover,
   z-index: 5;
   background: #FFFFFF;
   border: none;
-  -webkit-box-shadow: 0px 1px 3px 0px #BCBDBD, 0px 0px 0px 1px transparent;
-  box-shadow: 0px 1px 3px 0px #BCBDBD, 0px 0px 0px 1px transparent;
+  -webkit-box-shadow: 0px 1px 3px 0px #BCBDBD, 0px 0px 0px 1px #D4D4D5;
+  box-shadow: 0px 1px 3px 0px #BCBDBD, 0px 0px 0px 1px #D4D4D5;
   -webkit-transform: translateY(-3px);
   transform: translateY(-3px);
 }
@@ -28561,15 +29373,15 @@ a.ui.card:hover,
 .ui.red.cards > .card,
 .ui.cards > .red.card,
 .ui.red.card {
-  -webkit-box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #DB2828, 0px 1px 5px 0px #D4D4D5;
-  box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #DB2828, 0px 1px 5px 0px #D4D4D5;
+  -webkit-box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #DB2828, 0px 1px 3px 0px #D4D4D5;
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #DB2828, 0px 1px 3px 0px #D4D4D5;
 }
 
 .ui.red.cards > .card:hover,
 .ui.cards > .red.card:hover,
 .ui.red.card:hover {
-  -webkit-box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #d01919, 0px 1px 3px 0px #BCBDBD;
-  box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #d01919, 0px 1px 3px 0px #BCBDBD;
+  -webkit-box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #d01919, 0px 1px 3px 0px #BCBDBD;
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #d01919, 0px 1px 3px 0px #BCBDBD;
 }
 
 /* Orange */
@@ -28577,15 +29389,15 @@ a.ui.card:hover,
 .ui.orange.cards > .card,
 .ui.cards > .orange.card,
 .ui.orange.card {
-  -webkit-box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #F2711C, 0px 1px 5px 0px #D4D4D5;
-  box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #F2711C, 0px 1px 5px 0px #D4D4D5;
+  -webkit-box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #F2711C, 0px 1px 3px 0px #D4D4D5;
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #F2711C, 0px 1px 3px 0px #D4D4D5;
 }
 
 .ui.orange.cards > .card:hover,
 .ui.cards > .orange.card:hover,
 .ui.orange.card:hover {
-  -webkit-box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #f26202, 0px 1px 3px 0px #BCBDBD;
-  box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #f26202, 0px 1px 3px 0px #BCBDBD;
+  -webkit-box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #f26202, 0px 1px 3px 0px #BCBDBD;
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #f26202, 0px 1px 3px 0px #BCBDBD;
 }
 
 /* Yellow */
@@ -28593,15 +29405,15 @@ a.ui.card:hover,
 .ui.yellow.cards > .card,
 .ui.cards > .yellow.card,
 .ui.yellow.card {
-  -webkit-box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #FBBD08, 0px 1px 5px 0px #D4D4D5;
-  box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #FBBD08, 0px 1px 5px 0px #D4D4D5;
+  -webkit-box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #FBBD08, 0px 1px 3px 0px #D4D4D5;
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #FBBD08, 0px 1px 3px 0px #D4D4D5;
 }
 
 .ui.yellow.cards > .card:hover,
 .ui.cards > .yellow.card:hover,
 .ui.yellow.card:hover {
-  -webkit-box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #eaae00, 0px 1px 3px 0px #BCBDBD;
-  box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #eaae00, 0px 1px 3px 0px #BCBDBD;
+  -webkit-box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #eaae00, 0px 1px 3px 0px #BCBDBD;
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #eaae00, 0px 1px 3px 0px #BCBDBD;
 }
 
 /* Olive */
@@ -28609,15 +29421,15 @@ a.ui.card:hover,
 .ui.olive.cards > .card,
 .ui.cards > .olive.card,
 .ui.olive.card {
-  -webkit-box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #B5CC18, 0px 1px 5px 0px #D4D4D5;
-  box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #B5CC18, 0px 1px 5px 0px #D4D4D5;
+  -webkit-box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #B5CC18, 0px 1px 3px 0px #D4D4D5;
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #B5CC18, 0px 1px 3px 0px #D4D4D5;
 }
 
 .ui.olive.cards > .card:hover,
 .ui.cards > .olive.card:hover,
 .ui.olive.card:hover {
-  -webkit-box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #a7bd0d, 0px 1px 3px 0px #BCBDBD;
-  box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #a7bd0d, 0px 1px 3px 0px #BCBDBD;
+  -webkit-box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #a7bd0d, 0px 1px 3px 0px #BCBDBD;
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #a7bd0d, 0px 1px 3px 0px #BCBDBD;
 }
 
 /* Green */
@@ -28625,15 +29437,15 @@ a.ui.card:hover,
 .ui.green.cards > .card,
 .ui.cards > .green.card,
 .ui.green.card {
-  -webkit-box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #21BA45, 0px 1px 5px 0px #D4D4D5;
-  box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #21BA45, 0px 1px 5px 0px #D4D4D5;
+  -webkit-box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #21BA45, 0px 1px 3px 0px #D4D4D5;
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #21BA45, 0px 1px 3px 0px #D4D4D5;
 }
 
 .ui.green.cards > .card:hover,
 .ui.cards > .green.card:hover,
 .ui.green.card:hover {
-  -webkit-box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #16ab39, 0px 1px 3px 0px #BCBDBD;
-  box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #16ab39, 0px 1px 3px 0px #BCBDBD;
+  -webkit-box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #16ab39, 0px 1px 3px 0px #BCBDBD;
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #16ab39, 0px 1px 3px 0px #BCBDBD;
 }
 
 /* Teal */
@@ -28641,15 +29453,15 @@ a.ui.card:hover,
 .ui.teal.cards > .card,
 .ui.cards > .teal.card,
 .ui.teal.card {
-  -webkit-box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #00B5AD, 0px 1px 5px 0px #D4D4D5;
-  box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #00B5AD, 0px 1px 5px 0px #D4D4D5;
+  -webkit-box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #00B5AD, 0px 1px 3px 0px #D4D4D5;
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #00B5AD, 0px 1px 3px 0px #D4D4D5;
 }
 
 .ui.teal.cards > .card:hover,
 .ui.cards > .teal.card:hover,
 .ui.teal.card:hover {
-  -webkit-box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #009c95, 0px 1px 3px 0px #BCBDBD;
-  box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #009c95, 0px 1px 3px 0px #BCBDBD;
+  -webkit-box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #009c95, 0px 1px 3px 0px #BCBDBD;
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #009c95, 0px 1px 3px 0px #BCBDBD;
 }
 
 /* Blue */
@@ -28657,15 +29469,15 @@ a.ui.card:hover,
 .ui.blue.cards > .card,
 .ui.cards > .blue.card,
 .ui.blue.card {
-  -webkit-box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #438CBC, 0px 1px 5px 0px #D4D4D5;
-  box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #438CBC, 0px 1px 5px 0px #D4D4D5;
+  -webkit-box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #2185D0, 0px 1px 3px 0px #D4D4D5;
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #2185D0, 0px 1px 3px 0px #D4D4D5;
 }
 
 .ui.blue.cards > .card:hover,
 .ui.cards > .blue.card:hover,
 .ui.blue.card:hover {
-  -webkit-box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #377faf, 0px 1px 3px 0px #BCBDBD;
-  box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #377faf, 0px 1px 3px 0px #BCBDBD;
+  -webkit-box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #1678c2, 0px 1px 3px 0px #BCBDBD;
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #1678c2, 0px 1px 3px 0px #BCBDBD;
 }
 
 /* Violet */
@@ -28673,15 +29485,15 @@ a.ui.card:hover,
 .ui.violet.cards > .card,
 .ui.cards > .violet.card,
 .ui.violet.card {
-  -webkit-box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #6435C9, 0px 1px 5px 0px #D4D4D5;
-  box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #6435C9, 0px 1px 5px 0px #D4D4D5;
+  -webkit-box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #6435C9, 0px 1px 3px 0px #D4D4D5;
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #6435C9, 0px 1px 3px 0px #D4D4D5;
 }
 
 .ui.violet.cards > .card:hover,
 .ui.cards > .violet.card:hover,
 .ui.violet.card:hover {
-  -webkit-box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #5829bb, 0px 1px 3px 0px #BCBDBD;
-  box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #5829bb, 0px 1px 3px 0px #BCBDBD;
+  -webkit-box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #5829bb, 0px 1px 3px 0px #BCBDBD;
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #5829bb, 0px 1px 3px 0px #BCBDBD;
 }
 
 /* Purple */
@@ -28689,15 +29501,15 @@ a.ui.card:hover,
 .ui.purple.cards > .card,
 .ui.cards > .purple.card,
 .ui.purple.card {
-  -webkit-box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #A333C8, 0px 1px 5px 0px #D4D4D5;
-  box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #A333C8, 0px 1px 5px 0px #D4D4D5;
+  -webkit-box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #A333C8, 0px 1px 3px 0px #D4D4D5;
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #A333C8, 0px 1px 3px 0px #D4D4D5;
 }
 
 .ui.purple.cards > .card:hover,
 .ui.cards > .purple.card:hover,
 .ui.purple.card:hover {
-  -webkit-box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #9627ba, 0px 1px 3px 0px #BCBDBD;
-  box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #9627ba, 0px 1px 3px 0px #BCBDBD;
+  -webkit-box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #9627ba, 0px 1px 3px 0px #BCBDBD;
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #9627ba, 0px 1px 3px 0px #BCBDBD;
 }
 
 /* Pink */
@@ -28705,15 +29517,15 @@ a.ui.card:hover,
 .ui.pink.cards > .card,
 .ui.cards > .pink.card,
 .ui.pink.card {
-  -webkit-box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #E03997, 0px 1px 5px 0px #D4D4D5;
-  box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #E03997, 0px 1px 5px 0px #D4D4D5;
+  -webkit-box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #E03997, 0px 1px 3px 0px #D4D4D5;
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #E03997, 0px 1px 3px 0px #D4D4D5;
 }
 
 .ui.pink.cards > .card:hover,
 .ui.cards > .pink.card:hover,
 .ui.pink.card:hover {
-  -webkit-box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #e61a8d, 0px 1px 3px 0px #BCBDBD;
-  box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #e61a8d, 0px 1px 3px 0px #BCBDBD;
+  -webkit-box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #e61a8d, 0px 1px 3px 0px #BCBDBD;
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #e61a8d, 0px 1px 3px 0px #BCBDBD;
 }
 
 /* Brown */
@@ -28721,15 +29533,15 @@ a.ui.card:hover,
 .ui.brown.cards > .card,
 .ui.cards > .brown.card,
 .ui.brown.card {
-  -webkit-box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #A5673F, 0px 1px 5px 0px #D4D4D5;
-  box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #A5673F, 0px 1px 5px 0px #D4D4D5;
+  -webkit-box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #A5673F, 0px 1px 3px 0px #D4D4D5;
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #A5673F, 0px 1px 3px 0px #D4D4D5;
 }
 
 .ui.brown.cards > .card:hover,
 .ui.cards > .brown.card:hover,
 .ui.brown.card:hover {
-  -webkit-box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #975b33, 0px 1px 3px 0px #BCBDBD;
-  box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #975b33, 0px 1px 3px 0px #BCBDBD;
+  -webkit-box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #975b33, 0px 1px 3px 0px #BCBDBD;
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #975b33, 0px 1px 3px 0px #BCBDBD;
 }
 
 /* Grey */
@@ -28737,15 +29549,15 @@ a.ui.card:hover,
 .ui.grey.cards > .card,
 .ui.cards > .grey.card,
 .ui.grey.card {
-  -webkit-box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #767676, 0px 1px 5px 0px #D4D4D5;
-  box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #767676, 0px 1px 5px 0px #D4D4D5;
+  -webkit-box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #767676, 0px 1px 3px 0px #D4D4D5;
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #767676, 0px 1px 3px 0px #D4D4D5;
 }
 
 .ui.grey.cards > .card:hover,
 .ui.cards > .grey.card:hover,
 .ui.grey.card:hover {
-  -webkit-box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #838383, 0px 1px 3px 0px #BCBDBD;
-  box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #838383, 0px 1px 3px 0px #BCBDBD;
+  -webkit-box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #838383, 0px 1px 3px 0px #BCBDBD;
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #838383, 0px 1px 3px 0px #BCBDBD;
 }
 
 /* Black */
@@ -28753,15 +29565,15 @@ a.ui.card:hover,
 .ui.black.cards > .card,
 .ui.cards > .black.card,
 .ui.black.card {
-  -webkit-box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #1B1C1D, 0px 1px 5px 0px #D4D4D5;
-  box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #1B1C1D, 0px 1px 5px 0px #D4D4D5;
+  -webkit-box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #1B1C1D, 0px 1px 3px 0px #D4D4D5;
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #1B1C1D, 0px 1px 3px 0px #D4D4D5;
 }
 
 .ui.black.cards > .card:hover,
 .ui.cards > .black.card:hover,
 .ui.black.card:hover {
-  -webkit-box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #27292a, 0px 1px 3px 0px #BCBDBD;
-  box-shadow: 0px 0px 0px 1px transparent, 0px 2px 0px 0px #27292a, 0px 1px 3px 0px #BCBDBD;
+  -webkit-box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #27292a, 0px 1px 3px 0px #BCBDBD;
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #27292a, 0px 1px 3px 0px #BCBDBD;
 }
 
 /*--------------
@@ -29125,8 +29937,14 @@ a.ui.card:hover,
 /*******************************
     User Variable Overrides
 *******************************/
+
+@media only screen and (max-width: 767px) {
+  .ui.stackable.cards > .card {
+    width: calc(100% - 0.3em) !important;
+  }
+}
 /*!
- * # Semantic UI 2.3.3 - Comment
+ * # Semantic UI undefined - Comment
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -29412,7 +30230,7 @@ a.ui.card:hover,
     User Variable Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Feed
+ * # Semantic UI undefined - Feed
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -29725,7 +30543,7 @@ a.ui.card:hover,
     User Variable Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Item
+ * # Semantic UI undefined - Item
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -30246,7 +31064,7 @@ a.ui.card:hover,
     User Variable Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Statistic
+ * # Semantic UI undefined - Statistic
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -30882,7 +31700,7 @@ a.ui.card:hover,
     User Variable Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Accordion
+ * # Semantic UI undefined - Accordion
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -31145,7 +31963,7 @@ a.ui.card:hover,
         User Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Checkbox
+ * # Semantic UI undefined - Checkbox
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -31820,7 +32638,7 @@ a.ui.card:hover,
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Dimmer
+ * # Semantic UI undefined - Dimmer
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -32073,7 +32891,7 @@ body.dimmable > .dimmer {
         User Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Dropdown
+ * # Semantic UI undefined - Dropdown
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -33720,7 +34538,7 @@ select.ui.dropdown {
         User Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Video
+ * # Semantic UI undefined - Video
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -33885,7 +34703,7 @@ select.ui.dropdown {
   padding-bottom: 42.85714286%;
 }
 /*!
- * # Semantic UI 2.3.3 - Modal
+ * # Semantic UI undefined - Modal
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -34323,7 +35141,7 @@ select.ui.dropdown {
 /* Scrolling Content */
 
 .ui.modal .scrolling.content {
-  max-height: calc(70vh);
+  max-height: calc(80vh - 10em);
   overflow: auto;
 }
 
@@ -34537,7 +35355,7 @@ select.ui.dropdown {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Nag
+ * # Semantic UI undefined - Nag
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -34683,7 +35501,7 @@ a.ui.nag {
         User Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Popup
+ * # Semantic UI undefined - Popup
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -35513,7 +36331,7 @@ a.ui.nag {
         User Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Progress Bar
+ * # Semantic UI undefined - Progress Bar
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -36095,7 +36913,7 @@ a.ui.nag {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Rating
+ * # Semantic UI undefined - Rating
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -36372,7 +37190,7 @@ a.ui.nag {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Search
+ * # Semantic UI undefined - Search
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -36842,7 +37660,7 @@ a.ui.nag {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Shape
+ * # Semantic UI undefined - Shape
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -37002,7 +37820,7 @@ a.ui.nag {
         User Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Sidebar
+ * # Semantic UI undefined - Sidebar
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -37687,7 +38505,7 @@ body.pushable > .pusher {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Sticky
+ * # Semantic UI undefined - Sticky
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -37761,7 +38579,7 @@ body.pushable > .pusher {
          Site Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Tab
+ * # Semantic UI undefined - Tab
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -37849,7 +38667,7 @@ body.pushable > .pusher {
         User Overrides
 *******************************/
 /*!
- * # Semantic UI 2.3.3 - Transition
+ * # Semantic UI undefined - Transition
  * http://github.com/semantic-org/semantic-ui/
  *
  *

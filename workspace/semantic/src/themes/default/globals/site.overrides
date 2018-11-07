@@ -1,25 +1,34 @@
+/*******************************
+Site Overrides by valery
+*******************************/
 .marron {
     color: @marron;
 }
+
 a {
     color: @primaryColor;
 }
+
 .text-primary {
     color: @primaryColor;
 }
+
 h2 {
     font-weight: 600;
     color: @primaryColor;
 }
-/****************************** */
-/*         RB COLORS */
-/* ***************************** */
+
+/*******************************
+         RB COLORS
+*******************************/
 .c-guadeloupe {
     color: #bad77b !important;
 }
+
 .c-iroise {
     color: #4194c7 !important;
 }
+
 .c-audomarois {
     color: #be9eb3 !important;
 }
@@ -130,27 +139,35 @@ h2 {
 .cls-11 {
     fill: #fab632;
 }
+
 .cls-12 {
     fill: #f28575;
 }
+
 .cls-13 {
     fill: #00abbd;
 }
+
 .cls-14 {
     fill: #66c2a5;
 }
+
 .cls-15 {
     fill: #41ad4e;
 }
+
 .cls-16 {
     fill: #be9eb3;
 }
+
 .cls-17 {
     fill: #b3ddd0;
 }
+
 .cls-1 {
     fill: #e8e9e9;
 }
+
 .cls-2 {
     fill: #696969;
 }
@@ -158,19 +175,24 @@ h2 {
 .cls-3 {
     fill: #bad77c;
 }
+
 .cls-4 {
     fill: #f17e74;
 }
+
 .cls-5 {
     fill: #4194c7;
 }
+
 .cls-6 {
     fill: #f59769;
 }
+
 .cls-16,
 .cls-7 {
     fill: #b3ddcf;
 }
+
 .cls-8 {
     fill: #48bca2;
 }
@@ -202,24 +224,23 @@ h2 {
 .cls-15 {
     fill: #66c2a5;
 }
+
 .cls-16 {
     fill-rule: evenodd;
 }
+
 .cls-17 {
     fill: #41ad4e;
 }
+
 .cls-18 {
     fill: #be9eb3;
 }
+
 #header {
     z-index: 0;
 }
-.ui.dropdown .menu {
-    z-index: 2 !important;
-}
-.ui.menu.menu-principal .ui.dropdown .menu>.item {
-    padding: 0.3125em 1.125em !important;
-}
+
 .ui.secondary.menu.site-top-header {
     background: #008c6c;
     /* Old browsers */
@@ -229,57 +250,107 @@ h2 {
     /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to right, #008c6c 0%, #0672b9 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008c6c', endColorstr='#0672b9', GradientType=1);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#008c6c', endColorstr='#0672b9', GradientType=1);
     /* IE6-9 */
     margin-bottom: 0;
 }
-.ui.main.menu {
+
+.ui.main .menu {
     margin: 0;
     background: rgba(240, 240, 240, 0.70);
     display: block;
 }
+
 .ui.main.menu .item {
     color: #3F5F85;
 }
+
 .ui.main.menu.menu-principal {
+    padding: 8px 0;
+    margin-bottom: 0;
+}
+
+.ui.dropdown .menu {
+    z-index: 1000 !important;
+}
+
+.ui.main.menu.menu-principal .ui.dropdown .menu>.item {
+    padding: 0.3125em 1.125em !important;
+}
+
+.ui.main.menu-principal .ui.menu {
     position: relative;
     z-index: 1000;
-}
-.ui.main.menu.menu-principal .menu.right {
     background: none;
     border: none;
     -webkit-box-shadow: none;
     box-shadow: none;
     border-radius: 0;
 }
-.social-menu>a {
+
+.social-menu {
+    padding-right: 15px;
+    background: transparent !important;
+}
+
+.social-menu .ui.item>a {
     display: inline-block;
     height: 23px;
     width: 23px;
-    margin-top: 10px;
+    margin-top: 6px;
     margin-left: 6px;
     text-indent: -9999em;
     transition: all .2s ease-in-out;
 }
-.social-menu>a:hover {
+
+.menu.social-menu .ui.item {
+    padding: 0;
+}
+
+.coordonnees .social-menu>a {
+    height: 26px;
+    width: 26px;
+    margin-top: 1px;
+    vertical-align: top;
+}
+
+.social-menu>div.item>a:hover {
     transform: scale(1.2);
 }
+
+.ui.vertical.menu {
+    width: 100% !important;
+}
+
 .v-facebook {
     background: url('/workspace/img/facebook-logo.png') center center no-repeat;
 }
+
+.v-facebook.marron {
+    background: url('/workspace/img/facebook-logo-marron.png');
+}
+
 .v-vimeo {
     background: url('/workspace/img/vimeo-social-logo.png') center center no-repeat;
 }
+
 .v-flickr {
     background: url('/workspace/img/flickr-logo.png') center center no-repeat;
 }
+
 .v-instagram {
     background: url('/workspace/img/instagram-logo.png') center center no-repeat;
 }
+
+.v-instagram.marron {
+    background: url('/workspace/img/instagram-marron.png');
+}
+
 .site-name {
     font-size: 2.3em;
     color: #E8FAFD;
 }
+
 .site-baseline {
     font-family: "Open Sans", helvetica, arial, sans-serif;
     font-size: 1.3em;
@@ -287,13 +358,16 @@ h2 {
     font-style: italic;
     color: #E8FAFD;
 }
+
 .site-top-header img.ui {
     border: 3px solid white;
 }
+
 .site-top-header .ui.button {
     background: rgba(255, 255, 255, 0.71);
     color: #517364;
 }
+
 .hero {
     position: relative;
     margin-top: -46px;
@@ -301,27 +375,37 @@ h2 {
     z-index: 0;
     background-repeat: no-repeat;
 }
+
 .hero .hero-slogan {
     min-height: 430px;
     padding-top: 120px;
     padding-bottom: 45px;
 }
+
 .hero h1 {
     font-size: 2.1em;
     color: white;
     text-shadow: 1px 2px 3px grey;
 }
+
 section.annonce h1 {
     font-size: 2.3em;
 }
+
 section.annonce {
-    background-image: url(/workspace/img/actu-newsletter-1920.png);
     background-size: 100% 100%;
     z-index: 3;
     position: relative;
     padding: 8em 0;
     color: white;
 }
+
+@media only screen and (min-width: 767px) {
+    section.annonce {
+        background-image: url(/workspace/img/actu-newsletter-1920.png);
+    }
+}
+
 section.actu-newsletter {
     position: relative;
     min-height: 450px;
@@ -330,27 +414,38 @@ section.actu-newsletter {
     padding-top: 6em;
     padding-bottom: 8em;
 }
+
 section.actu-newsletter h2 {
     margin-bottom: 0;
 }
+
 section.actu-newsletter .ui.basic.button {
     border: none;
     -webkit-box-shadow: none !important;
     -moz-box-shadow: none !important;
     box-shadow: none !important;
 }
+
 section.actu-newsletter .newsletterTextBlock {
     padding: 50px !important;
     background-color: white;
     font-size: 18px;
 }
+
 section.actu-newsletter .newsletterTextBlock a {
     color: @marron;
     font-weight: bold;
 }
+
 section.actu-newsletter .ui.cards>.card {
     box-shadow: 0px 1px 8px 2px #b5d8de;
 }
+
+section.actu-newsletter .ui.cards>.card>.image {
+    //  height:130px;
+    //  overflow:hidden;
+}
+
 section.reserves {
     background-image: url(/workspace/img/fond-reserves-blanc.png), url(/workspace/img/fond-reserves.png);
     background-size: 70% 100%, 97% 100%;
@@ -362,14 +457,124 @@ section.reserves {
     margin-bottom: Opx;
     padding-bottom: 3em;
 }
+
 section.reserves .title {
     padding-top: 6em;
 }
+
 section.reserves #carte-rb {
     width: 90%;
     padding-top: 0;
     padding-right: 3em;
 }
+
+section.page-head {
+    min-height: 12rem;
+    background-repeat: no-repeat;
+}
+
+/*******************/
+/* Page biosphere  */
+/*******************/
+.biosphere .main-content {
+    margin-top: 0;
+}
+
+.biosphere .page-head {
+    background: url(/workspace/img/bg-header-biosphere.png) center top no-repeat;
+    padding-top: 30px !important;
+}
+
+.biosphere h1 {
+    font-weight: bold;
+    line-height: 30px;
+}
+
+.biosphere h2 {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.biosphere h1 small {
+    font-family: Lato, sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.illus-territoire {
+    position: absolute;
+    padding-top: 3.8em;
+}
+
+.main-page-content {
+    padding-top: 4em;
+}
+
+.sidebar-content {
+    padding-top: 13.4em;
+}
+
+.sidebar-content table td,
+.coordonnees table td {
+    padding: 5px 8px;
+}
+
+.sidebar-content table p {
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.table-list-title,
+.coordonnees .table-list-title {
+    font-size: 12px;
+    font-weight: normal;
+    color: @marron;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.coordonnees {
+    margin: 3em 0;
+}
+
+.coordonnees .ui.segment {
+    -webkit-box-shadow: 10px 10px 10px 20px rgba(150, 150, 150, 0.07);
+    box-shadow: 10px 10px 20px 20px rgba(150, 150, 150, 0.07);
+    margin: 1rem 0em;
+    padding: 1em 1em;
+    border-radius: 1em;
+    border: 1px solid rgba(150, 150, 150, 0.07);
+}
+
+.coordonnees .ui.segment:before {
+    width: 150px;
+    content: " ";
+    background-image: url('/workspace/img/pictos-bg.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 30px;
+    top: -18px;
+    height: 20px;
+}
+
+.coordonnees p {
+    font-size: 14px;
+    line-height: 22px;
+    color: #3F5F85;
+    margin: 0;
+}
+
+.coordonnees .table-list-title {
+    font-size: 14px;
+}
+
+.ui.button.download-press {
+    vertical-align: top;
+    margin-left: 5px;
+    background-color: @marron;
+    color: white;
+}
+
 h2.osibv {
     font-size: 3.2em;
     font-style: italic;
@@ -378,6 +583,7 @@ h2.osibv {
     line-height: 1.4em;
     padding-right: 25px;
 }
+
 h2.osliv {
     font-size: 2em;
     font-weight: 300;
@@ -385,74 +591,92 @@ h2.osliv {
     color: #249A86;
     line-height: 2.6em;
 }
+
 .list-rb>a {
     font-size: 0.8em;
     margin-bottom: 5px;
     padding: 6px 15px !important;
     background: #ffffffb0;
 }
+
 .list-rb>a.item:hover .header,
 .list-rb>a.item:hover .icon,
 .list-rb>a.item.hovered .header,
 .list-rb>a.item.hovered .icon {
     color: #B1563D !important;
-} // breadcrumbs
+}
+
+// breadcrumbs
 .bkg-breadcrumb {
     background: rgba(255, 255, 255, 0.6);
     height: 2.2em;
     width: 100%;
 }
+
 .ui.breadcrumb {
     padding: 0.7em 1em 0em 1.2em;
     font-size: 0.8em !important;
     display: block !important;
     color: @blue;
 }
+
 .page-header {
     background: url('/workspace/img/fond-page-contenus.png') center bottom no-repeat;
     min-height: 8em;
     padding-top: 0 !important;
     margin-bottom: 3em;
 }
+
 .page-header h1 {
     padding-left: 0.5em;
     font-weight: bold;
-} // contents
+}
+
+// contents
 .home .main-content {
     margin-top: 45px;
 }
+
 .main-content {
     margin-top: 16px;
 }
+
 #content {
     color: #262727;
 }
+
 #content a {
     text-decoration: underline;
 }
+
 #content.ui.segment {
     border: none;
     box-shadow: none;
 }
+
 #content strong {
     color: #094851;
     font-weight: bold;
 }
+
 #content h1,
 #content h2,
 #content h3 {
     font-family: @fontName, helvetica, arial, sans-serif;
     color: @marron;
 }
+
 #content ul {
     list-style-type: inherit;
     padding: 0 0 0 2.2em;
 }
+
 section.contact {
     background: url(/workspace/img/fond-section-contact.jpg) 100% 100% no-repeat;
     padding-top: 3em;
     padding-bottom: 6em;
 }
+
 .main.container {
     font-family: "Open Sans", helvetica, arial, sans-serif;
     margin-right: 387px !important;
@@ -460,30 +684,37 @@ section.contact {
     width: 700px !important;
     max-width: 960px !important;
 }
+
 .ui.sticky.bound.top,
 .ui.sticky.fixed.top {
     top: 45px;
     bottom: auto;
 }
+
 section.menu-footer ul.ui.list {
     margin-left: 0px;
 }
+
 section.menu-footer ul.ui.list ul {
     padding: 0 0 0.25em 0.5em;
 }
+
 section.menu-footer ul.ui.list li:before,
 section.menu-footer .ui.bulleted.list .list>.item:before,
 section.menu-footer .ui.bulleted.list>.item:before {
     content: '';
 }
+
 section.footer {
     background-color: #C96B4D;
     padding: 2em 0;
     color: white;
 }
+
 section.footer .ui.list>a.item {
     color: white;
 }
+
 #tocContents {
     background-image: url(/workspace/img/fond-page-contenus.png);
     background-repeat: no-repeat;
@@ -491,28 +722,41 @@ section.footer .ui.list>a.item {
     background-size: auto 100%;
     padding: 10px 0 41px 5px;
 }
+
+.ui.selection.dropdown.visible,
+.ui.selection.dropdown.active {
+    z-index: 1200 !important;
+}
+
 /*
  * jquery.tocify.css 1.9.0
  * Author: @gregfranko
  */
+
 /* The Table of Contents container element */
+
 #content .tocify {
     font-family: "Open Sans", helvetica, arial, sans-serif;
     padding-top: 1em;
     height: 130%;
 }
+
 #content .tocify a {
     text-decoration: none;
 }
+
 #content .tocify a:hover {
     text-decoration: underline;
 }
+
 #content .tocify a:before {
     font-family: Icons;
     content: "\f30b";
     padding-right: 5px;
 }
+
 /* The Table of Contents is composed of multiple nested unordered lists.  These styles remove the default styling of an unordered list because it is ugly. */
+
 #content .tocify ul,
 #content .tocify li {
     list-style: none;
@@ -521,30 +765,42 @@ section.footer .ui.list>a.item {
     border: none;
     line-height: 15px;
 }
+
 #content .tocify ul {
     margin-top: 6px;
 }
+
 /* Top level header elements */
+
 .tocify-header {
     text-indent: 0px;
 }
+
 /* Top level subheader elements.  These are the first nested items underneath a header element. */
+
 .tocify-subheader {
     padding-left: 6px;
     /*display: none;*/
 }
+
 /* Makes the font smaller for all subheader elements. */
+
 .tocify-subheader li {
     font-size: 12px;
 }
+
 /* Further indents second level subheader elements. */
+
 .tocify-subheader .tocify-subheader {
     text-indent: 30px;
 }
+
 /* Further indents third level subheader elements. You can continue this pattern if you have more nested elements. */
+
 .tocify-subheader .tocify-subheader .tocify-subheader {
     text-indent: 40px;
 }
+
 // responsive media query
 @media screen and (min-width: 1200px) {
     .main.ui.container {
@@ -553,21 +809,47 @@ section.footer .ui.list>a.item {
         margin-left: 10% !important;
     }
 }
+
 @media screen and (min-width: 1280px) {
     .hero {
         background-image: url('/workspace/img/slogan.jpg');
         max-height: 67%;
     }
+
     section.annonce {
+        /* permet de cacher le bas de la section .hero */
         margin-top: -7em;
     }
 }
+
 @media screen and (max-width: 1280px) {
     .hero {
         background-image: url('/workspace/img/slogan-1280.png');
         background-position: center -4px;
     }
+
     section.annonce {
         margin-top: -8%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    
+    .ui.secondary.menu.site-top-header {
+        margin: 0 !important;
+        padding: 0;
+    }
+
+    section.annonce {
+        background: #88ae96 !important;
+        /* Old browsers */
+        background: -moz-linear-gradient(45deg, #88ae96 0%, #3f8bbe 100%) !important;
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(45deg, #88ae96 0%, #3f8bbe 100%) !important;
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(45deg, #88ae96 0%, #3f8bbe 100%) !important;
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#88ae96', endColorstr='#3f8bbe', GradientType=1) !important;
+        /* IE6-9 fallback on horizontal gradient */
     }
 }

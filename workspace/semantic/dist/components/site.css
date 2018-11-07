@@ -19,7 +19,7 @@ body {
   height: 100%;
 }
 html {
-  font-size: 16px;
+  font-size: 14px;
 }
 body {
   margin: 0px;
@@ -30,7 +30,7 @@ body {
   font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.4285em;
-  color: #262627;
+  color: rgba(0, 0, 0, 0.87);
   font-smoothing: antialiased;
 }
 
@@ -125,32 +125,32 @@ a:hover {
 /* Site */
 ::-webkit-selection {
   background-color: #3F5F85;
-  color: #262627;
+  color: rgba(0, 0, 0, 0.87);
 }
 ::-moz-selection {
   background-color: #3F5F85;
-  color: #262627;
+  color: rgba(0, 0, 0, 0.87);
 }
 ::selection {
   background-color: #3F5F85;
-  color: #262627;
+  color: rgba(0, 0, 0, 0.87);
 }
 
 /* Form */
 textarea::-webkit-selection,
 input::-webkit-selection {
   background-color: rgba(100, 100, 100, 0.4);
-  color: #262627;
+  color: rgba(0, 0, 0, 0.87);
 }
 textarea::-moz-selection,
 input::-moz-selection {
   background-color: rgba(100, 100, 100, 0.4);
-  color: #262627;
+  color: rgba(0, 0, 0, 0.87);
 }
 textarea::selection,
 input::selection {
   background-color: rgba(100, 100, 100, 0.4);
-  color: #262627;
+  color: rgba(0, 0, 0, 0.87);
 }
 
 /* Force Simple Scrollbars */
@@ -190,6 +190,12 @@ body .ui.inverted::-webkit-scrollbar-thumb:window-inactive {
 body .ui.inverted::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.35);
 }
+
+
+/*******************************
+Site Overrides by valery
+*******************************/
+
 .marron {
   color: #B1563D;
 }
@@ -205,12 +211,10 @@ h2 {
 }
 
 
-/****************************** */
+/*******************************
+         RB COLORS
+*******************************/
 
-
-/*         RB COLORS */
-
-/* ***************************** */
 .c-guadeloupe {
   color: #bad77b !important;
 }
@@ -380,12 +384,6 @@ h2 {
 #header {
   z-index: 0;
 }
-.ui.dropdown .menu {
-  z-index: 2 !important;
-}
-.ui.menu.menu-principal .ui.dropdown .menu > .item {
-  padding: 0.3125em 1.125em !important;
-}
 .ui.secondary.menu.site-top-header {
   background: #008c6c;
   
@@ -404,7 +402,7 @@ h2 {
 /* IE6-9 */
   margin-bottom: 0;
 }
-.ui.main.menu {
+.ui.main .menu {
   margin: 0;
   background: rgba(240, 240, 240, 0.7);
   display: block;
@@ -413,32 +411,59 @@ h2 {
   color: #3F5F85;
 }
 .ui.main.menu.menu-principal {
+  padding: 8px 0;
+  margin-bottom: 0;
+}
+.ui.dropdown .menu {
+  z-index: 1000 !important;
+}
+.ui.main.menu.menu-principal .ui.dropdown .menu > .item {
+  padding: 0.3125em 1.125em !important;
+}
+.ui.main.menu-principal .ui.menu {
   position: relative;
   z-index: 1000;
-}
-.ui.main.menu.menu-principal .menu.right {
   background: none;
   border: none;
   -webkit-box-shadow: none;
   box-shadow: none;
   border-radius: 0;
 }
-.social-menu > a {
+.social-menu {
+  padding-right: 15px;
+  background: transparent !important;
+}
+.social-menu .ui.item > a {
   display: inline-block;
   height: 23px;
   width: 23px;
-  margin-top: 10px;
+  margin-top: 6px;
   margin-left: 6px;
   text-indent: -9999em;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-.social-menu > a:hover {
+.menu.social-menu .ui.item {
+  padding: 0;
+}
+.coordonnees .social-menu > a {
+  height: 26px;
+  width: 26px;
+  margin-top: 1px;
+  vertical-align: top;
+}
+.social-menu > div.item > a:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
+.ui.vertical.menu {
+  width: 100% !important;
+}
 .v-facebook {
   background: url('/workspace/img/facebook-logo.png') center center no-repeat;
+}
+.v-facebook.marron {
+  background: url('/workspace/img/facebook-logo-marron.png');
 }
 .v-vimeo {
   background: url('/workspace/img/vimeo-social-logo.png') center center no-repeat;
@@ -448,6 +473,9 @@ h2 {
 }
 .v-instagram {
   background: url('/workspace/img/instagram-logo.png') center center no-repeat;
+}
+.v-instagram.marron {
+  background: url('/workspace/img/instagram-marron.png');
 }
 .site-name {
   font-size: 2.3em;
@@ -488,12 +516,16 @@ section.annonce h1 {
   font-size: 2.3em;
 }
 section.annonce {
-  background-image: url(/workspace/img/actu-newsletter-1920.png);
   background-size: 100% 100%;
   z-index: 3;
   position: relative;
   padding: 8em 0;
   color: white;
+}
+@media only screen and (min-width: 767px) {
+  section.annonce {
+    background-image: url(/workspace/img/actu-newsletter-1920.png);
+  }
 }
 section.actu-newsletter {
   position: relative;
@@ -543,6 +575,102 @@ section.reserves #carte-rb {
   padding-top: 0;
   padding-right: 3em;
 }
+section.page-head {
+  min-height: 12rem;
+  background-repeat: no-repeat;
+}
+
+
+/*******************/
+
+
+/* Page biosphere  */
+
+
+/*******************/
+
+.biosphere .main-content {
+  margin-top: 0;
+}
+.biosphere .page-head {
+  background: url(/workspace/img/bg-header-biosphere.png) center top no-repeat;
+  padding-top: 30px !important;
+}
+.biosphere h1 {
+  font-weight: bold;
+  line-height: 30px;
+}
+.biosphere h2 {
+  font-weight: bold;
+  font-size: 24px;
+}
+.biosphere h1 small {
+  font-family: Lato, sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+}
+.illus-territoire {
+  position: absolute;
+  padding-top: 3.8em;
+}
+.main-page-content {
+  padding-top: 4em;
+}
+.sidebar-content {
+  padding-top: 13.4em;
+}
+.sidebar-content table td,
+.coordonnees table td {
+  padding: 5px 8px;
+}
+.sidebar-content table p {
+  font-size: 12px;
+  line-height: 18px;
+}
+.table-list-title,
+.coordonnees .table-list-title {
+  font-size: 12px;
+  font-weight: normal;
+  color: #B1563D;
+  text-align: right;
+  white-space: nowrap;
+}
+.coordonnees {
+  margin: 3em 0;
+}
+.coordonnees .ui.segment {
+  -webkit-box-shadow: 10px 10px 10px 20px rgba(150, 150, 150, 0.07);
+  box-shadow: 10px 10px 20px 20px rgba(150, 150, 150, 0.07);
+  margin: 1rem 0em;
+  padding: 1em 1em;
+  border-radius: 1em;
+  border: 1px solid rgba(150, 150, 150, 0.07);
+}
+.coordonnees .ui.segment:before {
+  width: 150px;
+  content: " ";
+  background-image: url('/workspace/img/pictos-bg.png');
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 30px;
+  top: -18px;
+  height: 20px;
+}
+.coordonnees p {
+  font-size: 14px;
+  line-height: 22px;
+  color: #3F5F85;
+  margin: 0;
+}
+.coordonnees .table-list-title {
+  font-size: 14px;
+}
+.ui.button.download-press {
+  vertical-align: top;
+  margin-left: 5px;
+  background-color: #B1563D;
+  color: white;
+}
 h2.osibv {
   font-size: 3.2em;
   font-style: italic;
@@ -579,7 +707,7 @@ h2.osliv {
   padding: 0.7em 1em 0em 1.2em;
   font-size: 0.8em !important;
   display: block !important;
-  color: #438CBC;
+  color: #2185D0;
 }
 .page-header {
   background: url('/workspace/img/fond-page-contenus.png') center bottom no-repeat;
@@ -665,6 +793,10 @@ section.footer .ui.list > a.item {
   background-size: auto 100%;
   padding: 10px 0 41px 5px;
 }
+.ui.selection.dropdown.visible,
+.ui.selection.dropdown.active {
+  z-index: 1200 !important;
+}
 /*
  * jquery.tocify.css 1.9.0
  * Author: @gregfranko
@@ -739,6 +871,8 @@ section.footer .ui.list > a.item {
     max-height: 67%;
   }
   section.annonce {
+    
+/* permet de cacher le bas de la section .hero */
     margin-top: -7em;
   }
 }
@@ -749,6 +883,28 @@ section.footer .ui.list > a.item {
   }
   section.annonce {
     margin-top: -8%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .ui.secondary.menu.site-top-header {
+    margin: 0 !important;
+    padding: 0;
+  }
+  section.annonce {
+    background: #88ae96 !important;
+    
+/* Old browsers */
+    
+/* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, #88ae96 0%, #3f8bbe 100%) !important;
+    
+/* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, #88ae96 0%, #3f8bbe 100%) !important;
+    
+/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#88ae96', endColorstr='#3f8bbe', GradientType=1) !important;
+    
+/* IE6-9 fallback on horizontal gradient */
   }
 }
 
@@ -1252,7 +1408,7 @@ h2.osliv {
   padding: 0.7em 1em 0em 1.2em;
   font-size: 0.8em !important;
   display: block !important;
-  color: #438CBC;
+  color: #2185D0;
 }
 .page-header {
   background: url('/workspace/img/fond-page-contenus.png') center bottom no-repeat;

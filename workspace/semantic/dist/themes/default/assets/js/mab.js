@@ -24,9 +24,12 @@ window.console.clear = function () {};
 // ready event
 semantic.ready = function () {
   // fix main menu to page on passing
-  $('.main.menu').visibility({
+  $('.menu-principal').visibility({
     type: 'fixed'
   });
+  $('.menu-mobile').on('click', function(){
+    $('.sidebar').sidebar('toggle');
+  }),
   // $('.overlay').visibility({
   //     type: 'fixed',
   //     offset: 80
