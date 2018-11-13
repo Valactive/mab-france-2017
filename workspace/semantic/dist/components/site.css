@@ -515,6 +515,10 @@ h2 {
 section.annonce h1 {
   font-size: 2.3em;
 }
+section.annonce img {
+  height: initial !important;
+  width: 100% !important;
+}
 section.annonce {
   background-size: 100% 100%;
   z-index: 3;
@@ -559,6 +563,10 @@ section.actu-newsletter .ui.cards > .card {
 .ui.card a.card-header-image {
   height: 175px !important;
   overflow: hidden;
+}
+.ui.card .extra.content img {
+  width: 37px;
+  margin-right: 4px;
 }
 section.reserves {
   background-image: url(/workspace/img/fond-reserves-blanc.png), url(/workspace/img/fond-reserves.png);
