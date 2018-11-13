@@ -96,7 +96,7 @@
 									<div class="ui two link cards stackable">
 										<xsl:for-each select="actualites-home-page/entry">
 											<div class="ui card">
-												<div class="">
+												
 													<a class="card-header-image" href="{$root}/{$current-language}/{/data/navigation/page[@id=8]/item[@lang='fr']/@handle}/{titre/@handle}/" target="_blank">
 
 														<xsl:choose>
@@ -127,7 +127,7 @@
 															</xsl:otherwise>
 														</xsl:choose>
 													</a>
-												</div>
+											
 												<div class="content">
 													<a href="{$root}/{$current-language}/actualite-et-publication/{titre/@handle}/" target="_blank" class="header">
 														<xsl:call-template name="truncate">
