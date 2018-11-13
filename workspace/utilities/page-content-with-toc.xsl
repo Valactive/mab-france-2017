@@ -7,7 +7,8 @@
 		<div class="ui grid">
 			<xsl:call-template name="content-page-header"></xsl:call-template>
 			<!-- toc -->
-			<div class="main ui container">
+			<div class="ui container">
+			<div class="main">
 
 				<div class="ui segment" id="content">
 					<div class="ui right rail very close">
@@ -28,6 +29,7 @@
 					<!-- </section> -->
 				</div>
 			</div>
+		</div>
 		</div>
 	</xsl:template>
 </xsl:stylesheet>

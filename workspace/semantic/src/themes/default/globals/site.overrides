@@ -292,8 +292,7 @@ h2 {
     padding-right: 15px;
     background: transparent !important;
 }
-
-.social-menu .ui.item>a {
+.social-menu .ui.item > a {
     display: inline-block;
     height: 23px;
     width: 23px;
@@ -302,18 +301,15 @@ h2 {
     text-indent: -9999em;
     transition: all .2s ease-in-out;
 }
-
 .menu.social-menu .ui.item {
     padding: 0;
 }
-
 .coordonnees .social-menu>a {
     height: 26px;
     width: 26px;
     margin-top: 1px;
     vertical-align: top;
 }
-
 .social-menu>div.item>a:hover {
     transform: scale(1.2);
 }
@@ -321,7 +317,6 @@ h2 {
 .ui.vertical.menu {
     width: 100% !important;
 }
-
 .v-facebook {
     background: url('/workspace/img/facebook-logo.png') center center no-repeat;
 }
@@ -717,7 +712,11 @@ section.footer {
 section.footer .ui.list>a.item {
     color: white;
 }
-
+@media only screen and (min-width: 1200px) {
+div.main {
+    width:800px;
+}
+}
 #tocContents {
     background-image: url(/workspace/img/fond-page-contenus.png);
     background-repeat: no-repeat;
