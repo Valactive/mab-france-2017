@@ -118,7 +118,7 @@
 										<xsl:with-param name="path" select="$img"/>
 										<xsl:with-param name="class" select="''"/>
 									</xsl:call-template> -->
-									<img src="{$root}/image/1/280/0/{$img/@path}/{$img/filename}" alt="image de l'actualité"/>
+									<img class="ui fluid image" src="{$root}/image/1/280/0/{$img/@path}/{$img/filename}" alt="image de l'actualité"/>
 								</a>
 								<div class="content">
 									<a href="{$root}/{$current-language}/eco-acteur/{$eco-name-handle}/" target="_blank" class="header">
