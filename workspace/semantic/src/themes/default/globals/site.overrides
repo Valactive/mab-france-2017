@@ -1,5 +1,5 @@
 /*******************************
-Site Overrides by valery
+Theme Overrides by valery
 *******************************/
 .marron {
     color: @marron;
