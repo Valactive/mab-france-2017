@@ -7,6 +7,7 @@ Site Overrides
 a {
     color: @primaryColor;
 }
+
 .text-primary {
     color: @primaryColor;
 }
@@ -408,7 +409,7 @@ section.actu-newsletter .newsletterTextBlock a {
     font-weight: bold;
 }
 .ui.card a.card-header-image {
-    height175px !important;
+    height: 175px !important;
     overflow:hidden;
 }
 section.actu-newsletter .ui.cards>.card {
