@@ -174,8 +174,8 @@
 					</div>					<!--ui four link cards-->
 				</div>				<!--ui four link cards-->
 			</div>			<!--ui row cards-eco-acteurs-->
-			<div class="ui row cards-eco-acteurs">
-				<div class="ui container grid centered">
+			<div class="ui row">
+				<div class="ui twelve column padded grid content centered">
 					<!-- appel template de pagination-->
 					<xsl:call-template name="pagination">
 						<xsl:with-param name="pagination" select="/data/laureats-avec-filtre/pagination"/>
