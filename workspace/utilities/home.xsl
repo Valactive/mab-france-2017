@@ -96,9 +96,7 @@
 									<div class="ui two link cards stackable">
 										<xsl:for-each select="actualites-home-page/entry">
 											<div class="ui card">
-												
 													<a class="card-header-image" href="{$root}/{$current-language}/{/data/navigation/page[@id=8]/item[@lang='fr']/@handle}/{titre/@handle}/" target="_blank">
-
 														<xsl:choose>
 															<xsl:when test="image-a-la-une != ''">
 																<xsl:variable name="img" select="image-a-la-une"/>	
