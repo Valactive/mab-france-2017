@@ -440,7 +440,10 @@ section.actu-newsletter .newsletterTextBlock a {
 section.actu-newsletter .ui.cards>.card {
     box-shadow: 0px 1px 8px 2px #b5d8de;
 }
-
+.ui.card a.card-header-image {
+    height175px !important;
+    overflow:hidden;
+}
 section.actu-newsletter .ui.cards>.card>.image {
     //  height:130px;
     //  overflow:hidden;
