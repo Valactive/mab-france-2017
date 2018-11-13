@@ -95,9 +95,9 @@
 								<div class="ui two column grid">
 									<div class="ui two link cards stackable">
 										<xsl:for-each select="actualites-home-page/entry">
-											<div class="card">
-												<div class="card-header-image">
-													<a href="{$root}/{$current-language}/{/data/navigation/page[@id=8]/item[@lang='fr']/@handle}/{titre/@handle}/" target="_blank">
+											<div class="ui card">
+												<div class="">
+													<a class="card-header-image" href="{$root}/{$current-language}/{/data/navigation/page[@id=8]/item[@lang='fr']/@handle}/{titre/@handle}/" target="_blank">
 
 														<xsl:choose>
 															<xsl:when test="image-a-la-une != ''">
@@ -115,13 +115,13 @@
 															<xsl:otherwise>
 																<xsl:choose>
 																	<xsl:when test="type-de-publication/item/@handle = 'actualite'">
-																		<img src="{$root}/image/1/370/0/uploads/image-a-la-une/capture-d-e-cran-2018-10-26-a-11-55-46-copie.png" alt="image de l actualité par defaut"/>
+																		<img class="ui fluid image" src="{$root}/image/1/370/0/uploads/image-a-la-une/capture-d-e-cran-2018-10-26-a-11-55-46-copie.png" alt="image de l actualité par defaut"/>
 																	</xsl:when>
 																	<xsl:when test="type-de-publication/item/@handle = ''">
-																		<img src="{$root}/image/1/370/0/uploads/image-a-la-une/capture-d-e-cran-2018-10-26-a-11-55-46-copie.png" alt="image par defaut sans type "/>
+																		<img class="ui fluid image" src="{$root}/image/1/370/0/uploads/image-a-la-une/capture-d-e-cran-2018-10-26-a-11-55-46-copie.png" alt="image par defaut sans type "/>
 																	</xsl:when>
 																	<xsl:otherwise >
-																		<img src="{$root}/image/1/370/0/uploads/image-a-la-une/capture-d-e-cran-2018-10-26-a-11-38-57-copie.png" alt="image de la publication"/>
+																		<img class="ui fluid image" src="{$root}/image/1/370/0/uploads/image-a-la-une/capture-d-e-cran-2018-10-26-a-11-38-57-copie.png" alt="image de la publication"/>
 																	</xsl:otherwise>
 																</xsl:choose>
 															</xsl:otherwise>
