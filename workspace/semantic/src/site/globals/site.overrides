@@ -418,12 +418,6 @@ a.card-header-image {
 section.actu-newsletter .ui.cards>.card {
     box-shadow: 0px 1px 8px 2px #b5d8de;
 }
-
-section.actu-newsletter .ui.cards>.card>.image {
-    // height:130px;
-    // overflow:hidden;
-}
-
 section.reserves {
     background-image: url(/workspace/img/fond-reserves-blanc.png), url(/workspace/img/fond-reserves.png);
     background-size: 70% 100%, 97% 100%;
