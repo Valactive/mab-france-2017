@@ -293,7 +293,7 @@
 								<a data-reserve="{classe}" href="{$root}/{$current-language}/{/data/navigation/page[@id=4]/item[@lang=$current-language]/@handle}/{nom/item[@lang=$current-language]/@handle}/" class="item">
 									<i class="circle icon c-{classe}"></i>
 									<div class="content">
-										<div class="header"> <xsl:value-of select="nom/item[@lang=$current-language]"/> </div>
+										<div class="header"> <xsl:value-of select="nom-page-accueil/item[@lang=$current-language]"/> </div>
 									</div>
 								</a>
 							</xsl:for-each>
