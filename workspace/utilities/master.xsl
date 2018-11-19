@@ -99,7 +99,17 @@
 			<!-- google font open sans -->
 			<link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400,700i" rel="stylesheet" />
 			<!-- CSS: implied media="all" -->
-			<link rel="stylesheet" href="{$workspace}/semantic/dist/semantic.css" />
+			<!-- production -->
+			<xsl:choose>
+				<xsl:when test="$http-host = 'mab-france.org' or $http-host='www.mab-france.org'">
+					<link rel="stylesheet" href="{$workspace}/semantic/dist/semantic.min.css" />
+				</xsl:when>
+				<xsl:otherwise>
+					<!-- developpement -->					
+					<link rel="stylesheet" href="{$workspace}/semantic/dist/semantic.css" />
+				</xsl:otherwise>
+			</xsl:choose>
+
 		</head>
 
 		<body>
