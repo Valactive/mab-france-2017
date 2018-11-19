@@ -20,6 +20,7 @@ class datasourceliste_reserves_de_biosphere extends SectionDatasource
 
     public $dsParamINCLUDEDELEMENTS = array(
         'nom: all-languages: formatted',
+        'nom-page-accueil: all-languages: formatted',
         'classe'
     );
 
