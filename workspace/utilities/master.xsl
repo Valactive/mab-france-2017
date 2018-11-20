@@ -98,7 +98,7 @@
 			<meta property="og:type" content="website" />
 			<meta property="og:url" content="http://www.vmab-france.org/" />
 			<meta property="og:title" content="Mab-France" />			
-			<meta property="og:description"   content="Depuis 1971, le programme sur l'Homme et la Biosphère "MAB" (Man and the Biosphere) de l'UNESCO œuvre de manière responsable à l’édification de sociétés prospères en harmonie avec la biosphère. " />
+			<meta property="og:description"   content="Depuis 1971, le programme sur l'Homme et la Biosphère MAB (Man and the Biosphere) de l'UNESCO œuvre de manière responsable à l’édification de sociétés prospères en harmonie avec la biosphère. " />
 			<meta property="og:image"         content="{$workspace}/img/logos/france-2016.png" />
 			
 			<xsl:call-template name="partage-actualite" />
