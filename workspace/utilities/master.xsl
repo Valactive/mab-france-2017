@@ -111,7 +111,7 @@
 					<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 					<meta name="keywords" content="MAB France, mab, Comité MAB France, Réserves de biosphère, Développement durable, programme mab, UNESCO, Comité français du mab, l'homme et la biosphère, Guadeloupe, Camargue, Cévennes, Luberon, Iroise, Ventoux, Fontainebleau, Tuamotu, Corse, Vosges" />
 					<meta name="author" content="valactive" />
-					<meta name="robots" content="noindex, nofollow">
+					<meta name="robots" content="noindex, nofollow"/>
 					<!-- Mobile viewport optimized: j.mp/bplateviewport -->
 					<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
 					<!-- <meta name="google-site-verification" content="AJta6kSh11NpeCGrwds_aC7awKODbNvE4hh7jv9hW9U" /> -->
