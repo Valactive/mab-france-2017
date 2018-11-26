@@ -70,46 +70,61 @@
 		<xsl:comment>master.xsl</xsl:comment>
 
 		<head>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-2132372-18"></script>
-		<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', 'UA-2132372-18');
-		</script>
-
 			<title>
 				<xsl:value-of select="$website-name"></xsl:value-of>
 			</title>
-			<meta charset="utf-8" />
-			<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
-					Remove this if you use the .htaccess -->
-			<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-			<meta name="keywords" content="MAB France, mab, Comité MAB France, Réserves de biosphère, Développement durable, programme mab, UNESCO, Comité français du mab, l'homme et la biosphère, Guadeloupe, Camargue, Cévennes, Luberon, Iroise, Ventoux, Fontainebleau, Tuamotu, Corse, Vosges" />
-			<meta name="author" content="valactive" />
-			<!-- Mobile viewport optimized: j.mp/bplateviewport -->
-			<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-			<!-- <meta name="google-site-verification" content="AJta6kSh11NpeCGrwds_aC7awKODbNvE4hh7jv9hW9U" /> -->
-			<!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-			<xsl:call-template name="partage-actualite" />
-			<link rel="shortcut icon" href="/favicon.ico" />
-			<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-			<!-- google font open sans -->
-			<link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400,700i" rel="stylesheet" />
-			<!-- CSS: implied media="all" -->
 			<!-- production -->
 			<xsl:choose>
 				<xsl:when test="$http-host = 'mab-france.org' or $http-host='www.mab-france.org'">
+					<!-- Global site tag (gtag.js) - Google Analytics -->
+				<script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-2132372-18"></script>
+				<script>
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+				gtag('js', new Date());
+
+				gtag('config', 'UA-2132372-18');
+				</script>
+					<meta charset="utf-8" />
+					<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+							Remove this if you use the .htaccess -->
+					<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+					<meta name="keywords" content="MAB France, mab, Comité MAB France, Réserves de biosphère, Développement durable, programme mab, UNESCO, Comité français du mab, l'homme et la biosphère, Guadeloupe, Camargue, Cévennes, Luberon, Iroise, Ventoux, Fontainebleau, Tuamotu, Corse, Vosges" />
+					<meta name="author" content="valactive" />
+					<!-- Mobile viewport optimized: j.mp/bplateviewport -->
+					<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+					<!-- <meta name="google-site-verification" content="AJta6kSh11NpeCGrwds_aC7awKODbNvE4hh7jv9hW9U" /> -->
+					<!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+					<xsl:call-template name="partage-actualite" />
+					<link rel="shortcut icon" href="/favicon.ico" />
+					<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+					<!-- google font open sans -->
+					<link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400,700i" rel="stylesheet" />
+					<!-- CSS: implied media="all" -->
 					<link rel="stylesheet" href="{$workspace}/semantic/dist/semantic.min.css" />
 				</xsl:when>
 				<xsl:otherwise>
-					<!-- developpement -->					
+					<!-- developpement -->
+					<meta charset="utf-8" />
+					<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+							Remove this if you use the .htaccess -->
+					<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+					<meta name="keywords" content="MAB France, mab, Comité MAB France, Réserves de biosphère, Développement durable, programme mab, UNESCO, Comité français du mab, l'homme et la biosphère, Guadeloupe, Camargue, Cévennes, Luberon, Iroise, Ventoux, Fontainebleau, Tuamotu, Corse, Vosges" />
+					<meta name="author" content="valactive" />
+					<meta name="robots" content="noindex, nofollow">
+					<!-- Mobile viewport optimized: j.mp/bplateviewport -->
+					<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+					<!-- <meta name="google-site-verification" content="AJta6kSh11NpeCGrwds_aC7awKODbNvE4hh7jv9hW9U" /> -->
+					<!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+					<xsl:call-template name="partage-actualite" />
+					<link rel="shortcut icon" href="/favicon.ico" />
+					<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+					<!-- google font open sans -->
+					<link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400,700i" rel="stylesheet" />
+					<!-- CSS: implied media="all" -->				
 					<link rel="stylesheet" href="{$workspace}/semantic/dist/semantic.css" />
 				</xsl:otherwise>
 			</xsl:choose>
-
 		</head>
 
 		<body>
