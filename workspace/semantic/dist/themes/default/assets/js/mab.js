@@ -47,7 +47,9 @@ semantic.ready = function () {
   // });
 
   $('.menu-principal .ui.dropdown')
-    .dropdown();
+    .dropdown({
+      action: 'hide'
+    });
 
 
   // http://gregfranko.com/jquery.tocify.js/
