@@ -17,7 +17,7 @@
 							<i class="home icon"></i>
 						</a>
 						<div class="divider"> / </div>
-						<a href="{$root}{$url-lang}/les-actuatites-et-publications/">
+						<a href="{$root}{$url-lang}/les-actualites-et-publications/">
 						<xsl:value-of select="plh-page/page/item[@lang=$current-language]"></xsl:value-of></a>
 						<div class="divider"> / </div>
 						<xsl:value-of select="actualite-detail/entry/titre"></xsl:value-of>
