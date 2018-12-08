@@ -93,7 +93,7 @@
 		</div>
 	</xsl:template>
 
-	<xsl:template name="partage-actualite"> <!-- partage facebook sur page actualite-->
+	<xsl:template name="partage-facebook"> <!-- partage facebook sur page actualite-->
 			<meta property="og:url"           content="{$current-url}" />
 			<meta property="og:type"          content="website" />
 			<meta property="og:title"         content="Mab France, actualite" />

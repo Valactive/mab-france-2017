@@ -343,5 +343,5 @@
 			</div> <!-- ui container-->
 		</section>
 	</xsl:template>
-	<xsl:template name="partage-actualite"/> <!-- partage facebook sur page actualite-->
+	<xsl:template name="partage-facebook"/> <!-- partage facebook sur page actualite-->
 </xsl:stylesheet>

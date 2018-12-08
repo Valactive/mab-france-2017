@@ -93,15 +93,10 @@
 			<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
 			<!-- <meta name="google-site-verification" content="AJta6kSh11NpeCGrwds_aC7awKODbNvE4hh7jv9hW9U" /> -->
 			<!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-<!-- meta pour partage facebook -->
-			<meta property="og:site_name" content="Mab-France" />
-			<meta property="og:type" content="website" />
-			<meta property="og:url" content="https://www.mab-france.org/" />
-			<meta property="og:title" content="Mab-France" />			
-			<meta property="og:description" content="Depuis 1971, le programme sur l'Homme et la Biosphère MAB (Man and the Biosphere) de l'UNESCO œuvre de manière responsable à l’édification de sociétés prospères en harmonie avec la biosphère. " />
-			<meta property="og:image" content="{$workspace}/img/logos/france-2016.png" />
+<!-- meta pour partage facebook -->  
 			
-			<xsl:call-template name="partage-actualite" />
+			
+			<xsl:call-template name="partage-facebook" />
 			<link rel="shortcut icon" href="/favicon.ico" />
 			<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 			<!-- google font open sans -->
