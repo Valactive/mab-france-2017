@@ -832,7 +832,7 @@ div.main {
 
 @media screen and (max-width: 1280px) {
     .hero {
-        background-image: url('/workspace/img/slogan-1280.png');
+        background-image: url('/workspace/img/slogan-1280.jpeg');
         background-position: center -4px;
     }
 
