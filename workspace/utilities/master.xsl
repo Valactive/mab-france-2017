@@ -95,7 +95,7 @@
 					<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
 					<!-- <meta name="google-site-verification" content="AJta6kSh11NpeCGrwds_aC7awKODbNvE4hh7jv9hW9U" /> -->
 					<!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-					<xsl:call-template name="partage-actualite" />
+					<xsl:call-template name="partage-facebook" />
 					<link rel="shortcut icon" href="/favicon.ico" />
 					<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 					<!-- google font open sans -->
@@ -116,7 +116,7 @@
 					<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
 					<!-- <meta name="google-site-verification" content="AJta6kSh11NpeCGrwds_aC7awKODbNvE4hh7jv9hW9U" /> -->
 					<!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-					<xsl:call-template name="partage-actualite" />
+					<xsl:call-template name="partage-facebook" />
 					<link rel="shortcut icon" href="/favicon.ico" />
 					<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 					<!-- google font open sans -->

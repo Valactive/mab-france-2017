@@ -17,7 +17,8 @@
 							<i class="home icon"></i>
 						</a>
 						<div class="divider"> / </div>
-						<xsl:value-of select="plh-page/page/item[@lang=$current-language]"></xsl:value-of>
+						<a href="{$root}{$url-lang}/les-actualites-et-publications/">
+						<xsl:value-of select="plh-page/page/item[@lang=$current-language]"></xsl:value-of></a>
 						<div class="divider"> / </div>
 						<xsl:value-of select="actualite-detail/entry/titre"></xsl:value-of>
 					</div>
@@ -93,7 +94,7 @@
 		</div>
 	</xsl:template>
 
-	<xsl:template name="partage-actualite"> <!-- partage facebook sur page actualite-->
+	<xsl:template name="partage-facebook"> <!-- partage facebook sur page actualite-->
 			<meta property="og:url"           content="{$current-url}" />
 			<meta property="og:type"          content="website" />
 			<meta property="og:title"         content="Mab France, actualite" />
