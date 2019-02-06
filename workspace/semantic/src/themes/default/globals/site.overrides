@@ -808,8 +808,20 @@ div.main {
 .tocify-subheader .tocify-subheader .tocify-subheader {
     text-indent: 40px;
 }
-
-// responsive media query
+/* fix italic, bold and list in content */
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+.main-content ol {
+    list-style : decimal;
+}
+.main-content ul {
+    list-style : disc;
+}
+/* responsive media query */
 @media screen and (min-width: 1200px) {
     .main.ui.container {
         max-width: 880px !important;
