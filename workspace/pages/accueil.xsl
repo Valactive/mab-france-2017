@@ -28,7 +28,8 @@
 			<!-- home page -->
 			<xsl:call-template name="home"></xsl:call-template>
 			<!-- <h1><xsl:value-of select="page-content-1level/entry/nom/item[@lang=$language]"/></h1><p><xsl:copy-of select="page-content-1level/entry/contenu"></xsl:copy-of></p> -->
-			<section class="menu-footer">
+			
+			<section class="menu-footer ">
 				<xsl:call-template name="mab-menu-principal-footer"/>
 			</section>
 		</xsl:when>

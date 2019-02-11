@@ -234,7 +234,7 @@
 					<!-- symphony page contents -->
 					<xsl:apply-templates />
 					<!-- entire website common section -->
-					<section class="ui grid footer">
+					<section class="ui grid footer ">
 						<div class="ui container grid">
 							<div class="column">
 								<div class="ui horizontal list">

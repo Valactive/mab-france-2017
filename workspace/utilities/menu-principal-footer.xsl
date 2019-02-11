@@ -3,7 +3,7 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:template name="mab-menu-principal-footer">
 		<div class="ui stackable row borderless">
-			<div class="ui container six column grid">
+			<div class="ui container six column grid computer only">
 				<!-- 1er niveau -->
 				<xsl:for-each select="/data/rubriques-principales/entry/nom/item[@lang=$language]">
 
