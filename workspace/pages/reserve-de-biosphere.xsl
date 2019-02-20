@@ -41,7 +41,7 @@
 										<xsl:otherwise>Introduction</xsl:otherwise>
 									</xsl:choose>
 								</h2>
-								<xsl:copy-of select="biosphere/entry/biosphere-presentation"/>
+								<xsl:copy-of select="biosphere/entry/biosphere-presentation/item[@lang=$current-language]"/>
 							</div>
 						</div>
 						<div class="five wide column">
