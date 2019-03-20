@@ -22,7 +22,7 @@
 				<xsl:value-of select="'en/'"></xsl:value-of>
 			</xsl:when>
 			<xsl:otherwise>
-				<xsl:value-of select="''"></xsl:value-of>
+				<xsl:value-of select="'fr/'"></xsl:value-of>
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:variable>
@@ -128,6 +128,8 @@
 		</head>
 
 		<body>
+			<!-- stm je ne comprend pas a quoi sert le code ci-dessous-->
+			<!-- type de page ? a utiliser poue navigation anglais ?-->
 			<xsl:attribute name="class">
 				<xsl:choose>
 					<xsl:when test="$current-page-id = 1 and $rubrique = ''">home mab</xsl:when>
@@ -162,7 +164,7 @@
 					<!-- afficher le bouton changement de langue-->
 					<!--<xsl:choose>
 							<xsl:when test="$rubrique != ''">-->
-					<!-- menu langue -->
+					<!-- menu langue STM -->
 					<div class="right floated right aligned middle aligned content three wide column">
 						<a class="ui mini button right floated lang-switcher">
 							<xsl:choose>
