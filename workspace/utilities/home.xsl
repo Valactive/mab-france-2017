@@ -387,7 +387,7 @@
 		</section>
 		<section class="contact">
 			<div class="ui container">
-				<div class="ui two column grid">
+				<div class="ui three column grid">
 					<div class="column">
 						<h2 class="marron">
 							<xsl:choose>
@@ -440,8 +440,8 @@
 									</a>
 								</div>
 							</div>
-						</div>
-					</div>
+						</div> 
+					</div><!-- class column 1-->
 					<div class="column">
 						<h2 class="marron">
 							<xsl:choose>
@@ -455,7 +455,20 @@
 							<br/>31326 Castanet Tolosan Cedex
 							<br/>contact[at]mab-france.org
 						</p>
-					</div>
+					</div><!-- class column 2-->
+					<div class="column">
+						<h2 class="marron">
+							<xsl:choose>
+								<xsl:when test="$current-language='fr'">Adhérez à notre association</xsl:when>
+								<xsl:otherwise>Join our association</xsl:otherwise>
+							</xsl:choose>
+						</h2>
+						<div class="content">
+							<a href="https://www.helloasso.com/"  target="_blank">
+								<img  src="/workspace/img/logo-helloasso.svg" alt=""></img>
+							</a>
+						</div>
+					</div><!-- class column 2-->
 				</div>
 			</div>
 		</section>

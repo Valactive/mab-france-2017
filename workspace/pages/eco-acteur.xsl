@@ -18,7 +18,7 @@
 						<div class="divider"> / </div>
 						<xsl:value-of select="plh-page/page/item[@lang=$current-language]"></xsl:value-of>
 						<div class="divider"> / </div>
-						<xsl:value-of select="eco-acteur-detail/entry/eco-acteur-nom"></xsl:value-of>
+						<xsl:value-of select="eco-acteur-detail/entry/eco-acteur-nom/item[@lang=$current-language]"></xsl:value-of>
 
 
 					</div>
@@ -26,7 +26,7 @@
 				<!-- page header -->
 				<div class="ui container">
 					<h1 class="text-primary">
-						<xsl:value-of select="eco-acteur-detail/entry/eco-acteur-nom" />
+						<xsl:value-of select="eco-acteur-detail/entry/eco-acteur-nom/item[@lang=$current-language]" />
 					</h1>
 				</div>
 				<!-- end page header -->
@@ -34,7 +34,7 @@
 			<!-- end breadcrumb -->
 			<div class="ui container grid">
 				<div class="eight wide column">
-					<xsl:copy-of select="eco-acteur-detail/entry/eco-acteur-presentation"/>
+					<xsl:copy-of select="eco-acteur-detail/entry/eco-acteur-presentation/item[@lang=$current-language]"/>
 				</div>
 				<div class="eight wide column">
 					<h1 class="ui text-primary">

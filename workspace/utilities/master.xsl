@@ -39,6 +39,11 @@
 			<xsl:when test="$rubrique != ''">
 				<xsl:value-of select="concat(//rubriques-principales/entry/nom[item/@handle = $rubrique]//item[@lang=$next-lang]/@handle,'/')" />
 			</xsl:when>
+			<!-- FFTM -->
+			<!-- si page actualités et publications, lien vers la liste -->
+			<xsl:when test="$rubrique = ''">
+				<xsl:value-of select="concat(//page[@id = $current-page-id]/item[@lang=$next-lang]/@handle,'/')"/>
+			</xsl:when>
 			<xsl:otherwise></xsl:otherwise>
 		</xsl:choose>
 	</xsl:variable>
@@ -46,6 +51,23 @@
 		<xsl:choose>
 			<xsl:when test="$s-rubrique != ''">
 				<xsl:value-of select="concat(//menu-principal/entry/nom[item/@handle = $s-rubrique]//item[@lang=$next-lang]/@handle,'/')" />
+			</xsl:when>
+			<!-- FFTM -->
+			<!--  si page actualites et publication, lien vers le détail de l'actu via $titre-actualite -->
+			<xsl:when test="$rubrique = '' and $current-page-id = '8'">
+				<xsl:value-of select="concat($titre-actualite,'/')"/>
+			</xsl:when>
+			<!--  si page eco-acteur, lien vers le détail eco-acteur via  $nom-eco-acteur-->
+			<xsl:when test="$rubrique = '' and $current-page-id = '9'">
+				<!-- recup de la version traduite du nom de l'entrée -->
+				<xsl:variable name="eco-acteur-lang" select="/data/eco-acteur-detail/entry/eco-acteur-nom[item/@handle=$nom-eco-acteur]/item[@lang=$next-lang]/@handle"/>
+				<xsl:value-of select="concat($eco-acteur-lang,'/')"/>
+			</xsl:when>
+			<!--  si page laureat, lien vers le détail laureat via  $nom-laureat -->
+			<xsl:when test="$rubrique = '' and $current-page-id = '10'">
+				<!-- recup de la version traduite du nom de l'entrée -->
+				<xsl:variable name="nom-laureat-lang" select="/data/laureat-detail/entry/laureat-nom[item/@handle=$nom-laureat]/item[@lang=$next-lang]/@handle"/>
+				<xsl:value-of select="concat($nom-laureat-lang,'/')"/>
 			</xsl:when>
 			<xsl:otherwise></xsl:otherwise>
 		</xsl:choose>

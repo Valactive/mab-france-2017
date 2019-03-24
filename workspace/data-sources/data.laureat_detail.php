@@ -25,13 +25,13 @@ class datasourcelaureat_detail extends SectionDatasource
     );
 
     public $dsParamINCLUDEDELEMENTS = array(
-        'laureat-nom: formatted',
-        'laureat-presentation: formatted',
+        'laureat-nom: all-languages: formatted',
+        'laureat-presentation: all-languages: formatted',
         'laureat-publie',
         'image-a-la-une',
         'logo-odd',
-        'biosphere-trophee',
-        'annee-trophee'
+        'annee-trophee',
+        'biosphere-trophee'
     );
 
     public function __construct($env = null, $process_params = true)
@@ -49,7 +49,7 @@ class datasourcelaureat_detail extends SectionDatasource
                 'website' => 'http://mab-france.localhost',
                 'email' => 'staminh@valactive.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-10-09T10:36:49+00:00'
+            'release-date' => '2019-03-24T21:26:38+00:00'
         );
     }
 

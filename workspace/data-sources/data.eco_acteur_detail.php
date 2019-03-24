@@ -25,8 +25,8 @@ class datasourceeco_acteur_detail extends SectionDatasource
     );
 
     public $dsParamINCLUDEDELEMENTS = array(
-        'eco-acteur-nom: formatted',
-        'eco-acteur-presentation: formatted',
+        'eco-acteur-nom: all-languages: formatted',
+        'eco-acteur-presentation: all-languages: formatted',
         'eco-acteur-publiee',
         'image-a-la-une',
         'logo-odd',
@@ -49,7 +49,7 @@ class datasourceeco_acteur_detail extends SectionDatasource
                 'website' => 'http://mab-france.localhost',
                 'email' => 'staminh@valactive.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-10-04T22:44:46+00:00'
+            'release-date' => '2019-03-24T21:00:13+00:00'
         );
     }
 
