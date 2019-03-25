@@ -387,7 +387,7 @@
 		</section>
 		<section class="contact">
 			<div class="ui container">
-				<div class="ui three column grid">
+				<div class="ui two column grid">
 					<div class="column">
 						<h2 class="marron">
 							<xsl:choose>
@@ -441,7 +441,7 @@
 								</div>
 							</div>
 						</div> 
-					</div><!-- class column 1-->
+					</div><!-- fin class column 1-->
 					<div class="column">
 						<h2 class="marron">
 							<xsl:choose>
@@ -455,8 +455,8 @@
 							<br/>31326 Castanet Tolosan Cedex
 							<br/>contact[at]mab-france.org
 						</p>
-					</div><!-- class column 2-->
-					<div class="column">
+					</div><!-- fin class column 2-->
+					<!--<div class="column">
 						<h2 class="marron">
 							<xsl:choose>
 								<xsl:when test="$current-language='fr'">Adhérez à notre association</xsl:when>
@@ -468,7 +468,7 @@
 								<img  src="/workspace/img/logo-helloasso.svg" alt=""></img>
 							</a>
 						</div>
-					</div><!-- class column 2-->
+					</div> fin class column 3-->
 				</div>
 			</div>
 		</section>
