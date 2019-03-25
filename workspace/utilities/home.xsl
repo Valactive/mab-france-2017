@@ -464,7 +464,7 @@
 							</xsl:choose>
 						</h2>
 						<div class="content">
-							<a href="https://www.helloasso.com/"  target="_blank">
+							<a href=" https://www.helloasso.com/associations/mab-france/adhesions/adhesion-mab-france-2019"  target="_blank">
 								<img  src="/workspace/img/logo-helloasso.svg" alt=""></img>
 							</a>
 						</div>
