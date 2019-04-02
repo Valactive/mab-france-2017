@@ -13,11 +13,11 @@
 				<!-- breadcrumb -->
 				<div class="bkg-breadcrumb">
 					<div class="ui breadcrumb container">
-						<a href="{$root}{$url-lang}" class="section">
+						<a href="{$root}/{$url-lang}" class="section">
 							<i class="home icon"></i>
 						</a>
 						<div class="divider"> / </div>
-						<a href="{$root}{$url-lang}/les-actualites-et-publications/">
+						<a href="{$root}/{$url-lang}les-actualites-et-publications/">
 						<xsl:value-of select="plh-page/page/item[@lang=$current-language]"></xsl:value-of></a>
 						<div class="divider"> / </div>
 						<xsl:value-of select="actualite-detail/entry/titre"></xsl:value-of>
