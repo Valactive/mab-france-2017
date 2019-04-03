@@ -11,7 +11,7 @@
 				<!-- breadcrumb -->
 				<div class="bkg-breadcrumb">
 					<div class="ui breadcrumb container">
-						<a href="{$root}{$url-lang}" class="section">
+						<a href="{$root}/{$url-lang}" class="section">
 							<i class="home icon"></i>
 							<!-- <xsl:value-of select="$page-title"></xsl:value-of> -->
 						</a>
