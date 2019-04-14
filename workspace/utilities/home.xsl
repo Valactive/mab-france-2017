@@ -387,7 +387,7 @@
 		</section>
 		<section class="contact">
 			<div class="ui container">
-				<div class="ui two column grid">
+				<div class="ui three column grid">
 					<div class="column">
 						<h2 class="marron">
 							<xsl:choose>
@@ -456,19 +456,23 @@
 							<br/>contact[at]mab-france.org
 						</p>
 					</div><!-- fin class column 2-->
-					<!--<div class="column">
-						<h2 class="marron">
-							<xsl:choose>
-								<xsl:when test="$current-language='fr'">Adhérez à notre association</xsl:when>
-								<xsl:otherwise>Join our association</xsl:otherwise>
-							</xsl:choose>
-						</h2>
-						<div class="content">
-							<a href=" https://www.helloasso.com/associations/mab-france/adhesions/adhesion-mab-france-2019"  target="_blank">
-								<img  src="/workspace/img/logo-helloasso.svg" alt=""></img>
-							</a>
-						</div>
-					</div> fin class column 3-->
+					<div class="column">
+						<xsl:choose>
+							<xsl:when test="$current-language='fr'">
+								<a id="Rejoignez-nous!" href="{$root}/fr/le-programme-mab/le-reseau-mab-francais/#Rejoignez-nous!">
+									<h2 class="marron">Adhérez à notre association</h2>
+									<img class="ui tiny image" src="{$workspace}/img/logos/france-2016.png" alt="logo du Mab France" />
+								</a>
+							</xsl:when>
+							<xsl:otherwise>
+								<a href="{$root}/en/man-and-biosphere/french-mab-network/#Joinus!">
+									<h2 class="marron">Join our association</h2>
+									<img class="ui tiny image" src="{$workspace}/img/logos/france-2016.png" alt="logo du Mab France" />
+								</a>
+							</xsl:otherwise>
+						</xsl:choose>
+
+					</div> <!--fin class column 3-->
 				</div>
 			</div>
 		</section>
