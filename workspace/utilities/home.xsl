@@ -465,7 +465,7 @@
 								</a>
 							</xsl:when>
 							<xsl:otherwise>
-								<a href="{$root}/en/man-and-biosphere/french-mab-network/#Joinus!">
+								<a href="{$root}/en/man-and-biosphere/french-mab-network/#Join-us!">
 									<h2 class="marron">Join our association</h2>
 									<img class="ui tiny image" src="{$workspace}/img/logos/france-2016.png" alt="logo du Mab France" />
 								</a>
