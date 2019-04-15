@@ -186,7 +186,6 @@
 					<!-- afficher le bouton changement de langue-->
 					<!--<xsl:choose>
 							<xsl:when test="$rubrique != ''">-->
-					<!-- menu langue STM -->
 					<div class="right floated right aligned middle aligned content three wide column">
 						<a class="ui mini button right floated lang-switcher">
 							<xsl:choose>

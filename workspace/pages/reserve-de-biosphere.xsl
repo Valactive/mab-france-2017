@@ -217,10 +217,10 @@
 								<tr>
 									<td></td>
 									<td>
-										<xsl:if test="biosphere/entry/biosphere-page-facebook!=''">
+										<xsl:if test="biosphere/entry/biosphere-page-facebook !=''">
 											<span class="social-menu"><a href="{biosphere/entry/biosphere-page-facebook}" target="_blank" class="v-facebook marron"></a></span>
 										</xsl:if>
-										<xsl:if test="biosphere/entry/biosphere-lien-instagram!=''">
+										<xsl:if test="biosphere/entry/biosphere-lien-instagram !=''">
 											<span class="social-menu"><a href="{biosphere/entry/biosphere-lien-instagram}" target="_blank" class="v-instagram marron"></a></span>
 										</xsl:if>
 										<xsl:if test="biosphere/entry/dossier-presse != ''">

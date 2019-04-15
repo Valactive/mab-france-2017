@@ -461,13 +461,13 @@
 							<xsl:when test="$current-language='fr'">
 								<a id="Rejoignez-nous!" href="{$root}/fr/le-programme-mab/le-reseau-mab-francais/#Rejoignez-nous!">
 									<h2 class="marron">Adhérez à notre association</h2>
-									<img class="ui tiny image" src="{$workspace}/img/logos/france-2016.png" alt="logo du Mab France" />
+									<img class="ui tiny centered image" src="{$workspace}/img/logos/france-2016.png" alt="logo du Mab France" />
 								</a>
 							</xsl:when>
 							<xsl:otherwise>
 								<a href="{$root}/en/man-and-biosphere/french-mab-network/#Join-us!">
 									<h2 class="marron">Join our association</h2>
-									<img class="ui tiny image" src="{$workspace}/img/logos/france-2016.png" alt="logo du Mab France" />
+									<img class="ui tiny centered image" src="{$workspace}/img/logos/france-2016.png" alt="logo du Mab France" />
 								</a>
 							</xsl:otherwise>
 						</xsl:choose>
