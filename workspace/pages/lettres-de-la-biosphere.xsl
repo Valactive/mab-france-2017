@@ -48,15 +48,21 @@
 							</div>
 						</div>-->
 
-						<div class="column nine wide">
+						<div class="column twelve wide">
 							<p>
 								<xsl:choose>
 								<xsl:when test="$current-language='fr'">
-								LeMab France publie la Lettre de la biosphère quatre fois par an.
+								Suite à la refonte de notre site internet, les liens des anciennes lettres de la biosphère ne fonctionnent plus, mais vous pouvez toujours retrouver les articles dans la rubrique 
+								<a href="{$root}/{$current-language}/{/data/navigation/page[@id=5]/item[@lang=$current-language]/@handle}/">actualités et publications
+								<i class="arrow alternate circle right outline icon"></i></a>
+								<br/>Le Mab France publie la Lettre de la biosphère quatre fois par an.
 								Pour la recevoir dans votre boîte mail
 								</xsl:when>
 								<xsl:otherwise>
-								The Mab France publishes the Letter of the biosphere four times a year.
+								Following the redesign of our website, the links in the old newsletters no longer work, but you can still find the articles in the 
+								<a href="{$root}/{$current-language}/{/data/navigation/page[@id=5]/item[@lang=$current-language]/@handle}/">news and publications section
+								<i class="arrow alternate circle right outline icon"></i></a>
+								<br/>The Mab France publishes the Letter of the biosphere four times a year.
 								To subscribe
 								</xsl:otherwise>
 								</xsl:choose>
