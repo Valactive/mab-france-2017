@@ -199,7 +199,6 @@
 									<xsl:if test="biosphere/entry/biosphere-nom-site-web !=''">
 									<tr>
 										<td><p class="table-list-title">
-
 											<xsl:choose>
 												<xsl:when test="$current-language='fr'">Site web :</xsl:when>
 												<xsl:otherwise>Website :</xsl:otherwise>
@@ -214,15 +213,45 @@
 										</td>
 									</tr>
 									</xsl:if>
+
+									<xsl:if test="biosphere/entry/biosphere-page-facebook !=''">
+									<tr>	
+										<td><p class="table-list-title">
+											<img class="ui avatar image" src="/workspace/img/facebook-logo.svg" alt=""></img>
+										</p></td>	
+										<td>
+												<p><a href="{biosphere/entry/biosphere-page-facebook}"  target="_blank">
+												
+													<xsl:choose>
+														<xsl:when test="$current-language='fr'">Sur Facebook</xsl:when>
+													<xsl:otherwise>On Facebook</xsl:otherwise>
+													</xsl:choose>
+												</a></p>
+										</td>
+									</tr>	
+									</xsl:if>		
+									<xsl:if test="biosphere/entry/biosphere-lien-instagram !=''">
+									<tr>	
+										<td><p class="table-list-title">
+											<img class="ui avatar image" src="/workspace/img/instagram-logo.svg" alt=""></img>
+										</p></td>	
+										<td>
+												<p><a href="{biosphere/entry/biosphere-lien-instagram}"  target="_blank">
+												
+													<xsl:choose>
+														<xsl:when test="$current-language='fr'">Sur Instagram</xsl:when>
+													<xsl:otherwise>On Instagram</xsl:otherwise>
+													</xsl:choose>
+												</a></p>
+										</td>
+									</tr>	
+									</xsl:if>	
+
+								
+
 								<tr>
 									<td></td>
 									<td>
-										<xsl:if test="biosphere/entry/biosphere-page-facebook !=''">
-											<span class="social-menu"><a href="{biosphere/entry/biosphere-page-facebook}" target="_blank" class="v-facebook marron"></a></span>
-										</xsl:if>
-										<xsl:if test="biosphere/entry/biosphere-lien-instagram !=''">
-											<span class="social-menu"><a href="{biosphere/entry/biosphere-lien-instagram}" target="_blank" class="v-instagram marron"></a></span>
-										</xsl:if>
 										<xsl:if test="biosphere/entry/dossier-presse != ''">
 											<a href="{$workspace}{biosphere/entry/dossier-presse/@path}/{biosphere/entry/dossier-presse/filename}" target="_blank" class="ui circular mini button download-press">
 												<xsl:choose>
