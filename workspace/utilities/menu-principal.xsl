@@ -4,11 +4,6 @@
 	<xsl:template name="mab-menu-principal">
 		<div class="ui row main menu menu-principal massive borderless">
 			<!-- <div class="ui container fluid"> -->
-			<!-- <div class="ui massive menu borderless"> -->
-				<!-- <a href="{$root}/{$url-lang}/" class="header item">
-					<img class="logo" src="assets/images/logo.png"/>
-					<xsl:value-of select="$page-title"></xsl:value-of>
-				</a> -->
 				<!-- 1er niveau -->
 				<xsl:for-each select="/data/rubriques-principales/entry/nom/item[@lang=$language]">
 					<xsl:variable name="rubrique-principale-handle">

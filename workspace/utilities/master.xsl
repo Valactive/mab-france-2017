@@ -164,10 +164,15 @@
 			</div>
 			<!-- TOP HEADER -->
 			<div class="pusher">
-				<div class="ui internally right aligned grid menu secondary site-top-header computer only">
 
+						
+				<div class="ui internally right aligned grid menu secondary site-top-header computer only">
+					
 					<!-- sitename -->
 					<div class="seven wide column left floated right aligned middle aligned content">
+						
+
+
 						<span class="site-name">
 							<xsl:value-of select="$website-name"></xsl:value-of>
 						</span>
@@ -183,9 +188,7 @@
 						<span class="site-baseline">L'Homme &amp; la Biosphère<br />Man &amp; the Biosphere</span>
 					</div>
 					<!-- que les cas de creation de page dynamique-->
-					<!-- afficher le bouton changement de langue-->
-					<!--<xsl:choose>
-							<xsl:when test="$rubrique != ''">-->
+			<!-- Bouton changement de langue-->
 					<div class="right floated right aligned middle aligned content three wide column">
 						<a class="ui mini button right floated lang-switcher">
 							<xsl:choose>
@@ -205,10 +208,9 @@
 								</xsl:otherwise>
 							</xsl:choose>
 						</a>
-					</div>
+					</div> <!--right floated right aligned middle aligned content three wide column-->
 					<!-- fin menu langue -->
-					<!--</xsl:when>
-					</xsl:choose>-->
+					
 				</div>
 				<!-- MENU MOBILE / TABLETTE -->
 				<div class="ui three column grid menu secondary container site-top-header tablet only mobile only">

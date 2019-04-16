@@ -451,7 +451,7 @@
 						</h2>
 						<p>MAB France
 							<br/>24, chemin de Borderouge,
-							<br/>Auzeville CS 532627
+							<br/>Auzeville CS 52627
 							<br/>31326 Castanet Tolosan Cedex
 							<br/>contact[at]mab-france.org
 						</p>
