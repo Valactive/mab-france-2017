@@ -275,9 +275,9 @@
 				</div>
 			</div>
 			<!-- END FULL CONTENT -->
-			<script src="{$workspace}/js/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+			<script src="{$workspace}/js/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
 			<script src="{$workspace}/semantic/dist/semantic.min.js"></script>
-			<script src="{$workspace}/js/jquery-ui-1.9.1.custom.min.js"></script>
+			<script src="{$workspace}/js/jquery-ui.min.js"></script>
 			<script src="{$workspace}/js/jquery.tocify.min.js"></script>
 			<script src="{$workspace}/semantic/dist/themes/default/assets/js/mab.js"></script>
 		</body>
