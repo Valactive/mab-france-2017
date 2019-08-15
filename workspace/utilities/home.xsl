@@ -459,13 +459,13 @@
 					<div class="column">
 						<xsl:choose>
 							<xsl:when test="$current-language='fr'">
-								<a id="Rejoignez-nous!" href="{$root}/fr/le-programme-mab/le-reseau-mab-francais/#Rejoignez-nous!">
+								<a id="Rejoignez-nous!" href="{$root}/fr/le-programme-mab/le-mab-france/lassociation/#rejoignez-nous">
 									<h2 class="marron">Adhérez à notre association</h2>
 									<img class="ui tiny centered image" src="{$workspace}/img/logos/france-2016.png" alt="logo du Mab France" />
 								</a>
 							</xsl:when>
 							<xsl:otherwise>
-								<a href="{$root}/en/man-and-biosphere/french-mab-network/#Join-us!">
+								<a href="{$root}/en/man-and-biosphere/mab-france/the-network/#joinus!">
 									<h2 class="marron">Join our association</h2>
 									<img class="ui tiny centered image" src="{$workspace}/img/logos/france-2016.png" alt="logo du Mab France" />
 								</a>
