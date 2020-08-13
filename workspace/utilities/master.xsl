@@ -143,8 +143,10 @@
 					<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 					<!-- google font open sans -->
 					<link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400,700i" rel="stylesheet" />
-					<!-- CSS: implied media="all" -->				
-					<link rel="stylesheet" href="{$workspace}/semantic/dist/semantic.css" />
+					<!-- CSS: implied media="all" -->	
+					<!-- <link rel="stylesheet" href="{$workspace}/semantic/dist/semantic.css" />-->
+					<!-- STM - preparation mise en prod -->	
+					<link rel="stylesheet" href="{$workspace}/semantic/dist/semantic.min.css" />
 				</xsl:otherwise>
 			</xsl:choose>
 <!-- tarteaucitron-->		

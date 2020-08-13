@@ -15,7 +15,9 @@ class datasourceslogan_home_page extends SectionDatasource
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
     public $dsParamINCLUDEDELEMENTS = array(
-        'slogan: all-languages: formatted',
+        'titre: all-languages: formatted',
+        'slogan1: formatted',
+        'slogan2: formatted',
         'nom-du-bouton-daction: all-languages: formatted',
         'lien-http-du-bouton-daction: all-languages: formatted'
     );
@@ -31,11 +33,11 @@ class datasourceslogan_home_page extends SectionDatasource
         return array(
             'name' => 'Slogan home page',
             'author' => array(
-                'name' => 'Valéry Frisch',
-                'website' => 'http://mab-france-new.localhost',
-                'email' => 'valery.frisch@gmail.com'),
+                'name' => 'Sophie Taminh',
+                'website' => 'http://mab-france.localhost',
+                'email' => 'staminh@valactive.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-05-09T16:07:08+00:00'
+            'release-date' => '2020-08-09T06:50:16+00:00'
         );
     }
 

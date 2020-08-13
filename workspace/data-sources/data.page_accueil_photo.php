@@ -1,31 +1,27 @@
 <?php
 
-class datasourcehome_page_annonce extends SectionDatasource
+class datasourcepage_accueil_photo extends SectionDatasource
 {
-    public $dsParamROOTELEMENT = 'home-page-annonce';
-    public $dsParamORDER = 'desc';
-    public $dsParamPAGINATERESULTS = 'no';
+    public $dsParamROOTELEMENT = 'page-accueil-photo';
+    public $dsParamORDER = 'random';
+    public $dsParamPAGINATERESULTS = 'yes';
     public $dsParamLIMIT = '1';
     public $dsParamSTARTPAGE = '1';
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
-    public $dsParamNEGATEPARAM = '$rubrique';
     public $dsParamSORT = 'system:id';
     public $dsParamHTMLENCODE = 'no';
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
     public $dsParamFILTERS = array(
-        '81' => 'yes',
+        '176' => 'yes',
     );
 
     public $dsParamINCLUDEDELEMENTS = array(
-        'nom-home-page: all-languages: formatted',
-        'contenu-home-page: all-languages: formatted',
-        'nom-lien-1: all-languages: formatted',
-        'lien-1: all-languages: formatted',
-        'nom-lien-2: all-languages: formatted',
-        'lien-2: all-languages: formatted'
+        'nom: formatted',
+        'photo-desktop',
+        'photo-portable'
     );
 
     public function __construct($env = null, $process_params = true)
@@ -37,19 +33,19 @@ class datasourcehome_page_annonce extends SectionDatasource
     public function about()
     {
         return array(
-            'name' => 'Home page : annonce',
+            'name' => 'page-accueil-photo',
             'author' => array(
                 'name' => 'Sophie Taminh',
                 'website' => 'http://mab-france.localhost',
                 'email' => 'staminh@valactive.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2020-08-13T10:30:08+00:00'
+            'release-date' => '2020-08-02T06:49:46+00:00'
         );
     }
 
     public function getSource()
     {
-        return '15';
+        return '22';
     }
 
     public function allowEditorToParse()

@@ -2,25 +2,32 @@
 <xsl:stylesheet version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:template name="home">
-		<section class="hero">
-			<!-- Contenu hero -->
-			<div class="ui grid container centered">
-				<div class="hero-slogan items">
-					<div class="item">
-						<div class="bottom aligned content">
-							<br/>
-							<h1 class="ui center">
-								<xsl:copy-of select="slogan-home-page/entry/slogan/item[@lang = $current-language]"/>
-							</h1>
-							<br/>
-							<a href="{slogan-home-page/entry/lien-http-du-bouton-daction/item[@lang = $current-language]}" class="ui tiny blue button">
-								<xsl:value-of select="slogan-home-page/entry/nom-du-bouton-daction/item[@lang = $current-language]"/>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+
+		<div  class="hero"  style="position:relative">
+			<picture title="photo d'une biosphere">
+				<xsl:variable name = "photo" select="/data/page-accueil-photo/entry"/>
+				<!-- pour une largeur > = 769 : media="(min-width:769px)"-->
+ 				<!--	<source media="(min-width:769px)" srcset="{$workspace}{$photo/photo-desktop/@path}/{$photo/photo-desktop/filename}"/>
+						<img src="{$workspace}{$photo/photo-portable/@path}/{$photo/photo-portable/filename}" alt="image biosphere" style="width:100%;"/> 	-->
+			<!-- pour une largeur <= 769 : media="(max-width:769px)"-->
+ 					<source media="(max-width:769px)" srcset="{$workspace}{$photo/photo-portable/@path}/{$photo/photo-portable/filename}"/>
+				<img src="{$workspace}{$photo/photo-desktop/@path}/{$photo/photo-desktop/filename}" alt="image biosphere" style="width:100%;"/>
+			</picture>
+			<div class="contenair-hero-slogan">
+					<h1>
+						<xsl:copy-of select="slogan-home-page/entry/titre/item[@lang = $current-language]"/>
+					</h1>
+					<h2>
+						<xsl:copy-of select="slogan-home-page/entry/slogan1[@lang = $current-language]"/>
+						<br/>
+						<xsl:copy-of select="slogan-home-page/entry/slogan2[@lang = $current-language]"/>
+					</h2>
+					<a class="slogan-button" href="{slogan-home-page/entry/lien-http-du-bouton-daction/item[@lang = $current-language]}" >
+						<xsl:value-of select="slogan-home-page/entry/nom-du-bouton-daction/item[@lang = $current-language]"/>
+					</a>
+			</div>	
+		</div>
+
 		<!-- Annonce home page -->
 		<section class="annonce">
 			<div class="ui container grid centered center">
@@ -288,7 +295,6 @@
 				<div class="ui grid">
 					<div class="column five wide">
 						<div class="ui list list-rb">
-
 							<xsl:for-each select="/data/liste-reserves-de-biosphere/entry">
 								<a data-reserve="{classe}" href="{$root}/{$current-language}/{/data/navigation/page[@id=4]/item[@lang=$current-language]/@handle}/{nom/item[@lang=$current-language]/@handle}/" class="item">
 									<i class="circle icon c-{classe}"></i>
