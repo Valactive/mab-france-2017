@@ -269,8 +269,12 @@
 		<!-- end container  -->
 	</section>
 	<!-- end section actu-newsletter -->
+
+	<!-- STM il faut faire tablet only computer only, et mobile only -->
+	<div class="ui grid tablet only computer only" style="display:block">
+
 	<!-- reserves de biosphère  -->
-	<section class="reserves container">
+	<section class="reserves container ">
 		<div class="ui">
 			<div id="reserves-de-biosphere" class="ui two column grid title">
 				<div class="row">
@@ -306,7 +310,6 @@
 
 						</div>
 					</div>
-
 					<div class="column eleven wide right aligned content">
 						<svg id="carte-rb"
 							xmlns="http://www.w3.org/2000/svg" viewBox="0 0 754.41 527.79">
@@ -390,7 +393,7 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> <!-- end reserves de biosphère  -->
 		<section class="contact">
 			<div class="ui container">
 				<div class="ui three column grid">
@@ -483,6 +486,141 @@
 				</div>
 			</div>
 		</section>
+		</div>
+
+<!-- STM mobile only -->
+	<div class="ui grid mobile only" style="display:block">
+
+	<!-- reserves de biosphère  -->
+	<section class="actu-newsletter" style="padding-top:0px;padding-bottom:0px;margin-top:-40%;">
+		<div class='ui container'>
+			<div>
+				
+						<h2>
+							<xsl:choose>
+								<xsl:when test="$current-language='fr'">Explorez les 14 Réserves de biosphère en France</xsl:when>
+								<xsl:otherwise>Discover the 14 Biosphere Reserves in France</xsl:otherwise>
+							</xsl:choose> 
+						</h2>
+						<br/>
+				
+			</div>
+				<!-- end row ; start new row -->
+				<div class="ui grid">
+					<div class="column wide">
+						<div class="ui list list-rb">
+							<xsl:for-each select="/data/liste-reserves-de-biosphere/entry">
+								<a data-reserve="{classe}" href="{$root}/{$current-language}/{/data/navigation/page[@id=4]/item[@lang=$current-language]/@handle}/{nom/item[@lang=$current-language]/@handle}/" class="item">
+									<i class="circle icon c-{classe}"></i>
+									<div class="content">
+										<div class="header"> <xsl:value-of select="nom-page-accueil/item[@lang=$current-language]"/> </div>
+									</div>
+								</a>
+							</xsl:for-each>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section> <!-- end reserves de biosphère  -->
+		<section class="contact">
+			<div class="ui container">
+				<div >
+					<div> <!-- suivez nous -->
+						<h2 class="marron" style="text-align:center">
+							<xsl:choose>
+								<xsl:when test="$current-language='fr'">Suivez-nous...</xsl:when>
+								<xsl:otherwise>Follow us...</xsl:otherwise>
+							</xsl:choose>
+						</h2>
+					
+						<div class="ui left aligned selection list">
+							
+							<div class="item"> <!--lien facebook-->
+
+								<img class="ui avatar image" src="/workspace/img/facebook-logo.svg" alt=""></img>
+								<div class="content">
+									<a href="https://www.facebook.com/manbiospherefrance/"  target="_blank">
+										<div class="header">
+											<xsl:choose>
+												<xsl:when test="$current-language='fr'">Sur Facebook</xsl:when>
+												<xsl:otherwise>On Facebook</xsl:otherwise>
+											</xsl:choose>
+										</div>
+									</a>
+								</div>
+
+							</div> <!-- fin lien facebook-->
+
+							<div class="item">
+								<img class="ui avatar image" src="/workspace/img/instagram-logo.svg" alt=""></img>
+								<div class="content">
+									<a href="https://www.instagram.com/man_biosphere.france/"  target="_blank">
+										<div class="header">
+											<xsl:choose>
+												<xsl:when test="$current-language='fr'">Sur Instagram</xsl:when>
+												<xsl:otherwise>On Instagram</xsl:otherwise>
+											</xsl:choose>
+										</div>
+									</a>
+								</div>
+							</div>
+							<div class="item">
+								<img class="ui avatar image" src="/workspace/img/vimeo-social-logo.svg" alt=""></img>
+								<div class="content">
+									<a href="https://vimeo.com/user8895387"  target="_blank">
+										<div class="header">
+											<xsl:choose>
+												<xsl:when test="$current-language='fr'">Sur Vimeo</xsl:when>
+												<xsl:otherwise>On Vimeo</xsl:otherwise>
+											</xsl:choose>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div> 
+					</div><!-- fin suivez nous -->
+					<br/>
+					<div> <!-- contactez nous -->
+						<h2 class="marron" style="text-align:center">
+							<xsl:choose>
+								<xsl:when test="$current-language='fr'">Contactez-nous</xsl:when>
+								<xsl:otherwise>Contact-us</xsl:otherwise>
+							</xsl:choose>
+						</h2>
+						<p>MAB France
+							<br/>24, chemin de Borderouge,
+							<br/>Auzeville CS 52627
+							<br/>31326 Castanet Tolosan Cedex
+							<br/>contact[at]mab-france.org
+						</p>
+					</div> <!-- fin contactez nous -->
+					<br/>
+					<br/>
+					<div style="text-align:center"> <!-- adherez -->
+						<xsl:choose>
+							<xsl:when test="$current-language='fr'">  
+								<!-- changt de place du rejoignez nous 2020/03/18 -->
+								<a id="Rejoignez-nous!" href="{$root}/fr/le-programme-mab/rejoignez-nous/">
+									<h2 class="marron">Adhérez à notre association</h2>
+									<img class="ui tiny centered image" src="{$workspace}/img/logos/france-2016.png" alt="logo du Mab France" />
+								</a>
+							</xsl:when>
+							<xsl:otherwise>
+								<a href="{$root}/en/man-and-biosphere/joinus/">
+									<h2 class="marron">Join our association</h2>
+									<img class="ui tiny centered image" src="{$workspace}/img/logos/france-2016.png" alt="logo du Mab France" />
+								</a>
+						</xsl:otherwise>
+						</xsl:choose>
+
+					</div> <!-- finadherez -->
+				</div>
+			</div>
+		</section>
+	</div>
+
 
 	</xsl:template>
 </xsl:stylesheet>
