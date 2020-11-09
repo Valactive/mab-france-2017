@@ -2,7 +2,7 @@
 <xsl:stylesheet version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:template name="home">
-
+<!-- test git -->
 		<div  class="hero"  style="position:relative">
 			<picture title="photo d'une biosphere">
 				<xsl:variable name = "photo" select="/data/page-accueil-photo/entry"/>
