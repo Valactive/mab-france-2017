@@ -15,7 +15,7 @@ class datasourcepage_accueil_photo extends SectionDatasource
     public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 
     public $dsParamFILTERS = array(
-        '176' => 'yes',
+        '177' => 'yes',
     );
 
     public $dsParamINCLUDEDELEMENTS = array(
