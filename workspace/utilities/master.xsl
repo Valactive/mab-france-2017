@@ -296,7 +296,7 @@
 								<div class="ui horizontal list">
 									<div class="item">©MAB FRANCE 2019</div>
 
-									<a class="item" href="https://intranet.mab-france.org/fr/" target="_blank">intranet</a>
+									<a class="item" href="https://intranet.mab-france.org/" target="_blank">intranet</a>
 									<a class="item" href="{$root}/{$current-language}/mentions-legales/">Mentions-légales/crédits/RGPD</a>
 
 								</div>
