@@ -118,7 +118,7 @@
 					<!-- <meta name="google-site-verification" content="AJta6kSh11NpeCGrwds_aC7awKODbNvE4hh7jv9hW9U" /> -->
 					<!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
 					<xsl:call-template name="partage-facebook" />
-					<link rel="shortcut icon" href="/favicon.ico" />
+					<link rel="shortcut icon" href="{$workspace}/favicon.ico" />
 					<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 					<!-- google font open sans -->
 					<link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400,700i" rel="stylesheet" />
@@ -139,7 +139,7 @@
 					<!-- <meta name="google-site-verification" content="AJta6kSh11NpeCGrwds_aC7awKODbNvE4hh7jv9hW9U" /> -->
 					<!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
 					<xsl:call-template name="partage-facebook" />
-					<link rel="shortcut icon" href="/favicon.ico" />
+					<link rel="shortcut icon" href="{$workspace}/favicon.ico" />
 					<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 					<!-- google font open sans -->
 					<link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400,700i" rel="stylesheet" />
