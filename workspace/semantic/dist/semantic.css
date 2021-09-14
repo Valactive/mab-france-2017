@@ -361,6 +361,12 @@ h2 {
 .c-fakarava {
   color: #f27e75 !important;
 }
+.c-martinique {
+  color:#356791 !important;
+}
+.c-moselle {
+   color:#E66B9C !important;
+}
 .cls-1 {
   fill: #e8e9e9;
 }
@@ -372,6 +378,10 @@ h2 {
 .cls-14,
 .cls-15,
 .cls-16,
+.cls-17,
+.cls-18,
+.cls-19,
+.cls-20,
 .cls-2,
 .cls-3,
 .cls-4,
@@ -382,7 +392,9 @@ h2 {
 .cls-9 {
   fill-rule: evenodd;
 }
-.cls-2 {
+
+
+.cls-21 {
   fill: #b1563d;
 }
 .cls-3 {
@@ -429,6 +441,12 @@ h2 {
 }
 .cls-17 {
   fill: #b3ddd0;
+}
+.cls-19 {
+  fill: #356791;
+}
+.cls-20 {
+  fill: #E66B9C;
 }
 .cls-1 {
   fill: #e8e9e9;
@@ -687,7 +705,7 @@ section.reserves {
   background-image: url(/workspace/img/fond-reserves-blanc.png), url(/workspace/img/fond-reserves.png);
   background-size: 70% 100%, 97% 100%;
   position: relative;
-  margin-top: -4em;
+  margin-top: -7em;
   min-height: 22em;
   background-position: right top, left 13px;
   background-repeat: no-repeat, no-repeat;
@@ -869,6 +887,7 @@ h2.osliv {
 }
 section.contact {
   background: url(/workspace/img/fond-section-contact.jpg) 100% 100% no-repeat;
+  background-size: cover;
   padding-top: 3em;
   padding-bottom: 6em;
 }
