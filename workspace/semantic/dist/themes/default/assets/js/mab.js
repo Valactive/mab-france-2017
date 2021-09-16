@@ -72,28 +72,34 @@ semantic.ready = function () {
     });
 
   // LISTE RB hover
-  $('a', '.list-rb').mouseover(function () {
-    rb = $(this).data("reserve") + '-on';
+  $('a', '.list-rb').on("mouseover",function () {
+    var rb = $(this).data("reserve") + '-on';
     $("path[data-reserve='" + rb + "']").hide();
-  }).mouseleave(function (e) {
+  }).on("mouseleave",function (e) {
     $("path[data-reserve='" + rb + "']").show();
   });
 
+  // init popup for each path on the map
+  $('path').popup();  
   // CARTE RB hover
-  $('path', '#reserves-on').mouseenter(function (e) {
+  $('path', '#reserves-on').on("mouseenter", function (e) {
     //set active status in rb list
-    rb_on = $(this).data('reserve');
+    var rb_on = $(this).data('reserve');
     rb = rb_on.split('-');
     rb = rb[0];
     var listTarget = $(".item[data-reserve='" + rb + "']");
     listTarget.toggleClass('hovered');
     listTarget.addClass('cursor','pointer');
     $("path[data-reserve='" + rb_on + "']").hide();
+    $(this).popup({
+      content: 'the rb'
+    })
   });
 
-  $('path', '#reserves-off').mouseleave(function () {
-    //rb_id = '#' + $(this).data('reserve') + '-on';
-    $("path[data-reserve='" + rb_on + "']").show();
+  $('path', '#reserves-off').on("mouseleave", function () {
+    var rb_id = $(this).data('reserve') + '-on';
+    console.log('mouseleave : ' + rb_id);
+    $("path[data-reserve='" + rb_id + "']").show();
     $('a', '.list-rb').removeClass('hovered');
   });
   $('path', '#reserves-off').popup({
@@ -102,7 +108,7 @@ semantic.ready = function () {
 
   $("path", "#reserves-off").on("click", function() {
     //console.log('click');
-    rb_on = $(this).data('reserve');
+    var rb_on = $(this).data('reserve');
     rb = rb_on.split('-');
     rb = rb[0];
     var listTarget = $(".item[data-reserve='" + rb + "']").attr('href');
