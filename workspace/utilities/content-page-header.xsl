@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- ********************************************************************** -->
+<!-- *  fil d'ariane                                                      * -->
+<!-- *  Rappel du titre de la page                                        * -->
+<!-- *                                                                    * -->
+<!-- *  A appeler sur toutes les pages                                    * -->
+<!-- *                                                                    * -->
+<!-- *                                                                    * -->
+<!-- *                                                                    * -->
+<!-- *                                                                    * -->
+<!-- ********************************************************************** -->
+
+
 <xsl:stylesheet version="1.0" 
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:template name="content-page-header">
@@ -7,8 +19,7 @@
 				<div class="bkg-breadcrumb">
 					<div class="ui breadcrumb container">
 						<a href="{$root}/{$url-lang}" class="section">
-							<i class="home icon"></i>
-							<!-- <xsl:value-of select="$page-title"></xsl:value-of> -->
+							<i class="home icon"></i>->
 						</a>
 						<!-- rubrique ? (non cliquable) -->
 						<xsl:if test="$rubrique !=''">
@@ -48,7 +59,7 @@
 					</h1>
 				</div>
 				<!-- end page header -->
-			</div>
+		</div>
 			<!-- end breadcrumb -->
 
 	</xsl:template>

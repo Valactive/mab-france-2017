@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- ********************************************************************** -->
+<!-- *  construit toutes les pages                                        * -->
+<!-- *  en tete computer                        		   	              * -->
+<!-- *  en tete mobile contenu de la page                                 * -->
+<!-- *  menu computer                                                     * -->
+<!-- *  menu mobile                                                       * -->
+<!-- *  contenu de la page                                                * -->
+<!-- *  footer                                                            * -->
+<!-- *                                                                    * -->
+<!-- *  STMSEARCH pour ajouter des sections au champ "rechercher"         * -->
+<!-- *                                                                    * -->
+<!-- *                                                                    * -->
+<!-- *                                                                    * -->
+
+<!-- ********************************************************************** -->
+
+
 <!-- master des pages du site mab-france.org -->
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:string="http://symphony-cms.com/functions">
 	<!-- <xsl:import href="page-title.xsl"/><xsl:import href="date-time.xsl"/><xsl:import href="mab-menu-principal.xsl"/><xsl:import href="mab-menu-secondaire.xsl"/><xsl:import href="mab-menu-footer.xsl"/><xsl:import href="menu-langue.xsl"/><xsl:import href="get-diaporama.xsl"/><xsl:import href="get-actualites.xsl"/><xsl:import href="get-publications.xsl"/><xsl:import href="string-utils.xsl"/><xsl:import href="actions.xsl"/><xsl:import href="tools.xsl"/> -->
@@ -68,6 +85,27 @@
 				<!-- recup de la version traduite du nom de l'entrée -->
 				<xsl:variable name="nom-laureat-lang" select="/data/laureat-detail/entry/laureat-nom[item/@handle=$nom-laureat]/item[@lang=$next-lang]/@handle"/>
 				<xsl:value-of select="concat($nom-laureat-lang,'/')"/>
+			</xsl:when>
+			<!-- STM 27/08/2021-->
+			<!--  changement de langue quand on est sur la page biosphere =>  $nom -->
+			<xsl:when test="$rubrique = '' and $current-page-id = '4'">
+				<!-- recup de la version traduite du nom de l'entrée -->
+				<xsl:variable name="nom-lang" select="/data/biosphere/entry/nom[item/@handle=$nom]/item[@lang=$next-lang]/@handle"/>
+				<xsl:value-of select="concat($nom-lang,'/')"/>
+			</xsl:when>
+			<!--  changement de langue quand on est sur la page search =>  $nom -->
+			<xsl:when test="$rubrique = '' and $current-page-id = '13'">
+				<!--  STM a completer avec les parametres passes-->	
+				<xsl:variable name="page-de-recherche">	
+					<xsl:value-of select="/data/navigation/page[@id = 13]//item[@lang=$next-lang]/@handle"></xsl:value-of>
+				</xsl:variable>
+				<form action="/{$page-de-recherche}/" method="get">
+					<div class="ui icon input">
+						<i class="search icon"></i>
+						<input type="hidden"  name="keywords" value="$url-keywords"/>
+						<input type="hidden" name="sections" value="biosphere,eco-acteurs,page,laureat,actualites-publications" />
+					</div>
+				</form>	
 			</xsl:when>
 			<xsl:otherwise></xsl:otherwise>
 		</xsl:choose>
@@ -149,7 +187,7 @@
 					<!--<link rel="stylesheet" href="{$workspace}/semantic/dist/semantic.min.css" />-->
 				</xsl:otherwise>
 			</xsl:choose>
-<!-- tarteaucitron-->		
+			<!-- tarteaucitron-->		
 			 <script type="text/javascript" src="{$workspace}/tarteaucitron/tarteaucitron.js"></script>
 
         <script type="text/javascript">
@@ -177,7 +215,7 @@
     	  "readmoreLink": "/cookiespolicy" /* Change the default readmore link */
         });
         </script>
-<!--fin tarteaucitron-->		
+		<!--fin tarteaucitron-->		
 		</head>
 
 		<body>
@@ -196,14 +234,10 @@
 			<!-- TOP HEADER -->
 			<div class="pusher">
 
-						
-				<div class="ui internally right aligned grid menu secondary site-top-header computer only">
-					
+				<!-- EN TETE COMPUTER -->		
+				<div class="ui internally right aligned grid menu secondary site-top-header computer only">		
 					<!-- sitename -->
-					<div class="seven wide column left floated right aligned middle aligned content">
-						
-
-
+					<div class="six wide column left floated right aligned middle aligned content">
 						<span class="site-name">
 							<xsl:value-of select="$website-name"></xsl:value-of>
 						</span>
@@ -215,13 +249,49 @@
 						</a>
 					</div>
 					<!-- baseline -->
-					<div class="left floated left aligned four wide column middle aligned content">
+					<div class="three wide column middle aligned content">
 						<span class="site-baseline">L'Homme &amp; la Biosphère<br />Man &amp; the Biosphere</span>
 					</div>
 					<!-- que les cas de creation de page dynamique-->
-			<!-- Bouton changement de langue-->
-					<div class="right floated right aligned middle aligned content three wide column">
-						<a class="ui mini button right floated lang-switcher">
+					<!-- STMSEARCH -->
+					<!-- Bouton recherche-->		
+					<div class="three wide column middle aligned content">
+						<xsl:variable name="page-de-recherche">
+							<xsl:value-of select="concat($root,'/',$current-language,'/',/data/navigation/page[@id = 13]//item[@lang=$current-language]/@handle,'/')"></xsl:value-of>
+						</xsl:variable>
+
+						<form action="{$page-de-recherche}" method="get">
+							<div class="ui icon input">
+								<i class="search icon"></i>
+								<input class="ui mini button" placeholder="{$page-de-recherche}" type="text" name="keywords"/>
+								<input type="hidden" name="sections" value="biosphere,eco-acteurs,page,laureat,actualites-publications" />
+							</div>
+						</form>	
+
+					<!--	<xsl:choose>
+							
+							<xsl:when test="$current-language = 'fr'">
+								<form action="/recherche/" method="get">
+									<div class="ui icon input">
+										<i class="search icon"></i>
+										<input class="ui mini button" placeholder="Recherche" type="text" name="keywords"/>
+										<input type="hidden" name="sections" value="biosphere,eco-acteurs,page" />
+									</div>
+								</form>					
+							</xsl:when>
+							<xsl:otherwise>
+								<form action="/search/" method="get">
+									<div class="ui icon input">
+										<i class="search icon"></i>
+										<input class="ui mini button" placeholder="Search" type="text" name="keywords"/>
+										<input type="hidden" name="sections" value="biosphere,eco-acteurs,page" />
+									</div>
+								</form>
+							</xsl:otherwise>
+						</xsl:choose>-->
+					</div> <!-- class="three wide column middle aligned content" -->
+					<div class="two wide column middle aligned content">	
+						<a class="ui mini button">
 							<xsl:choose>
 								<xsl:when test="$current-language = 'fr'">
 									<xsl:attribute name="href">
@@ -239,11 +309,11 @@
 								</xsl:otherwise>
 							</xsl:choose>
 						</a>
-					</div> <!--right floated right aligned middle aligned content three wide column-->
+					</div> <!--class="two wide column middle aligned content"-->
 					<!-- fin menu langue -->
-					
-				</div>
-				<!-- MENU MOBILE / TABLETTE -->
+				</div> 	<!-- FIN EN TETE COMPUTER -->	
+
+				<!-- MENU MOBILE / TABLETTE STM ajouter le bouton recherhce-->
 				<div class="ui three column grid menu secondary container site-top-header tablet only mobile only">
 					<div class="row">
 						<div class="column">
@@ -294,7 +364,7 @@
 						<div class="ui container grid">
 							<div class="column">
 								<div class="ui horizontal list">
-									<div class="item">©MAB FRANCE 2019</div>
+									<div class="item">©MAB FRANCE 2019-2021</div>
 
 									<a class="item" href="https://intranet.mab-france.org/" target="_blank">intranet</a>
 									<a class="item" href="{$root}/{$current-language}/mentions-legales/">Mentions-légales/crédits/RGPD</a>
@@ -311,15 +381,13 @@
 			<script src="{$workspace}/js/jquery-ui.min.js"></script>
 			<script src="{$workspace}/js/jquery.tocify.min.js"></script>
 			<script src="{$workspace}/semantic/dist/themes/default/assets/js/mab.js"></script>
-<!-- STM-->			
-		  <script type="text/javascript">
-        tarteaucitron.user.gajsUa = 'UA-2132372-18';
-        tarteaucitron.user.gajsMore = function () { /* add here your optionnal _ga.push() */ };
-        (tarteaucitron.job = tarteaucitron.job || []).push('gajs');
-        </script>
-
-		
-<!-- fin STM-->		
+			<!-- autorisation cookies-->			
+		  	<script type="text/javascript">
+ 		    	tarteaucitron.user.gajsUa = 'UA-2132372-18';
+        		tarteaucitron.user.gajsMore = function () { /* add here your optionnal _ga.push() */ };
+        		(tarteaucitron.job = tarteaucitron.job || []).push('gajs');
+       		</script>
+	
 		</body>
 
 		</html>

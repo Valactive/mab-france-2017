@@ -28,8 +28,8 @@ class datasourcelaureats extends SectionDatasource
         'laureat-presentation: all-languages: formatted',
         'image-a-la-une',
         'logo-odd',
-        'biosphere-trophee',
-        'annee-trophee'
+        'annee-trophee',
+        'biosphere-trophee'
     );
 
     public function __construct($env = null, $process_params = true)
@@ -47,7 +47,7 @@ class datasourcelaureats extends SectionDatasource
                 'website' => 'http://mab-france.localhost',
                 'email' => 'staminh@valactive.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-10-04T09:18:43+00:00'
+            'release-date' => '2021-09-09T12:27:54+00:00'
         );
     }
 

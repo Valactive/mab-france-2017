@@ -21,6 +21,7 @@ class datasourcebiosphere extends SectionDatasource
     public $dsParamFILTERS = array(
         '124' => '{$nom}',
         '45' => 'yes',
+        '181' => '{$url-keywords}',
     );
 
     public $dsParamINCLUDEDELEMENTS = array(
@@ -70,7 +71,7 @@ class datasourcebiosphere extends SectionDatasource
                 'website' => 'http://mab-france.localhost',
                 'email' => 'staminh@valactive.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-09-09T18:05:26+00:00'
+            'release-date' => '2021-09-01T14:10:55+00:00'
         );
     }
 

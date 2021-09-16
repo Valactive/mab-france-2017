@@ -299,7 +299,7 @@
 				<div class="ui grid">
 					<div class="column five wide">
 						<div class="ui list list-rb">
-							<xsl:for-each select="/data/liste-reserves-de-biosphere/entry">
+							<xsl:for-each select="/data/liste-reserves-de-biosphere/entry">			
 								<a data-reserve="{classe}" href="{$root}/{$current-language}/{/data/navigation/page[@id=4]/item[@lang=$current-language]/@handle}/{nom/item[@lang=$current-language]/@handle}/" class="item">
 									<i class="circle icon c-{classe}"></i>
 									<div class="content">

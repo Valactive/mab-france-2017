@@ -12,11 +12,11 @@
 		omit-xml-declaration="yes"
 		encoding="UTF-8"
 		indent="yes" />
-
+		
 		<xsl:template match="data">
-			<xsl:variable name="logo-officiel-id">
+			<!--<xsl:variable name="logo-officiel-id">
 				<xsl:value-of select="/data/biosphere/entry/logo-officiel/item/@id"/>
-			</xsl:variable>
+			</xsl:variable>-->
 			<!-- page header -->
 			<section class="ui grid padded biosphere page-head">
 				<div class="ui grid container">
@@ -24,7 +24,7 @@
 						<div class="two wide column items">
 							<div class="ui item">
 								<div class="image">
-									<img class="ui tiny right floated image" src="{$root}/image/1/75/0{/data/biosphere-logo-officiel/entry/image-ref-logo/@path}/{/data/biosphere-logo-officiel/entry/image-ref-logo/filename}" alt="{/data/biosphere-logo-officiel/entry/nom-ref-logo}"/>
+									<img class="ui right floated image" src="{$root}/image/1/100/0{/data/biosphere-logo-officiel/entry/image-ref-logo/@path}/{/data/biosphere-logo-officiel/entry/image-ref-logo/filename}" alt="{/data/biosphere-logo-officiel/entry/nom-ref-logo}"/>
 								</div>
 							</div>
 						</div>

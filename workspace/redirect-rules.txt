@@ -1,5 +1,5 @@
-RewriteCond %{THE_REQUEST} /(popup/partage-dexperience-autour-de-l-anguille-entre-les-acteurs-des-reserves-de-biosphere-du-bassin-de-la-dordogne-et-du-delta-du-po) [NC]
-RewriteRule ^(.+)$ https://mab-france.org/fr/reserve-de-biosphere/bassin-de-la-dordogne/ [R=301,L,NE]
+RewriteCond %{THE_REQUEST} /(popup/partage-dexperience-autour-de-l-anguille-entre-les-acteurs-des-reserves-de-biosphere-du--de-la-dordogne-et-du-delta-du-po) [NC]
+RewriteRule ^(.+)$ https://mab-france.org/fr/reserve-de-biosphere/-de-la-dordogne/ [R=301,L,NE]
 RewriteCond %{THE_REQUEST} /(publication/ecosystem-services-social-interdependencies-and-collective-action-a-conceptual-framework) [NC]
 RewriteRule ^(.+)$ https://mab-france.org/fr/la-recherche/les-projets/les-services-ecosystemiques/ [R=301,L,NE]
 
@@ -55,8 +55,8 @@ RewriteCond %{THE_REQUEST} /(biosphere/reserve-de-biosphere-de-la-commune-de-fak
 RewriteRule ^(.+)$ https://mab-france.org/fr/reserve-de-biosphere/commune-de-fakarava/ [R=301,L,NE]
 RewriteCond %{THE_REQUEST} /(dialoguer-pour-mieux-gerer/coupe-des-arbres-en-foret/15/) [NC]
 RewriteRule ^(.+)$ https://mab-france.org/fr/ [R=301,L,NE]
-RewriteCond %{THE_REQUEST} /(biosphere/reserve-de-biosphere-du-bassin-de-la-dordogne/) [NC]
-RewriteRule ^(.+)$ https://mab-france.org/fr/reserve-de-biosphere/bassin-de-la-dordogne/ [R=301,L,NE]
+RewriteCond %{THE_REQUEST} /(biosphere/reserve-de-biosphere-du--de-la-dordogne/) [NC]
+RewriteRule ^(.+)$ https://mab-france.org/fr/reserve-de-biosphere/-de-la-dordogne/ [R=301,L,NE]
 RewriteCond %{THE_REQUEST} /(acquerir-des-connaissances/sciences-participatives/193/) [NC]
 RewriteRule ^(.+)$ https://mab-france.org/fr/la-recherche/groupe-recherche/ [R=301,L,NE]
 RewriteCond %{THE_REQUEST} /(transmettre-les-savoirs/partenariats-universitaires/75/) [NC]

@@ -20,40 +20,40 @@
 		<!-- si $rubrique ok et $sous-rubrique ok = $sous-rubrique -->
 		<!-- vrai page ? -->
 		<!-- <div class="ui vertical "><h1><xsl:value-of select="plh-page/page/item[@lang=$language]"/></h1><xsl:value-of select="page-content/entry/rubrique-parente/item"></xsl:value-of> /
-	</div> -->
-	<!-- nom de la rubrique parente -->
-	<xsl:choose>
+		</div> -->
+		<!-- nom de la rubrique parente -->
+		<xsl:choose>
+			<xsl:when test="$rubrique ='' and $s-rubrique = '' and $ss-rubrique = ''">
+				<!-- home page -->
+				<xsl:call-template name="home"></xsl:call-template>
+				<!-- <h1><xsl:value-of select="page-content-1level/entry/nom/item[@lang=$language]"/></h1><p><xsl:copy-of select="page-content-1level/entry/contenu"></xsl:copy-of></p> -->
+				
+				<section class="menu-footer ">
+					<xsl:call-template name="mab-menu-principal-footer"/>
+				</section>
+			</xsl:when>
 
-		<xsl:when test="$rubrique ='' and $s-rubrique = '' and $ss-rubrique = ''">
-			<!-- home page -->
-			<xsl:call-template name="home"></xsl:call-template>
-			<!-- <h1><xsl:value-of select="page-content-1level/entry/nom/item[@lang=$language]"/></h1><p><xsl:copy-of select="page-content-1level/entry/contenu"></xsl:copy-of></p> -->
-			
-			<section class="menu-footer ">
-				<xsl:call-template name="mab-menu-principal-footer"/>
-			</section>
-		</xsl:when>
+			<xsl:when test="/data/menu-principal/entry[nom/item[@lang=$current-language]/@handle=$s-rubrique]/@id = 22">
+				<xsl:call-template name="list-eco-acteurs"></xsl:call-template>
+			</xsl:when>
 
-		<xsl:when test="/data/menu-principal/entry[nom/item[@lang=$current-language]/@handle=$s-rubrique]/@id = 22">
-			<xsl:call-template name="list-eco-acteurs"></xsl:call-template>
-		</xsl:when>
+			<xsl:when test="/data/menu-principal/entry[nom/item[@lang=$current-language]/@handle=$s-rubrique]/@id = 2187">
+				<xsl:call-template name="list-laureats"></xsl:call-template>
+			</xsl:when>	
 
-		<xsl:when test="/data/menu-principal/entry[nom/item[@lang=$current-language]/@handle=$s-rubrique]/@id = 2187">
-			<xsl:call-template name="list-laureats"></xsl:call-template>
-		</xsl:when>	
-
-		<!-- pages de contenus -->
-		<xsl:otherwise>
-			<xsl:call-template name="page-content-with-toc"></xsl:call-template>
-		</xsl:otherwise>
-	</xsl:choose>
-</xsl:template>
-<xsl:template name="partage-facebook"> <!-- partage facebook sur page actualite-->
-			<meta property="og:site_name" content="Mab-France" />
-			<meta property="og:type" content="website" />
-			<meta property="og:url" content="{$current-url}" />
-			<meta property="og:title" content="Mab-France" />			
-			<meta property="og:description" content="Depuis 1971, le programme sur l'Homme et la Biosphère MAB (Man and the Biosphere) de l'UNESCO œuvre de manière responsable à l’édification de sociétés prospères en harmonie avec la biosphère. " />
-			<meta property="og:image" content="{$workspace}/img/1/280/0/logos/france-2016.png" />
-</xsl:template>
+			<!-- pages de contenus -->
+			<xsl:otherwise>
+				<xsl:call-template name="page-content-with-toc"></xsl:call-template>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:template>
+	
+	<xsl:template name="partage-facebook"> <!-- partage facebook sur page actualite-->
+				<meta property="og:site_name" content="Mab-France" />
+				<meta property="og:type" content="website" />
+				<meta property="og:url" content="{$current-url}" />
+				<meta property="og:title" content="Mab-France" />			
+				<meta property="og:description" content="Depuis 1971, le programme sur l'Homme et la Biosphère MAB (Man and the Biosphere) de l'UNESCO œuvre de manière responsable à l’édification de sociétés prospères en harmonie avec la biosphère. " />
+				<meta property="og:image" content="{$workspace}/img/1/280/0/logos/france-2016.png" />
+	</xsl:template>
 </xsl:stylesheet>

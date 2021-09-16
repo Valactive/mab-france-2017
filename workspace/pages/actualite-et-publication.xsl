@@ -97,7 +97,7 @@
 	<xsl:template name="partage-facebook"> <!-- partage facebook sur page actualite-->
 			<meta property="og:url"           content="{$current-url}" />
 			<meta property="og:type"          content="website" />
-			<meta property="og:title"         content="Mab France, actualite" />
+			<meta property="og:title"         content="Mab France, actualité" />
 			<meta property="og:description"   content="Actualité du mab France. {data/actualite-detail/entry/titre}. " />
 			<meta property="og:image"         content="{$root}/image/1/280/0/{data/actualite-detail/entry/image-a-la-une/@path}/{data/actualite-detail/entry/image-a-la-une/filename}" />
 	</xsl:template>

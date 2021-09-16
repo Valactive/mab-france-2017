@@ -19,6 +19,7 @@ class datasourceliste_reserves_de_biosphere extends SectionDatasource
     );
 
     public $dsParamINCLUDEDELEMENTS = array(
+        'system:pagination',
         'nom: all-languages: formatted',
         'nom-page-accueil: all-languages: formatted',
         'classe'
@@ -36,10 +37,10 @@ class datasourceliste_reserves_de_biosphere extends SectionDatasource
             'name' => 'Liste réserves de biosphère',
             'author' => array(
                 'name' => 'Sophie Taminh',
-                'website' => 'https://www.mab-france.org',
+                'website' => 'http://mab-france.localhost',
                 'email' => 'staminh@valactive.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-11-18T10:37:09+00:00'
+            'release-date' => '2021-09-09T12:30:02+00:00'
         );
     }
 

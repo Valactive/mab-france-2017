@@ -5,7 +5,7 @@ require_once(EXTENSIONS.'/page_lhandles/lib/class.datasource.MultilingualNavigat
 class datasourcenavigation extends MultilingualNavigationDatasource
 {
     public $dsParamROOTELEMENT = 'navigation';
-    public $dsParamORDER = 'desc';
+    public $dsParamORDER = 'asc';
     public $dsParamREDIRECTONEMPTY = 'no';
     public $dsParamREDIRECTONFORBIDDEN = 'no';
     public $dsParamREDIRECTONREQUIRED = 'no';
@@ -21,11 +21,11 @@ class datasourcenavigation extends MultilingualNavigationDatasource
         return array(
             'name' => 'Navigation',
             'author' => array(
-                'name' => 'Valéry Frisch',
-                'website' => 'http://mab-france-new.localhost',
-                'email' => 'valery.frisch@gmail.com'),
+                'name' => 'Sophie Taminh',
+                'website' => 'http://mab-france.localhost',
+                'email' => 'staminh@valactive.com'),
             'version' => 'Symphony 2.7.2',
-            'release-date' => '2018-06-17T10:43:41+00:00'
+            'release-date' => '2021-08-30T11:30:25+00:00'
         );
     }
 
