@@ -242,7 +242,7 @@
 								<xsl:value-of select="$website-name"></xsl:value-of>
 							</span>
 						</div>
-						<!-- logo - lien home page  -->
+						<!-- logo - lien home page  --> 
 						<div class="two wide column middle aligned content">
 							<a href="{$root}" class="ui tiny image" style="background-color:white">
 								<img src="{$workspace}/img/logos/logo-mab-2021.svg" alt="logo du Mab France 2021" />
