@@ -26,7 +26,7 @@
 		<div >
 			<div class="ui container grid "  >
 				<section class="row page-header ui grid">
-					<h1>
+					<h1 style="padding-top:3rem">
 					<xsl:choose>
 						<xsl:when test="$current-language='fr'">Recherche sur </xsl:when>
 						<xsl:otherwise>Search on </xsl:otherwise>
