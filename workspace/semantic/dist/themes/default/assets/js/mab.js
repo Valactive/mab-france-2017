@@ -76,6 +76,7 @@ semantic.ready = function () {
     var rb = $(this).data("reserve") + '-on';
     $("path[data-reserve='" + rb + "']").hide();
   }).on("mouseleave",function (e) {
+    var rb = $(this).data("reserve") + '-on';
     $("path[data-reserve='" + rb + "']").show();
   });
 
@@ -98,7 +99,6 @@ semantic.ready = function () {
 
   $('path', '#reserves-off').on("mouseleave", function () {
     var rb_id = $(this).data('reserve') + '-on';
-    console.log('mouseleave : ' + rb_id);
     $("path[data-reserve='" + rb_id + "']").show();
     $('a', '.list-rb').removeClass('hovered');
   });
@@ -121,7 +121,6 @@ semantic.ready = function () {
     debug: true,
     onChange: function (value, text) {
       //redirect with url param for filtering items
-      console.log("ok");
       if(value !== 'all'){
         removedParam = removeParam('numpage');
         addParam = insertParam('biosphere', value);
@@ -161,7 +160,6 @@ semantic.ready = function () {
       debug: true,
       onChange: function (value, text) {
         //redirect with url param for filtering items
-        console.log("ok");
         if(value !== 'all'){
           removedParam = removeParam('numpage');
           addParam = insertParam('annee', value);
@@ -180,7 +178,6 @@ semantic.ready = function () {
       debug: true,
       onChange: function (value, text) {
         //redirect with url param for filtering items
-        console.log("ok");
         if(value !== 'all'){
           removedParam = removeParam('numpage');
           addParam = insertParam('biosphere', value);
@@ -220,7 +217,6 @@ semantic.ready = function () {
       debug: true,
       onChange: function (value, text) {
         //redirect with url param for filtering items
-        console.log("ok");
         if(value !== 'all'){
           removedParam = removeParam('numpage');
           addParam = insertParam('annee', value);
@@ -257,7 +253,6 @@ semantic.ready = function () {
       debug: true,
       onChange: function (value, text) {
         //redirect with url param for filtering items
-        console.log("ok");
         if(value !== 'all'){
           removedParam = removeParam('numpage');
           addParam = insertParam('biosphere', value);

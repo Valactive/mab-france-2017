@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- ********************************************************************** -->
+<!-- *  résultat de recherche                                             * -->
+<!-- *  création 17/09/2021					                              * -->
+<!-- *                			                                   		  * -->
+<!-- *  RaF : chgt de langue                                              * -->
+<!-- *                                                                    * -->
+<!-- *                                                                    * -->
+<!-- *                                                                    * -->
+<!-- *                                                                    * -->
+<!-- ********************************************************************** -->
+
 <xsl:stylesheet version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
@@ -9,8 +20,6 @@
 	omit-xml-declaration="yes"
 	encoding="UTF-8"
 	indent="yes" />
-
-
 
 <xsl:template match="data">
 
@@ -38,10 +47,9 @@
 									<xsl:value-of select="nom[@lang=$current-language]/@handle"/>
 									<i class="arrow alternate circle right outline icon"></i>
 									<br/>
-									<strong>Biosphere</strong> <!-- <xsl:value-of select="nom"/> -->
+									<strong>Biosphere</strong>
 									<div class="image">
-										<img src="{$root}/image/1/100/0{/data/biosphere-logo-officiel/entry/image-ref-logo/@path}/{/data/biosphere-logo-officiel/entry/image-ref-logo/filename}" alt="{/data/biosphere-logo-officiel/entry/nom-ref-logo}"/>
-										
+										<img src="{$root}/image/1/100/0{/data/biosphere-logo-officiel/entry/image-ref-logo/@path}/{/data/biosphere-logo-officiel/entry/image-ref-logo/filename}" alt="{/data/biosphere-logo-officiel/entry/nom-ref-logo}"/>	
 									</div>
 								</a>
 							</xsl:when>
@@ -54,7 +62,7 @@
 									<xsl:value-of select="eco-acteur-nom[@lang=$current-language]/@handle"/>
 									<i class="arrow alternate circle right outline icon"></i>
 									<br/>
-									<strong>Eco-acteur</strong> <!-- <xsl:value-of select="eco-acteur-nom"/> -->
+									<strong>Eco-acteur</strong>
 									<div class="image">
 										<img src="{$root}/image/1/100/0/{image-a-la-une/@path}/{image-a-la-une/filename}" alt="image à la une"/>
 									</div>
@@ -78,9 +86,6 @@
 										<xsl:variable name="page">
 											<xsl:value-of select="nom/@handle"/>
 										</xsl:variable>
-										<xsl:variable name="nom-page">
-											<xsl:value-of select="nom[@lang=$current-language]"/>
-										</xsl:variable>
 										<xsl:variable name="sous-menu">
 											<xsl:value-of select="menu-niveau-2-page/item/@handle"/>
 										</xsl:variable>
@@ -93,18 +98,12 @@
 										<xsl:variable name="menu">
 											<xsl:value-of select="/data/menu-principal/entry[@id=$id-menu]/rubrique-parente/item/@handle"/>
 										</xsl:variable>
-										<xsl:variable name="nom-menu">
-											<xsl:value-of select="/data/menu-principal/entry[@id=$id-menu]/rubrique-parente/item"/>
-										</xsl:variable>
 										<a href="{$root}/{$current-language}/{$menu}/{$sous-menu}/{$page}" target="_blank" title="En savoir plus">
 											<xsl:value-of select="$root"/>/
 											<xsl:value-of select="$current-language"/>/
 											<xsl:value-of select="$menu"/>/
 											<xsl:value-of select="$sous-menu"/>/
 											<xsl:value-of select="$page"/>										
-											<!-- Page :  <xsl:value-of select="$nom-page"/> <br/>
-											dans le menu :  <xsl:value-of select="$nom-page"/> <br/>
-											dans le sous menu : <xsl:value-of select="$nom-menu"/> -->
 											<i class="arrow alternate circle right outline icon"></i>
 										</a>
 									</xsl:when>
@@ -114,7 +113,6 @@
 											<xsl:value-of select="$root"/>/
 											<xsl:value-of select="$current-language"/>/
 											<xsl:value-of select="nom[@lang=$current-language]/@handle"/>/
-											<!-- Page : <xsl:value-of select="nom[@lang=$current-language]"/> -->
 											<i class="arrow alternate circle right outline icon"></i>
 											</a>
 									</xsl:otherwise>
@@ -129,7 +127,7 @@
 									<xsl:value-of select="laureat-nom[@lang=$current-language]/@handle"/>
 									<i class="arrow alternate circle right outline icon"></i>
 									<br/>
-									<strong>Lauréat des trophés</strong> <!-- <xsl:value-of select="nom"/> -->
+									<strong>Lauréat des trophés</strong>
 									<div class="image">
 										<img src="{$root}/image/1/100/0/{image-a-la-une/@path}/{image-a-la-une/filename}" alt="image à la une"/>
 									</div>
@@ -144,7 +142,7 @@
 									<xsl:value-of select="titre/@handle"/>
 									<i class="arrow alternate circle right outline icon"></i>
 									<br/>
-									<strong>Actualité/publication</strong> <!-- <xsl:value-of select="nom"/> -->
+									<strong>Actualité/publication</strong>
 									<div class="image">
 										<img src="{$root}/image/1/100/0/{image-a-la-une/@path}/{image-a-la-une/filename}" alt="image à la une"/>
 									</div>

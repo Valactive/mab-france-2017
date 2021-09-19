@@ -17,14 +17,15 @@
 
 
 <!-- master des pages du site mab-france.org -->
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:string="http://symphony-cms.com/functions">
+<xsl:stylesheet version="1.0"
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+	xmlns:string="http://symphony-cms.com/functions">
 	<!-- <xsl:import href="page-title.xsl"/><xsl:import href="date-time.xsl"/><xsl:import href="mab-menu-principal.xsl"/><xsl:import href="mab-menu-secondaire.xsl"/><xsl:import href="mab-menu-footer.xsl"/><xsl:import href="menu-langue.xsl"/><xsl:import href="get-diaporama.xsl"/><xsl:import href="get-actualites.xsl"/><xsl:import href="get-publications.xsl"/><xsl:import href="string-utils.xsl"/><xsl:import href="actions.xsl"/><xsl:import href="tools.xsl"/> -->
 	<xsl:import href="menu-principal.xsl" />
 	<xsl:import href="menu-principal-mobile.xsl" />
 	<xsl:import href="menu-principal-footer.xsl" />
 
-	<xsl:output method="html" doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
-	 omit-xml-declaration="yes" encoding="UTF-8" indent="yes" />
+	<xsl:output method="html" doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" omit-xml-declaration="yes" encoding="UTF-8" indent="yes" />
 
 	<xsl:variable name="is-logged-in" select="/data/events/login-info/@logged-in" />
 	<xsl:variable name="rubrique" />
@@ -95,17 +96,16 @@
 			</xsl:when>
 			<!--  changement de langue quand on est sur la page search =>  $nom -->
 			<xsl:when test="$rubrique = '' and $current-page-id = '13'">
-				<!--  STM a completer avec les parametres passes-->	
-				<xsl:variable name="page-de-recherche">	
+				<!--  STM a completer avec les parametres passes-->
+				<xsl:variable name="page-de-recherche">
 					<xsl:value-of select="/data/navigation/page[@id = 13]//item[@lang=$next-lang]/@handle"></xsl:value-of>
 				</xsl:variable>
 				<form action="/{$page-de-recherche}/" method="get">
 					<div class="ui icon input">
 						<i class="search icon"></i>
-						<input type="hidden"  name="keywords" value="$url-keywords"/>
 						<input type="hidden" name="sections" value="biosphere,eco-acteurs,page,laureat,actualites-publications" />
 					</div>
-				</form>	
+				</form>
 			</xsl:when>
 			<xsl:otherwise></xsl:otherwise>
 		</xsl:choose>
@@ -126,71 +126,71 @@
 		<!--[if IE 9]><html lang="{$current-language}" class="no-js ie9 lte-ie9 gte-ie9 gte-ie8 gte-ie7 gte-ie6"><![endif]-->
 		<!--[if !(lte IE 9)]><!-->
 		<html lang="{$current-language}" class="no-js">
-		<!--<![endif]-->
-		<xsl:comment>master.xsl</xsl:comment>
+			<!--<![endif]-->
+			<xsl:comment>master.xsl</xsl:comment>
 
-		<head>
-			<title>
-				<xsl:value-of select="$website-name"></xsl:value-of>
-			</title>
-			<!-- production -->
-			<xsl:choose>
-				<xsl:when test="$http-host = 'mab-france.org' or $http-host='www.mab-france.org'">
-					<!-- Global site tag (gtag.js) - Google Analytics -->
-				<script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-2132372-18"></script>
-				<script>
+			<head>
+				<title>
+					<xsl:value-of select="$website-name"></xsl:value-of>
+				</title>
+				<!-- production -->
+				<xsl:choose>
+					<xsl:when test="$http-host = 'mab-france.org' or $http-host='www.mab-france.org'">
+						<!-- Global site tag (gtag.js) - Google Analytics -->
+						<script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-2132372-18"></script>
+						<script>
 				window.dataLayer = window.dataLayer || [];
 				function gtag(){dataLayer.push(arguments);}
 				gtag('js', new Date());
 
 				gtag('config', 'UA-2132372-18');
-				</script>
-					<meta charset="utf-8" />
-					<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+						</script>
+						<meta charset="utf-8" />
+						<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
 							Remove this if you use the .htaccess -->
-					<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-					<meta name="keywords" content="MAB France, mab, Comité MAB France, Réserves de biosphère, Développement durable, programme mab, UNESCO, Comité français du mab, l'homme et la biosphère, Guadeloupe, Camargue, Cévennes, Luberon, Iroise, Ventoux, Fontainebleau, Tuamotu, Corse, Vosges" />
-					<meta name="author" content="valactive" />
-					<!-- Mobile viewport optimized: j.mp/bplateviewport -->
-					<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-					<!-- <meta name="google-site-verification" content="AJta6kSh11NpeCGrwds_aC7awKODbNvE4hh7jv9hW9U" /> -->
-					<!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-					<xsl:call-template name="partage-facebook" />
-					<link rel="shortcut icon" href="{$workspace}/favicon.ico" />
-					<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-					<!-- google font open sans -->
-					<link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400,700i" rel="stylesheet" />
-					<!-- CSS: implied media="all" -->
-					<link rel="stylesheet" href="{$workspace}/semantic/dist/semantic.min.css" />
-				</xsl:when>
-				<xsl:otherwise>
-					<!-- developpement -->
-					<meta charset="utf-8" />
-					<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+						<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+						<meta name="keywords" content="MAB France, mab, Comité MAB France, Réserves de biosphère, Développement durable, programme mab, UNESCO, Comité français du mab, l'homme et la biosphère, Guadeloupe, Camargue, Cévennes, Luberon, Iroise, Ventoux, Fontainebleau, Tuamotu, Corse, Vosges" />
+						<meta name="author" content="valactive" />
+						<!-- Mobile viewport optimized: j.mp/bplateviewport -->
+						<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+						<!-- <meta name="google-site-verification" content="AJta6kSh11NpeCGrwds_aC7awKODbNvE4hh7jv9hW9U" /> -->
+						<!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+						<xsl:call-template name="partage-facebook" />
+						<link rel="shortcut icon" href="{$workspace}/favicon.ico" />
+						<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+						<!-- google font open sans -->
+						<link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400,700i" rel="stylesheet" />
+						<!-- CSS: implied media="all" -->
+						<link rel="stylesheet" href="{$workspace}/semantic/dist/semantic.min.css" />
+					</xsl:when>
+					<xsl:otherwise>
+						<!-- developpement -->
+						<meta charset="utf-8" />
+						<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
 							Remove this if you use the .htaccess -->
-					<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-					<meta name="keywords" content="MAB France, mab, Comité MAB France, Réserves de biosphère, Développement durable, programme mab, UNESCO, Comité français du mab, l'homme et la biosphère, Guadeloupe, Camargue, Cévennes, Luberon, Iroise, Ventoux, Fontainebleau, Tuamotu, Corse, Vosges" />
-					<meta name="author" content="valactive" />
-					<meta name="robots" content="noindex, nofollow"/>
-					<!-- Mobile viewport optimized: j.mp/bplateviewport -->
-					<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-					<!-- <meta name="google-site-verification" content="AJta6kSh11NpeCGrwds_aC7awKODbNvE4hh7jv9hW9U" /> -->
-					<!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-					<xsl:call-template name="partage-facebook" />
-					<link rel="shortcut icon" href="{$workspace}/favicon.ico" />
-					<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-					<!-- google font open sans -->
-					<link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400,700i" rel="stylesheet" />
-					<!-- CSS: implied media="all" -->	
-					 <link rel="stylesheet" href="{$workspace}/semantic/dist/semantic.css" />
-					<!-- STM - preparation mise en prod -->	
-					<!--<link rel="stylesheet" href="{$workspace}/semantic/dist/semantic.min.css" />-->
-				</xsl:otherwise>
-			</xsl:choose>
-			<!-- tarteaucitron-->		
-			 <script type="text/javascript" src="{$workspace}/tarteaucitron/tarteaucitron.js"></script>
+						<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+						<meta name="keywords" content="MAB France, mab, Comité MAB France, Réserves de biosphère, Développement durable, programme mab, UNESCO, Comité français du mab, l'homme et la biosphère, Guadeloupe, Camargue, Cévennes, Luberon, Iroise, Ventoux, Fontainebleau, Tuamotu, Corse, Vosges" />
+						<meta name="author" content="valactive" />
+						<meta name="robots" content="noindex, nofollow"/>
+						<!-- Mobile viewport optimized: j.mp/bplateviewport -->
+						<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+						<!-- <meta name="google-site-verification" content="AJta6kSh11NpeCGrwds_aC7awKODbNvE4hh7jv9hW9U" /> -->
+						<!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+						<xsl:call-template name="partage-facebook" />
+						<link rel="shortcut icon" href="{$workspace}/favicon.ico" />
+						<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+						<!-- google font open sans -->
+						<link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400,700i" rel="stylesheet" />
+						<!-- CSS: implied media="all" -->
+						<link rel="stylesheet" href="{$workspace}/semantic/dist/semantic.css" />
+						<!-- STM - preparation mise en prod -->
+						<!--<link rel="stylesheet" href="{$workspace}/semantic/dist/semantic.min.css" />-->
+					</xsl:otherwise>
+				</xsl:choose>
+				<!-- tarteaucitron-->
+				<script type="text/javascript" src="{$workspace}/tarteaucitron/tarteaucitron.js"></script>
 
-        <script type="text/javascript">
+				<script type="text/javascript">
         tarteaucitron.init({
     	  "privacyUrl": "", /* Privacy policy url */
 
@@ -214,181 +214,161 @@
                           
     	  "readmoreLink": "/cookiespolicy" /* Change the default readmore link */
         });
-        </script>
-		<!--fin tarteaucitron-->		
-		</head>
+				</script>
+				<!--fin tarteaucitron-->
+			</head>
 
-		<body>
-			<!-- stm je ne comprend pas a quoi sert le code ci-dessous-->
-			<!-- type de page ? a utiliser poue navigation anglais ?-->
-			<xsl:attribute name="class">
-				<xsl:choose>
-					<xsl:when test="$current-page-id = 1 and $rubrique = ''">home mab</xsl:when>
-					<xsl:when test="$current-page-id = 4">biosphere</xsl:when>
-					<xsl:otherwise>mab</xsl:otherwise>
-				</xsl:choose>
-			</xsl:attribute>
-			<div class="ui very wide sidebar" style="background-color:white;">
-				<xsl:call-template name="mab-menu-mobile-principal" />
-			</div>
-			<!-- TOP HEADER -->
-			<div class="pusher">
+			<body>
+				<!-- stm je ne comprend pas a quoi sert le code ci-dessous-->
+				<!-- type de page ? a utiliser poue navigation anglais ?-->
+				<xsl:attribute name="class">
+					<xsl:choose>
+						<xsl:when test="$current-page-id = 1 and $rubrique = ''">home mab</xsl:when>
+						<xsl:when test="$current-page-id = 4">biosphere</xsl:when>
+						<xsl:otherwise>mab</xsl:otherwise>
+					</xsl:choose>
+				</xsl:attribute>
+				<div class="ui very wide sidebar" style="background-color:white;">
+					<xsl:call-template name="mab-menu-mobile-principal" />
+				</div>
+				<!-- TOP HEADER -->
+				<div class="pusher">
 
-				<!-- EN TETE COMPUTER -->		
-				<div class="ui internally right aligned grid menu secondary site-top-header computer only">		
-					<!-- sitename -->
-					<div class="six wide column left floated right aligned middle aligned content">
-						<span class="site-name">
-							<xsl:value-of select="$website-name"></xsl:value-of>
-						</span>
-					</div>
-					<!-- logo - lien home page  -->
-					<div class="two wide column middle aligned content">
-						<a href="{$root}" class="ui medium img">
-							<img class="ui tiny centered image" src="{$workspace}/img/logos/france-2016.png" alt="logo du Mab France" />
-						</a>
-					</div>
-					<!-- baseline -->
-					<div class="three wide column middle aligned content">
-						<span class="site-baseline">L'Homme &amp; la Biosphère<br />Man &amp; the Biosphere</span>
-					</div>
-					<!-- que les cas de creation de page dynamique-->
-					<!-- STMSEARCH -->
-					<!-- Bouton recherche-->		
-					<div class="three wide column middle aligned content">
-						<xsl:variable name="page-de-recherche">
-							<xsl:value-of select="concat($root,'/',$current-language,'/',/data/navigation/page[@id = 13]//item[@lang=$current-language]/@handle,'/')"></xsl:value-of>
-						</xsl:variable>
-
-						<form action="{$page-de-recherche}" method="get">
-							<div class="ui icon input">
-								<i class="search icon"></i>
-								<input class="ui mini button" placeholder="{$page-de-recherche}" type="text" name="keywords"/>
-								<input type="hidden" name="sections" value="biosphere,eco-acteurs,page,laureat,actualites-publications" />
-							</div>
-						</form>	
-
-					<!--	<xsl:choose>
-							
-							<xsl:when test="$current-language = 'fr'">
-								<form action="/recherche/" method="get">
-									<div class="ui icon input">
-										<i class="search icon"></i>
-										<input class="ui mini button" placeholder="Recherche" type="text" name="keywords"/>
-										<input type="hidden" name="sections" value="biosphere,eco-acteurs,page" />
-									</div>
-								</form>					
-							</xsl:when>
-							<xsl:otherwise>
-								<form action="/search/" method="get">
-									<div class="ui icon input">
-										<i class="search icon"></i>
-										<input class="ui mini button" placeholder="Search" type="text" name="keywords"/>
-										<input type="hidden" name="sections" value="biosphere,eco-acteurs,page" />
-									</div>
-								</form>
-							</xsl:otherwise>
-						</xsl:choose>-->
-					</div> <!-- class="three wide column middle aligned content" -->
-					<div class="two wide column middle aligned content">	
-						<a class="ui mini button">
-							<xsl:choose>
-								<xsl:when test="$current-language = 'fr'">
-									<xsl:attribute name="href">
-										<xsl:value-of select="concat($root,'/en/',$localized-n1-handle,$localized-n2-handle,$localized-n3-handle)" />
-									</xsl:attribute>
-									<i class="world icon"></i>
-									English
-								</xsl:when>
-								<xsl:otherwise>
-									<xsl:attribute name="href">
-										<xsl:value-of select="concat($root,'/fr/',$localized-n1-handle,$localized-n2-handle,$localized-n3-handle)" />
-									</xsl:attribute>
-									<i class="world icon"></i>
-									Français
-								</xsl:otherwise>
-							</xsl:choose>
-						</a>
-					</div> <!--class="two wide column middle aligned content"-->
-					<!-- fin menu langue -->
-				</div> 	<!-- FIN EN TETE COMPUTER -->	
-
-				<!-- MENU MOBILE / TABLETTE STM ajouter le bouton recherhce-->
-				<div class="ui three column grid menu secondary container site-top-header tablet only mobile only">
-					<div class="row">
-						<div class="column">
-							<button class="ui left floated mini button menu-mobile"><i class="bars icon"></i> Menu</button>
+					<!-- EN TETE COMPUTER -->
+					<div class="ui internally right aligned grid menu secondary site-top-header computer only">
+						<!-- sitename -->
+						<div class="six wide column left floated right aligned middle aligned content">
+							<span class="site-name">
+								<xsl:value-of select="$website-name"></xsl:value-of>
+							</span>
 						</div>
-						<div class="column center aligned">
-							<!-- <a href="{$root}" class="ui medium img">
-								<img class="ui mini centered image" src="{$workspace}/img/logos/france-2016.png" alt="logo du Mab France" />
-							</a> -->
-							<div class="ui center aligned">
-								<h3 style="color:white;">MAB FRANCE</h3>
-							</div>
+						<!-- logo - lien home page  -->
+						<div class="two wide column middle aligned content">
+							<a href="{$root}" class="ui medium tiny image" style="background-color:white">
+								<img src="{$workspace}/img/logos/logo-mab-2021.svg" alt="logo du Mab France 2021" />
+							</a>
 						</div>
-						<div class="column">
-							<a class="ui right floated mini button right floated lang-switcher">
+						<!-- baseline -->
+						<div class="three wide column middle aligned content">
+							<span class="site-baseline">L'Homme &amp; la Biosphère<br/> Man &amp; the Biosphere</span>
+						</div>
+						<!-- que les cas de creation de page dynamique-->
+						<!-- STMSEARCH -->
+						<!-- Bouton recherche-->
+						<div class="three wide column middle aligned content">
+							<xsl:variable name="page-de-recherche">
+								<xsl:value-of select="concat($root,'/',$current-language,'/',/data/navigation/page[@id = 13]//item[@lang=$current-language]/@handle,'/')"></xsl:value-of>
+							</xsl:variable>
+							<xsl:variable name="placeholder-recherche">
+								<xsl:value-of select="/data/navigation/page[@id = 13]//item[@lang=$current-language]/@handle"></xsl:value-of>
+							</xsl:variable>
+							<form action="{$page-de-recherche}" method="get">
+								<div class="ui icon input">
+									<i class="search icon"></i>
+									<input class="ui mini button" placeholder="{$placeholder-recherche}" type="text" name="keywords"/>
+									<input type="hidden" name="sections" value="biosphere,eco-acteurs,page,laureat,actualites-publications" />
+								</div>
+							</form>
+						</div>						<!-- class="three wide column middle aligned content" -->
+						<div class="two wide column middle aligned content">
+							<a class="ui mini button">
 								<xsl:choose>
 									<xsl:when test="$current-language = 'fr'">
 										<xsl:attribute name="href">
 											<xsl:value-of select="concat($root,'/en/',$localized-n1-handle,$localized-n2-handle,$localized-n3-handle)" />
 										</xsl:attribute>
 										<i class="world icon"></i>
-										En
+									English
 									</xsl:when>
 									<xsl:otherwise>
 										<xsl:attribute name="href">
 											<xsl:value-of select="concat($root,'/fr/',$localized-n1-handle,$localized-n2-handle,$localized-n3-handle)" />
 										</xsl:attribute>
 										<i class="world icon"></i>
-										Fr
+									Français
 									</xsl:otherwise>
 								</xsl:choose>
 							</a>
-						</div>
-					</div>
-				</div>
-				<!-- MAIN MENU -->
-				<div class="ui grid computer only" style="margin:0;height:62px;">
-					<xsl:call-template name="mab-menu-principal" />
-				</div>
-				<!-- FULL CONTENT -->
-				<div class="main-content">
+						</div>						<!--class="two wide column middle aligned content"-->
+						<!-- fin menu langue -->
+					</div>					<!-- FIN EN TETE COMPUTER -->
 
-
-					<!-- symphony page contents -->
-					<xsl:apply-templates />
-					<!-- entire website common section -->
-					<section class="ui grid footer ">
-						<div class="ui container grid">
+					<!-- MENU MOBILE / TABLETTE STM ajouter le bouton recherhce-->
+					<div class="ui three column grid menu secondary container site-top-header tablet only mobile only">
+						<div class="row">
 							<div class="column">
-								<div class="ui horizontal list">
-									<div class="item">©MAB FRANCE 2019-2021</div>
-
-									<a class="item" href="https://intranet.mab-france.org/" target="_blank">intranet</a>
-									<a class="item" href="{$root}/{$current-language}/mentions-legales/">Mentions-légales/crédits/RGPD</a>
-
+								<button class="ui left floated mini button menu-mobile">
+									<i class="bars icon"></i> Menu</button>
+							</div>
+							<div class="column center aligned">
+								<!-- <a href="{$root}" class="ui medium img">
+								<img class="ui mini centered image" src="{$workspace}/img/logos/france-2016.png" alt="logo du Mab France" />
+							</a> -->
+								<div class="ui center aligned">
+									<h3 style="color:white;">MAB FRANCE</h3>
 								</div>
 							</div>
+							<div class="column">
+								<a class="ui right floated mini button right floated lang-switcher">
+									<xsl:choose>
+										<xsl:when test="$current-language = 'fr'">
+											<xsl:attribute name="href">
+												<xsl:value-of select="concat($root,'/en/',$localized-n1-handle,$localized-n2-handle,$localized-n3-handle)" />
+											</xsl:attribute>
+											<i class="world icon"></i>
+										En
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:attribute name="href">
+												<xsl:value-of select="concat($root,'/fr/',$localized-n1-handle,$localized-n2-handle,$localized-n3-handle)" />
+											</xsl:attribute>
+											<i class="world icon"></i>
+										Fr
+										</xsl:otherwise>
+									</xsl:choose>
+								</a>
+							</div>
 						</div>
-					</section>
+					</div>
+					<!-- MAIN MENU -->
+					<div class="ui grid computer only" style="margin:0;height:62px;">
+						<xsl:call-template name="mab-menu-principal" />
+					</div>
+					<!-- FULL CONTENT -->
+					<div class="main-content">
+
+
+						<!-- symphony page contents -->
+						<xsl:apply-templates />
+						<!-- entire website common section -->
+						<section class="ui grid footer ">
+							<div class="ui container grid">
+								<div class="column">
+									<div class="ui horizontal list">
+										<div class="item">©MAB FRANCE 2019-2021</div>
+										<a class="item" href="https://intranet.mab-france.org/" target="_blank">intranet</a>
+										<a class="item" href="{$root}/{$current-language}/mentions-legales/">Mentions-légales/crédits/RGPD</a>
+
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
 				</div>
-			</div>
-			<!-- END FULL CONTENT -->
-			<script src="{$workspace}/js/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
-			<script src="{$workspace}/semantic/dist/semantic.min.js"></script>
-			<script src="{$workspace}/js/jquery-ui.min.js"></script>
-			<script src="{$workspace}/js/jquery.tocify.min.js"></script>
-			<script src="{$workspace}/semantic/dist/themes/default/assets/js/mab.js"></script>
-			<!-- autorisation cookies-->			
-		  	<script type="text/javascript">
+				<!-- END FULL CONTENT -->
+				<script src="{$workspace}/js/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+				<script src="{$workspace}/semantic/dist/semantic.min.js"></script>
+				<script src="{$workspace}/js/jquery-ui.min.js"></script>
+				<script src="{$workspace}/js/jquery.tocify.min.js"></script>
+				<script src="{$workspace}/semantic/dist/themes/default/assets/js/mab.js"></script>
+				<!-- autorisation cookies-->
+				<script type="text/javascript">
  		    	tarteaucitron.user.gajsUa = 'UA-2132372-18';
         		tarteaucitron.user.gajsMore = function () { /* add here your optionnal _ga.push() */ };
         		(tarteaucitron.job = tarteaucitron.job || []).push('gajs');
-       		</script>
-	
-		</body>
+				</script>
+
+			</body>
 
 		</html>
 	</xsl:template>

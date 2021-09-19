@@ -15,7 +15,7 @@
 <xsl:stylesheet version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:template name="mab-menu-principal">
-		<div class="ui row main menu menu-principal massive borderless">
+		<div class="ui row main menu menu-principal borderless">
 			<!-- <div class="ui container fluid"> -->
 				<!-- 1er niveau -->
 				<xsl:for-each select="/data/rubriques-principales/entry/nom/item[@lang=$language]">

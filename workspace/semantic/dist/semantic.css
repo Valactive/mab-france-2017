@@ -184,7 +184,6 @@ body {
   font-size: 16px;
   line-height: 1.4285em;
   color: rgba(0, 0, 0, 0.87);
-  font-smoothing: antialiased;
 }
 h1,
 h2,
@@ -531,10 +530,11 @@ h2 {
 .ui.main.menu.menu-principal .ui.dropdown .menu > .item {
   padding: 0.3125em 1.125em !important;
 }
-.ui.main.menu-principal .ui.menu {
+.ui.main.menu-principal.ui.menu {
   position: relative;
   z-index: 1000;
   background: 0 0;
+  background-color:white;
   border: none;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -4784,7 +4784,6 @@ i.flag:not(.icon) {
   margin: 0 0.5em 0 0;
   text-decoration: inherit;
   speak: none;
-  font-smoothing: antialiased;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
