@@ -24,7 +24,7 @@
 						<div class="two wide column items">
 							<div class="ui item">
 								<div class="image">
-									<img class="ui right floated image" src="{$root}/image/1/100/0{/data/biosphere-logo-officiel/entry/image-ref-logo/@path}/{/data/biosphere-logo-officiel/entry/image-ref-logo/filename}" alt="{/data/biosphere-logo-officiel/entry/nom-ref-logo}"/>
+									<img class="ui right floated image" src="{$root}/image/1/120/0{/data/biosphere-logo-officiel/entry/image-ref-logo/@path}/{/data/biosphere-logo-officiel/entry/image-ref-logo/filename}" alt="{/data/biosphere-logo-officiel/entry/nom-ref-logo}"/>
 								</div>
 							</div>
 						</div>
