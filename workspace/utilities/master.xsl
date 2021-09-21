@@ -294,19 +294,28 @@
 					</div>					<!-- FIN EN TETE COMPUTER -->
 
 					<!-- MENU MOBILE / TABLETTE STM ajouter le bouton recherhce-->
-					<div class="ui three column grid menu secondary container site-top-header tablet only mobile only">
+					<div class="ui four column grid menu secondary container site-top-header tablet only mobile only">
 						<div class="row">
 							<div class="column">
 								<button class="ui left floated mini button menu-mobile">
 									<i class="bars icon"></i> Menu</button>
 							</div>
 							<div class="column center aligned">
-								<!-- <a href="{$root}" class="ui medium img">
-								<img class="ui mini centered image" src="{$workspace}/img/logos/france-2016.png" alt="logo du Mab France" />
-							</a> -->
 								<div class="ui center aligned">
 									<h3 style="color:white;">MAB FRANCE</h3>
 								</div>
+							</div>
+							<div class="column center aligned">
+								<xsl:variable name="page-de-recherche">
+									<xsl:value-of select="concat($root,'/',$current-language,'/',/data/navigation/page[@id = 13]//item[@lang=$current-language]/@handle,'/')"></xsl:value-of>
+								</xsl:variable>
+								<form action="{$page-de-recherche}" method="get">
+									<div class="ui icon input" style="width:30px">
+										<i class="search icon"></i>
+										<input class="ui mini button" type="text" name="keywords"/>
+										<input type="hidden" name="sections" value="biosphere,eco-acteurs,page,laureat,actualites-publications" />
+									</div>
+								</form>
 							</div>
 							<div class="column">
 								<a class="ui right floated mini button right floated lang-switcher">
