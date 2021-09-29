@@ -253,7 +253,6 @@
 							<span class="site-baseline">L'Homme &amp; la Biosphère<br/> Man &amp; the Biosphere</span>
 						</div>
 						<!-- que les cas de creation de page dynamique-->
-						<!-- STMSEARCH -->
 						<!-- Bouton recherche-->
 						<div class="three wide column middle aligned content">
 							<xsl:variable name="page-de-recherche">
@@ -306,20 +305,10 @@
 									<h3 style="color:white;">MAB FRANCE</h3>
 								</div>
 							</div>
-					<!--		<div class="column">
-								<xsl:variable name="page-de-recherche">
-									<xsl:value-of select="concat($root,'/',$current-language,'/',/data/navigation/page[@id = 13]//item[@lang=$current-language]/@handle,'/')"></xsl:value-of>
-								</xsl:variable>
-								
+							<!-- pas de recherche sur la version mobile
+							<div class="column">
 								<button class="ui mini button" type="submit"><i class="search icon link"></i></button>
-								<form action="{$page-de-recherche}" method="get">
-									<div class="ui mini" style="width:20px">
-										<input class="ui mini button" placeholder="...." type="text" name="keywords"/>
-										<input type="hidden" name="sections" value="biosphere,eco-acteurs,page,laureat,actualites-publications" />
-									
-									</div>
-								</form>
-							</div>-->
+							</div> -->
 							<div class="column">
 								<a class="ui right floated mini button right floated lang-switcher">
 									<xsl:choose>
@@ -341,6 +330,17 @@
 								</a>
 							</div>
 						</div>
+						<!-- pas de bouton recherche sur la version mobile 
+						<div class="row">
+							<xsl:variable name="page-de-recherche">
+								<xsl:value-of select="concat($root,'/',$current-language,'/',/data/navigation/page[@id = 13]//item[@lang=$current-language]/@handle,'/')"></xsl:value-of>
+							</xsl:variable>
+							<form  action="{$page-de-recherche}" method="get">
+								<input class="ui mini button" placeholder="...." type="text" name="keywords"/>
+								<input type="hidden" name="sections" value="biosphere,eco-acteurs,page,laureat,actualites-publications" />
+								<button class="ui mini button" type="submit"><i class="search icon link"></i></button>
+							</form>
+						</div> -->
 					</div>
 					<!-- MAIN MENU -->
 					<div class="ui grid computer only" style="margin:0;height:62px;">
