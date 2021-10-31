@@ -264,7 +264,7 @@
 							<form action="{$page-de-recherche}" method="get">
 								<div class="ui icon input">
 									<i class="search icon"></i>
-									<input class="ui mini button" placeholder="{$placeholder-recherche}" type="text" name="keywords"/>
+									<input class="ui prompt" placeholder="{$placeholder-recherche}" type="text" name="keywords"/>
 									<input type="hidden" name="sections" value="biosphere,eco-acteurs,page,laureat,actualites-publications" />
 								</div>
 							</form>
