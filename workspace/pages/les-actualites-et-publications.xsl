@@ -90,7 +90,7 @@
 			<div class="ui row cards-eco-acteurs">
 				<!-- la grille des vignettes-->
 				<div class="ui container">
-					<div class="ui four link cards">
+					<div class="ui stackable four link cards">
 						<xsl:for-each select="actualites-avec-filtre/entry">
 							<xsl:variable name="actualite-name-handle">
 								<xsl:value-of select="titre/@handle"></xsl:value-of>		

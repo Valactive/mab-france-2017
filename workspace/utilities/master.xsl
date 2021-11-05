@@ -302,7 +302,7 @@
 							</div>
 							<div class="column center aligned">
 								<div class="ui center aligned">
-									<h3 style="color:white;">MAB FRANCE</h3>
+									<a href="{$root}" ><h3 style="color:white;">MAB FRANCE</h3></a>
 								</div>
 							</div>
 							<!-- pas de recherche sur la version mobile
