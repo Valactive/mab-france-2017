@@ -5,6 +5,7 @@ jQuery(document).ready(function () {
 			jQuery(this).find('iframe').css('width',width);
 	});
     // Add custom styles:
+    let ckeditor_styles = [];
     CKEDITOR.stylesSet.add('default', ckeditor_styles);
 
     // See if there are any ckeditor textareas:
