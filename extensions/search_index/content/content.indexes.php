@@ -299,7 +299,7 @@
 						$col_name->appendChild(Widget::Input("items[{$section->get('id')}]", null, 'checkbox'));
 					}
 					
-					if ($index && isset($index['fields']) && count($index['fields'] > 0)) {
+					if ($index && isset($index['fields']) && (count($index['fields']) > 0)) {
 						$section_fields = $section->fetchFields();
 						$fields = $this->_indexes[$section->get('id')]['fields'];
 						$fields_list = '';

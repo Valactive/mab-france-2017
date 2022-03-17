@@ -100,7 +100,7 @@ Class SearchIndex {
 
 						if($field_id == 'id') $where = " AND `e`.id IN ('".@implode("', '", $value)."') ";
 						else{ 
-							if(!$fieldPool[$field_id]->buildDSRetrievalSQL($value, $joins, $where, ($filter_type == DS_FILTER_AND ? true : false))){ $this->_force_empty_result = true; return; }
+							if(!$fieldPool[$field_id]->buildDSRetrievalSQL($value, $joins, $where, ($filter_type == 'DS_FILTER_AND' ? true : false))){ $this->_force_empty_result = true; return; }
 							if(!$group) $group = $fieldPool[$field_id]->requiresSQLGrouping();
 						}
 											
@@ -207,20 +207,18 @@ Class SearchIndex {
 			$data = utf8_encode($data);
 		}
 
-		$data = preg_replace_callback('~&#x([0-9a-f]+);~i', 
-			function($m) {
-				return chr(hexdec($m[1]));
-			},
-			$data
+		// $data = preg_replace('~&#x([0-9a-f]+);~ei', 'chr(hexdec("\\1"))', $data);
+    $data = preg_replace_callback('~&#x([0-9a-f]+);~i', 
+      function($m) { return chr(hexdec($m[1])); },
+      $data
 		);
-
-		$data = preg_replace_callback('~&#([0-9]+);~', 
-			function($m) {
-				return chr($m[1]);
-			},
-			$data
-		);
-
+		
+	  //$data = preg_replace('~&#([0-9]+);~e', 'chr("\\1")', $data);
+	  $data = preg_replace_callback('~&#([0-9]+);~', 
+      function($m) { return chr($m[1]); },
+      $data
+    );
+	  
 		$data = strip_punctuation($data);
 		
 		$words = explode(' ', trim($data));
@@ -325,6 +323,34 @@ Class SearchIndex {
 	*
 	* @param string $string
 	*/
+// 	public function manipulateKeywords($string) {
+// 		
+// 		// replace spaces within quoted phrases
+// 		$string = preg_replace('/"(?:[^\\"]+|\\.)*"/e', "str_replace(' ', 'SEARCH_INDEX_SPACE', '$0')", $string);
+// 		// correct slashed quotes sa a result of above
+// 		$string = stripslashes(trim($string));
+// 		
+// 		$keywords = '';
+// 		
+// 		// get each word
+// 		foreach(explode(' ', $string) as $word) {
+// 			if (!preg_match('/^(\-|\+)/', $word) && !preg_match('/^"/', $word)) {
+// 				if (Symphony::Configuration()->get('append-all-words-required', 'search_index') == 'yes') {
+// 					$word = '+' . $word;
+// 				}
+// 				if (!preg_match('/\*$/', $word) && Symphony::Configuration()->get('append-wildcard', 'search_index') == 'yes') {
+// 					$word = $word . '*';
+// 				}
+// 			}
+// 			$keywords .= $word . ' ';
+// 		}
+// 		
+// 		$keywords = trim($keywords);
+// 		$keywords = preg_replace('/SEARCH_INDEX_SPACE/', ' ', $keywords);
+// 		
+// 		return $keywords;
+// 	}
+	
 	public static function parseExcerpt($keywords, $text) {
 	
 		$text = trim($text);
@@ -380,7 +406,9 @@ Class SearchIndex {
 				// Locate a keyword (position $p), then locate a space in front (position
 				// $q) and behind it (position $s)
 				if (preg_match('/'. $boundary . $key . $boundary .'/iu', $text, $match, PREG_OFFSET_CAPTURE, $included[$key])) {
-					$p = $match[0][1];
+				  // fix for mb_strpos() [function.mb-strpos]: Offset not contained in string
+				  // based on https://www.getsymphony.com/discuss/thread/46163/15/#position-286
+					$p = $match[0][1]/8*7;
 					if (($q = self::strpos($text, ' ', max(0, $p - $between_start))) !== FALSE) {
 						$end = self::substr($text, $p, $between_end);
 						if (($s = self::strrpos($end, ' ')) !== FALSE) {
