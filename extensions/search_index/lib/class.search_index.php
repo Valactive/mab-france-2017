@@ -78,7 +78,7 @@ Class SearchIndex {
 						if(!is_array($filter)){
 							$filter_type = DataSource::__determineFilterType($filter);
 
-							$value = preg_split('/'.($filter_type == DS_FILTER_AND ? '\+' : '(?<!\\\\),').'\s*/', $filter, -1, PREG_SPLIT_NO_EMPTY);			
+							$value = preg_split('/'.($filter_type == 'DS_FILTER_AND' ? '\+' : '(?<!\\\\),').'\s*/', $filter, -1, PREG_SPLIT_NO_EMPTY);			
 							$value = array_map('trim', $value);
 
 							$value = array_map(array('Datasource', 'removeEscapedCommas'), $value);
