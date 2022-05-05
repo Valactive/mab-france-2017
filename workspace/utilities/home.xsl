@@ -576,11 +576,11 @@
 									<img class="ui avatar image" src="/workspace/img/vimeo-social-logo.svg"
 										alt=""></img>
 									<div class="content">
-										<a href="https://vimeo.com/user8895387" target="_blank">
+										<a href="https://www.youtube.com/channel/UCMotT1wgiFZ7GzMXh6brloA" target="_blank">
 											<div class="header">
 												<xsl:choose>
-													<xsl:when test="$current-language='fr'">Sur Vimeo</xsl:when>
-													<xsl:otherwise>On Vimeo</xsl:otherwise>
+													<xsl:when test="$current-language='fr'">Sur Youtube</xsl:when>
+													<xsl:otherwise>On Youtube</xsl:otherwise>
 												</xsl:choose>
 											</div>
 										</a>
@@ -712,11 +712,11 @@
 									<img class="ui avatar image" src="/workspace/img/vimeo-social-logo.svg"
 										alt=""></img>
 									<div class="content">
-										<a href="https://vimeo.com/user8895387" target="_blank">
+										<a href="https://www.youtube.com/channel/UCMotT1wgiFZ7GzMXh6brloA" target="_blank">
 											<div class="header">
 												<xsl:choose>
-													<xsl:when test="$current-language='fr'">Sur Vimeo</xsl:when>
-													<xsl:otherwise>On Vimeo</xsl:otherwise>
+													<xsl:when test="$current-language='fr'">Sur Youtube</xsl:when>
+													<xsl:otherwise>On Youtube</xsl:otherwise>
 												</xsl:choose>
 											</div>
 										</a>

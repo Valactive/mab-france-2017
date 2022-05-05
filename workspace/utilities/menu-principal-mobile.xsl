@@ -91,7 +91,7 @@
 				</xsl:for-each>
 				<div class="right menu social-menu">
 					 <div class="ui item">
-						<a href="https://vimeo.com/user8895387" class="ui right v-vimeo" target="_blank"></a>
+						<a href="https://www.youtube.com/channel/UCMotT1wgiFZ7GzMXh6brloA" class="ui right v-vimeo" target="_blank"></a>
 					</div>
 					<div class="ui item">
 					<a href="https://www.facebook.com/manbiospherefrance/" class="ui right v-facebook" target="_blank"></a>
