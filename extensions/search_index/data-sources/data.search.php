@@ -81,6 +81,7 @@
 			switch($param_sort) {
 				case 'date': $sql_order_by = "e.creation_date $param_direction"; break;
 				case 'id': $sql_order_by = "e.id $param_direction"; break;
+				//case 'erstellungsdatum': $sql_order_by = "e.erstellungsdatum $param_direction"; break;
 				default: $sql_order_by = "score $param_direction"; break;
 			}
 		
@@ -305,45 +306,45 @@
 		/*-----------------------------------------------------------------------*/
 			
 			// we have search words, check for soundalikes
-			if(count($keywords_boolean['include-words-all']) > 0) {
-				
-				$sounds_like = array();
-				
-				foreach($keywords_boolean['include-words-all'] as $word) {
-					$soundalikes = Symphony::Database()->fetchCol('keyword', sprintf(
-						"SELECT keyword FROM tbl_search_index_keywords WHERE SOUNDEX(keyword) = SOUNDEX('%s')",
-						Symphony::Database()->cleanValue($word)
-					));
-					foreach($soundalikes as $i => &$soundalike) {
-						if($soundalike == $word) {
-							unset($soundalikes[$i]);
-							continue;
-						}
-						$soundalike = array(
-							'word' => $soundalike,
-							'distance' => levenshtein($soundalike, $word)
-						);
-					}
-					usort($soundalikes, array('datasourcesearch', 'sortWordDistance'));
-					$sounds_like[$word] = $soundalikes[0]['word'];
-				}
-				
-				// add words to XML
-				if(count($sounds_like) > 0) {
-					$alternative_spelling = new XMLElement('alternative-keywords');
-					foreach($sounds_like as $word => $soundalike) {
-						$alternative_spelling->appendChild(
-							new XMLElement('keyword', NULL, array(
-								'original' => $word,
-								'alternative' => $soundalike,
-								'distance' => levenshtein($soundalike, $word)
-							))
-						);
-					}
-					$result->appendChild($alternative_spelling);
-				}
-				
-			}
+// 			if(count($keywords_boolean['include-words-all']) > 0) {
+// 				
+// 				$sounds_like = array();
+// 				
+// 				foreach($keywords_boolean['include-words-all'] as $word) {
+// 					$soundalikes = Symphony::Database()->fetchCol('keyword', sprintf(
+// 						"SELECT keyword FROM tbl_search_index_keywords WHERE SOUNDEX(keyword) = SOUNDEX('%s')",
+// 						Symphony::Database()->cleanValue($word)
+// 					));
+// 					foreach($soundalikes as $i => &$soundalike) {
+// 						if($soundalike == $word) {
+// 							unset($soundalikes[$i]);
+// 							continue;
+// 						}
+// 						$soundalike = array(
+// 							'word' => $soundalike,
+// 							'distance' => levenshtein($soundalike, $word)
+// 						);
+// 					}
+// 					usort($soundalikes, array('datasourcesearch', 'sortWordDistance'));
+// 					$sounds_like[$word] = $soundalikes[0]['word'];
+// 				}
+// 				
+// 				// add words to XML
+// 				if(count($sounds_like) > 0) {
+// 					$alternative_spelling = new XMLElement('alternative-keywords');
+// 					foreach($sounds_like as $word => $soundalike) {
+// 						$alternative_spelling->appendChild(
+// 							new XMLElement('keyword', NULL, array(
+// 								'original' => $word,
+// 								'alternative' => $soundalike,
+// 								'distance' => levenshtein($soundalike, $word)
+// 							))
+// 						);
+// 					}
+// 					$result->appendChild($alternative_spelling);
+// 				}
+// 				
+// 			}
 		
 		
 		// Run search SQL!

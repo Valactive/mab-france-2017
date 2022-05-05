@@ -96,7 +96,7 @@
 			Symphony::Configuration()->set('default-sort', 'score', 'search_index');
 			Symphony::Configuration()->set('default-direction', 'desc', 'search_index');
 			
-			Symphony::Configuration()->set('excerpt-length', 250, 'search_index');
+			Symphony::Configuration()->set('excerpt-length', 0, 'search_index');
 			Symphony::Configuration()->set('min-word-length', 3, 'search_index');
 			Symphony::Configuration()->set('max-word-length', 30, 'search_index');
 			Symphony::Configuration()->set('stem-words', 'yes', 'search_index');
