@@ -267,9 +267,10 @@
 											<p>Le Mab France publie la Lettre de la biosphère quatre fois par an.</p>
 											<p> Pour la recevoir dans votre boîte mail </p>
 											<p>
+												<a href="https://sibforms.com/serve/MUIFAOP8x1c5u0pA8CBJnYaqnJqQ6GfZ9x-a_HqXU4ezpSmegWj98LdTpFOP2SaIVjP6Qs2Z_AwjTM-MFyDtu59UpskHuAK8i1olc3987uZxNMJofMZXRFP1qac7herkE9Kq3gpZGNOAErzIyL7raxNwTMptzIU2H6RbCFUF9Gj8ebnVqHM9Ao4HfH3fS268Hz71QOlDDRRCCT95" target="_blank" class="ui rounded button primary">Je m'abonne à la newletter</a>
 												<div class="createsend-button" style="height:27px;display:inline-block;"
 													data-listid="r/54/8E5/071/1B4D77D32002385C"></div>
-												<script type="text/javascript">
+												<!-- <script type="text/javascript">
 													(function () {
 														var e = document.createElement('script');
 														e.type = 'text/javascript';
@@ -280,7 +281,7 @@
 														var s = document.getElementsByTagName('script')[0];
 														s.parentNode.insertBefore(e, s);
 													})();
-												</script>
+												</script> -->
 											</p>
 											<p> <a href="{$root}/fr/lettres-de-la-biosphere/">Toutes les lettres sont
 													consultables en ligne</a> </p>
@@ -288,11 +289,13 @@
 										<xsl:otherwise>
 											<p>The Mab France publishes the Letter of the biosphere four times a year.
 											</p>
-											<p>To subscribe </p>
 											<p>
+											
+												<a href="https://sibforms.com/serve/MUIFAOP8x1c5u0pA8CBJnYaqnJqQ6GfZ9x-a_HqXU4ezpSmegWj98LdTpFOP2SaIVjP6Qs2Z_AwjTM-MFyDtu59UpskHuAK8i1olc3987uZxNMJofMZXRFP1qac7herkE9Kq3gpZGNOAErzIyL7raxNwTMptzIU2H6RbCFUF9Gj8ebnVqHM9Ao4HfH3fS268Hz71QOlDDRRCCT95" target="_blank" class="ui rounded button primary">Subcribe online</a></p>
+												
 												<div class="createsend-button" style="height:27px;display:inline-block;"
 													data-listid="r/54/8E5/071/1B4D77D32002385C"></div>
-												<script type="text/javascript">
+												<!-- <script type="text/javascript">
 													(function () {
 														var e = document.createElement('script');
 														e.type = 'text/javascript';
@@ -303,8 +306,8 @@
 														var s = document.getElementsByTagName('script')[0];
 														s.parentNode.insertBefore(e, s);
 													})();
-												</script>
-											</p>
+												</script> -->
+											
 											<p>you can also<a href="{$root}/en/biosphere-newsletter/"> consult all the
 													previous letters on line.</a></p>
 										</xsl:otherwise>
