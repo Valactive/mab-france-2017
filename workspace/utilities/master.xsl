@@ -357,7 +357,7 @@
 							<div class="ui container grid">
 								<div class="column">
 									<div class="ui horizontal list">
-										<div class="item">©MAB FRANCE 2019-2021</div>
+										<div class="item">©MAB FRANCE 2019-<xsl:value-of select="$this-year" /></div>
 										<a class="item" href="https://intranet.mab-france.org/" target="_blank">intranet</a>
 										<a class="item" href="{$root}/{$current-language}/mentions-legales/">Mentions-légales/crédits/RGPD</a>
 
